@@ -7,7 +7,37 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-The first run hasn't happened yet. Start the **daily predictions** workflow once (see [Start it](#start-it-on-github-automatic-daily-runs)) and this section will fill itself in after every trading day.
+**Last run:** 2026-09-24 14:31 UTC · predictions made after the close of 2026-09-23
+
+### Next-session calls
+
+Will each stock close above its opening price in the next session?
+
+| Stock | P(up), price + news | P(up), price only | Call | Headlines (24 h) | News mood |
+|---|---|---|---|---|---|
+| AAPL | 50.9% | 50.9% | Stay out | 32 | positive (+0.09) |
+| AMZN | 52.8% | 52.8% | Stay out | 42 | positive (+0.16) |
+| GOOGL | 54.3% | 54.3% | Stay out | 44 | positive (+0.07) |
+| JPM | 55.5% | 55.5% | **Buy at open** | 21 | positive (+0.15) |
+| META | 37.9% | 37.9% | Stay out | 72 | positive (+0.11) |
+| MSFT | 53.2% | 53.2% | Stay out | 27 | positive (+0.12) |
+| NVDA | 54.0% | 54.0% | Stay out | 64 | positive (+0.14) |
+| TSLA | 46.2% | 46.2% | Stay out | 21 | positive (+0.07) |
+| UNH | 51.3% | 51.3% | Stay out | 15 | positive (+0.10) |
+| XOM | 52.0% | 52.0% | Stay out | 22 | positive (+0.16) |
+
+### How accurate has it been?
+
+| | Predictions | Accuracy | 95% range | Always up | Same as today | Beats baselines? |
+|---|---|---|---|---|---|---|
+| Historical replay, price + news | 10,338 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
+| Historical replay, price only | 10,338 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
+
+Any model has to beat three simple rules: always predict up (*Always up* is the share of sessions that rose), always predict down, and predict the same direction as today (*Same as today*). *Beats baselines* is only "yes" when the whole 95% range is above all three.
+
+![Rolling accuracy](reports/rolling_accuracy.png)
+
+Full report, with per-stock results, paper trading and source health: [reports/latest.md](reports/latest.md)
 <!-- scoreboard:end -->
 
 ## How it works
