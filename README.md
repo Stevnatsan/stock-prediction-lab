@@ -7,11 +7,11 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-**Updated:** 2026-09-24 15:29 UTC
+**Updated:** 2026-09-24 15:30 UTC
 
 ### Next-session calls
 
-Will each stock close above its opening price in the next session? Calls use the **champion**: whichever of the four models was most accurate over the last 120 sessions (now: logistic, price + news). **Buy at open** marks the (up to) 3 highest-rated stocks with P(up) ≥ 52%: the paper-trading strategy.
+Will each stock close above its opening price in the next session? Calls use the **champion**: whichever of the four models was most accurate over the last 120 sessions (now: gradient boosting). **Buy at open** marks the (up to) 3 highest-rated stocks with P(up) ≥ 52%: the paper-trading strategy.
 
 No open calls right now. New ones are made after each US market close.
 
@@ -19,8 +19,10 @@ No open calls right now. New ones are made after each US market close.
 
 | Model | Accuracy, last 120 sessions |
 |---|---|
-| **Logistic, price + news (champion)** | 50.3% |
+| **Gradient boosting (champion)** | 53.0% |
+| Logistic, price + news | 50.3% |
 | Logistic, price only | 50.3% |
+| Ensemble | 49.2% |
 
 ### How accurate has it been?
 
@@ -28,6 +30,8 @@ No open calls right now. New ones are made after each US market close.
 |---|---|---|---|---|---|---|
 | Historical replay, logistic, price + news | 10,338 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
 | Historical replay, logistic, price only | 10,338 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
+| Historical replay, gradient boosting | 9,748 | **51.2%** | 50.2%–52.2% | 52.3% | 49.8% | no |
+| Historical replay, ensemble | 9,748 | **51.2%** | 50.2%–52.2% | 52.3% | 49.8% | no |
 
 Any model has to beat three simple rules: always predict up (*Always up* is the share of sessions that rose), always predict down, and predict the same direction as today (*Same as today*). *Beats baselines* is only "yes" when the whole 95% range is above all three.
 
