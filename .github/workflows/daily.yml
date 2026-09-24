@@ -1,0 +1,36 @@
+name: daily predictions
+
+on:
+  schedule:
+    - cron: "15 22 * * 1-5"   # 22:15 UTC on weekdays, after the US close in both summer and winter time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-predictions
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Collect, score yesterday, learn, predict the next session
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python -m stocklab daily
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state reports README.md
+          git diff --cached --quiet || git commit -m "Daily run $(date -u +%Y-%m-%d)"
+          git push

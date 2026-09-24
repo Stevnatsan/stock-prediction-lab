@@ -1,0 +1,23 @@
+# Which stocks to predict. The model learns a separate set of weights for each one.
+tickers: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, TSLA, JPM, XOM, UNH]
+
+# Market context used as a feature for every stock.
+market: SPY
+
+# Years of price history replayed on the first run so each model starts with experience.
+history_years: 4
+
+# Paper trading: buy at the next open and sell at the close only when P(up) >= this.
+decision_threshold: 0.55
+cost_bps: 5          # assumed round-trip trading cost, in basis points (0.05%)
+
+model:
+  learning_rate: 0.01
+  l2: 0.0001
+
+# Data sources. Sources that need a key or contact are skipped when it isn't set.
+sources:
+  yahoo_rss: true      # Yahoo Finance headlines, no key needed
+  google_news: true    # Google News headlines, no key needed
+  sec_filings: true    # SEC EDGAR 8-K filings, needs SEC_USER_AGENT (your name + email, SEC policy)
+  finnhub: true        # Finnhub company news, needs FINNHUB_API_KEY (free tier)
