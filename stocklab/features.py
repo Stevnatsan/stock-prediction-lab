@@ -40,7 +40,7 @@ CONTEXT_FEATURES = [
     "vix",                 # CBOE volatility index (FRED), previous day
     "vix_chg_5",           # VIX change over a week
     "rate_chg_5",          # 10-year Treasury yield change over a week, percentage points
-    "curve",               # 10-year minus 2-year Treasury yield
+    "curve_10y3m",         # yield curve: 10-year Treasury minus 3-month bill
     "filings_5d",          # 8-K filings with the SEC in the last 5 days
 ]
 VADER_FEATURES = [
@@ -194,13 +194,13 @@ def analyst_features(index, actions, days=30):
 
 
 def macro_features(index, macro):
-    """`macro`: daily FRED series (vix, rate_10y, curve) indexed by observation date. FRED publishes a
+    """`macro`: daily series (vix, rate_10y, curve = 10-year minus 3-month) indexed by observation date. FRED publishes a
     day's value the next morning, so row t uses the latest observation from *before* t."""
-    cols = ["vix", "vix_chg_5", "rate_chg_5", "curve"]
+    cols = ["vix", "vix_chg_5", "rate_chg_5", "curve_10y3m"]
     if macro is None or not len(macro):
         return pd.DataFrame(np.nan, index=index, columns=cols)
     m = macro.sort_index().ffill()
-    m = m.assign(vix_chg_5=np.log(m["vix"] / m["vix"].shift(5)), rate_chg_5=m["rate_10y"].diff(5))[cols]
+    m = m.assign(vix_chg_5=np.log(m["vix"] / m["vix"].shift(5)), rate_chg_5=m["rate_10y"].diff(5), curve_10y3m=m["curve"])[cols]
     pos = m.index.searchsorted(index, side="left") - 1
     values = m.to_numpy(float)[np.clip(pos, 0, None)]
     values[pos < 0] = np.nan

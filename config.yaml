@@ -30,7 +30,7 @@ sources:
   earnings: true       # earnings dates and EPS surprises (Yahoo Finance)
   analysts: true       # analyst upgrades/downgrades and price-target revisions (Yahoo Finance)
   # market-wide, with history
-  fred: true           # VIX, 10-year yield, yield curve from FRED, no key needed
+  fred: true           # VIX, 10-year yield, yield curve from FRED (optional FRED_API_KEY; falls back to Yahoo Finance)
   # collected live from now on
   options: true        # implied volatility and put/call volume from option chains (Yahoo Finance)
   stocktwits: true     # StockTwits posts with bullish/bearish tags, no key needed

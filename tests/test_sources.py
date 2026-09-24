@@ -172,3 +172,26 @@ def test_optional_sources_are_skipped_without_keys(monkeypatch):
     assert "REDDIT_CLIENT_ID" in live.health["reddit"]["last_error"]
     assert "ALPACA_API_KEY" in live.health["alpaca"]["last_error"]
     assert live.finbert(["Apple beats"]) is None and live.social("AAPL", None) is None
+
+
+def test_fred_api_is_parsed():
+    from stocklab.sources import macro
+
+    s = macro.parse_fred_api({"observations": [{"date": "2026-03-02", "value": "4.21"}, {"date": "2026-03-03", "value": "."}]})
+    assert s.iloc[0] == 4.21 and np.isnan(s.iloc[1])
+
+
+def test_macro_falls_back_to_yahoo_when_fred_does_not_answer(monkeypatch):
+    from stocklab.sources import macro
+
+    def slow(*args, **kwargs):
+        raise TimeoutError("FRED did not answer")
+
+    idx = pd.bdate_range("2026-03-02", periods=3)
+    bars = {"^VIX": [18.0, 19.0, 20.0], "^TNX": [4.2, 4.3, 4.4], "^IRX": [3.9, 3.9, 4.0]}
+    monkeypatch.setattr(macro.requests, "get", slow)
+    monkeypatch.setattr(prices, "fetch_prices", lambda symbol, years: pd.DataFrame({"close": bars[symbol]}, index=idx))
+    live = LiveSources(Config(tickers=["AAPL"], sources={"fred": True}))
+    m = live.macro(1)
+    assert live.health["fred"]["failed"] == 1 and live.health["macro_yahoo"]["ok"] == 1
+    assert list(m.columns) == ["vix", "rate_10y", "curve"] and np.isclose(m["curve"].iloc[-1], 0.4)

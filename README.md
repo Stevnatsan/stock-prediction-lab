@@ -95,7 +95,7 @@ The first time it sees a stock, it replays about 4 years of that stock's history
 | Yahoo Finance (`yfinance`) | **Earnings calendar**: report dates and EPS surprise vs analysts' estimate | yes | nothing |
 | Yahoo Finance (`yfinance`) | **Analyst revisions**: upgrades, downgrades and price-target changes | yes | nothing |
 | Yahoo Finance (`yfinance`) | **Options-implied volatility** and put/call volume from the option chain | live only | nothing |
-| FRED (St. Louis Fed) | **Macro**: VIX, 10-year Treasury yield, 10-year minus 2-year yield curve | yes | nothing |
+| FRED (St. Louis Fed) | **Macro**: VIX, 10-year Treasury yield, yield curve (10-year minus 3-month) | yes | nothing; `FRED_API_KEY` (free) makes it more reliable. If FRED doesn't answer, the same series come from Yahoo Finance |
 | SEC EDGAR | 8-K filings, which companies must file for material events | yes | `SEC_USER_AGENT` (your name and email, SEC policy) |
 | Yahoo Finance RSS, Google News RSS | Latest headlines for each stock | live only | nothing |
 | Finnhub | Company news | live only | `FINNHUB_API_KEY` (free tier) |
@@ -224,6 +224,7 @@ The tests check this honestly for both kinds of model. On a simulated random mar
    |---|---|
    | `SEC_USER_AGENT` | Your name and email, e.g. `Jane Doe jane@example.com` |
    | `FINNHUB_API_KEY` | Free account at finnhub.io |
+   | `FRED_API_KEY` | Free key at fred.stlouisfed.org/docs/api/api_key.html |
    | `REDDIT_CLIENT_ID`, `REDDIT_CLIENT_SECRET` | reddit.com/prefs/apps → "create app" → type **script** (the id is under the app name) |
    | `ALPACA_API_KEY`, `ALPACA_SECRET_KEY` | Free account at alpaca.markets → switch to **Paper Trading** → generate API keys. Keep the paper account's default $100,000: US day-trading rules need at least $25,000 in the account. |
 

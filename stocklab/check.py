@@ -29,8 +29,12 @@ def run_checks(config, ticker="AAPL", now=None):
     report("earnings", s.earnings(ticker), lambda e: f"{len(e)} reports, latest {e['released'].iloc[-1]:%Y-%m-%d %H:%M}")
     report("analysts", s.analysts(ticker), lambda a: f"{len(a)} actions, latest {a['time'].iloc[-1]:%Y-%m-%d}, "
                                                    f"{int(np.isfinite(a['target']).sum())} with a price-target change")
-    report("fred", s.macro(1), lambda m: f"through {m.index[-1].date()}: VIX {m['vix'].dropna().iloc[-1]:.1f}, "
-                                        f"10-year {m['rate_10y'].dropna().iloc[-1]:.2f}%, curve {m['curve'].dropna().iloc[-1]:+.2f}")
+    macro = s.macro(1)
+    describe = lambda m: (f"through {m.index[-1].date()}: VIX {m['vix'].dropna().iloc[-1]:.1f}, "  # noqa: E731
+                          f"10-year {m['rate_10y'].dropna().iloc[-1]:.2f}%, 10y-3m {m['curve'].dropna().iloc[-1]:+.2f}")
+    report("fred", macro if s.health["fred"]["ok"] else None, describe)
+    if not s.health["fred"]["ok"]:
+        report("macro_yahoo", macro, describe)
     spot = float(prices["close"].iloc[-1]) if prices is not None else 100.0
     report("options", s.options(ticker, now, spot), lambda o: f"at-the-money implied volatility {o['iv_atm']:.1%}, "
                                                             f"log put/call volume {o['put_call']:+.2f}")

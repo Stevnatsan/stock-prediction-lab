@@ -81,7 +81,10 @@ class LiveSources:
         return self._call("analysts", events.analyst_actions, ticker) if self.config.source_on("analysts") else None
 
     def macro(self, years):
-        return self._call("fred", macro.fetch_macro, years) if self.config.source_on("fred") else None
+        if not self.config.source_on("fred"):
+            return None
+        data = self._call("fred", macro.fetch_fred, years, os.environ.get("FRED_API_KEY", "").strip())
+        return data if data is not None else self._call("macro_yahoo", macro.fetch_yahoo, years)
 
     def options(self, ticker, now, spot):
         return self._call("options", options.options_snapshot, ticker, now, spot) if self.config.source_on("options") else None
