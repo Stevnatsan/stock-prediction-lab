@@ -72,11 +72,14 @@ def resolve_pending(state, ticker, frame, now_iso, give_up_days=10):
     return resolved
 
 
+def pending_for(state, ticker, date):
+    return {p["variant"]: p["p_up"] for p in state.pending if p["ticker"] == ticker and pd.Timestamp(p["feature_date"]) == date}
+
+
 def predict_latest(state, ticker, frame, news, now_iso):
     """Make tomorrow's prediction from today's close plus today's headlines. Returns P(up) per variant."""
     date = frame.index[-1]
-    existing = {p["variant"]: p["p_up"] for p in state.pending
-                if p["ticker"] == ticker and pd.Timestamp(p["feature_date"]) == date}
+    existing = pending_for(state, ticker, date)
     if existing or pd.notna(frame.at[date, "target_up"]):
         return existing
     row = frame.loc[date].copy()

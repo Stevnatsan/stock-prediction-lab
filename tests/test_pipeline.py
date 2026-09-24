@@ -69,6 +69,16 @@ def test_missed_days_are_caught_up(tmp_path, config):
     assert not predictions.duplicated(["ticker", "variant", "feature_date"]).any()
 
 
+def test_no_prediction_once_the_next_session_has_opened(tmp_path, config):
+    full = {t: synthetic_prices(300, seed=s) for t, s in (("AAA", 1), ("BBB", 2), ("SPY", 3))}
+    last = full["AAA"].index[-1]
+    next_morning = (last + pd.offsets.BDay(1) + timedelta(hours=15)).tz_localize("UTC").to_pydatetime()  # ~11:00 New York
+    summary = run_daily(config, FakeSources(full), tmp_path / "s", tmp_path / "r", None, next_morning)
+    assert summary["AAA"]["history_replayed"] > 100
+    assert summary["AAA"]["prediction"].startswith("skipped")
+    assert State.load(tmp_path / "s", config).pending == []
+
+
 def test_sentiment_reads_finance_headlines():
     assert score("Apple beats earnings expectations, shares surge") > 0.3
     assert score("Regulators open probe; analysts downgrade stock after lawsuit") < -0.3

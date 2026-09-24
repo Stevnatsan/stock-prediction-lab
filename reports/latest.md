@@ -1,21 +1,10 @@
 # Stock prediction lab: latest report
 
-Generated 2026-09-24 14:31 UTC.
+Generated 2026-09-24 14:34 UTC.
 
 ## Next-session calls
 
-| Stock | P(up), price + news | P(up), price only | Call | Headlines (24 h) | News mood |
-|---|---|---|---|---|---|
-| AAPL | 50.9% | 50.9% | Stay out | 32 | positive (+0.09) |
-| AMZN | 52.8% | 52.8% | Stay out | 42 | positive (+0.16) |
-| GOOGL | 54.3% | 54.3% | Stay out | 44 | positive (+0.07) |
-| JPM | 55.5% | 55.5% | **Buy at open** | 21 | positive (+0.15) |
-| META | 37.9% | 37.9% | Stay out | 72 | positive (+0.11) |
-| MSFT | 53.2% | 53.2% | Stay out | 27 | positive (+0.12) |
-| NVDA | 54.0% | 54.0% | Stay out | 64 | positive (+0.14) |
-| TSLA | 46.2% | 46.2% | Stay out | 21 | positive (+0.07) |
-| UNH | 51.3% | 51.3% | Stay out | 15 | positive (+0.10) |
-| XOM | 52.0% | 52.0% | Stay out | 22 | positive (+0.16) |
+No open calls right now. New ones are made after each US market close.
 
 ## Accuracy
 
@@ -53,26 +42,11 @@ Hypothetical only: no real orders are placed.
 
 | Source | Calls ok | Failed | Items | Note |
 |---|---|---|---|---|
-| finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
-| google_news | 10 | 0 | 1001 |  |
-| prices | 11 | 0 | 11933 |  |
-| sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| yahoo_rss | 10 | 0 | 187 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-09-23 | 1034 | 0 | 32 |
-| MSFT | ok | 2026-09-23 | 1034 | 0 | 27 |
-| NVDA | ok | 2026-09-23 | 1034 | 0 | 64 |
-| AMZN | ok | 2026-09-23 | 1034 | 0 | 42 |
-| GOOGL | ok | 2026-09-23 | 1034 | 0 | 44 |
-| META | ok | 2026-09-23 | 1034 | 0 | 72 |
-| TSLA | ok | 2026-09-23 | 1034 | 0 | 21 |
-| JPM | ok | 2026-09-23 | 1034 | 0 | 21 |
-| XOM | ok | 2026-09-23 | 1033 | 0 | 22 |
-| UNH | ok | 2026-09-23 | 1033 | 0 | 15 |
 
 ---
 

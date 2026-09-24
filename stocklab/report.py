@@ -120,6 +120,8 @@ def calls_table(state, threshold):
         mood_txt = "–" if mood is None else ("positive" if mood > 0.05 else "negative" if mood < -0.05 else "neutral") + f" ({mood:+.2f})"
         lines.append(f"| {ticker} | {_pct(p)} | {_pct(price.get('p_up'))} | {call} | {full.get('headlines_24h', 0)} | {mood_txt} |")
     as_of = max((p["feature_date"] for p in state.pending), default=None)
+    if not by_ticker:
+        lines = ["No open calls right now. New ones are made after each US market close."]
     return lines, as_of
 
 
@@ -161,7 +163,7 @@ def build_report(state, config, reports_dir, readme_path, now, health, summary):
     stamp = now.strftime("%Y-%m-%d %H:%M UTC")
     calls, as_of = calls_table(state, config.decision_threshold)
 
-    board = [f"**Last run:** {stamp}" + (f" · predictions made after the close of {as_of}" if as_of else ""), ""]
+    board = [f"**Updated:** {stamp}" + (f" · predictions made after the close of {as_of}" if as_of else ""), ""]
     board += ["### Next-session calls", "", "Will each stock close above its opening price in the next session?", ""] + calls + [""]
     if len(resolved):
         rows = accuracy_rows(resolved)

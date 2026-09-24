@@ -7,24 +7,13 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-**Last run:** 2026-09-24 14:31 UTC · predictions made after the close of 2026-09-23
+**Updated:** 2026-09-24 14:34 UTC
 
 ### Next-session calls
 
 Will each stock close above its opening price in the next session?
 
-| Stock | P(up), price + news | P(up), price only | Call | Headlines (24 h) | News mood |
-|---|---|---|---|---|---|
-| AAPL | 50.9% | 50.9% | Stay out | 32 | positive (+0.09) |
-| AMZN | 52.8% | 52.8% | Stay out | 42 | positive (+0.16) |
-| GOOGL | 54.3% | 54.3% | Stay out | 44 | positive (+0.07) |
-| JPM | 55.5% | 55.5% | **Buy at open** | 21 | positive (+0.15) |
-| META | 37.9% | 37.9% | Stay out | 72 | positive (+0.11) |
-| MSFT | 53.2% | 53.2% | Stay out | 27 | positive (+0.12) |
-| NVDA | 54.0% | 54.0% | Stay out | 64 | positive (+0.14) |
-| TSLA | 46.2% | 46.2% | Stay out | 21 | positive (+0.07) |
-| UNH | 51.3% | 51.3% | Stay out | 15 | positive (+0.10) |
-| XOM | 52.0% | 52.0% | Stay out | 22 | positive (+0.16) |
+No open calls right now. New ones are made after each US market close.
 
 ### How accurate has it been?
 
