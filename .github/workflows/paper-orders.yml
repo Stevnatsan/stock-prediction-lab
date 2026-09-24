@@ -1,0 +1,37 @@
+name: paper orders
+
+# Sends the champion's picks to an Alpaca *paper* account (simulated money, real fills).
+# Does nothing until the ALPACA_API_KEY and ALPACA_SECRET_KEY secrets are set.
+on:
+  schedule:
+    - cron: "40 12 * * 1-5"   # 8:40 New York summer time / 7:40 winter: before the 9:28 cutoff for market-on-open orders
+    - cron: "5 19 * * 1-5"    # 15:05 / 14:05: before the 15:50 cutoff for market-on-close orders
+  workflow_dispatch:
+    inputs:
+      step:
+        description: "open (buy tonight's picks at the next open) or close (sell today's buys at the close)"
+        required: true
+        default: open
+        type: choice
+        options: [open, close]
+
+permissions:
+  contents: read
+
+jobs:
+  orders:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Send orders
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          STEP: ${{ github.event_name == 'workflow_dispatch' && inputs.step || (github.event.schedule == '5 19 * * 1-5' && 'close' || 'open') }}
+        run: python -m stocklab orders "$STEP"

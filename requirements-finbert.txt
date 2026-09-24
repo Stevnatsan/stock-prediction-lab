@@ -1,0 +1,5 @@
+# Optional: FinBERT headline sentiment. Install the small CPU-only PyTorch build first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-finbert.txt
+torch>=2.2
+transformers>=4.40

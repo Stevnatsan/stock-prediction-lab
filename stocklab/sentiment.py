@@ -1,5 +1,13 @@
-"""Headline sentiment with VADER, plus a small finance vocabulary VADER doesn't know by default."""
+"""Headline sentiment, two ways, so they can be compared live:
+
+- VADER: a fast word-list scorer, plus a small finance vocabulary it doesn't know by default.
+- FinBERT (ProsusAI/finbert): a BERT language model fine-tuned on financial news. It reads the whole
+  sentence, so it gets "shares fall less than feared" or "beats on revenue, cuts guidance" right more
+  often, but it needs PyTorch and a 440 MB download (requirements-finbert.txt).
+"""
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+FINBERT_MODEL = "ProsusAI/finbert"
 
 FINANCE_WORDS = {
     "beat": 1.5, "beats": 1.5, "tops": 1.2, "upgrade": 2.0, "upgrades": 2.0, "upgraded": 2.0, "outperform": 1.8,
@@ -18,3 +26,20 @@ _analyzer.lexicon.update(FINANCE_WORDS)
 def score(text):
     """VADER compound score in [-1, 1]; above 0 reads positive."""
     return _analyzer.polarity_scores(text)["compound"]
+
+
+_finbert = None
+
+
+def finbert_scores(texts, batch_size=32):
+    """FinBERT P(positive) - P(negative) for each text, in [-1, 1]. Loads the model on first use."""
+    global _finbert
+    if _finbert is None:
+        from transformers import pipeline
+
+        _finbert = pipeline("text-classification", model=FINBERT_MODEL)
+    out = []
+    for labels in _finbert(list(texts), batch_size=batch_size, top_k=None, truncation=True):
+        p = {d["label"].lower(): d["score"] for d in labels}
+        out.append(round(p.get("positive", 0.0) - p.get("negative", 0.0), 4))
+    return out

@@ -16,6 +16,7 @@ class Config:
     learning_rate: float = 0.01
     l2: float = 1e-4
     sources: dict = field(default_factory=dict)
+    paper_orders: dict = field(default_factory=dict)
 
     def source_on(self, name):
         return bool(self.sources.get(name, False))
@@ -33,4 +34,5 @@ def load_config(path=ROOT / "config.yaml"):
         learning_rate=float(model.get("learning_rate", 0.01)),
         l2=float(model.get("l2", 1e-4)),
         sources=raw.get("sources", {}),
+        paper_orders=raw.get("paper_orders") or {},
     )

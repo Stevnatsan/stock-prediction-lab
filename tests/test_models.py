@@ -4,7 +4,7 @@ import pandas as pd
 import pytest
 
 from stocklab import boosting, watchlist
-from stocklab.features import build_frame
+from stocklab.features import ALL_MODELS, ENSEMBLES, build_frame
 from stocklab.pipeline import run_daily
 from stocklab.report import CHAMPION_WINDOW, champion
 from stocklab.state import State
@@ -61,10 +61,12 @@ def test_new_models_and_reruns_never_duplicate_history(tmp_path, config):
         run_daily(config, FakeSources(full), tmp_path / "s", tmp_path / "r", None, evening_after(day) + pd.Timedelta(minutes=minutes))
     p = State.load(tmp_path / "s", config).predictions
     assert not p.duplicated(["ticker", "variant", "feature_date"]).any()
-    assert set(p["variant"]) == {"price", "full", "gbm", "ensemble"}
-    ens = p[p["variant"] == "ensemble"].set_index(["ticker", "feature_date"])["p_up"]
-    parts = p[p["variant"].isin(["full", "gbm"])].pivot_table(index=["ticker", "feature_date"], columns="variant", values="p_up")
-    np.testing.assert_allclose(ens, ((parts["full"] + parts["gbm"]) / 2).loc[ens.index], atol=1e-5)
+    assert set(p["variant"]) == set(ALL_MODELS)
+    for ensemble, (a, b) in ENSEMBLES.items():
+        ens = p[p["variant"] == ensemble].set_index(["ticker", "feature_date"])["p_up"]
+        parts = p[p["variant"].isin([a, b])].pivot_table(index=["ticker", "feature_date"], columns="variant", values="p_up")
+        assert len(ens) > 100
+        np.testing.assert_allclose(ens, ((parts[a] + parts[b]) / 2).loc[ens.index], atol=1e-5)
 
 
 def test_removed_stocks_lose_their_open_calls(tmp_path, config):

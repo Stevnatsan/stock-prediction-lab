@@ -8,7 +8,8 @@ market: SPY
 history_years: 4
 
 # Paper trading: each session buy (at the open, sell at the close) the 3 stocks the champion model
-# rates most likely to rise, but only those with P(up) >= this.
+# rates most likely to rise, but only those with P(up) >= this. The same threshold marks the
+# "Outperform" picks for the beat-the-market question.
 decision_threshold: 0.52
 cost_bps: 5          # assumed round-trip trading cost, in basis points (0.05%)
 
@@ -17,8 +18,26 @@ model:
   l2: 0.0001
 
 # Data sources. Sources that need a key or contact are skipped when it isn't set.
+# Check them all at once with: python -m stocklab check AAPL (or Actions -> check sources).
 sources:
+  # headlines
   yahoo_rss: true      # Yahoo Finance headlines, no key needed
   google_news: true    # Google News headlines, no key needed
-  sec_filings: true    # SEC EDGAR 8-K filings, needs SEC_USER_AGENT (your name + email, SEC policy)
   finnhub: true        # Finnhub company news, needs FINNHUB_API_KEY (free tier)
+  finbert: true        # also score headlines with FinBERT (needs requirements-finbert.txt; the daily workflow installs it)
+  # company events, with history
+  sec_filings: true    # SEC EDGAR 8-K filings, needs SEC_USER_AGENT (your name + email, SEC policy)
+  earnings: true       # earnings dates and EPS surprises (Yahoo Finance)
+  analysts: true       # analyst upgrades/downgrades and price-target revisions (Yahoo Finance)
+  # market-wide, with history
+  fred: true           # VIX, 10-year yield, yield curve from FRED, no key needed
+  # collected live from now on
+  options: true        # implied volatility and put/call volume from option chains (Yahoo Finance)
+  stocktwits: true     # StockTwits posts with bullish/bearish tags, no key needed
+  reddit: true         # r/wallstreetbets, r/stocks, r/investing, r/StockMarket; needs REDDIT_CLIENT_ID + REDDIT_CLIENT_SECRET
+
+# Send the champion's "Buy at open" picks to an Alpaca paper-trading account (simulated money, real
+# fills). Needs the ALPACA_API_KEY and ALPACA_SECRET_KEY secrets from a *paper* account.
+paper_orders:
+  enabled: true
+  budget_per_stock: 10000   # dollars per pick, in whole shares

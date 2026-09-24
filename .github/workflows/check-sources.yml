@@ -1,21 +1,22 @@
-name: daily predictions
+name: check sources
 
+# Calls every data source once (and the Alpaca paper account, if connected) and prints what came back.
+# Run it after adding API keys. Nothing is saved or committed.
 on:
-  schedule:
-    - cron: "15 22 * * 1-5"   # 22:15 UTC on weekdays, after the US close in both summer and winter time
   workflow_dispatch:
+    inputs:
+      ticker:
+        description: "Stock to try, e.g. AAPL"
+        required: false
+        default: AAPL
 
 permissions:
-  contents: write
-
-concurrency:
-  group: daily-predictions
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  run:
+  check:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,19 +32,13 @@ jobs:
         with:
           path: ~/.cache/huggingface
           key: finbert-${{ runner.os }}-v1
-      - name: Collect, score yesterday, learn, predict the next session
+      - name: Check every source
         env:
+          TICKER: ${{ inputs.ticker }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
           FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-        run: python -m stocklab daily
-      - name: Commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state reports README.md
-          git diff --cached --quiet || git commit -m "Daily run $(date -u +%Y-%m-%d)"
-          git push
+        run: python -m stocklab check "$TICKER"
