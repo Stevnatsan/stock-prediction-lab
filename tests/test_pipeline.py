@@ -31,7 +31,7 @@ def test_two_daily_runs_score_learn_and_predict(tmp_path, config):
     assert summary["AAA"]["history_replayed"] > 250
     assert summary["AAA"]["headlines_24h"] == 1
     state = State.load(tmp_path / "state", config)
-    assert len(state.pending) == 4  # 2 stocks x 2 model variants
+    assert len(state.pending) == 8  # 2 stocks x 4 models
     assert {p["feature_date"] for p in state.pending} == {day1.date().isoformat()}
     aaa_full = next(p for p in state.pending if p["ticker"] == "AAA" and p["variant"] == "full")
     assert aaa_full["sentiment_24h"] > 0
@@ -39,14 +39,14 @@ def test_two_daily_runs_score_learn_and_predict(tmp_path, config):
     # running again the same evening must not duplicate anything
     run_daily(config, FakeSources({t: df.iloc[:-1] for t, df in full.items()}, news), tmp_path / "state",
               tmp_path / "reports", readme, now1 + timedelta(minutes=20))
-    assert len(State.load(tmp_path / "state", config).pending) == 4
+    assert len(State.load(tmp_path / "state", config).pending) == 8
 
     day2 = full["AAA"].index[-1]
     summary = run_daily(config, FakeSources(full), tmp_path / "state", tmp_path / "reports", readme, evening_after(day2))
-    assert summary["AAA"]["scored"] == 2 and summary["BBB"]["scored"] == 2
+    assert summary["AAA"]["scored"] == 4 and summary["BBB"]["scored"] == 4
     state = State.load(tmp_path / "state", config)
     live = state.predictions[state.predictions["source"] == "live"]
-    assert len(live) == 4
+    assert len(live) == 8
     assert set(live["feature_date"].dt.date) == {day1.date()}
     assert {p["feature_date"] for p in state.pending} == {day2.date().isoformat()}
 
@@ -63,7 +63,7 @@ def test_missed_days_are_caught_up(tmp_path, config):
     run_daily(config, FakeSources({t: df.loc[:first] for t, df in full.items()}), tmp_path / "s", tmp_path / "r",
               None, evening_after(first))
     summary = run_daily(config, FakeSources(full), tmp_path / "s", tmp_path / "r", None, evening_after(full["AAA"].index[-1]))
-    assert summary["AAA"]["scored"] == 2      # the pending prediction from the first run
+    assert summary["AAA"]["scored"] == 4      # the pending predictions (4 models) from the first run
     assert summary["AAA"]["caught_up"] == 4   # the four sessions the bot missed
     predictions = State.load(tmp_path / "s", config).predictions
     assert not predictions.duplicated(["ticker", "variant", "feature_date"]).any()

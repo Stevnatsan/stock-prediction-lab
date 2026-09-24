@@ -47,8 +47,9 @@ class State:
             path.write_text(json.dumps(model.to_dict(), indent=1))
 
     # ---------- models ----------
-    def has_models(self, ticker):
-        return all((v, ticker) in self.models for v in VARIANTS)
+    def missing_models(self, ticker):
+        """Online models this stock doesn't have yet (e.g. a newly added stock)."""
+        return [v for v in VARIANTS if (v, ticker) not in self.models]
 
     def model(self, variant, ticker):
         key = (variant, ticker)
@@ -68,11 +69,12 @@ class State:
             self.predictions = new if self.predictions.empty else pd.concat([self.predictions, new], ignore_index=True)
             self._new_rows = []
 
-    def last_feature_date(self, ticker):
-        """Latest day already predicted (resolved or pending) for this ticker."""
+    def last_feature_date(self, ticker, variant):
+        """Latest day this model already predicted (resolved or pending) for this ticker."""
         self.flush()
-        dates = list(self.predictions.loc[self.predictions["ticker"] == ticker, "feature_date"])
-        dates += [pd.Timestamp(p["feature_date"]) for p in self.pending if p["ticker"] == ticker]
+        p = self.predictions
+        dates = list(p.loc[(p["ticker"] == ticker) & (p["variant"] == variant), "feature_date"])
+        dates += [pd.Timestamp(x["feature_date"]) for x in self.pending if x["ticker"] == ticker and x["variant"] == variant]
         return max(dates) if dates else None
 
     # ---------- headlines ----------

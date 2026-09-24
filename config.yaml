@@ -7,8 +7,9 @@ market: SPY
 # Years of price history replayed on the first run so each model starts with experience.
 history_years: 4
 
-# Paper trading: buy at the next open and sell at the close only when P(up) >= this.
-decision_threshold: 0.55
+# Paper trading: each session buy (at the open, sell at the close) the 3 stocks the champion model
+# rates most likely to rise, but only those with P(up) >= this.
+decision_threshold: 0.52
 cost_bps: 5          # assumed round-trip trading cost, in basis points (0.05%)
 
 model:
