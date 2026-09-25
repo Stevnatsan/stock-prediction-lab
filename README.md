@@ -241,7 +241,7 @@ The tests check this honestly for both kinds of model. On a simulated random mar
 
 3. Run **Actions → check sources** to confirm each source works.
 4. Open **Actions → daily predictions → Run workflow**. The first run downloads history and replays it, which takes a few minutes.
-5. From then on it runs automatically every weekday at 22:15 UTC, after the US close, and **paper orders** runs before the open and before the close. If GitHub ever pauses the schedules, re-enable them from the Actions tab.
+5. From then on it runs automatically every weekday at 22:15 UTC, after the US close (with a backup run at 01:15 UTC, because GitHub sometimes starts scheduled runs hours late), and **paper orders** runs before the open and before the close. If GitHub ever pauses the schedules, re-enable them from the Actions tab.
 
 ### Run it on your computer
 

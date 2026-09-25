@@ -3,6 +3,8 @@ name: daily predictions
 on:
   schedule:
     - cron: "15 22 * * 1-5"   # 22:15 UTC on weekdays, after the US close in both summer and winter time
+    - cron: "15 1 * * 2-6"    # backup, 01:15 UTC (still the same evening in New York): GitHub sometimes runs
+                              # schedules hours late or drops them; a second run the same evening changes nothing
   workflow_dispatch:
 
 permissions:
@@ -18,6 +20,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # the latest state, even if this run was queued behind another
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

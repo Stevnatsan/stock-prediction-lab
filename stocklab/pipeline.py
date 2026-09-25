@@ -73,11 +73,15 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
         if next_session_started(latest, now) and not engine.pending_for(state, ticker, latest):
             info["prediction"] = "skipped: the next session had already opened"
             continue
-        row = frame.loc[latest]
-        live = live_features(row, headlines, sources.options(ticker, now, float(row["close"])), sources.social(ticker, now), now)
-        info["headlines_24h"] = int(live["sent_count"])
-        state.record_live(ticker, latest, live)
-        info["prediction"] = engine.predict_latest(state, ticker, frame, live, now_iso)
+        made = engine.pending_for(state, ticker, latest)
+        if all(v in made for v in VARIANTS):  # a rerun the same evening: keep the inputs the calls were made with
+            info["prediction"] = made
+        else:
+            row = frame.loc[latest]
+            live = live_features(row, headlines, sources.options(ticker, now, float(row["close"])), sources.social(ticker, now), now)
+            info["headlines_24h"] = int(live["sent_count"])
+            state.record_live(ticker, latest, live)
+            info["prediction"] = engine.predict_latest(state, ticker, frame, live, now_iso)
         if any(v not in info["prediction"] for v in BOOSTED):
             ready.append(ticker)
     if ready:

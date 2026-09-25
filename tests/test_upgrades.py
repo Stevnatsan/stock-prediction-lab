@@ -114,3 +114,16 @@ def test_report_covers_both_questions_calibration_and_orders(tmp_path, config):
         assert text in report, text
     for chart in ("rolling_accuracy.png", "paper_trading.png", "calibration.png"):
         assert (tmp_path / "r" / chart).stat().st_size > 10_000
+
+
+def test_a_second_run_the_same_evening_changes_nothing(tmp_path, config):
+    full = _prices()
+    now = evening_after(full["AAA"].index[-1])
+    run_daily(config, FakeSources(full, options={"AAA": {"iv_atm": 0.30, "put_call": 0.0}}), tmp_path / "s", tmp_path / "r", None, now)
+    first = State.load(tmp_path / "s", config)
+    run_daily(config, FakeSources(full, options={"AAA": {"iv_atm": 0.99, "put_call": 0.0}}), tmp_path / "s", tmp_path / "r", None,
+              now + pd.Timedelta(hours=3))
+    second = State.load(tmp_path / "s", config)
+    assert second.pending == first.pending
+    assert second.live.set_index("ticker").at["AAA", "iv_atm"] == 0.30
+    pd.testing.assert_frame_equal(first.predictions, second.predictions)
