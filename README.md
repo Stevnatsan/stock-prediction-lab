@@ -7,7 +7,7 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-**Updated:** 2026-09-24 16:06 UTC
+**Updated:** 2026-09-25 00:23 UTC
 
 ### Next-session calls
 
@@ -21,46 +21,46 @@ Accuracy over the last 120 sessions.
 
 | Model | Up or down? | Beats the market? |
 |---|---|---|
-| Logistic, all sources (VADER) | 51.3% | **50.8% (champion)** |
-| Logistic, all sources (FinBERT) | 51.3% | – |
+| Logistic, all sources (VADER) | 51.8% | **52.3% (champion)** |
+| Logistic, all sources (FinBERT) | 51.8% | – |
 | Logistic, price only | 50.3% | – |
-| Gradient boosting | 51.3% | 50.1% |
-| Ensemble | **51.8% (champion)** | 50.0% |
+| Gradient boosting | 51.2% | 49.7% |
+| Ensemble | **53.1% (champion)** | 50.3% |
 
 ### How accurate has it been? Up or down?
 
 | | Predictions | Accuracy | 95% range | Always up | Same as today | Beats baselines? |
 |---|---|---|---|---|---|---|
 | Historical replay, logistic, price only | 10,338 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
-| Historical replay, logistic, all sources (VADER) | 10,338 | **51.2%** | 50.2%–52.1% | 52.2% | 49.8% | no |
-| Historical replay, logistic, all sources (FinBERT) | 10,338 | **51.2%** | 50.2%–52.1% | 52.2% | 49.8% | no |
-| Historical replay, gradient boosting | 9,748 | **50.7%** | 49.7%–51.7% | 52.3% | 49.8% | no |
-| Historical replay, ensemble | 9,748 | **51.3%** | 50.3%–52.3% | 52.3% | 49.8% | no |
+| Historical replay, logistic, all sources (VADER) | 10,338 | **50.4%** | 49.5%–51.4% | 52.2% | 49.8% | no |
+| Historical replay, logistic, all sources (FinBERT) | 10,338 | **50.4%** | 49.5%–51.4% | 52.2% | 49.8% | no |
+| Historical replay, gradient boosting | 9,748 | **50.1%** | 49.1%–51.1% | 52.3% | 49.8% | no |
+| Historical replay, ensemble | 9,748 | **51.5%** | 50.5%–52.5% | 52.3% | 49.8% | no |
 
 ### How accurate has it been? Beats the market?
 
 | | Predictions | Accuracy | 95% range | Always beats | Same as today | Beats baselines? |
 |---|---|---|---|---|---|---|
-| Historical replay, logistic, all sources (VADER) | 10,338 | **51.5%** | 50.5%–52.4% | 50.4% | 49.8% | yes |
-| Historical replay, gradient boosting | 9,748 | **50.5%** | 49.5%–51.5% | 50.5% | 49.9% | no |
-| Historical replay, ensemble | 9,748 | **51.0%** | 50.0%–52.0% | 50.5% | 49.9% | within noise |
+| Historical replay, logistic, all sources (VADER) | 10,338 | **51.4%** | 50.4%–52.4% | 50.4% | 49.8% | yes |
+| Historical replay, gradient boosting | 9,748 | **50.6%** | 49.6%–51.6% | 50.5% | 49.9% | within noise |
+| Historical replay, ensemble | 9,748 | **51.2%** | 50.2%–52.2% | 50.5% | 49.9% | within noise |
 
 Any model has to beat simple rules: always say yes (*Always up* / *Always beats* is how often the answer was yes), always say no, or repeat today's answer (*Same as today*). *Beats baselines* is only "yes" when the whole 95% range is above all of them.
 
 ### Are the probabilities honest?
 
-When the champion (ensemble) says a stock has a given chance of rising, how often does it? Based on all scored predictions; on average its probabilities are off by **3.6 percentage points**.
+When the champion (ensemble) says a stock has a given chance of rising, how often does it? Based on all scored predictions; on average its probabilities are off by **4.4 percentage points**.
 
 | Predicted | Calls | Average prediction | Actually went up | Verdict |
 |---|---|---|---|---|
-| under 40% | 258 | 36.3% | **50.8%** | happened more often than predicted |
-| 40–45% | 671 | 43.0% | **49.6%** | happened more often than predicted |
-| 45–48% | 1,024 | 46.6% | **53.3%** | happened more often than predicted |
-| 48–50% | 1,065 | 49.0% | **51.5%** | honest |
-| 50–52% | 1,415 | 51.0% | **51.5%** | honest |
-| 52–55% | 2,438 | 53.5% | **52.8%** | honest |
-| 55–60% | 2,185 | 57.0% | **52.8%** | happened less often than predicted |
-| 60% or more | 692 | 62.8% | **53.8%** | happened less often than predicted |
+| under 40% | 473 | 36.5% | **52.0%** | happened more often than predicted |
+| 40–45% | 918 | 43.0% | **53.1%** | happened more often than predicted |
+| 45–48% | 1,181 | 46.6% | **48.9%** | honest |
+| 48–50% | 1,139 | 49.1% | **51.3%** | honest |
+| 50–52% | 1,384 | 51.0% | **53.8%** | happened more often than predicted |
+| 52–55% | 1,970 | 53.5% | **52.6%** | honest |
+| 55–60% | 1,871 | 57.1% | **54.6%** | happened less often than predicted |
+| 60% or more | 812 | 63.5% | **50.0%** | happened less often than predicted |
 
 ![Rolling accuracy](reports/rolling_accuracy.png)
 

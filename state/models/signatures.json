@@ -36,7 +36,7 @@
   "vix",
   "vix_chg_5",
   "rate_chg_5",
-  "curve",
+  "curve_10y3m",
   "filings_5d",
   "sent_mean",
   "sent_count",
@@ -70,7 +70,7 @@
   "vix",
   "vix_chg_5",
   "rate_chg_5",
-  "curve",
+  "curve_10y3m",
   "filings_5d",
   "finbert_mean",
   "sent_count",
@@ -104,7 +104,7 @@
   "vix",
   "vix_chg_5",
   "rate_chg_5",
-  "curve",
+  "curve_10y3m",
   "filings_5d",
   "sent_mean",
   "sent_count",
@@ -138,7 +138,7 @@
   "vix",
   "vix_chg_5",
   "rate_chg_5",
-  "curve",
+  "curve_10y3m",
   "filings_5d"
  ],
  "beat_gbm": [
@@ -163,7 +163,7 @@
   "vix",
   "vix_chg_5",
   "rate_chg_5",
-  "curve",
+  "curve_10y3m",
   "filings_5d"
  ],
  "ensemble": [
@@ -190,7 +190,7 @@
    "vix",
    "vix_chg_5",
    "rate_chg_5",
-   "curve",
+   "curve_10y3m",
    "filings_5d",
    "sent_mean",
    "sent_count",
@@ -224,7 +224,7 @@
    "vix",
    "vix_chg_5",
    "rate_chg_5",
-   "curve",
+   "curve_10y3m",
    "filings_5d"
   ]
  ],
@@ -252,7 +252,7 @@
    "vix",
    "vix_chg_5",
    "rate_chg_5",
-   "curve",
+   "curve_10y3m",
    "filings_5d",
    "sent_mean",
    "sent_count",
@@ -286,7 +286,7 @@
    "vix",
    "vix_chg_5",
    "rate_chg_5",
-   "curve",
+   "curve_10y3m",
    "filings_5d"
   ]
  ]
