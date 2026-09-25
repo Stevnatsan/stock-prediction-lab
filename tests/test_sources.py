@@ -80,7 +80,7 @@ def test_yfinance_bars_are_normalised(monkeypatch):
             return raw
 
     monkeypatch.setattr(yfinance, "Ticker", FakeTicker)
-    bars = prices.fetch_prices("AAPL", 1)
+    bars = prices.fetch_prices("AAPL", 1, now=datetime(2026, 3, 3, 19, 0, tzinfo=timezone.utc))  # mid-session
     assert list(bars.columns) == ["open", "high", "low", "close", "volume"]
     assert bars.index.tz is None and list(bars.index.strftime("%Y-%m-%d")) == ["2026-03-02", "2026-03-03"]
     assert bars.loc["2026-03-03", "close"] == 2.55  # duplicate day keeps the latest bar
@@ -195,3 +195,36 @@ def test_macro_falls_back_to_yahoo_when_fred_does_not_answer(monkeypatch):
     m = live.macro(1)
     assert live.health["fred"]["failed"] == 1 and live.health["macro_yahoo"]["ok"] == 1
     assert list(m.columns) == ["vix", "rate_10y", "curve"] and np.isclose(m["curve"].iloc[-1], 0.4)
+
+
+def _five_minute_bars(day, n=78):
+    idx = pd.date_range(f"{day} 09:30", periods=n, freq="5min", tz="America/New_York")
+    return pd.DataFrame({"Open": np.linspace(100, 110, n), "High": np.linspace(101, 111, n), "Low": np.linspace(99, 109, n),
+                         "Close": np.linspace(100.5, 110.5, n), "Volume": 1000.0}, index=idx)
+
+
+def test_a_late_daily_bar_is_rebuilt_from_five_minute_bars(monkeypatch):
+    import yfinance
+
+    daily = pd.DataFrame({"Open": [1.0], "High": [1.2], "Low": [0.9], "Close": [1.1], "Volume": [10]},
+                         index=pd.DatetimeIndex(["2026-09-23"], tz="America/New_York"))
+    calls = []
+
+    class FakeTicker:
+        def __init__(self, symbol):
+            pass
+
+        def history(self, **kwargs):
+            calls.append(kwargs.get("interval"))
+            return daily if kwargs["interval"] == "1d" else _five_minute_bars("2026-09-24")
+
+    monkeypatch.setattr(yfinance, "Ticker", FakeTicker)
+    evening = datetime(2026, 9, 25, 0, 23, tzinfo=timezone.utc)  # 20:23 in New York on the 24th
+    bars = prices.fetch_prices("AAPL", 1, now=evening)
+    assert list(bars.index.strftime("%Y-%m-%d")) == ["2026-09-23", "2026-09-24"]
+    last = bars.iloc[-1]
+    assert last["open"] == 100 and last["close"] == 110.5 and last["high"] == 111 and last["low"] == 99 and last["volume"] == 78000
+    # during the session nothing is rebuilt (the bar isn't finished), and a half session is never used
+    calls.clear()
+    assert len(prices.fetch_prices("AAPL", 1, now=datetime(2026, 9, 24, 17, 0, tzinfo=timezone.utc))) == 1 and calls == ["1d"]
+    assert prices.bar_from_intraday(_five_minute_bars("2026-09-24", n=40), pd.Timestamp("2026-09-24").date()) is None
