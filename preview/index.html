@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stock Lab</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Stock Lab"><meta name="theme-color" content="#1f6f54">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f54'/%3E%3Cpath d='M12 44l13-14 9 8 17-20' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f54'/%3E%3Cpath d='M12 44l13-14 9 8 17-20' stroke='white' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f7f4;--surface:#fff;--fg:#1d2420;--muted:#5d6a63;--line:#dfe4df;--accent:#1f6f54;--up:#1f7a4d;--down:#b4442f;--flat:#6b6f6c;--track:#e7ece8;
+--display:Georgia,"Iowan Old Style",serif;--body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#121614;--surface:#1a201d;--fg:#e6ebe7;--muted:#9aa8a0;--line:#2b3430;--accent:#5cc49b;--up:#5cc48c;--down:#ec8a74;--flat:#a3aaa6;--track:#26302b;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--body);padding:max(20px,env(safe-area-inset-top)) 16px max(40px,env(safe-area-inset-bottom))}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:1.9rem}h2{font-size:1.3rem}h3{font-size:1.2rem}
+p{margin:0}a{color:var(--accent)}
+.label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.small{font-size:.86rem;color:var(--muted)}
+.num,.price{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.pos{color:var(--up)}.neg{color:var(--down)}
+header{display:flex;flex-direction:column;gap:6px}
+.when{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.when ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px}
+.leans{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-weight:600;font-size:.9rem;padding:4px 12px;border-radius:99px;border:1px solid currentColor;text-decoration:none}
+.pill.up{color:var(--up)}.pill.down{color:var(--down)}
+.market{border-block:1px solid var(--line);padding-block:12px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:baseline}
+.list{display:flex;flex-direction:column;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tick{font:600 .8rem var(--mono);color:var(--muted)}
+.price{font-size:1.3rem}
+.call{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font-weight:600;font-size:.85rem;padding:2px 10px;border-radius:99px;border:1px solid currentColor}
+.call.up .chip{color:var(--up)}.call.down .chip{color:var(--down)}.call.flat .chip,.call.none .chip{color:var(--flat)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stats div{display:flex;flex-direction:column;min-width:0}
+@media (max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stats.three{grid-template-columns:repeat(3,1fr)}
+.range{display:flex;flex-direction:column;gap:6px}
+.bar{position:relative;height:8px;background:var(--track);border-radius:4px}
+.bar i{position:absolute;top:-4px;width:4px;height:16px;border-radius:2px;background:var(--accent);transform:translateX(-50%)}
+.ends{display:flex;justify-content:space-between;font:.8rem var(--mono);color:var(--muted)}
+details summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details ul{margin:10px 0 0;padding-left:1.1em;display:flex;flex-direction:column;gap:6px}
+.heads{font-size:.9rem;color:var(--muted)}
+.more>summary{font-family:var(--display);font-size:1.2rem;padding-block:6px}
+.more .list{margin-top:12px}
+.record{border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.dots{display:flex;gap:6px}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block}
+.dot.hit{background:var(--up)}.dot.miss{background:var(--down);opacity:.75}
+.honest{display:flex;flex-direction:column;gap:10px}
+footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.tabsel{position:absolute;opacity:0;pointer-events:none}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;padding:4px;background:var(--track);border-radius:10px}
+.tabs label{text-align:center;padding:9px 0;border-radius:8px;font-weight:600;cursor:pointer;color:var(--muted)}
+#tab-day:checked~.tabs label[for=tab-day],#tab-week:checked~.tabs label[for=tab-week],#tab-news:checked~.tabs label[for=tab-news]{background:var(--surface);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#tab-day:focus-visible~.tabs label[for=tab-day],#tab-week:focus-visible~.tabs label[for=tab-week],#tab-news:focus-visible~.tabs label[for=tab-news]{outline:2px solid var(--accent)}
+.panel{display:flex;flex-direction:column;gap:24px}
+.panel.week,.panel.news,#tab-week:checked~.panel.day,#tab-news:checked~.panel.day{display:none}
+#tab-week:checked~.panel.week,#tab-news:checked~.panel.news{display:flex}
+.pill.flat{color:var(--flat)}
+.moodbar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--track)}
+.moodbar i{display:block;height:100%}.moodbar .pos{background:var(--up)}.moodbar .neu{background:var(--flat);opacity:.35}.moodbar .neg{background:var(--down)}
+.spark{display:block;width:100%;height:44px;margin-top:6px}
+.spark line{stroke:var(--line);stroke-width:1}.spark .pos{fill:var(--up)}.spark .neg{fill:var(--down)}
+.facts{display:flex;flex-direction:column;gap:8px}
+.reads{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.reads li{display:flex;flex-direction:column;gap:2px}
+.reads a{color:var(--fg);font-weight:600;text-decoration:none}
+.reads a:active{color:var(--accent)}
+.cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.cal li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.cal li:first-child{border-top:0}
+.cal a,.cal .date{display:flex;flex-direction:column;min-width:0}
+.cal a{text-decoration:none;color:var(--fg)}
+.cal .date{text-align:right}
+.more-note{margin-top:10px}
+</style></head>
+<body><main>
+<header><span class="label">Stock prediction lab</span>
+  <h1>Your stock calls</h1>
+  <p class="small">Prices up to 2026-10-08 · models retrained every weekday night</p></header>
+<input class="tabsel" type="radio" name="tab" id="tab-day" checked>
+<input class="tabsel" type="radio" name="tab" id="tab-week">
+<input class="tabsel" type="radio" name="tab" id="tab-news">
+<nav class="tabs"><label for="tab-day">Next day</label><label for="tab-week">Next week</label><label for="tab-news">News</label></nav>
+<div class="panel day">
+
+<section class="when">
+  <h2>Next day: Thu 8 Oct</h2>
+  <ol>
+    <li>New calls arrive every weekday night after the US market closes. This page was updated <b><time data-utc="2026-10-08T15:09:18.235711+00:00">Thu 08 Oct, 15:09 UTC</time></b>.</li>
+    <li>They are for <b>Thursday 8 Oct</b>: from the open at <b><time data-utc="2026-10-08T09:30:00-04:00" data-short>9:30am New York</time></b> to the close at <b><time data-utc="2026-10-08T16:00:00-04:00" data-short>4:00pm New York</time></b>.</li>
+    <li>If you act on a call, act at the open. The call is settled at that day's close.</li>
+  </ol>
+  <p class="leans"><a class="pill up" href="#googl">GOOGL up</a><a class="pill down" href="#nvda">NVDA down</a></p>
+  <p class="small">The models are right a bit over half the time. Keep any bet small. Not financial advice.</p>
+</section>
+
+<section class="market"><span class="label">S&amp;P 500 (SPY)</span><span class="num">$775.30</span>
+  <span>This year <b class="num pos">+14.6%</b></span>
+  <span>Past year <b class="num pos">+17.1%</b></span>
+  <span class="small">Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one. A typical day moves it about 0.5%. Lately it is calmer than its usual year (10% vs 13% annualised volatility).</span></section>
+<section class="list">
+<article class="card" id="googl">
+  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$352.49</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>53%</b> chance it closes above its open · <b>52%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+6.6%</span></div><div><span class="label">This year</span><span class="num pos">+12.8%</span></div><div><span class="label">1 year</span><span class="num pos">+43.8%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+26.7%</span></div></div>
+  <div class="range"><span class="label">Where it sits in its 1-year range</span>
+    <div class="bar"><i style="left:70%"></i></div>
+    <div class="ends"><span>$235.96</span><span>$402.12</span></div></div>
+  <details open><summary>What's going on</summary>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 57, normal range 30 to 70).</li><li>A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 27 percentage points.</li><li>It sits 12% below its 1-year high of $402.12.</li><li>News mood over the last week: mixed (303 headlines).</li></ul>
+    <p class="label">Headlines this week</p><ul class="heads"><li>Alphabet Stocks Drop Although TPU Sales Escape Google&#x27;s Cloud - TradingView</li><li>Unity Software Stock Is Falling Wednesday: What&#x27;s Going On? - Alphabet (NASDAQ:GOOGL), Alphabet (NASDAQ:G - Benzinga</li><li>GOOGL Stock: Google Loses More AI Talent As Two Experts Reportedly Move To Anthropic - Stocktwits</li></ul>
+  </details>
+  <div class="record"><span class="label">Last 9 calls on GOOGL</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot hit" title="2026-10-02: right"></i><i class="dot miss" title="2026-10-05: wrong"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
+    <p class="small">Right 53.3% of the last 120 sessions. It has had a small edge on this stock lately.</p></div>
+</article>
+<article class="card" id="aapl">
+  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$337.75</span></div>
+  <div class="call flat">
+    <span class="chip">No clear lean</span>
+    <span><b>52%</b> chance it closes above its open · <b>53%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+7.1%</span></div><div><span class="label">This year</span><span class="num pos">+24.6%</span></div><div><span class="label">1 year</span><span class="num pos">+32.2%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+15.1%</span></div></div>
+  <div class="range"><span class="label">Where it sits in its 1-year range</span>
+    <div class="bar"><i style="left:97%"></i></div>
+    <div class="ends"><span>$244.37</span><span>$341.07</span></div></div>
+  <details open><summary>What's going on</summary>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 59, normal range 30 to 70).</li><li>A typical day moves it about 0.9%. Lately it is calmer than its usual year (16% vs 25% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 15 percentage points.</li><li>It is close to its 1-year high of $341.07 (-1.0%).</li><li>News mood over the last week: mixed (291 headlines).</li></ul>
+    <p class="label">Headlines this week</p><ul class="heads"><li>Apple (AAPL) Stock Looks Fully Priced On Its 145% Five Year Run - Simply Wall Street</li><li>Apple, IBD Stock Of The Day, Rises Near Buy Points Ahead Of Smart Home Launch</li><li>Apple&#x27;s AI strategy could add $75 per share to valuation, says Dan Ives (AAPL:NASDAQ) - Seeking Alpha</li></ul>
+  </details>
+  <div class="record"><span class="label">Last 9 calls on AAPL</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot miss" title="2026-09-30: wrong"></i><i class="dot miss" title="2026-10-01: wrong"></i><i class="dot hit" title="2026-10-02: right"></i><i class="dot miss" title="2026-10-05: wrong"></i><i class="dot hit" title="2026-10-06: right"></i></span>
+    <p class="small">Right 48.3% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
+</article>
+<article class="card" id="nvda">
+  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$236.13</span></div>
+  <div class="call down">
+    <span class="chip">Leans down</span>
+    <span><b>47%</b> chance it closes above its open · <b>43%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+5.7%</span></div><div><span class="label">This year</span><span class="num pos">+26.9%</span></div><div><span class="label">1 year</span><span class="num pos">+27.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+10.8%</span></div></div>
+  <div class="range"><span class="label">Where it sits in its 1-year range</span>
+    <div class="bar"><i style="left:96%"></i></div>
+    <div class="ends"><span>$164.79</span><span>$239.24</span></div></div>
+  <details open><summary>What's going on</summary>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 62, normal range 30 to 70).</li><li>A typical day moves it about 1.5%. Lately it is calmer than its usual year (22% vs 38% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 11 percentage points.</li><li>It is close to its 1-year high of $239.24 (-1.3%).</li><li>News mood over the last week: positive (617 headlines).</li></ul>
+    <p class="label">Headlines this week</p><ul class="heads"><li>Intel Slides 3% as Chip Stocks Sell Off With Yields and Oil Higher; NVIDIA and AMD Slip - 24/7 Wall St.</li><li>Nvidia stock drops to decade-low valuation desp... - Pluang</li><li>Nvidia-backed Firmus closes IPO bookbuilding as investor support falter -Bloomberg</li></ul>
+  </details>
+  <div class="record"><span class="label">Last 9 calls on NVDA</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot miss" title="2026-09-30: wrong"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot hit" title="2026-10-06: right"></i></span>
+    <p class="small">Right 55.0% of the last 120 sessions. It has had a small edge on this stock lately.</p></div>
+</article></section>
+
+<section class="honest">
+  <h2>How good are the daily calls?</h2>
+  <p>Over the last 120 sessions the lead model was right <b>52.9%</b> of the time. Simply guessing "up" every day was right 50.8%.
+  Since it went live it has been right on 51 of 90 calls. Use the calls as one clue next to the trend and the news, not as a signal on their own.</p>
+</section>
+</div>
+<div class="panel week">
+
+<section class="when">
+  <h2>Week ahead: Thu 8 Oct to Wed 14 Oct</h2>
+  <ol>
+    <li>Each call covers 5 trading days: from the open on <b>Thu 8 Oct</b> to the close on <b>Wed 14 Oct</b>.</li>
+    <li>If you act, buy at that first open and hold until that last close. The odds are refreshed every night.</li>
+  </ol>
+  <p>The best forecast for any of your stocks this week is the usual odds: about <b>55%</b> that it ends the week higher. Each stock below shows how far it typically moves in a week and how it did after setups like today's.</p>
+</section>
+<section class="list">
+<article class="card" id="w-googl">
+  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$352.49</span></div>
+  <div class="call flat"><span class="chip">A usual week</span><span><b>55%</b> chance it is higher after the week (the usual odds)</span></div>
+  <div class="stats three"><div><span class="label">1 week</span><span class="num pos">+4.2%</span></div><div><span class="label">1 month</span><span class="num pos">+6.6%</span></div><div><span class="label">3 months</span><span class="num neg">-1.2%</span></div></div>
+  <p>In 8 of 10 weeks over the past two years it moved between <b class="num neg">-4.5%</b> and <b class="num pos">+6.0%</b>.</p>
+  <p>Setup now: <b>normal</b> (RSI 56) and above its 200-day average. In 402 past weeks like this, GOOGL was higher a week later 58% of the time, +0.6% on average.</p>
+  
+</article>
+<article class="card" id="w-aapl">
+  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$337.75</span></div>
+  <div class="call flat"><span class="chip">A usual week</span><span><b>55%</b> chance it is higher after the week (the usual odds)</span></div>
+  <div class="stats three"><div><span class="label">1 week</span><span class="num pos">+2.2%</span></div><div><span class="label">1 month</span><span class="num pos">+7.1%</span></div><div><span class="label">3 months</span><span class="num pos">+7.2%</span></div></div>
+  <p>In 8 of 10 weeks over the past two years it moved between <b class="num neg">-4.2%</b> and <b class="num pos">+5.1%</b>.</p>
+  <p>Setup now: <b>normal</b> (RSI 58) and above its 200-day average. In 313 past weeks like this, AAPL was higher a week later 56% of the time, +0.5% on average.</p>
+  
+</article>
+<article class="card" id="w-nvda">
+  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$236.13</span></div>
+  <div class="call flat"><span class="chip">A usual week</span><span><b>55%</b> chance it is higher after the week (the usual odds)</span></div>
+  <div class="stats three"><div><span class="label">1 week</span><span class="num pos">+2.3%</span></div><div><span class="label">1 month</span><span class="num pos">+5.7%</span></div><div><span class="label">3 months</span><span class="num pos">+12.1%</span></div></div>
+  <p>In 8 of 10 weeks over the past two years it moved between <b class="num neg">-6.0%</b> and <b class="num pos">+7.5%</b>.</p>
+  <p>Setup now: <b>stretched</b> (RSI 64) and above its 200-day average. In 314 past weeks like this, NVDA was higher a week later 58% of the time, +1.4% on average.</p>
+  
+</article></section>
+
+<section class="honest">
+  <h2>How good are the weekly calls?</h2>
+  <p>Every night two ways of calling the week are tested on 2,385 past weeks since 2023-08-01, each using only what was known at the time.
+  The usual odds (how often your stocks rose in the past year's weeks) were right <b>57.1%</b> of the time.
+  A model using trend, momentum, volatility and market data was right <b>56.9%</b>.
+  The usual odds are ahead, so this tab shows them. If the model pulls ahead, the tab switches to it by itself.
+  </p>
+  <p class="small">The setups and ranges describe the past. They are not a promise about this week. Not financial advice.</p>
+</section>
+</div>
+<div class="panel news">
+
+<section class="when">
+  <h2>Earnings coming up</h2>
+  <ul class="cal"><li><a href="#n-googl"><b>GOOGL</b><span class="small">Alphabet</span></a><span class="date"><b>Wed 28 Oct</b><span class="small">after the close · in 20 days</span></span></li><li><a href="#n-aapl"><b>AAPL</b><span class="small">Apple</span></a><span class="date"><b>Mon 2 Nov</b><span class="small">in 25 days</span></span></li><li><a href="#n-nvda"><b>NVDA</b><span class="small">Nvidia</span></a><span class="date"><b>Tue 17 Nov</b><span class="small">in 40 days</span></span></li></ul>
+  <p class="small">Dates are from Yahoo Finance. One more than a few weeks away can be an estimate until the company confirms it. Stocks often move more than usual the day after a report.</p>
+</section>
+<section class="when">
+  <h2>News mood this week</h2>
+  <p class="leans"><a class="pill flat" href="#n-googl">GOOGL neutral</a><a class="pill flat" href="#n-aapl">AAPL neutral</a><a class="pill up" href="#n-nvda">NVDA positive</a></p>
+  <p class="small">Every headline is scored by FinBERT, a model trained on financial news, as positive, neutral or negative. Only headlines that name the company count.</p>
+</section>
+<section class="list">
+<article class="card" id="n-googl">
+  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$352.49</span></div>
+  <div class="call flat"><span class="chip">Neutral news</span>
+    <span>121 headlines naming Alphabet this week, mood about the same as the week before.</span></div>
+  <div class="moodbar" aria-hidden="true"><i class="pos" style="width:25.6%"></i><i class="neu" style="width:53.7%"></i><i class="neg" style="width:20.7%"></i></div><div class="ends"><span class="pos">31 positive</span><span>65 neutral</span><span class="neg">25 negative</span></div>
+  <div><span class="label">Mood, last 14 days</span><svg class="spark" viewBox="0 0 248 40" preserveAspectRatio="none" role="img" aria-label="Headline mood, last 14 days"><line x1="0" x2="248" y1="20.0" y2="20.0"/><rect x="0" y="14.2" width="14" height="5.8" rx="2" class="pos"><title>Fri 25 Sep: 17 headlines, mood +0.14</title></rect><rect x="18" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Sat 26 Sep: 5 headlines, mood -0.04</title></rect><rect x="36" y="20.0" width="14" height="5.9" rx="2" class="neg"><title>Sun 27 Sep: 5 headlines, mood -0.15</title></rect><rect x="54" y="20.0" width="14" height="6.9" rx="2" class="neg"><title>Mon 28 Sep: 10 headlines, mood -0.17</title></rect><rect x="72" y="20.0" width="14" height="16.1" rx="2" class="neg"><title>Tue 29 Sep: 16 headlines, mood -0.40</title></rect><rect x="90" y="16.6" width="14" height="3.4" rx="2" class="pos"><title>Wed 30 Sep: 28 headlines, mood +0.09</title></rect><rect x="108" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Thu 1 Oct: 25 headlines, mood -0.01</title></rect><rect x="126" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Fri 2 Oct: 14 headlines, mood -0.01</title></rect><rect x="144" y="14.3" width="14" height="5.7" rx="2" class="pos"><title>Sat 3 Oct: 3 headlines, mood +0.14</title></rect><rect x="162" y="20.0" width="14" height="20.0" rx="2" class="neg"><title>Sun 4 Oct: 2 headlines, mood -0.94</title></rect><rect x="180" y="20.0" width="14" height="2.2" rx="2" class="neg"><title>Mon 5 Oct: 15 headlines, mood -0.05</title></rect><rect x="198" y="18.0" width="14" height="2.0" rx="2" class="pos"><title>Tue 6 Oct: 34 headlines, mood +0.03</title></rect><rect x="216" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Wed 7 Oct: 17 headlines, mood -0.02</title></rect><rect x="234" y="10.9" width="14" height="9.1" rx="2" class="pos"><title>Thu 8 Oct: 19 headlines, mood +0.23</title></rect></svg></div>
+  <div class="facts"><p><b>Next earnings: Wednesday 28 Oct, after the close</b> (in 20 days).</p><p>Last report: Wed 22 Jul. Profit per share came in 214.2% above what analysts expected, and the stock moved <b class="num neg">-7.1%</b> the next session.</p><p>Over its last 8 reports, GOOGL moved about <b>4.1%</b> on the day it reacted, up or down. It beat estimates 8 of the last 8 times.</p><p>Analysts, last 30 days: 5 notes. 4 raised their price target and 0 cut it (average change <b class="num pos">+6.5%</b>).</p></div>
+  <div><span class="label">Worth reading this week</span>
+    <ul class="reads"><li><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcDFROGxuS1JtVDV4Ym1UUFhYd0RkcTZjTVlNNWVIOFQxYmNRenZMUFZKRU9XYjl5SGpQUkNSU0xEdGVGcTlqcTJiX0pmUEJzUHFZdjdoZHdoeEl1Ti1MOUh5YWZGYkJ6ZDZIMmFfOXA2TFowOWdsUURtQ2VJNjZKVmNreHBCNFhRa3FBWVc5RlY4djN6Q1ZuSU9hOTFuZmg1ZWU5V2V3UTh1Zw?oc=5" target="_blank" rel="noopener">Google Launches ‘Universal’ Gemini AI Agent for Workplace</a><span class="small">Bloomberg · Thu 8 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNek1hZ0tORjJNVDJFUmZYNXJ6aVhoWEJpMnZVQzJaS3NoTXRMcGJwQ2VzbXpadkJpZlFKejRKSWZSSkZaYkg0WEtYS3RyZGFvVXcxSHduS0tGUDNFSWkzMFREVDhJcmpGMnBQQlQyTHRJTGlPNTh1RFE1OGxNZmZlR3pSVHdscVlHZXJYTmR0cS1LSVB0TDNvUVIxVVFCeEp0QjVNUnM4V01Kb19CaFhrRUdHc3hOLXYyVXBPTFdnMm92UQ?oc=5" target="_blank" rel="noopener">Alphabet’s Isomorphic Labs in Funding Talks for at Least $40 Billion Value</a><span class="small">Bloomberg · Thu 8 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxOWTdsWTdFWVdPWUFDRjN1RGd6el9PR3NQNFN5blFINGVqVUNRcXMtaW5JcDQ0OV9IejBJa0stOHFnaG9Kd0Q3N3BObTEtQWFXYW9ad2JCS09oQV9iWlB6dU1RSktCSnExdWVUdnRXQmE3aTNCdm5LV01TTW9vbG9sRkctZFhoNm1wdGlqcGtRd3RhRFlzUWt1dElpV0NocGtvYlgyenBlUG5ZV0N6eHUzTXVYSDhzWWROWUhDNlJRYnhwc3Q0SVZzUjUxQUp0OFNkbmFrZEpiNDZweEdRbG9nLUgtZw?oc=5" target="_blank" rel="noopener">US government, Google join Zuckerberg-backed Biohub in $1.8 billion push for AI biology data</a><span class="small">Reuters · Wed 7 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxNWnBqSWFoaFlTQUZuQzJqMmN5QWQxMHZxTlh6bjhVR0tqNjQza3lFSDdNa1RfSDU5SWxybHk5ak5ZYjU0TVNRSk45aVFpbGItSHBkRXR6RUF4enA3TGJxeXNTZzREZ0JraXBWNE5iY1JpdHE4X1A3R1hveUV4ZFVVSXYyN0Q?oc=5" target="_blank" rel="noopener">Google launches platform to create video games from text prompts</a><span class="small">Financial Times · Wed 7 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE83MlF0TnR6blk3VzJjX3ZnT0Zwc1lFNURpRkZKY3RzRWdrY2lmYVZBRzNubTlZLURSZGtMYWpTd2FYclJZTmttNzR3Sm5VakJpalFORlI0eTh2NjUwVnNiYU9XYVpvWGp2TnJtS0t3Tms0by0wU0Y00gF8QVVfeXFMUEFKMUY4TmRzdmtuRmE2eURXS015b0V0Njk1MTFDeXo5aHR1S0EzanFsWXBUcEFxbnBEY3BvZWxtM3U1Y0VSdWNJenRDbDdzZzcxQzlNdnFOYmxyT0VVYVpRcWFxaTR4dVFMMlV0TFhYTjZ5SDFzcUpDZGY1ZQ?oc=5" target="_blank" rel="noopener">Google ordered to halt work on two data centers in ‘Texas of Europe’</a><span class="small">CNBC · Wed 7 Oct · negative</span></li></ul>
+    <p class="small more-note">20 more from major newsrooms this week.</p></div>
+</article>
+<article class="card" id="n-aapl">
+  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$337.75</span></div>
+  <div class="call flat"><span class="chip">Neutral news</span>
+    <span>111 headlines naming Apple this week, mood better than the week before.</span></div>
+  <div class="moodbar" aria-hidden="true"><i class="pos" style="width:21.6%"></i><i class="neu" style="width:66.7%"></i><i class="neg" style="width:11.7%"></i></div><div class="ends"><span class="pos">24 positive</span><span>74 neutral</span><span class="neg">13 negative</span></div>
+  <div><span class="label">Mood, last 14 days</span><svg class="spark" viewBox="0 0 248 40" preserveAspectRatio="none" role="img" aria-label="Headline mood, last 14 days"><line x1="0" x2="248" y1="20.0" y2="20.0"/><rect x="0" y="11.9" width="14" height="8.1" rx="2" class="pos"><title>Fri 25 Sep: 21 headlines, mood +0.20</title></rect><rect x="18" y="1.7" width="14" height="18.3" rx="2" class="pos"><title>Sat 26 Sep: 2 headlines, mood +0.46</title></rect><rect x="36" y="20.0" width="14" height="2.4" rx="2" class="neg"><title>Sun 27 Sep: 4 headlines, mood -0.06</title></rect><rect x="54" y="20.0" width="14" height="6.1" rx="2" class="neg"><title>Mon 28 Sep: 7 headlines, mood -0.15</title></rect><rect x="72" y="20.0" width="14" height="13.2" rx="2" class="neg"><title>Tue 29 Sep: 32 headlines, mood -0.33</title></rect><rect x="90" y="20.0" width="14" height="4.3" rx="2" class="neg"><title>Wed 30 Sep: 22 headlines, mood -0.11</title></rect><rect x="108" y="20.0" width="14" height="4.5" rx="2" class="neg"><title>Thu 1 Oct: 22 headlines, mood -0.11</title></rect><rect x="126" y="20.0" width="14" height="3.1" rx="2" class="neg"><title>Fri 2 Oct: 17 headlines, mood -0.08</title></rect><rect x="144" y="20.0" width="14" height="5.9" rx="2" class="neg"><title>Sat 3 Oct: 5 headlines, mood -0.15</title></rect><rect x="162" y="18.0" width="14" height="2.0" rx="2" class="pos"><title>Sun 4 Oct: 8 headlines, mood +0.03</title></rect><rect x="180" y="16.4" width="14" height="3.6" rx="2" class="pos"><title>Mon 5 Oct: 25 headlines, mood +0.09</title></rect><rect x="198" y="15.4" width="14" height="4.6" rx="2" class="pos"><title>Tue 6 Oct: 15 headlines, mood +0.12</title></rect><rect x="216" y="13.4" width="14" height="6.6" rx="2" class="pos"><title>Wed 7 Oct: 19 headlines, mood +0.17</title></rect><rect x="234" y="7.7" width="14" height="12.3" rx="2" class="pos"><title>Thu 8 Oct: 13 headlines, mood +0.31</title></rect></svg></div>
+  <div class="facts"><p><b>Next earnings: Monday 2 Nov</b> (in 25 days).</p><p>Last report: Thu 30 Jul. Profit per share came in 6.7% above what analysts expected, and the stock moved <b class="num neg">-7.4%</b> the next session.</p><p>Over its last 8 reports, AAPL moved about <b>2.5%</b> on the day it reacted, up or down. It beat estimates 8 of the last 8 times.</p><p>Analysts, last 30 days: 11 notes. 1 raised their price target and 2 cut it (average change <b class="num neg">-0.0%</b>).</p></div>
+  <div><span class="label">Worth reading this week</span>
+    <ul class="reads"><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOWFRIR0VJSm1lTVJfdFJRR0FvSm96T2JtUWtaWjVIZ0JIX0JlTGQwUkdZeTlFakxLQ1ZIellPVEFFMVNiaWZJZWZaM3Z0Y0ZwdDFzSndaLUtWWFdMdUpLclE1LWpKc294MmttYVNtbHduQ2FkUGJSVUN4ZVVnSlY1Tg?oc=5" target="_blank" rel="noopener">Here are Thursday&#x27;s biggest analyst calls: Nvidia, Apple, SpaceX, Palantir, Microsoft, Generac, Netflix &amp; more</a><span class="small">CNBC · Thu 8 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNWE16b0luNm8zOXFYTExtdEV4OVBxS3k4c3dfbW4ySVdfUXVwaHJCVmk1Rmt5cGJmU2RJbXdUMHZ6QTdVUWZNWFJOLTJZVmhJbElOb2pUSld6ZTNHT2NkMm9HckdPaEZXVXlDZDg5WDVYQ3V3OUtueVZYUEEyaUtfVWJ4aTZoOHpxNXVBMFQ1TEdKYmNZX04yWDBRV1N6RHdoVE1La2FLb2cwSURxX0E?oc=5" target="_blank" rel="noopener">Stocks Sharply Off Lows As Treasury Yields Slash Gains; Apple, Micron Eye Buy Points</a><span class="small">Investor&#x27;s Business Daily · Wed 7 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMingFBVV95cUxPV2tuNGVydTFEdlhid01fVkFfM2M5blRLNWQyUmtNODFma1BCdmpZWjBCVWtGcEF6YlRBeXVzR0QzemtBUnE5V0FaYm5HVEFmU0NsQ1hYMWl3UmNWaHBUcDlMYVAxOXNZaUcxLXhabU42NmxRZ1BFNGt1dmhBaDc3dklhSHJZWF9ma2oxeGR4cUpwbWoxTm56TENZc2RrUQ?oc=5" target="_blank" rel="noopener">Apple, IBD Stock Of The Day, Set To Enter New Market</a><span class="small">Investor&#x27;s Business Daily · Wed 7 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOa3JQd01hWld4ZVVVNTNGeFhuNmJYWUFPSW1aeU9ycGhWNlF3TGVVOTRqa0JrbU9Wa0Fyb0FtWm9GemMzNHlLYmhYb0lQUU9tMzYxZlVoR2ZXa0tMTndSbEkxUUJMNm40ejFKLU90cmRGUC1TTTYwTWRXUy1ZOExwNU9qNF85SGxlMzV1OTZnVF9weVlSci1IQ1c2US0zRnhOTnhGQVhR?oc=5" target="_blank" rel="noopener">Tony Wang on what Apple&#x27;s smart home push means for investors</a><span class="small">CNBC · Wed 7 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOb25xbExzazZyb183T09ieXVGdW1mX2otUVphQ3Y5R3ZGM0VNMDExOUNTWjJvYWxZbXAtMTRSclhkdDBhcDBHdW90dmlYQ01qbUJ0bDZOX3VvOUpCeGhWVjVvSW1JWTg1bFRvZEZFMTNHaVdwLTdBWllzWUdlQ2JDYWZWa191YkpuNUk3WmVqd0JXN2c?oc=5" target="_blank" rel="noopener">The Best October Prime Day Apple Deals on AirPods, MacBooks, and More</a><span class="small">The New York Times · Wed 7 Oct · neutral</span></li></ul>
+    <p class="small more-note">5 more from major newsrooms this week.</p></div>
+</article>
+<article class="card" id="n-nvda">
+  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$236.13</span></div>
+  <div class="call up"><span class="chip">Positive news</span>
+    <span>340 headlines naming Nvidia this week, mood better than the week before.</span></div>
+  <div class="moodbar" aria-hidden="true"><i class="pos" style="width:31.5%"></i><i class="neu" style="width:55.6%"></i><i class="neg" style="width:12.9%"></i></div><div class="ends"><span class="pos">107 positive</span><span>189 neutral</span><span class="neg">44 negative</span></div>
+  <div><span class="label">Mood, last 14 days</span><svg class="spark" viewBox="0 0 248 40" preserveAspectRatio="none" role="img" aria-label="Headline mood, last 14 days"><line x1="0" x2="248" y1="20.0" y2="20.0"/><rect x="0" y="16.8" width="14" height="3.2" rx="2" class="pos"><title>Fri 25 Sep: 33 headlines, mood +0.08</title></rect><rect x="18" y="20.0" width="14" height="4.6" rx="2" class="neg"><title>Sat 26 Sep: 6 headlines, mood -0.11</title></rect><rect x="36" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Sun 27 Sep: 7 headlines, mood -0.03</title></rect><rect x="54" y="14.1" width="14" height="5.9" rx="2" class="pos"><title>Mon 28 Sep: 94 headlines, mood +0.15</title></rect><rect x="72" y="17.0" width="14" height="3.0" rx="2" class="pos"><title>Tue 29 Sep: 54 headlines, mood +0.08</title></rect><rect x="90" y="15.3" width="14" height="4.7" rx="2" class="pos"><title>Wed 30 Sep: 34 headlines, mood +0.12</title></rect><rect x="108" y="17.6" width="14" height="2.4" rx="2" class="pos"><title>Thu 1 Oct: 43 headlines, mood +0.06</title></rect><rect x="126" y="12.5" width="14" height="7.5" rx="2" class="pos"><title>Fri 2 Oct: 65 headlines, mood +0.19</title></rect><rect x="144" y="18.0" width="14" height="2.0" rx="2" class="pos"><title>Sat 3 Oct: 8 headlines, mood +0.04</title></rect><rect x="162" y="9.3" width="14" height="10.7" rx="2" class="pos"><title>Sun 4 Oct: 8 headlines, mood +0.27</title></rect><rect x="180" y="13.5" width="14" height="6.5" rx="2" class="pos"><title>Mon 5 Oct: 74 headlines, mood +0.16</title></rect><rect x="198" y="13.9" width="14" height="6.1" rx="2" class="pos"><title>Tue 6 Oct: 58 headlines, mood +0.15</title></rect><rect x="216" y="16.6" width="14" height="3.4" rx="2" class="pos"><title>Wed 7 Oct: 67 headlines, mood +0.08</title></rect><rect x="234" y="20.0" width="14" height="2.0" rx="2" class="neg"><title>Thu 8 Oct: 39 headlines, mood -0.00</title></rect></svg></div>
+  <div class="facts"><p><b>Next earnings: Tuesday 17 Nov</b> (in 40 days).</p><p>Last report: Wed 26 Aug. Profit per share came in 6.2% above what analysts expected, and the stock moved <b class="num pos">+8.7%</b> the next session.</p><p>Over its last 8 reports, NVDA moved about <b>4.0%</b> on the day it reacted, up or down. It beat estimates 8 of the last 8 times.</p><p>Analysts, last 30 days: 3 notes. No rating or target changes.</p></div>
+  <div><span class="label">Worth reading this week</span>
+    <ul class="reads"><li><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1OR2d5TV9DVTYyTUREaERXMDdRV3BqMFptZUZVREFCZGFaRXhyeDUxdWdhLWpoeE5OcnV6ejQwMFl0ZDljNnR1ZWlnZmJybjJWTTI2eGZsY3ZFOEMtSURPMFhINXJSR2tvcW5aeDY0QWo5RkFkdzRDRlhyZFRzQ3M?oc=5" target="_blank" rel="noopener">Nvidia Stock Drops. A Big Options Trade Signals Where It Might Go Next.</a><span class="small">Barron&#x27;s · Thu 8 Oct · negative</span></li><li><a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOWFRIR0VJSm1lTVJfdFJRR0FvSm96T2JtUWtaWjVIZ0JIX0JlTGQwUkdZeTlFakxLQ1ZIellPVEFFMVNiaWZJZWZaM3Z0Y0ZwdDFzSndaLUtWWFdMdUpLclE1LWpKc294MmttYVNtbHduQ2FkUGJSVUN4ZVVnSlY1Tg?oc=5" target="_blank" rel="noopener">Here are Thursday&#x27;s biggest analyst calls: Nvidia, Apple, SpaceX, Palantir, Microsoft, Generac, Netflix &amp; more</a><span class="small">CNBC · Thu 8 Oct · neutral</span></li><li><a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNY1Bic0VhVWU5NVVMNWxfTzl3WTJPenlXS0JGVzl1cW1NUVlzWHhhcDBteV9nUUJrTFlmVG9DZFpnUGF2N1A5amJoeTItX2pGUnVDaUFjb1UtRGNyZ0N4UzdKeHR4RkYzTkxnX0VSV3V3ODlWMFJiYVN6QkhGU2IyYVh6QmZFQ1dWSmVFalpqX0IwcS03TklBazZFcU1wX19qSmdSNHlLVUdiMzZpRDNVczFkTmNYUQ?oc=5" target="_blank" rel="noopener">Nvidia-Backed IPO’s Cratering Demand Sends Warning on AI Funding</a><span class="small">Bloomberg · Thu 8 Oct · negative</span></li><li><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxOdGxrUDVTc2JTVERpVDhpZ0tCekJVZmRMWjkyRHZWWVpGRWlvbVZxZmZGTUgyZDlxV2MzVUFGSmhjeVc2Qkc4cTlNWnNZaGp3MllmR0FwcjVOV0FLZGRNSVUxZm1VQlFSWE00X1czdkVtaGlWMnFUUC0xM0VVd0ZIWTdrY2xtbUhGY19DTmEwY0VRX2lQQjJ4eUs1SHJwVm5ILTVjVHpYNFAxWVBINzJGOEVQMA?oc=5" target="_blank" rel="noopener">Nvidia-Backed Firmus Said to Close Books as IPO Struggles</a><span class="small">Bloomberg · Thu 8 Oct · negative</span></li><li><a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQdmVJbnpXNmxnLXlXWnZHbldkbTJ6dVhQZk1BMGdqdUxiM3B1QUF4WE5GQTVYakxYNWFLelVYYWpuRXFNZDdiVmlfcU92dGgxeEhXMEVoYmhCaEliaTBwRUFOSFJaTk9Pb01JMkpra3dLWlV1ajI4aS1ILUpUZGVJbUJ1TWFmZGtnUl9JdGtwU3ctenpIc0ZyakhCUXA3Q1ZSNUItaGFWcmFpeUhzWHJQLXh3ZDdmSEJEYUE?oc=5" target="_blank" rel="noopener">Microsoft and Nvidia Detail PC Laptop with RTX Spark Chip and On-Device AI</a><span class="small">Barron&#x27;s · Wed 7 Oct · neutral</span></li></ul>
+    <p class="small more-note">47 more from major newsrooms this week.</p></div>
+</article></section>
+
+<section class="honest">
+  <h2>Does the news mood predict the price?</h2>
+  <p>Not so far. On the 56 nights where the headline mood leaned clearly one way, the stock went that way the next session 52% of the time, about a coin flip.
+  Read the news to understand why a stock is moving and what is coming up, not to time a trade.</p>
+</section>
+</div>
+<footer><p><a href="https://github.com/Stevnatsan/stock-prediction-lab/blob/main/reports/latest.md">Full report</a> · <a href="https://github.com/Stevnatsan/stock-prediction-lab">Project on GitHub</a></p>
+  <p>Educational project. Not financial advice.</p></footer>
+</main>
+<script>
+const week = document.getElementById('tab-week'), day = document.getElementById('tab-day'), news = document.getElementById('tab-news');
+if (location.hash === '#weekly' || location.hash.startsWith('#w-')) week.checked = true;
+if (location.hash === '#news' || location.hash.startsWith('#n-')) news.checked = true;
+week.addEventListener('change', () => history.replaceState(null, '', '#weekly'));
+news.addEventListener('change', () => history.replaceState(null, '', '#news'));
+day.addEventListener('change', () => history.replaceState(null, '', location.pathname));
+for (const el of document.querySelectorAll('time[data-utc]')) {
+  const d = new Date(el.dataset.utc);
+  if (isNaN(d)) continue;
+  const opts = el.hasAttribute('data-short') ? {hour: 'numeric', minute: '2-digit'} : {weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit'};
+  const local = d.toLocaleString([], opts);
+  el.textContent = el.hasAttribute('data-short') ? el.textContent + ' (' + local + ' your time)' : local + ' your time';
+}
+</script>
+</body></html>
