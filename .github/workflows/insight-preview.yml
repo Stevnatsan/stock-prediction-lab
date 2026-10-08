@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 jobs:
-  insight:
+  data:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -15,9 +15,35 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: python -m stocklab insight GOOGL,AAPL,NVDA,MSFT,AMZN,META,TSLA,JPM,XOM,UNH > /dev/null
+      - name: Snapshot the week-ahead frames for offline tuning
+        run: |
+          python - <<'PY'
+          from datetime import datetime, timezone
+          import pandas as pd
+          from stocklab import weekly
+          from stocklab.config import load_config
+          from stocklab.features import build_frame
+          from stocklab.sources import LiveSources
+          from stocklab.sources.prices import drop_unfinished_session
+          cfg, now = load_config(), datetime.now(timezone.utc)
+          src = LiveSources(cfg)
+          market = drop_unfinished_session(src.prices(cfg.market, cfg.history_years), now)
+          macro = src.macro(cfg.history_years)
+          parts = []
+          for t in cfg.tickers:
+              p = drop_unfinished_session(src.prices(t, cfg.history_years), now)
+              f = build_frame(p, market, {"earnings": src.earnings(t), "analysts": src.analysts(t), "macro": macro})
+              w = weekly.week_frame(f, p, market)
+              w["ticker"] = t
+              parts.append(w)
+          pd.concat(parts).to_csv("weekframes.csv.gz")
+          market.to_csv("market.csv.gz")
+          PY
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/insight.md reports/insight.json docs
-          git commit -m "Insight preview with weekly calls $(date -u +%Y-%m-%d)" && git push
+          git checkout --orphan claude/weekly-data-scratch
+          git rm -rfq --cached .
+          git add -f weekframes.csv.gz market.csv.gz
+          git commit -qm "Scratch data for tuning the weekly model (delete after use)"
+          git push -f origin claude/weekly-data-scratch
