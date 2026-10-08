@@ -1,4 +1,5 @@
 """Daily prices from Yahoo Finance (via yfinance). No API key needed."""
+import time as clock
 from datetime import datetime, time, timedelta
 from zoneinfo import ZoneInfo
 
@@ -7,6 +8,18 @@ import pandas as pd
 NEW_YORK = ZoneInfo("America/New_York")
 SESSION_SETTLED = time(16, 15)  # a little after the 16:00 close, so the daily bar is final
 MIN_SESSION_BARS = 70           # a full session has 78 five-minute bars
+RETRY_WAITS = (5, 20, 60)       # seconds between attempts: Yahoo often refuses or rate-limits for a moment
+
+
+def with_retries(fn, waits=RETRY_WAITS, sleep=clock.sleep):
+    """Call fn(), retrying after each of `waits` seconds if it raises; the last error is raised."""
+    for wait in (*waits, None):
+        try:
+            return fn()
+        except Exception:  # noqa: BLE001 - network errors, rate limits and empty answers all look alike here
+            if wait is None:
+                raise
+            sleep(wait)
 
 
 def _daily(raw):
@@ -32,6 +45,10 @@ def bar_from_intraday(raw, day):
 
 
 def fetch_prices(ticker, years, now=None):
+    return with_retries(lambda: _fetch_prices(ticker, years, now))
+
+
+def _fetch_prices(ticker, years, now=None):
     import yfinance as yf
 
     now_ny = (now or datetime.now(NEW_YORK)).astimezone(NEW_YORK)

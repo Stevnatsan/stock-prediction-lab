@@ -3,6 +3,7 @@ python -m stocklab report                         rebuild the report from saved 
 python -m stocklab watchlist --add "KO" --remove TSLA   change which stocks are predicted
 python -m stocklab catalogue                      refresh the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
 python -m stocklab check [TICKER]                 call every data source once and show what came back
+python -m stocklab insight [TICKERS]              plain-language market brief (reports/insight.md), e.g. "GOOGL,AAPL,NVDA"
 python -m stocklab orders open|close              send the champion's picks to an Alpaca paper account (needs
                                                   ALPACA_API_KEY and ALPACA_SECRET_KEY)"""
 import argparse
@@ -15,8 +16,8 @@ from .config import ROOT, load_config
 
 def main():
     parser = argparse.ArgumentParser(prog="stocklab", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["daily", "report", "watchlist", "catalogue", "orders", "check"], nargs="?", default="daily")
-    parser.add_argument("step", nargs="?", help="orders: open or close; check: the ticker to try (default AAPL)")
+    parser.add_argument("command", choices=["daily", "report", "watchlist", "catalogue", "orders", "check", "insight"], nargs="?", default="daily")
+    parser.add_argument("step", nargs="?", help="orders: open or close; check: the ticker to try (default AAPL); insight: tickers, comma-separated")
     parser.add_argument("--add", default="", help="symbols to add, e.g. \"KO, PEP\"")
     parser.add_argument("--remove", default="", help="symbols to remove")
     args = parser.parse_args()
@@ -41,6 +42,21 @@ def main():
         from .check import run_checks
 
         print("\n".join(run_checks(config, (args.step or "AAPL").upper())))
+        return
+    if args.command == "insight":
+        from . import insight
+        from .sources import LiveSources
+        from .state import State
+
+        tickers = [t.strip().upper() for t in (args.step or ",".join(config.tickers)).split(",") if t.strip()]
+        sources = LiveSources(config)
+        prices = {t: sources.prices(t, 2) for t in tickers}
+        brief = insight.build(prices, sources.prices(config.market, 2), State.load(ROOT / "state", config), datetime.now(timezone.utc), tickers)
+        insight.write(brief, ROOT / "reports")
+        print(insight.to_markdown(brief))
+        missing = [t for t in tickers if t not in brief["stocks"]]
+        if missing:
+            raise SystemExit(f"No price data for {', '.join(missing)}: {sources.health['prices']['last_error']}")
         return
     if args.command == "orders":
         from . import alpaca

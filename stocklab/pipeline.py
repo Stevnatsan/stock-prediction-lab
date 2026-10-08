@@ -1,7 +1,7 @@
 """One daily run: fetch every source, score yesterday, learn, predict tomorrow, publish."""
 from datetime import datetime, time, timezone
 
-from . import boosting, engine
+from . import boosting, engine, insight
 from .features import BOOSTED, ENSEMBLES, TASKS, VARIANTS, build_frame, live_features, score_headlines, task_of
 from .report import build_report
 from .sources.prices import NEW_YORK, drop_unfinished_session
@@ -37,7 +37,7 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
     macro = sources.macro(config.history_years)
 
     # 1. Online logistic models, one per stock: learn from history once, then score and learn daily.
-    frames = {}
+    frames, raw = {}, {}
     for ticker in config.tickers:
         prices = sources.prices(ticker, config.history_years)
         if prices is None or len(prices) < MIN_HISTORY:
@@ -45,7 +45,8 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
             continue
         context = {"filings": sources.filing_dates(ticker), "earnings": sources.earnings(ticker),
                    "analysts": sources.analysts(ticker), "macro": macro}
-        frame = build_frame(drop_unfinished_session(prices, now), market, context)
+        raw[ticker] = drop_unfinished_session(prices, now)
+        frame = build_frame(raw[ticker], market, context)
         frames[ticker] = frame
         info = summary[ticker] = {"status": "ok", "data_through": frame.index[-1].date().isoformat()}
         missing = state.missing_models(ticker)
@@ -113,5 +114,9 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
             sources.health["alpaca"]["ok"] += 1
 
     state.save()
+    try:
+        insight.write(insight.build(raw, market, state, now), reports_dir)
+    except Exception as exc:  # noqa: BLE001 - the plain-language brief must never stop the predictions
+        notes.append(f"Market insight not written: {type(exc).__name__}: {exc}"[:200])
     build_report(state, config, reports_dir, readme_path, now, sources.health, summary, notes)
     return summary
