@@ -105,6 +105,73 @@ def _card(ticker, s, name, open_details=True):
 </article>"""
 
 
+
+def _week_card(ticker, s, name, call, record, live):
+    kind, label = lean(call.get("p_up"))
+    r, rec = s["returns"], record.get(ticker) or {}
+    stats = [("1 week", r.get("1 week")), ("1 month", r.get("1 month")), ("3 months", r.get("3 months"))]
+    trend = (s.get("summary") or [""])[0]
+    lv = live.get(ticker) or {}
+    dots = "".join(f'<i class="dot {"hit" if c["right"] else "miss"}" title="{_e(c["date"])}"></i>' for c in lv.get("last", []))
+    acc, base = rec.get("accuracy"), rec.get("always_yes")
+    edge = ("better than" if acc is not None and base is not None and acc > base + 0.01 else
+            "no better than" if acc is not None and base is not None and acc < base - 0.01 else "about the same as")
+    when_up = rec.get("avg_week_when_leaning_up")
+    lean_line = (f" In weeks when it clearly leaned up, {_e(ticker)} moved {_pct(when_up)} on average, against {_pct(rec.get('avg_week'))} for an average week."
+                 if when_up is not None else "")
+    return f"""
+<article class="card" id="w-{_e(ticker.lower())}">
+  <div class="top"><h3>{_e(name)} <span class="tick">{_e(ticker)}</span></h3><span class="price">${s['close']:,.2f}</span></div>
+  <div class="call {kind}">
+    <span class="chip">{label}</span>
+    <span><b>{_pct(call.get('p_up'), False, 0)}</b> chance it is higher after the week · <b>{_pct(call.get('p_beat'), False, 0)}</b> it beats the market</span>
+  </div>
+  <div class="stats">{''.join(f'<div><span class="label">{k}</span><span class="num {_sign(v)}">{_pct(v)}</span></div>' for k, v in stats)}</div>
+  <p>{_e(trend)}</p>
+  <div class="record">
+    {f'<span class="label">Last {len(lv.get("last", []))} weekly calls</span><span class="dots">{dots}</span>' if dots else ''}
+    <p class="small">Tested on {rec.get('calls', 0):,} past weeks of {_e(ticker)}: right {_pct(acc, False)} of the time, {edge} always guessing "up" ({_pct(base, False)}).{lean_line}</p>
+  </div>
+</article>"""
+
+
+def weekly_panel(insight, names, focus, rest):
+    wk = insight.get("weekly")
+    if not wk or not wk.get("calls"):
+        return '<section class="when"><h2>Week ahead</h2><p>The first week-ahead calls appear after the next nightly run.</p></section>'
+    calls, record, live = wk["calls"], wk["record"]["up"], wk.get("live") or {}
+    stocks = insight["stocks"]
+    shown = [t for t in focus if t in calls]
+    others = sorted((t for t in calls if t in stocks and t not in shown), key=lambda t: -calls[t]["p_up"])
+    first = next(iter(calls.values()))
+    start, end = pd.Timestamp(first["week_from"]), pd.Timestamp(first["week_to"])
+    pills = []
+    for t in shown + others:
+        kind, label = lean(calls[t]["p_up"])
+        if kind in ("up", "down"):
+            pills.append(f'<a class="pill {kind}" href="#w-{_e(t.lower())}">{_e(t)} {label.split()[1]}</a>')
+    overall = record.get("all", {})
+    lv = live.get("all", {})
+    folded = "".join(_week_card(t, stocks[t], names.get(t, t), calls[t], record, live) for t in others)
+    return f"""
+<section class="when">
+  <h2>Week ahead: {start:%a %d %b} to {end:%a %d %b}</h2>
+  <ol>
+    <li>Each call is for one week of 5 trading days: from the open on <b>{start:%a %d %b}</b> to the close on <b>{end:%a %d %b}</b>.</li>
+    <li>If you act on one, buy at that first open and hold until that last close. The calls are refreshed every night, so check again before you buy.</li>
+  </ol>
+  <p class="leans">{''.join(pills) or 'No stock has a clear lean for this week.'}</p>
+</section>
+<section class="list">{''.join(_week_card(t, stocks[t], names.get(t, t), calls[t], record, live) for t in shown)}</section>
+{f'<details class="more"><summary>Your other {len(others)} stocks</summary><section class="list">{folded}</section></details>' if others else ''}
+<section class="honest">
+  <h2>How good are the weekly calls?</h2>
+  <p>Tested on {overall.get('calls', 0):,} past weeks since {_e(overall.get('from') or '–')}, each predicted only from what was known at the time: right <b>{_pct(overall.get('accuracy'), False)}</b> of the time.
+  Always guessing "up" was right {_pct(overall.get('always_yes'), False)}, because stocks rise in most weeks. When the model was fairly sure (at least 55% one way), it was right {_pct(overall.get('confident_accuracy'), False)} of {overall.get('confident_calls', 0):,} calls.
+  {f"Live so far: {lv.get('right', 0)} of {lv.get('calls', 0)} weekly calls right." if lv.get('calls') else 'Live weekly calls are scored here as each week ends.'}</p>
+</section>"""
+
+
 def build_page(insight, state, config, now):
     names = company_names()
     stocks = insight.get("stocks", {})
@@ -134,7 +201,7 @@ def build_page(insight, state, config, now):
     if session:
         when = f"""
 <section class="when">
-  <h2>When to use this</h2>
+  <h2>Next day: {session:%a %d %b}</h2>
   <ol>
     <li>New calls arrive every weekday night after the US market closes. This page was updated <b><time data-utc="{updated.isoformat()}">{updated:%a %d %b, %H:%M} UTC</time></b>.</li>
     <li>They are for <b>{session:%A %d %b}</b>: from the open at <b><time data-utc="{opens.isoformat()}" data-short>9:30am New York</time></b> to the close at <b><time data-utc="{closes.isoformat()}" data-short>4:00pm New York</time></b>.</li>
@@ -157,17 +224,25 @@ def build_page(insight, state, config, now):
 <style>{CSS}</style></head>
 <body><main>
 <header><span class="label">Stock prediction lab</span>
-  <h1>{f'Calls for {session:%a %d %b}' if session else 'Market insight'}</h1>
+  <h1>Your stock calls</h1>
   <p class="small">Prices up to {_e((mk or {}).get('as_of', '–'))} · models retrained every weekday night</p></header>
+<input class="tabsel" type="radio" name="tab" id="tab-day" checked>
+<input class="tabsel" type="radio" name="tab" id="tab-week">
+<nav class="tabs"><label for="tab-day">Next day</label><label for="tab-week">Next week</label></nav>
+<div class="panel day">
 {when}
 {market}
 <section class="list">{''.join(_card(t, stocks[t], names.get(t, t)) for t in focus)}</section>
 {f'<details class="more"><summary>Your other {len(rest)} stocks</summary><section class="list">{others}</section></details>' if rest else ''}
 <section class="honest">
-  <h2>How good are the calls?</h2>
+  <h2>How good are the daily calls?</h2>
   <p>Over the last {CHAMPION_WINDOW} sessions the lead model was right <b>{_pct(acc, False)}</b> of the time. Simply guessing "up" every day was right {_pct(record.get('always_up'), False)}.
   Since it went live it has been right on {record.get('live_right', 0)} of {record.get('live_total', 0)} calls. Use the calls as one clue next to the trend and the news, not as a signal on their own.</p>
 </section>
+</div>
+<div class="panel week">
+{weekly_panel(insight, names, focus, rest)}
+</div>
 <footer><a href="{REPO_URL}/blob/main/reports/latest.md">Full report</a> · <a href="{REPO_URL}">Project on GitHub</a>
   <p>Educational project. Not financial advice.</p></footer>
 </main>
@@ -234,9 +309,21 @@ details ul{margin:10px 0 0;padding-left:1.1em;display:flex;flex-direction:column
 .dot.hit{background:var(--up)}.dot.miss{background:var(--down);opacity:.75}
 .honest{display:flex;flex-direction:column;gap:10px}
 footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.tabsel{position:absolute;opacity:0;pointer-events:none}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:var(--track);border-radius:10px}
+.tabs label{text-align:center;padding:9px 0;border-radius:8px;font-weight:600;cursor:pointer;color:var(--muted)}
+#tab-day:checked~.tabs label[for=tab-day],#tab-week:checked~.tabs label[for=tab-week]{background:var(--surface);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#tab-day:focus-visible~.tabs label[for=tab-day],#tab-week:focus-visible~.tabs label[for=tab-week]{outline:2px solid var(--accent)}
+.panel{display:flex;flex-direction:column;gap:24px}
+.panel.week,#tab-week:checked~.panel.day{display:none}
+#tab-week:checked~.panel.week{display:flex}
 """
 
 JS = """
+const week = document.getElementById('tab-week'), day = document.getElementById('tab-day');
+if (location.hash === '#weekly' || location.hash.startsWith('#w-')) week.checked = true;
+week.addEventListener('change', () => history.replaceState(null, '', '#weekly'));
+day.addEventListener('change', () => history.replaceState(null, '', location.pathname));
 for (const el of document.querySelectorAll('time[data-utc]')) {
   const d = new Date(el.dataset.utc);
   if (isNaN(d)) continue;

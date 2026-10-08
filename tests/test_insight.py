@@ -62,7 +62,9 @@ def test_daily_run_writes_the_phone_page(tmp_path, config):
     page = (tmp_path / "docs" / "index.html").read_text()
     assert (tmp_path / "docs" / ".nojekyll").exists()
     assert page.index('id="bbb"') < page.index('id="aaa"')  # focus stocks first
-    assert "When to use this" in page and "Your other 1 stocks" in page
+    assert "Next day:" in page and "Your other 1 stocks" in page
+    assert 'id="w-bbb"' in page and "Week ahead:" in page  # the weekly tab
+    assert (tmp_path / "state" / "weekly.csv").exists()
     day, opens, closes = site.next_session(full["AAA"].index[-1])
     assert day.weekday() < 5 and opens.hour == 9 and closes.hour == 16
     assert site.lean(0.53)[0] == "up" and site.lean(0.47)[0] == "down" and site.lean(0.505)[0] == "flat"

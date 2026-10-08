@@ -44,16 +44,29 @@ def main():
         print("\n".join(run_checks(config, (args.step or "AAPL").upper())))
         return
     if args.command == "insight":
-        from . import insight, site
+        from . import insight, site, weekly
         from .sources import LiveSources
         from .state import State
 
         tickers = [t.strip().upper() for t in (args.step or ",".join(config.tickers)).split(",") if t.strip()]
-        sources = LiveSources(config)
-        prices = {t: sources.prices(t, 2) for t in tickers}
-        brief = insight.build(prices, sources.prices(config.market, 2), State.load(ROOT / "state", config), datetime.now(timezone.utc), tickers)
+        sources, now = LiveSources(config), datetime.now(timezone.utc)
+        state = State.load(ROOT / "state", config)
+        market = sources.prices(config.market, config.history_years)
+        prices = {t: sources.prices(t, config.history_years) for t in tickers}
+        brief = insight.build(prices, market, state, now, tickers)
+        if market is not None:
+            from .features import build_frame
+            from .sources.prices import drop_unfinished_session
+
+            market = drop_unfinished_session(market, now)
+            macro = sources.macro(config.history_years)
+            frames = {t: build_frame(drop_unfinished_session(p, now), market, {"earnings": sources.earnings(t), "analysts": sources.analysts(t),
+                                                                               "filings": sources.filing_dates(t), "macro": macro})
+                      for t, p in prices.items() if p is not None}
+            brief["weekly"] = weekly.run(frames, {t: drop_unfinished_session(p, now) for t, p in prices.items() if p is not None},
+                                         market, ROOT / "state", now, save=False)
         insight.write(brief, ROOT / "reports")
-        site.write(brief, State.load(ROOT / "state", config), config, datetime.now(timezone.utc))
+        site.write(brief, state, config, now)
         print(insight.to_markdown(brief))
         missing = [t for t in tickers if t not in brief["stocks"]]
         if missing:

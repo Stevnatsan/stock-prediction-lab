@@ -1,7 +1,7 @@
 """One daily run: fetch every source, score yesterday, learn, predict tomorrow, publish."""
 from datetime import datetime, time, timezone
 
-from . import boosting, engine, insight, site
+from . import boosting, engine, insight, site, weekly
 from .features import BOOSTED, ENSEMBLES, TASKS, VARIANTS, build_frame, live_features, score_headlines, task_of
 from .report import build_report
 from .sources.prices import NEW_YORK, drop_unfinished_session
@@ -116,6 +116,10 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
     state.save()
     try:
         brief = insight.build(raw, market, state, now)
+        try:
+            brief["weekly"] = weekly.run(frames, raw, market, state.root, now)
+        except Exception as exc:  # noqa: BLE001 - same: the daily calls come first
+            notes.append(f"Week-ahead calls not made: {type(exc).__name__}: {exc}"[:200])
         insight.write(brief, reports_dir)
         if docs_dir is not None:
             site.write(brief, state, config, now, docs_dir)

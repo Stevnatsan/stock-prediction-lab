@@ -88,7 +88,11 @@ Full report, with calibration of every model, VADER vs FinBERT, paper trading, r
 
 ## On your phone
 
-Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with tonight's calls, when to act on them (shown in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
+Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with two tabs, *Next day* and *Next week*, showing tonight's calls, when to act on them (in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
+
+## Week ahead
+
+A third question, answered every night next to the two daily ones: buy at the next open and hold for 5 trading days; will the stock be higher at the last close, and will it beat SPY? A gradient-boosting model pooled over all stocks answers it from the same historical inputs plus longer momentum (3 and 6 months, distance from the 200-day average). Its track record is walk-forward: each month of history is predicted by a model trained only on weeks that had already ended. Live calls are logged in `state/weekly.csv` and scored when their week ends. See [`stocklab/weekly.py`](stocklab/weekly.py).
 
 ## How it works
 
@@ -296,6 +300,7 @@ stocklab/
   report.py       README scoreboard, reports/latest.md, charts, calibration
   insight.py      reports/insight.md: plain-language brief per stock
   site.py         docs/index.html: the phone page
+  weekly.py       the week-ahead calls and their track record
   check.py        try every source once
   catalogue.py    the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
   watchlist.py    add or remove stocks
