@@ -23,7 +23,7 @@ def company_names():
     if not path.exists():
         return {}
     rows = pd.read_csv(path)
-    return {s: str(n).split(" (")[0].replace(" Inc.", "").replace(" Corporation", "") for s, n in zip(rows["symbol"], rows["name"])}
+    return {s: str(n).split(" (")[0].replace(", Inc.", "").replace(" Inc.", "").replace(" Corporation", "") for s, n in zip(rows["symbol"], rows["name"])}
 
 
 def next_session(after):
@@ -184,6 +184,132 @@ def weekly_panel(insight, names, focus, rest):
 </section>"""
 
 
+MOOD = 0.1  # a week's average headline score beyond +-0.1 reads as positive or negative
+
+
+def _mood_word(score):
+    if score is None:
+        return "none", "No headlines"
+    return ("up", "Positive") if score > MOOD else ("down", "Negative") if score < -MOOD else ("flat", "Neutral")
+
+
+def _in_days(n):
+    return "today" if n == 0 else "tomorrow" if n == 1 else f"in {n} days"
+
+
+def _spark(daily):
+    """Daily mood as bars around a zero line, oldest on the left; blank days had no headlines."""
+    w, h, gap = 14, 40, 4
+    bars = []
+    for i, d in enumerate(daily):
+        if d["score"] is None:
+            continue
+        size = max(2.0, min(1.0, abs(d["score"]) / 0.5) * h / 2)
+        y = h / 2 - size if d["score"] >= 0 else h / 2
+        bars.append(f'<rect x="{i * (w + gap)}" y="{y:.1f}" width="{w}" height="{size:.1f}" rx="2" class="{"pos" if d["score"] >= 0 else "neg"}">'
+                    f'<title>{_e(_day(d["date"]))}: {d["count"]} headlines, mood {d["score"]:+.2f}</title></rect>')
+    width = len(daily) * (w + gap) - gap
+    return (f'<svg class="spark" viewBox="0 0 {width} {h}" preserveAspectRatio="none" role="img" aria-label="Headline mood, last {len(daily)} days">'
+            f'<line x1="0" x2="{width}" y1="{h / 2}" y2="{h / 2}"/>{"".join(bars)}</svg>')
+
+
+def _earnings_line(ticker, ev):
+    if not ev:
+        return "<p>No earnings dates came back from Yahoo Finance tonight.</p>"
+    out = []
+    if ev.get("next"):
+        when = f", {ev['next_time']}" if ev.get("next_time") else ""
+        out.append(f"<p><b>Next earnings: {_day(ev['next'], long=True)}{when}</b> ({_in_days(ev['days_until'])}).</p>")
+    last = ev.get("last")
+    if last:
+        s, mv = last.get("surprise"), last.get("move")
+        result = ("" if s is None else f" Profit per share came in {abs(s):.1f}% {'above' if s >= 0 else 'below'} what analysts expected"
+                  f"{',' if mv is not None else '.'}")
+        move = "" if mv is None else f"{' and' if s is not None else ' After it,'} the stock moved <b class=\"num {_sign(mv)}\">{_pct(mv)}</b> the next session."
+        out.append(f"<p>Last report: {_day(last['date'])}.{result}{move}</p>")
+    if ev.get("typical_move") is not None and ev.get("reports", 0) >= 3:
+        beats = (f" It beat estimates {ev['beat_count']} of the last {ev['beat_of']} times." if ev.get("beat_of") else "")
+        out.append(f"<p>Over its last {ev['reports']} reports, {_e(ticker)} moved about <b>{ev['typical_move']:.1%}</b> on the day it reacted, "
+                   f"up or down.{beats}</p>")
+    return "".join(out)
+
+
+def _analyst_line(a):
+    if not a:
+        return ""
+    if not a["notes"]:
+        return f"<p>Analysts: no new notes in the last {a['days']} days.</p>"
+    moves = []
+    if a["upgrades"] or a["downgrades"]:
+        moves.append(f"{a['upgrades']} upgrade{'s' * (a['upgrades'] != 1)}, {a['downgrades']} downgrade{'s' * (a['downgrades'] != 1)}")
+    if a["raised"] or a["cut"]:
+        avg = "" if a["target_change"] is None else f" (average change <b class=\"num {_sign(a['target_change'])}\">{_pct(a['target_change'])}</b>)"
+        moves.append(f"{a['raised']} raised their price target and {a['cut']} cut it{avg}")
+    return f"<p>Analysts, last {a['days']} days: {a['notes']} notes. {'; '.join(moves).capitalize() + '.' if moves else 'No rating or target changes.'}</p>"
+
+
+def _news_card(ticker, s, name):
+    p = s.get("press") or {}
+    wk = p.get("week") or {}
+    kind, label = _mood_word(wk.get("score"))
+    trend = {"improving": "better than", "worsening": "worse than", "steady": "about the same as"}.get(p.get("trend"))
+    total = wk.get("count") or 0
+    bar = "".join(f'<i class="{c}" style="width:{100 * wk.get(k, 0) / total:.1f}%"></i>'
+                  for k, c in (("positive", "pos"), ("neutral", "neu"), ("negative", "neg"))) if total else ""
+    reads = "".join(f'<li><a href="{_e(r["link"])}" target="_blank" rel="noopener">{_e(r["title"])}</a>'
+                    f'<span class="small">{_e(r["outlet"])} · {_day(r["published"][:10])} · {_e(r["mood"])}</span></li>'
+                    for r in p.get("read") or [])
+    more = p.get("major_count", 0) - len(p.get("read") or [])
+    return f"""
+<article class="card" id="n-{_e(ticker.lower())}">
+  <div class="top"><h3>{_e(name)} <span class="tick">{_e(ticker)}</span></h3><span class="price">${s['close']:,.2f}</span></div>
+  <div class="call {kind}"><span class="chip">{label} news</span>
+    <span>{total} headlines naming {_e(name)} this week{f", mood {trend} the week before" if trend else ""}.</span></div>
+  {f'<div class="moodbar" aria-hidden="true">{bar}</div><div class="ends"><span class="pos">{wk.get("positive", 0)} positive</span><span>{wk.get("neutral", 0)} neutral</span><span class="neg">{wk.get("negative", 0)} negative</span></div>' if total else ''}
+  {f'<div><span class="label">Mood, last {len(p["daily"])} days</span>{_spark(p["daily"])}</div>' if p.get("daily") else ''}
+  <div class="facts">{_earnings_line(ticker, p.get("earnings"))}{_analyst_line(p.get("analysts"))}</div>
+  <div><span class="label">Worth reading this week</span>
+    {f'<ul class="reads">{reads}</ul>' if reads else f'<p class="small">No story naming {_e(name)} from a major newsroom this week.</p>'}
+    {f'<p class="small more-note">{more} more from major newsrooms this week.</p>' if more > 0 else ''}</div>
+</article>"""
+
+
+def news_panel(insight, names, focus, rest):
+    stocks = insight.get("stocks", {})
+    have = [t for t in focus + rest if (stocks[t].get("press") or {}).get("week") is not None]
+    if not have:
+        return '<section class="when"><h2>News</h2><p>News, mood and earnings dates appear after the next nightly run.</p></section>'
+    shown, others = [t for t in focus if t in have], [t for t in rest if t in have]
+    upcoming = sorted(((stocks[t]["press"].get("earnings") or {}).get("next"), t) for t in have
+                      if ((stocks[t]["press"].get("earnings") or {}).get("days_until") or 999) <= 60)
+    soon = "".join(
+        f'<li><a href="#n-{_e(t.lower())}"><b>{_e(t)}</b><span class="small">{_e(names.get(t, t))}</span></a>'
+        f'<span class="date"><b>{_day(d)}</b><span class="small">{_e(ev["next_time"]) + " · " if ev.get("next_time") else ""}{_in_days(ev["days_until"])}</span></span></li>'
+        for d, t in upcoming for ev in [stocks[t]["press"]["earnings"]])
+    pills = "".join(f'<a class="pill {_mood_word(stocks[t]["press"]["week"]["score"])[0]}" href="#n-{_e(t.lower())}">{_e(t)} '
+                    f'{_mood_word(stocks[t]["press"]["week"]["score"])[1].lower()}</a>' for t in shown + others)
+    rec = insight.get("news_record") or {}
+    folded = "".join(_news_card(t, stocks[t], names.get(t, t)) for t in others)
+    return f"""
+<section class="when">
+  <h2>Earnings coming up</h2>
+  {f'<ul class="cal">{soon}</ul>' if soon else '<p>None of your stocks has a report date in the next 60 days.</p>'}
+  <p class="small">Dates are from Yahoo Finance. One more than a few weeks away can be an estimate until the company confirms it. Stocks often move more than usual the day after a report.</p>
+</section>
+<section class="when">
+  <h2>News mood this week</h2>
+  <p class="leans">{pills}</p>
+  <p class="small">Every headline is scored by FinBERT, a model trained on financial news, as positive, neutral or negative. Only headlines that name the company count.</p>
+</section>
+<section class="list">{''.join(_news_card(t, stocks[t], names.get(t, t)) for t in shown)}</section>
+{f'<details class="more"><summary>Your other {len(others)} stocks</summary><section class="list">{folded}</section></details>' if others else ''}
+<section class="honest">
+  <h2>Does the news mood predict the price?</h2>
+  <p>Not so far. {f"On the {rec['days']} nights where the headline mood leaned clearly one way, the stock went that way the next session {_pct(rec['matched'], False, 0)} of the time, about a coin flip." if rec.get('days') else "Results appear once enough nights have been scored."}
+  Read the news to understand why a stock is moving and what is coming up, not to time a trade.</p>
+</section>"""
+
+
 def build_page(insight, state, config, now):
     names = company_names()
     stocks = insight.get("stocks", {})
@@ -240,7 +366,8 @@ def build_page(insight, state, config, now):
   <p class="small">Prices up to {_e((mk or {}).get('as_of', '–'))} · models retrained every weekday night</p></header>
 <input class="tabsel" type="radio" name="tab" id="tab-day" checked>
 <input class="tabsel" type="radio" name="tab" id="tab-week">
-<nav class="tabs"><label for="tab-day">Next day</label><label for="tab-week">Next week</label></nav>
+<input class="tabsel" type="radio" name="tab" id="tab-news">
+<nav class="tabs"><label for="tab-day">Next day</label><label for="tab-week">Next week</label><label for="tab-news">News</label></nav>
 <div class="panel day">
 {when}
 {market}
@@ -254,6 +381,9 @@ def build_page(insight, state, config, now):
 </div>
 <div class="panel week">
 {weekly_panel(insight, names, focus, rest)}
+</div>
+<div class="panel news">
+{news_panel(insight, names, focus, rest)}
 </div>
 <footer><p><a href="{REPO_URL}/blob/main/reports/latest.md">Full report</a> · <a href="{REPO_URL}">Project on GitHub</a></p>
   <p>Educational project. Not financial advice.</p></footer>
@@ -323,19 +453,38 @@ details ul{margin:10px 0 0;padding-left:1.1em;display:flex;flex-direction:column
 .honest{display:flex;flex-direction:column;gap:10px}
 footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
 .tabsel{position:absolute;opacity:0;pointer-events:none}
-.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:var(--track);border-radius:10px}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;padding:4px;background:var(--track);border-radius:10px}
 .tabs label{text-align:center;padding:9px 0;border-radius:8px;font-weight:600;cursor:pointer;color:var(--muted)}
-#tab-day:checked~.tabs label[for=tab-day],#tab-week:checked~.tabs label[for=tab-week]{background:var(--surface);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
-#tab-day:focus-visible~.tabs label[for=tab-day],#tab-week:focus-visible~.tabs label[for=tab-week]{outline:2px solid var(--accent)}
+#tab-day:checked~.tabs label[for=tab-day],#tab-week:checked~.tabs label[for=tab-week],#tab-news:checked~.tabs label[for=tab-news]{background:var(--surface);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#tab-day:focus-visible~.tabs label[for=tab-day],#tab-week:focus-visible~.tabs label[for=tab-week],#tab-news:focus-visible~.tabs label[for=tab-news]{outline:2px solid var(--accent)}
 .panel{display:flex;flex-direction:column;gap:24px}
-.panel.week,#tab-week:checked~.panel.day{display:none}
-#tab-week:checked~.panel.week{display:flex}
+.panel.week,.panel.news,#tab-week:checked~.panel.day,#tab-news:checked~.panel.day{display:none}
+#tab-week:checked~.panel.week,#tab-news:checked~.panel.news{display:flex}
+.pill.flat{color:var(--flat)}
+.moodbar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--track)}
+.moodbar i{display:block;height:100%}.moodbar .pos{background:var(--up)}.moodbar .neu{background:var(--flat);opacity:.35}.moodbar .neg{background:var(--down)}
+.spark{display:block;width:100%;height:44px;margin-top:6px}
+.spark line{stroke:var(--line);stroke-width:1}.spark .pos{fill:var(--up)}.spark .neg{fill:var(--down)}
+.facts{display:flex;flex-direction:column;gap:8px}
+.reads{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.reads li{display:flex;flex-direction:column;gap:2px}
+.reads a{color:var(--fg);font-weight:600;text-decoration:none}
+.reads a:active{color:var(--accent)}
+.cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.cal li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.cal li:first-child{border-top:0}
+.cal a,.cal .date{display:flex;flex-direction:column;min-width:0}
+.cal a{text-decoration:none;color:var(--fg)}
+.cal .date{text-align:right}
+.more-note{margin-top:10px}
 """
 
 JS = """
-const week = document.getElementById('tab-week'), day = document.getElementById('tab-day');
+const week = document.getElementById('tab-week'), day = document.getElementById('tab-day'), news = document.getElementById('tab-news');
 if (location.hash === '#weekly' || location.hash.startsWith('#w-')) week.checked = true;
+if (location.hash === '#news' || location.hash.startsWith('#n-')) news.checked = true;
 week.addEventListener('change', () => history.replaceState(null, '', '#weekly'));
+news.addEventListener('change', () => history.replaceState(null, '', '#news'));
 day.addEventListener('change', () => history.replaceState(null, '', location.pathname));
 for (const el of document.querySelectorAll('time[data-utc]')) {
   const d = new Date(el.dataset.utc);

@@ -39,7 +39,7 @@ def run_checks(config, ticker="AAPL", now=None):
     report("options", s.options(ticker, now, spot), lambda o: f"at-the-money implied volatility {o['iv_atm']:.1%}, "
                                                             f"log put/call volume {o['put_call']:+.2f}")
     headlines = score_headlines(s.headlines(ticker, now))
-    for name in ("yahoo_rss", "google_news", "finnhub"):
+    for name in ("yahoo_rss", "google_news", "major_news", "finnhub"):
         count = sum(h["source"] == name for h in headlines)
         report(name, count if s.health.get(name, {}).get("ok") else None, lambda n: f"{n} headlines")
     sample = headlines[:5]

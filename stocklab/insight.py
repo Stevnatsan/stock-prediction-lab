@@ -12,6 +12,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from . import news
 from .strategy import CHAMPION_WINDOW, champion, ranked_calls
 
 TRADING_DAYS = 252
@@ -91,17 +92,6 @@ def model_stats(state, ticker):
     return out
 
 
-def _names(ticker):
-    """Words a headline about `ticker` would contain: the symbol and the company's first name word."""
-    names = {ticker.lower()}
-    catalogue = Path(__file__).resolve().parents[1] / "catalogue" / "sp500.csv"
-    if catalogue.exists():
-        rows = pd.read_csv(catalogue)
-        for name in rows.loc[rows["symbol"] == ticker, "name"]:
-            names.add(str(name).split()[0].strip(",.").lower())
-    return names
-
-
 def news_stats(state_root, ticker, now, days=7, top=3):
     path = Path(state_root) / "news" / f"{ticker}.jsonl"
     items = [json.loads(line) for line in path.read_text().splitlines() if line] if path.exists() else []
@@ -109,7 +99,7 @@ def news_stats(state_root, ticker, now, days=7, top=3):
     recent = [h for h in items if pd.Timestamp(h["published"]) >= cutoff]
     scores = [h["finbert"] if h.get("finbert") is not None else h.get("score", 0.0) for h in recent]
     recent.sort(key=lambda h: h["published"], reverse=True)
-    names = _names(ticker)
+    names = news.words_for(ticker)
     about = [h for h in recent if any(n in h["title"].lower() for n in names)] or recent
     loudest = sorted(about[:40], key=lambda h: -abs(h.get("finbert") if h.get("finbert") is not None else h.get("score", 0.0)))
     return {"count_7d": len(recent), "mood_7d": float(np.mean(scores)) if scores else None,
@@ -179,8 +169,9 @@ def describe(ticker, s, m, n):
     return lines
 
 
-def build(prices, market, state, now, tickers=None):
-    """The insight for every stock in `prices` (or just `tickers`), as a JSON-ready dict."""
+def build(prices, market, state, now, tickers=None, events=None):
+    """The insight for every stock in `prices` (or just `tickers`), as a JSON-ready dict. `events`:
+    {ticker: {"earnings": frame, "analysts": frame}} for the News tab's calendar and analyst lines."""
     out = {"generated": pd.Timestamp(now).isoformat(timespec="seconds"), "market": None, "stocks": {}}
     if market is not None:
         out["market"] = price_stats(market)
@@ -192,6 +183,17 @@ def build(prices, market, state, now, tickers=None):
         m = model_stats(state, ticker) if state is not None else None
         n = news_stats(state.root, ticker, now) if state is not None else None
         out["stocks"][ticker] = {**s, "models": m, "news": n, "summary": describe(ticker, s, m, n)}
+        if state is not None:
+            ev = (events or {}).get(ticker) or {}
+            try:
+                out["stocks"][ticker]["press"] = news.brief(state.root, ticker, now, ev.get("earnings"), ev.get("analysts"), prices[ticker])
+            except Exception as exc:  # noqa: BLE001 - a bad feed item must not cost the rest of the brief
+                out["stocks"][ticker]["press"] = {"error": f"{type(exc).__name__}: {exc}"[:200]}
+    if state is not None:
+        try:
+            out["news_record"] = news.track_record(state)
+        except Exception:  # noqa: BLE001 - a footnote, never worth failing the brief over
+            out["news_record"] = None
     return out
 
 
