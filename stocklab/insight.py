@@ -164,7 +164,7 @@ def describe(ticker, s, m, n):
     lines = [_trend(s), _heat(s), _risk(s)]
     vs = (s.get("vs_market") or {}).get("1 year")
     if vs is not None:
-        lines.append(f"Over the past year it {'beat' if vs >= 0 else 'lagged'} the S&P 500 (SPY) by {abs(vs):.0%} points.")
+        lines.append(f"Over the past year it {'beat' if vs >= 0 else 'lagged'} the S&P 500 (SPY) by {abs(vs) * 100:.0f} percentage points.")
     if s["off_high"] < -0.1:
         lines.append(f"It sits {abs(s['off_high']):.0%} below its 1-year high of ${s['high_1y']:,.2f}.")
     else:
