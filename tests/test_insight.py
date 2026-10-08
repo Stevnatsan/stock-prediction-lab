@@ -50,3 +50,19 @@ def test_retries_until_the_source_answers():
     assert waits == [1, 2]
     with pytest.raises(ConnectionError):
         with_retries(lambda: (_ for _ in ()).throw(ConnectionError("down")), waits=(1,), sleep=lambda s: None)
+
+
+def test_daily_run_writes_the_phone_page(tmp_path, config):
+    from stocklab import site
+
+    config.focus = ["BBB"]
+    full = {t: synthetic_prices(400, seed=s) for t, s in (("AAA", 1), ("BBB", 2), ("SPY", 3))}
+    now = evening_after(full["AAA"].index[-1])
+    run_daily(config, FakeSources(full), tmp_path / "state", tmp_path / "reports", None, now, docs_dir=tmp_path / "docs")
+    page = (tmp_path / "docs" / "index.html").read_text()
+    assert (tmp_path / "docs" / ".nojekyll").exists()
+    assert page.index('id="bbb"') < page.index('id="aaa"')  # focus stocks first
+    assert "When to use this" in page and "Your other 1 stocks" in page
+    day, opens, closes = site.next_session(full["AAA"].index[-1])
+    assert day.weekday() < 5 and opens.hour == 9 and closes.hour == 16
+    assert site.lean(0.53)[0] == "up" and site.lean(0.47)[0] == "down" and site.lean(0.505)[0] == "flat"

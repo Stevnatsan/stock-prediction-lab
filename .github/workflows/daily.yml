@@ -49,7 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state reports README.md
+          git add state reports docs README.md
           git diff --cached --quiet && exit 0
           git commit -m "Daily run $(date -u +%Y-%m-%d)"
           # Someone may have pushed to main while this ran (a code change, or another workflow). Then a plain

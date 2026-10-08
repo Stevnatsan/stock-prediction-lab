@@ -1,7 +1,7 @@
 """One daily run: fetch every source, score yesterday, learn, predict tomorrow, publish."""
 from datetime import datetime, time, timezone
 
-from . import boosting, engine, insight
+from . import boosting, engine, insight, site
 from .features import BOOSTED, ENSEMBLES, TASKS, VARIANTS, build_frame, live_features, score_headlines, task_of
 from .report import build_report
 from .sources.prices import NEW_YORK, drop_unfinished_session
@@ -18,7 +18,7 @@ def next_session_started(last_date, now):
     return now_ny.date() > last_date.date() and now_ny.weekday() < 5 and now_ny.time() >= SESSION_OPEN
 
 
-def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=None):
+def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=None, docs_dir=None):
     now = now or datetime.now(timezone.utc)
     now_iso = now.isoformat(timespec="seconds")
     state = State.load(state_dir, config)
@@ -115,7 +115,10 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
 
     state.save()
     try:
-        insight.write(insight.build(raw, market, state, now), reports_dir)
+        brief = insight.build(raw, market, state, now)
+        insight.write(brief, reports_dir)
+        if docs_dir is not None:
+            site.write(brief, state, config, now, docs_dir)
     except Exception as exc:  # noqa: BLE001 - the plain-language brief must never stop the predictions
         notes.append(f"Market insight not written: {type(exc).__name__}: {exc}"[:200])
     build_report(state, config, reports_dir, readme_path, now, sources.health, summary, notes)

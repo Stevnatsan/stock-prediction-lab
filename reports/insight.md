@@ -26,7 +26,7 @@ Generated 2026-10-08 13:48 UTC. Plain-language snapshot of each stock. Describes
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 58, normal range 30 to 70).
 - A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 27% points.
+- Over the past year it beat the S&P 500 (SPY) by 27 percentage points.
 - It sits 12% below its 1-year high of $402.12.
 - News mood over the last week: mixed (195 headlines).
 - The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
@@ -42,7 +42,7 @@ Headlines with the strongest tone this week:
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 58, normal range 30 to 70).
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (16% vs 25% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 15% points.
+- Over the past year it beat the S&P 500 (SPY) by 15 percentage points.
 - It is close to its 1-year high of $341.07 (-1.2%).
 - News mood over the last week: mixed (176 headlines).
 - The models give 52% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
@@ -58,7 +58,7 @@ Headlines with the strongest tone this week:
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 59, normal range 30 to 70).
 - A typical day moves it about 1.5%. Lately it is calmer than its usual year (23% vs 38% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 10% points.
+- Over the past year it beat the S&P 500 (SPY) by 10 percentage points.
 - It is close to its 1-year high of $239.24 (-2.2%).
 - News mood over the last week: positive (491 headlines).
 - The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
@@ -74,7 +74,7 @@ Headlines with the strongest tone this week:
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 69, normal range 30 to 70).
 - A typical day moves it about 1.1%. Lately it is calmer than its usual year (21% vs 33% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 15% points.
+- Over the past year it lagged the S&P 500 (SPY) by 15 percentage points.
 - It is close to its 1-year high of $537.65 (-1.3%).
 - News mood over the last week: positive (183 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
@@ -90,7 +90,7 @@ Headlines with the strongest tone this week:
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
 - Neither overbought nor oversold (RSI 56, normal range 30 to 70).
 - A typical day moves it about 1.3%. Lately it is calmer than its usual year (22% vs 34% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 1% points.
+- Over the past year it lagged the S&P 500 (SPY) by 1 percentage points.
 - It is close to its 1-year high of $284.02 (-9.0%).
 - News mood over the last week: positive (268 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
@@ -106,7 +106,7 @@ Headlines with the strongest tone this week:
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 57, normal range 30 to 70).
 - A typical day moves it about 1.3%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 16% points.
+- Over the past year it lagged the S&P 500 (SPY) by 16 percentage points.
 - It is close to its 1-year high of $777.59 (-7.4%).
 - News mood over the last week: mixed (265 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
@@ -122,7 +122,7 @@ Headlines with the strongest tone this week:
 - Long-term trend is down (below the 200-day average), with some recent recovery.
 - Neither overbought nor oversold (RSI 55, normal range 30 to 70).
 - A typical day moves it about 1.6%. Lately it is calmer than its usual year (30% vs 45% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 31% points.
+- Over the past year it lagged the S&P 500 (SPY) by 31 percentage points.
 - It sits 24% below its 1-year high of $489.88.
 - News mood over the last week: positive (182 headlines).
 - The models give 42% odds the next session closes above its open (a slight lean to fall). On this stock they were right 64.2% of the time over the last 120 sessions, a meaningful edge, if it lasts.
@@ -138,7 +138,7 @@ Headlines with the strongest tone this week:
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
 - Neither overbought nor oversold (RSI 32, normal range 30 to 70).
 - A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 8% points.
+- Over the past year it lagged the S&P 500 (SPY) by 8 percentage points.
 - It is close to its 1-year high of $363.37 (-9.7%).
 - News mood over the last week: mixed (131 headlines).
 - The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
@@ -154,7 +154,7 @@ Headlines with the strongest tone this week:
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
 - Neither overbought nor oversold (RSI 64, normal range 30 to 70).
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 35% points.
+- Over the past year it beat the S&P 500 (SPY) by 35 percentage points.
 - It is close to its 1-year high of $169.32 (-0.4%).
 - News mood over the last week: positive (82 headlines).
 - The models give 60% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
@@ -170,7 +170,7 @@ Headlines with the strongest tone this week:
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
 - Neither overbought nor oversold (RSI 45, normal range 30 to 70).
 - A typical day moves it about 1.0%. Lately it is calmer than its usual year (19% vs 34% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 11% points.
+- Over the past year it lagged the S&P 500 (SPY) by 11 percentage points.
 - It sits 14% below its 1-year high of $433.68.
 - News mood over the last week: mixed (58 headlines).
 - The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.

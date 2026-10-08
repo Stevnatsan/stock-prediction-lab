@@ -85,6 +85,8 @@ def model_stats(state, ticker):
             "accuracy_live": float(live["correct"].mean()) if len(live) else None,
             "live_sessions": int(len(live)),
             "base_rate": float(rows["outcome_up"].mean()) if len(rows) else None,
+            "last_calls": [{"date": pd.Timestamp(r.feature_date).date().isoformat(), "p": float(r.p_up), "right": bool(r.correct)}
+                           for r in live.sort_values("feature_date").tail(10).itertuples()],
         }
     return out
 

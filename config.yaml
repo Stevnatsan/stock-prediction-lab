@@ -1,6 +1,9 @@
 # Which stocks to predict. The model learns a separate set of weights for each one.
 tickers: [AAPL, MSFT, NVDA, AMZN, GOOGL, META, TSLA, JPM, XOM, UNH]
 
+# Shown first, fully open, on the phone page (docs/index.html). The rest are folded underneath.
+focus: [GOOGL, AAPL, NVDA]
+
 # Market context used as a feature for every stock.
 market: SPY
 

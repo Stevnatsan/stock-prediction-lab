@@ -86,6 +86,10 @@ When the champion (ensemble) says a stock has a given chance of rising, how ofte
 Full report, with calibration of every model, VADER vs FinBERT, paper trading, real Alpaca fills and source health: [reports/latest.md](reports/latest.md)
 <!-- scoreboard:end -->
 
+## On your phone
+
+Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with tonight's calls, when to act on them (shown in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
+
 ## How it works
 
 Every weekday after the US market closes, GitHub Actions runs `python -m stocklab daily`, which:
@@ -291,11 +295,13 @@ stocklab/
   pipeline.py     one daily run
   report.py       README scoreboard, reports/latest.md, charts, calibration
   insight.py      reports/insight.md: plain-language brief per stock
+  site.py         docs/index.html: the phone page
   check.py        try every source once
   catalogue.py    the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
   watchlist.py    add or remove stocks
 state/            predictions, pending calls, live features, orders, headlines, model weights (committed by the bot)
-reports/          latest report and charts
+reports/          latest report, charts, and the plain-language insight
+docs/             the phone page (GitHub Pages), rewritten every run
 tests/            no-lookahead, random-walk, planted-pattern, calibration, Alpaca and end-to-end tests
 ```
 

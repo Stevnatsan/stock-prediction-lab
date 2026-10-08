@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 @dataclass
 class Config:
     tickers: list
+    focus: list = field(default_factory=list)
     market: str = "SPY"
     history_years: int = 4
     decision_threshold: float = 0.55
@@ -27,6 +28,7 @@ def load_config(path=ROOT / "config.yaml"):
     model = raw.get("model", {})
     return Config(
         tickers=[t.upper() for t in raw["tickers"]],
+        focus=[t.upper() for t in raw.get("focus") or []],
         market=raw.get("market", "SPY").upper(),
         history_years=int(raw.get("history_years", 4)),
         decision_threshold=float(raw.get("decision_threshold", 0.55)),
