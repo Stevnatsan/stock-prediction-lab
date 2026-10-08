@@ -1,0 +1,63 @@
+name: news preview (temporary)
+
+on:
+  push:
+    branches: [claude/news-tab]
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Install FinBERT (CPU-only PyTorch)
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-finbert.txt
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: finbert-${{ runner.os }}-v1
+      - name: Collect tonight's headlines and build the page for GOOGL, AAPL, NVDA
+        run: |
+          mkdir -p preview
+          python - <<'PY' 2>&1 | tee preview/log.txt
+          import json
+          from datetime import datetime, timezone
+          from stocklab.config import ROOT, load_config
+          from stocklab.features import score_headlines
+          from stocklab.sources import LiveSources
+          from stocklab.state import State
+          cfg, now = load_config(), datetime.now(timezone.utc)
+          src, st = LiveSources(cfg), State.load(ROOT / "state", cfg)
+          for t in ["GOOGL", "AAPL", "NVDA"]:
+              items = score_headlines(src.headlines(t, now))
+              counts = {}
+              for h in items:
+                  counts[h["source"]] = counts.get(h["source"], 0) + 1
+              print(t, counts)
+              for h in [h for h in items if h["source"] == "major_news"][:12]:
+                  print("   ", h["published"][:16], h["title"][:120])
+              st.store_headlines(t, items, now, src.finbert)
+              e, a = src.earnings(t), src.analysts(t)
+              print(e.tail(6) if e is not None else "no earnings")
+              print(a.tail(10) if a is not None else "no analysts")
+          print(json.dumps(src.health, default=str, indent=1))
+          PY
+          python -m stocklab insight GOOGL,AAPL,NVDA > preview/insight-cli.txt 2>&1 || true
+          cp reports/insight.json reports/insight.md docs/index.html preview/
+      - name: Commit the preview
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add preview
+          git commit -m "News preview $(date -u +%Y-%m-%dT%H:%M)"
+          git push
