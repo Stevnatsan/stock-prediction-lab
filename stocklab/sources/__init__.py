@@ -54,6 +54,10 @@ class LiveSources:
             found += self._call("yahoo_rss", news.yahoo_headlines, ticker) or []
         if self.config.source_on("google_news"):
             found += self._call("google_news", news.google_headlines, ticker) or []
+        if self.config.source_on("major_news"):
+            from ..news import words_for
+
+            found += self._call("major_news", news.major_headlines, ticker, words_for(ticker)) or []
         if self.finnhub_key:
             found += self._call("finnhub", news.finnhub_headlines, ticker, self.finnhub_key, now) or []
         return found

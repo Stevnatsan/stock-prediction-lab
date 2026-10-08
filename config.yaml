@@ -26,6 +26,7 @@ sources:
   # headlines
   yahoo_rss: true      # Yahoo Finance headlines, no key needed
   google_news: true    # Google News headlines, no key needed
+  major_news: true     # Google News search limited to major newsrooms (Reuters, Bloomberg, CNBC, WSJ, ...), for the News tab
   finnhub: true        # Finnhub company news, needs FINNHUB_API_KEY (free tier)
   finbert: true        # also score headlines with FinBERT (needs requirements-finbert.txt; the daily workflow installs it)
   # company events, with history

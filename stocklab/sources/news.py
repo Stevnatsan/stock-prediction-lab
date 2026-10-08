@@ -12,6 +12,9 @@ USER_AGENT = "Mozilla/5.0 (compatible; stock-prediction-lab; +https://github.com
 YAHOO_RSS = "https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
 GOOGLE_NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
 FINNHUB_NEWS = "https://finnhub.io/api/v1/company-news"
+# newsrooms the major-outlet search is limited to (Google News ranks a plain search by aggregator volume)
+MAJOR_SITES = ["reuters.com", "bloomberg.com", "cnbc.com", "wsj.com", "ft.com", "apnews.com", "barrons.com",
+               "marketwatch.com", "nytimes.com", "axios.com"]
 
 
 def headline_id(title):
@@ -45,6 +48,13 @@ def yahoo_headlines(ticker):
 
 def google_headlines(ticker):
     return _rss(GOOGLE_NEWS_RSS.format(query=quote_plus(f"{ticker} stock")), "google_news")
+
+
+def major_headlines(ticker, words):
+    """The past week's stories naming the company from MAJOR_SITES, via a Google News search."""
+    who = " OR ".join(sorted({w for w in words if w}))
+    sites = " OR ".join(f"site:{s}" for s in MAJOR_SITES)
+    return _rss(GOOGLE_NEWS_RSS.format(query=quote_plus(f"({who}) ({sites}) when:7d")), "major_news")
 
 
 def finnhub_headlines(ticker, api_key, now):

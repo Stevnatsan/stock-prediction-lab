@@ -88,11 +88,15 @@ Full report, with calibration of every model, VADER vs FinBERT, paper trading, r
 
 ## On your phone
 
-Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with two tabs, *Next day* and *Next week*, showing tonight's calls, when to act on them (in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
+Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with three tabs, *Next day*, *Next week* and *News*, showing tonight's calls, when to act on them (in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
 
 ## Week ahead
 
 A third question, answered every night next to the two daily ones: buy at the next open and hold for 5 trading days; will the stock be higher at the last close, and will it beat SPY? Two candidates answer it: the **usual odds** (how often the watched stocks rose in the past year's weeks) and a strongly regularised **model** on trend, momentum, volatility and market inputs. Both are tested walk-forward every night, each month of history predicted only from weeks that had already ended, and the one with the better score is shown. When this was added (October 2026) the usual odds won: over a week, nothing tried (gradient boosting, logistic regression, momentum, trend, oversold/overbought rules) beat simply assuming the usual odds. The page also shows each stock's typical weekly range and how it did after setups like today's. Live calls are logged in `state/weekly.csv` and scored when their week ends. See [`stocklab/weekly.py`](stocklab/weekly.py).
+
+## News tab
+
+For reading, not for predicting. For each stock: the next earnings date (before the open or after the close, and how many days away), how the last report compared with analysts' estimates and how far the stock moved the next session, how far it typically moves after a report, analyst upgrades, downgrades and price-target changes over the last 30 days, the week's headline mood (positive, neutral or negative, scored by FinBERT) against the week before with a 14-day chart, and up to five recent stories from major newsrooms (Reuters, Bloomberg, CNBC, The Wall Street Journal, Barron's and similar) to read. Only headlines that name the company count. Content farms, stock-promotion sites, law-firm notices and republished press releases stay off the reading list. A Google News search limited to major newsrooms (`major_news` in `config.yaml`) feeds the tab; the models don't see it, so their inputs are unchanged. The tab also reports how often the headline mood has matched the next session so far (about half the time). See [`stocklab/news.py`](stocklab/news.py).
 
 ## How it works
 
@@ -125,6 +129,7 @@ The first time it sees a stock, it replays about 4 years of that stock's history
 | FRED (St. Louis Fed) | **Macro**: VIX, 10-year Treasury yield, yield curve (10-year minus 3-month) | yes | nothing; `FRED_API_KEY` (free) makes it more reliable. If FRED doesn't answer, the same series come from Yahoo Finance |
 | SEC EDGAR | 8-K filings, which companies must file for material events | yes | `SEC_USER_AGENT` (your name and email, SEC policy) |
 | Yahoo Finance RSS, Google News RSS | Latest headlines for each stock | live only | nothing |
+| Google News RSS, major newsrooms only | Stories from Reuters, Bloomberg, CNBC, WSJ and similar, for the News tab (not used by the models) | live only | nothing |
 | Finnhub | Company news | live only | `FINNHUB_API_KEY` (free tier) |
 | StockTwits | Recent posts, tagged bullish or bearish by their authors | live only | nothing |
 | Reddit | Posts mentioning the stock in r/wallstreetbets, r/stocks, r/investing, r/StockMarket | live only | `REDDIT_CLIENT_ID` + `REDDIT_CLIENT_SECRET` (free "script" app) |
@@ -301,6 +306,7 @@ stocklab/
   insight.py      reports/insight.md: plain-language brief per stock
   site.py         docs/index.html: the phone page
   weekly.py       the week-ahead calls and their track record
+  news.py         the News tab: earnings dates, analyst moves, headline mood, stories to read
   check.py        try every source once
   catalogue.py    the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
   watchlist.py    add or remove stocks

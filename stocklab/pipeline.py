@@ -37,7 +37,7 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
     macro = sources.macro(config.history_years)
 
     # 1. Online logistic models, one per stock: learn from history once, then score and learn daily.
-    frames, raw = {}, {}
+    frames, raw, events = {}, {}, {}
     for ticker in config.tickers:
         prices = sources.prices(ticker, config.history_years)
         if prices is None or len(prices) < MIN_HISTORY:
@@ -45,6 +45,7 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
             continue
         context = {"filings": sources.filing_dates(ticker), "earnings": sources.earnings(ticker),
                    "analysts": sources.analysts(ticker), "macro": macro}
+        events[ticker] = context
         raw[ticker] = drop_unfinished_session(prices, now)
         frame = build_frame(raw[ticker], market, context)
         frames[ticker] = frame
@@ -79,7 +80,8 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
             info["prediction"] = made
         else:
             row = frame.loc[latest]
-            live = live_features(row, headlines, sources.options(ticker, now, float(row["close"])), sources.social(ticker, now), now)
+            model_news = [h for h in headlines if h.get("source") != "major_news"]  # the models see the feeds they always saw
+            live = live_features(row, model_news, sources.options(ticker, now, float(row["close"])), sources.social(ticker, now), now)
             info["headlines_24h"] = int(live["sent_count"])
             state.record_live(ticker, latest, live)
             info["prediction"] = engine.predict_latest(state, ticker, frame, live, now_iso)
@@ -115,7 +117,7 @@ def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=Non
 
     state.save()
     try:
-        brief = insight.build(raw, market, state, now)
+        brief = insight.build(raw, market, state, now, events=events)
         try:
             brief["weekly"] = weekly.run(frames, raw, market, state.root, now)
         except Exception as exc:  # noqa: BLE001 - same: the daily calls come first

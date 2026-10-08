@@ -53,14 +53,15 @@ def main():
         state = State.load(ROOT / "state", config)
         market = sources.prices(config.market, config.history_years)
         prices = {t: sources.prices(t, config.history_years) for t in tickers}
-        brief = insight.build(prices, market, state, now, tickers)
+        events = {t: {"earnings": sources.earnings(t), "analysts": sources.analysts(t)} for t in tickers}
+        brief = insight.build(prices, market, state, now, tickers, events)
         if market is not None:
             from .features import build_frame
             from .sources.prices import drop_unfinished_session
 
             market = drop_unfinished_session(market, now)
             macro = sources.macro(config.history_years)
-            frames = {t: build_frame(drop_unfinished_session(p, now), market, {"earnings": sources.earnings(t), "analysts": sources.analysts(t),
+            frames = {t: build_frame(drop_unfinished_session(p, now), market, {**events[t],
                                                                                "filings": sources.filing_dates(t), "macro": macro})
                       for t, p in prices.items() if p is not None}
             brief["weekly"] = weekly.run(frames, {t: drop_unfinished_session(p, now) for t, p in prices.items() if p is not None},
