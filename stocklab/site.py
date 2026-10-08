@@ -225,8 +225,10 @@ def _earnings_line(ticker, ev):
         s, mv = last.get("surprise"), last.get("move")
         result = ("" if s is None else f" Profit per share came in {abs(s):.1f}% {'above' if s >= 0 else 'below'} what analysts expected"
                   f"{',' if mv is not None else '.'}")
+        odd = (" A gap that large usually comes from one-off items, such as gains on investments, rather than the core business."
+               if s is not None and abs(s) > 50 else "")
         move = "" if mv is None else f"{' and' if s is not None else ' After it,'} the stock moved <b class=\"num {_sign(mv)}\">{_pct(mv)}</b> the next session."
-        out.append(f"<p>Last report: {_day(last['date'])}.{result}{move}</p>")
+        out.append(f"<p>Last report: {_day(last['date'])}.{result}{move}{odd}</p>")
     if ev.get("typical_move") is not None and ev.get("reports", 0) >= 3:
         beats = (f" It beat estimates {ev['beat_count']} of the last {ev['beat_of']} times." if ev.get("beat_of") else "")
         out.append(f"<p>Over its last {ev['reports']} reports, {_e(ticker)} moved about <b>{ev['typical_move']:.1%}</b> on the day it reacted, "
@@ -243,9 +245,13 @@ def _analyst_line(a):
     if a["upgrades"] or a["downgrades"]:
         moves.append(f"{a['upgrades']} upgrade{'s' * (a['upgrades'] != 1)}, {a['downgrades']} downgrade{'s' * (a['downgrades'] != 1)}")
     if a["raised"] or a["cut"]:
-        avg = "" if a["target_change"] is None else f" (average change <b class=\"num {_sign(a['target_change'])}\">{_pct(a['target_change'])}</b>)"
-        moves.append(f"{a['raised']} raised their price target and {a['cut']} cut it{avg}")
-    return f"<p>Analysts, last {a['days']} days: {a['notes']} notes. {'; '.join(moves).capitalize() + '.' if moves else 'No rating or target changes.'}</p>"
+        change = a["target_change"]
+        avg = ("" if change is None else " (on average about unchanged)" if abs(change) < 0.0005
+               else f" (average change <b class=\"num {_sign(change)}\">{_pct(change)}</b>)")
+        who = " and ".join(x for x in (f"{a['raised']} raised their price target" if a["raised"] else "",
+                                       (f"{a['cut']} cut it" if a["raised"] else f"{a['cut']} cut their price target") if a["cut"] else "") if x)
+        moves.append(who + avg)
+    return f"<p>Analysts, last {a['days']} days: {a['notes']} notes. {'; '.join(moves) + '.' if moves else 'No rating or target changes.'}</p>"
 
 
 def _news_card(ticker, s, name):
