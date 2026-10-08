@@ -15,7 +15,9 @@ running so the page switches by itself if it ever does better.
 
 Next to the odds each stock gets context that is description, not forecast: its typical weekly range,
 whether it looks stretched or beaten down, and how often it rose after similar setups before.
-Live calls go to state/weekly.csv and are scored once their week is over.
+Live calls go to state/weekly.csv and are scored once their week is over. A run that happens after the
+week's first session has opened still shows the odds but doesn't log them: they would no longer be a
+call made before the week began.
 """
 from pathlib import Path
 
@@ -25,6 +27,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+
+from .sources.prices import next_session_started
 
 HORIZON = 5  # sessions
 FEATURES = ["ret_5", "ret_20", "ret_60", "ret_120", "dist_sma50", "dist_sma200", "vol_20", "rsi_14", "mkt_ret_5", "vix", "curve_10y3m"]
@@ -198,8 +202,9 @@ def run(frames, prices, market, state_dir, now, save=True):
         c["week_to"] = (start + pd.offsets.BDay(HORIZON)).date().isoformat()
         c["context"] = context(weeks[t])
     path = Path(state_dir) / "weekly.csv"
+    late = next_session_started(max(w.index[-1] for w in weeks.values()), now)
     if save:
-        log = update_live(path, weeks, calls, now)
+        log = update_live(path, weeks, {} if late else calls, now)
     else:
         log = pd.read_csv(path) if path.exists() and path.stat().st_size else pd.DataFrame(columns=COLUMNS)
-    return {"horizon": HORIZON, "calls": calls, "record": record, "live": live_record(log)}
+    return {"horizon": HORIZON, "calls": calls, "record": record, "live": live_record(log), "late": late}

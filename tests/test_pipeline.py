@@ -117,3 +117,22 @@ def test_headline_store_dedupes_and_prunes(tmp_path, config):
     later = now + timedelta(days=40)
     assert state.store_headlines("AAA", [], later) == []
     assert pd.isna(news_features([], later)["sent_mean"])
+
+
+def test_a_run_during_trading_hours_makes_and_logs_no_late_calls(tmp_path, config):
+    import json
+
+    full = {t: synthetic_prices(400, seed=s) for t, s in (("AAA", 1), ("BBB", 2), ("SPY", 3))}
+    day, today = full["AAA"].index[-2], full["AAA"].index[-1]
+    midday = (today + timedelta(hours=16)).tz_localize("UTC").to_pydatetime()  # the session is on, its bar still moving
+    run_daily(config, FakeSources({t: df.iloc[:-1] for t, df in full.items()}), tmp_path / "state", tmp_path / "reports", None,
+              evening_after(day))
+    calls = json.loads((tmp_path / "state" / "pending.json").read_text())
+    run_daily(config, FakeSources(full), tmp_path / "state", tmp_path / "reports", None, midday)
+    assert json.loads((tmp_path / "state" / "pending.json").read_text()) == calls  # last night's calls stay as they were
+
+    summary = run_daily(config, FakeSources(full), tmp_path / "fresh", tmp_path / "fresh-reports", None, midday)
+    assert "already opened" in summary["AAA"]["prediction"]  # nothing made for a session that has started
+    weekly_log = tmp_path / "fresh" / "weekly.csv"
+    assert not weekly_log.exists() or pd.read_csv(weekly_log).empty  # nor for a week that has started
+    assert State.load(tmp_path / "fresh", config).pending == []
