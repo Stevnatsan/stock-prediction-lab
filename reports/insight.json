@@ -1,0 +1,780 @@
+{
+ "generated": "2026-10-08T13:48:20+00:00",
+ "market": {
+  "as_of": "2026-10-08",
+  "close": 774.9,
+  "returns": {
+   "1 week": 0.014280336547787265,
+   "1 month": 0.018919487864621276,
+   "3 months": 0.028974437818911403,
+   "1 year": 0.1705824808567331
+  },
+  "ytd": 0.1452260276666364,
+  "high_1y": 779.09,
+  "low_1y": 628.78,
+  "off_high": -0.005378072234242026,
+  "sma50": 765.5287097167969,
+  "sma200": 719.1674426269532,
+  "rsi_14": 57.79782808897019,
+  "vol_now": 0.1007552161026421,
+  "vol_1y": 0.13008301896923788,
+  "typical_day": 0.004524202947012668,
+  "up_days_1y": 0.5277777777777778,
+  "summary": [
+   "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+   "A typical day moves it about 0.5%. Lately it is calmer than its usual year (10% vs 13% annualised volatility)."
+  ]
+ },
+ "stocks": {
+  "GOOGL": {
+   "as_of": "2026-10-08",
+   "close": 352.96,
+   "returns": {
+    "1 week": 0.04351939937824412,
+    "1 month": 0.0674731527912209,
+    "3 months": -0.011179615606508486,
+    "1 year": 0.43993298452368035
+   },
+   "ytd": 0.12986135553942368,
+   "high_1y": 402.12,
+   "low_1y": 235.96,
+   "off_high": -0.12225467258245937,
+   "sma50": 345.86794189453127,
+   "sma200": 339.4793402099609,
+   "rsi_14": 57.72840847269416,
+   "vol_now": 0.24216476374936233,
+   "vol_1y": 0.316083905886942,
+   "typical_day": 0.011425687885866898,
+   "up_days_1y": 0.5119047619047619,
+   "vs_market": {
+    "3 months": -0.04015405342541989,
+    "1 year": 0.26935050366694724
+   },
+   "beta": 1.3439611813955725,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.52533,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5333333333333333,
+     "recent_sessions": 120,
+     "accuracy_live": 0.7777777777777778,
+     "live_sessions": 9,
+     "base_rate": 0.5472081218274112
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.51685,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.4583333333333333,
+     "recent_sessions": 120,
+     "accuracy_live": 0.6666666666666666,
+     "live_sessions": 9,
+     "base_rate": 0.5363984674329502
+    }
+   },
+   "news": {
+    "count_7d": 195,
+    "mood_7d": 0.04891538461538461,
+    "headlines": [
+     {
+      "title": "Planet Labs Stock Is Down 66% as Google AI Satellite Reaches Orbit - Benzinga",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "Planet Labs Stock Is Down 66% as Google AI Satellite Reaches Orbit - TradingView",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "GOOG, GOOGL Stock Notice: Alphabet Inc. Stock Plummeted 4% after AI Issues Disclosed - Securities Fraud Class Action Filed - Morningstar",
+      "published": "2026-10-06"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 58, normal range 30 to 70).",
+    "A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 27% points.",
+    "It sits 12% below its 1-year high of $402.12.",
+    "News mood over the last week: mixed (195 headlines).",
+    "The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge."
+   ]
+  },
+  "AAPL": {
+   "as_of": "2026-10-08",
+   "close": 336.99,
+   "returns": {
+    "1 week": 0.02020764000049513,
+    "1 month": 0.06867190661121625,
+    "3 months": 0.06966133491703341,
+    "1 year": 0.31877653377989
+   },
+   "ytd": 0.24296436137893584,
+   "high_1y": 341.07,
+   "low_1y": 244.37,
+   "off_high": -0.011947729555585207,
+   "sma50": 322.21812622070314,
+   "sma200": 290.05317268371584,
+   "rsi_14": 58.02790281839247,
+   "vol_now": 0.1642512589530642,
+   "vol_1y": 0.24644228890060924,
+   "typical_day": 0.009013271045810678,
+   "up_days_1y": 0.5396825396825397,
+   "vs_market": {
+    "3 months": 0.04068689709812201,
+    "1 year": 0.1481940529231569
+   },
+   "beta": 0.6829701932463605,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.51897,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.48333333333333334,
+     "recent_sessions": 120,
+     "accuracy_live": 0.4444444444444444,
+     "live_sessions": 9,
+     "base_rate": 0.5451776649746193
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.53062,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5166666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.6666666666666666,
+     "live_sessions": 9,
+     "base_rate": 0.5306513409961686
+    }
+   },
+   "news": {
+    "count_7d": 176,
+    "mood_7d": 0.03486704545454545,
+    "headlines": [
+     {
+      "title": "Scott Galloway: \u201cApple Wins by Showing Up Late\u201d in AI, and Its New Home Hub Is the Test",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "Apple, IBD Stock Of The Day, Rises Near Buy Points Ahead Of Smart Home Launch",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Knollwood Investment Advisory LLC Trims Stock Holdings in Apple Inc. $AAPL - MarketBeat",
+      "published": "2026-10-06"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 58, normal range 30 to 70).",
+    "A typical day moves it about 0.9%. Lately it is calmer than its usual year (16% vs 25% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 15% points.",
+    "It is close to its 1-year high of $341.07 (-1.2%).",
+    "News mood over the last week: mixed (176 headlines).",
+    "The models give 52% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  },
+  "NVDA": {
+   "as_of": "2026-10-08",
+   "close": 234.06,
+   "returns": {
+    "1 week": 0.01385254283297277,
+    "1 month": 0.047614361182820364,
+    "3 months": 0.11073139492464246,
+    "1 year": 0.26793539352660645
+   },
+   "ytd": 0.25793929783594804,
+   "high_1y": 239.24,
+   "low_1y": 164.79,
+   "off_high": -0.02166028555824273,
+   "sma50": 221.32271240234374,
+   "sma200": 201.61669136047362,
+   "rsi_14": 59.17552716765643,
+   "vol_now": 0.22961621781917285,
+   "vol_1y": 0.3771055884322885,
+   "typical_day": 0.015344920617992364,
+   "up_days_1y": 0.5158730158730159,
+   "vs_market": {
+    "3 months": 0.08175695710573105,
+    "1 year": 0.09735291266987334
+   },
+   "beta": 1.8874787272720568,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.46787,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.55,
+     "recent_sessions": 120,
+     "accuracy_live": 0.7777777777777778,
+     "live_sessions": 9,
+     "base_rate": 0.5289340101522843
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.43467,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.575,
+     "recent_sessions": 120,
+     "accuracy_live": 0.6666666666666666,
+     "live_sessions": 9,
+     "base_rate": 0.5220306513409961
+    }
+   },
+   "news": {
+    "count_7d": 491,
+    "mood_7d": 0.13223543788187375,
+    "headlines": [
+     {
+      "title": "SpaceX stock slips on report of its $40 billion in new debt for Nvidia chips - Yahoo Finance",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "S&P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields \u2014 SPCX, AMD, NVDA, MRVL In Focus - Yahoo Finance",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Nvidia-backed Firmus closes IPO bookbuilding as investor support falter -Bloomberg",
+      "published": "2026-10-08"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 59, normal range 30 to 70).",
+    "A typical day moves it about 1.5%. Lately it is calmer than its usual year (23% vs 38% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 10% points.",
+    "It is close to its 1-year high of $239.24 (-2.2%).",
+    "News mood over the last week: positive (491 headlines).",
+    "The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
+   ]
+  },
+  "MSFT": {
+   "as_of": "2026-10-08",
+   "close": 530.54,
+   "returns": {
+    "1 week": 0.03459436555512774,
+    "1 month": 0.07910095517879245,
+    "3 months": 0.38026156853149207,
+    "1 year": 0.02085032819210708
+   },
+   "ytd": 0.10397796303074625,
+   "high_1y": 537.65,
+   "low_1y": 352.17,
+   "off_high": -0.013217692900019617,
+   "sma50": 498.6507489013672,
+   "sma200": 432.4781776428223,
+   "rsi_14": 68.57104391648491,
+   "vol_now": 0.20609061356431127,
+   "vol_1y": 0.326534171792051,
+   "typical_day": 0.010889382048865415,
+   "up_days_1y": 0.5,
+   "vs_market": {
+    "3 months": 0.35128713071258066,
+    "1 year": -0.14973215266462603
+   },
+   "beta": 0.960243002772691,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.45976,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5166666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.4444444444444444,
+     "live_sessions": 9,
+     "base_rate": 0.5197969543147208
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.52359,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5333333333333333,
+     "recent_sessions": 120,
+     "accuracy_live": 0.7777777777777778,
+     "live_sessions": 9,
+     "base_rate": 0.4885057471264368
+    }
+   },
+   "news": {
+    "count_7d": 183,
+    "mood_7d": 0.15368251366120217,
+    "headlines": [
+     {
+      "title": "Microsoft Stock (NASDAQ:MSFT) Slips on New Canadian Project - TipRanks",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "The \u201cAdults in Charge\u201d of AI: Microsoft Stock (NASDAQ:MSFT) Rises Thanks to New Investor Perception - TipRanks",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "MSFT Rises 41% in 6 Months on Solid AI Demand: Should You Hold Now? - Yahoo Finance Singapore",
+      "published": "2026-10-06"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 69, normal range 30 to 70).",
+    "A typical day moves it about 1.1%. Lately it is calmer than its usual year (21% vs 33% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 15% points.",
+    "It is close to its 1-year high of $537.65 (-1.3%).",
+    "News mood over the last week: positive (183 headlines).",
+    "The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  },
+  "AMZN": {
+   "as_of": "2026-10-08",
+   "close": 258.33,
+   "returns": {
+    "1 week": 0.040708197645180855,
+    "1 month": 0.023514253970338128,
+    "3 months": 0.052967291559303575,
+    "1 year": 0.16482547063298858
+   },
+   "ytd": 0.11920536893585121,
+   "high_1y": 284.02,
+   "low_1y": 198.79,
+   "off_high": -0.09043376717177942,
+   "sma50": 258.6424996948242,
+   "sma200": 242.00292495727538,
+   "rsi_14": 56.17066749739063,
+   "vol_now": 0.22153347972309842,
+   "vol_1y": 0.3439817013009527,
+   "typical_day": 0.012884957457843071,
+   "up_days_1y": 0.5079365079365079,
+   "vs_market": {
+    "3 months": 0.023992853740392173,
+    "1 year": -0.00575701022374453
+   },
+   "beta": 1.4386110321863113,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.5055,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.49166666666666664,
+     "recent_sessions": 120,
+     "accuracy_live": 0.4444444444444444,
+     "live_sessions": 9,
+     "base_rate": 0.5106598984771573
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.50738,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5916666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.5555555555555556,
+     "live_sessions": 9,
+     "base_rate": 0.48084291187739464
+    }
+   },
+   "news": {
+    "count_7d": 268,
+    "mood_7d": 0.055055223880597005,
+    "headlines": [
+     {
+      "title": "Amazon cuts fewer than 1,000 jobs across teams, Business Insider reports",
+      "published": "2026-10-08"
+     },
+     {
+      "title": "Amazon Reportedly Hands Pink Slips To 1,000 Workers As Big Tech Layoffs Continue",
+      "published": "2026-10-08"
+     },
+     {
+      "title": "Amazon stock is trading at its lowest trailing PE ratio in years despite AI boom - Yahoo Finance",
+      "published": "2026-10-08"
+     }
+    ]
+   },
+   "summary": [
+    "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
+    "Neither overbought nor oversold (RSI 56, normal range 30 to 70).",
+    "A typical day moves it about 1.3%. Lately it is calmer than its usual year (22% vs 34% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 1% points.",
+    "It is close to its 1-year high of $284.02 (-9.0%).",
+    "News mood over the last week: positive (268 headlines).",
+    "The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  },
+  "META": {
+   "as_of": "2026-10-08",
+   "close": 720.22,
+   "returns": {
+    "1 week": -0.007864373193834706,
+    "1 month": 0.1026471621889451,
+    "3 months": 0.07707501060407784,
+    "1 year": 0.013440336830331079
+   },
+   "ytd": 0.09390409546771594,
+   "high_1y": 777.59,
+   "low_1y": 524.82,
+   "off_high": -0.07377797627714522,
+   "sma50": 635.7851477050781,
+   "sma200": 628.8831954956055,
+   "rsi_14": 57.353044982731014,
+   "vol_now": 0.5381079642276668,
+   "vol_1y": 0.4182680761571177,
+   "typical_day": 0.012630707441905309,
+   "up_days_1y": 0.5238095238095238,
+   "vs_market": {
+    "3 months": 0.04810057278516644,
+    "1 year": -0.15714214402640203
+   },
+   "beta": 1.456728223392472,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.46452,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5166666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.7777777777777778,
+     "live_sessions": 9,
+     "base_rate": 0.5096446700507614
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.49991,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.55,
+     "recent_sessions": 120,
+     "accuracy_live": 0.6666666666666666,
+     "live_sessions": 9,
+     "base_rate": 0.48946360153256707
+    }
+   },
+   "news": {
+    "count_7d": 265,
+    "mood_7d": 0.02216037735849057,
+    "headlines": [
+     {
+      "title": "Meta Platforms (NASDAQ:META) Stock Price Down 2.4% - What's Next? - MarketBeat",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Meta Threatened With Major Fines In Europe Over 'Addictive' Features - Investor's Business Daily",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Meta\u2019s Muse, Agentic AI Could Put the Squeeze on These Retail Power Providers",
+      "published": "2026-10-07"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 57, normal range 30 to 70).",
+    "A typical day moves it about 1.3%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 16% points.",
+    "It is close to its 1-year high of $777.59 (-7.4%).",
+    "News mood over the last week: mixed (265 headlines).",
+    "The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  },
+  "TSLA": {
+   "as_of": "2026-10-08",
+   "close": 373.18,
+   "returns": {
+    "1 week": 0.05386747902094169,
+    "1 month": 0.014613523383479432,
+    "3 months": -0.08479255292078425,
+    "1 year": -0.13831997803190965
+   },
+   "ytd": -0.1701836775201584,
+   "high_1y": 489.88,
+   "low_1y": 298.32,
+   "off_high": -0.23821141128659484,
+   "sma50": 353.2316973876953,
+   "sma200": 391.12562423706055,
+   "rsi_14": 54.62336762341189,
+   "vol_now": 0.30088385903326653,
+   "vol_1y": 0.4529726351877766,
+   "typical_day": 0.015675369881061496,
+   "up_days_1y": 0.503968253968254,
+   "vs_market": {
+    "3 months": -0.11376699073969565,
+    "1 year": -0.30890245888864276
+   },
+   "beta": 2.207796256924959,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.42246,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.6416666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.5555555555555556,
+     "live_sessions": 9,
+     "base_rate": 0.4984771573604061
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.41326,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.55,
+     "recent_sessions": 120,
+     "accuracy_live": 0.5555555555555556,
+     "live_sessions": 9,
+     "base_rate": 0.4875478927203065
+    }
+   },
+   "news": {
+    "count_7d": 182,
+    "mood_7d": 0.08900989010989013,
+    "headlines": [
+     {
+      "title": "Why Tesla (TSLA) Is Up 6.7% After Unveiling Terafab AI Chip Complex And Major New Credit Lines",
+      "published": "2026-10-08"
+     },
+     {
+      "title": "TSLA Stock Recovers To Close Nearly 2% Higher As SpaceX IPO Debuts - Stocktwits",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "TSLA Stock Heads For Weekly Win: Dan Ives Sees Over 30% Upside From AI, UBS Calls Setup \u2018Tactically Favorable\u2019",
+      "published": "2026-10-08"
+     }
+    ]
+   },
+   "summary": [
+    "Long-term trend is down (below the 200-day average), with some recent recovery.",
+    "Neither overbought nor oversold (RSI 55, normal range 30 to 70).",
+    "A typical day moves it about 1.6%. Lately it is calmer than its usual year (30% vs 45% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 31% points.",
+    "It sits 24% below its 1-year high of $489.88.",
+    "News mood over the last week: positive (182 headlines).",
+    "The models give 42% odds the next session closes above its open (a slight lean to fall). On this stock they were right 64.2% of the time over the last 120 sessions, a meaningful edge, if it lasts."
+   ]
+  },
+  "JPM": {
+   "as_of": "2026-10-08",
+   "close": 328.04,
+   "returns": {
+    "1 week": -0.010515080621294581,
+    "1 month": -0.07057432671378294,
+    "3 months": -0.020190293852261454,
+    "1 year": 0.08667157103039447
+   },
+   "ytd": 0.03766977758651091,
+   "high_1y": 363.37,
+   "low_1y": 278.75,
+   "off_high": -0.0972217089774462,
+   "sma50": 348.7923681640625,
+   "sma200": 318.9831301879883,
+   "rsi_14": 32.34254338783232,
+   "vol_now": 0.1768713002744622,
+   "vol_1y": 0.2245010090527285,
+   "typical_day": 0.006372434845320296,
+   "up_days_1y": 0.5357142857142857,
+   "vs_market": {
+    "3 months": -0.04916473167117286,
+    "1 year": -0.08391090982633864
+   },
+   "beta": 0.7915361860594405,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.53606,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5,
+     "recent_sessions": 120,
+     "accuracy_live": 0.2222222222222222,
+     "live_sessions": 9,
+     "base_rate": 0.5411167512690356
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.58423,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.44166666666666665,
+     "recent_sessions": 120,
+     "accuracy_live": 0.3333333333333333,
+     "live_sessions": 9,
+     "base_rate": 0.5325670498084292
+    }
+   },
+   "news": {
+    "count_7d": 131,
+    "mood_7d": 0.028205343511450386,
+    "headlines": [
+     {
+      "title": "Wells Fargo\u2019s Higher Dividend Yield Masks JPMorgan\u2019s Superior Dividend Safety Record",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "JPMorgan Chase: Expect Q3 Earnings To Reinforce Buy Thesis (NYSE:JPM) - Seeking Alpha",
+      "published": "2026-10-06"
+     },
+     {
+      "title": "JPMorgan Chase (JPM) Stock Still Looks Cheap Following Its 145% Run - Simply Wall Street",
+      "published": "2026-10-06"
+     }
+    ]
+   },
+   "summary": [
+    "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
+    "Neither overbought nor oversold (RSI 32, normal range 30 to 70).",
+    "A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 8% points.",
+    "It is close to its 1-year high of $363.37 (-9.7%).",
+    "News mood over the last week: mixed (131 headlines).",
+    "The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  },
+  "XOM": {
+   "as_of": "2026-10-08",
+   "close": 168.64,
+   "returns": {
+    "1 week": 0.02942248718064322,
+    "1 month": 0.026852607786860494,
+    "3 months": 0.22214830447795197,
+    "1 year": 0.5187084921048255
+   },
+   "ytd": 0.42947509688607766,
+   "high_1y": 169.32,
+   "low_1y": 107.52,
+   "off_high": -0.004016110944693119,
+   "sma50": 161.09083251953126,
+   "sma200": 148.67341094970703,
+   "rsi_14": 63.7657067765008,
+   "vol_now": 0.2433994548816247,
+   "vol_1y": 0.2598632531879276,
+   "typical_day": 0.009476913157350164,
+   "up_days_1y": 0.5515873015873016,
+   "vs_market": {
+    "3 months": 0.19317386665904057,
+    "1 year": 0.3481260112480924
+   },
+   "beta": -0.5665517845162374,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.59802,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.55,
+     "recent_sessions": 120,
+     "accuracy_live": 0.7777777777777778,
+     "live_sessions": 9,
+     "base_rate": 0.5193089430894309
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.64351,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.475,
+     "recent_sessions": 120,
+     "accuracy_live": 0.6666666666666666,
+     "live_sessions": 9,
+     "base_rate": 0.4966442953020134
+    }
+   },
+   "news": {
+    "count_7d": 82,
+    "mood_7d": 0.14683048780487806,
+    "headlines": [
+     {
+      "title": "H&P & ExxonMobil Expand Deployment of FlexRobotics\u00ae Technology",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Is Helmerich & Payne (HP) Undervalued Following High End Margin Guidance And ExxonMobil Expansion?",
+      "published": "2026-10-08"
+     },
+     {
+      "title": "ExxonMobil (XOM) Eyes Trinidad and Tobago to Boost Oil Productio - GuruFocus",
+      "published": "2026-10-07"
+     }
+    ]
+   },
+   "summary": [
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 64, normal range 30 to 70).",
+    "A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 35% points.",
+    "It is close to its 1-year high of $169.32 (-0.4%).",
+    "News mood over the last week: positive (82 headlines).",
+    "The models give 60% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
+   ]
+  },
+  "UNH": {
+   "as_of": "2026-10-08",
+   "close": 375.12,
+   "returns": {
+    "1 week": 0.02716315054374263,
+    "1 month": -0.039765355226679344,
+    "3 months": -0.11113505470758267,
+    "1 year": 0.0589795058074043
+   },
+   "ytd": 0.15881533196962172,
+   "high_1y": 433.68,
+   "low_1y": 255.97,
+   "off_high": -0.13502964256865524,
+   "sma50": 388.5902526855469,
+   "sma200": 353.6071922302246,
+   "rsi_14": 45.04211371756689,
+   "vol_now": 0.1924330647124494,
+   "vol_1y": 0.34381558499444176,
+   "typical_day": 0.009847292058916157,
+   "up_days_1y": 0.47619047619047616,
+   "vs_market": {
+    "3 months": -0.14010949252649407,
+    "1 year": -0.11160297504932881
+   },
+   "beta": 0.43334805693506306,
+   "models": {
+    "up": {
+     "model": "ensemble",
+     "p": 0.49414,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5166666666666667,
+     "recent_sessions": 120,
+     "accuracy_live": 0.4444444444444444,
+     "live_sessions": 9,
+     "base_rate": 0.5142276422764228
+    },
+    "beat": {
+     "model": "beat_full",
+     "p": 0.35729,
+     "for_session_after": "2026-10-07",
+     "accuracy_recent": 0.5583333333333333,
+     "recent_sessions": 120,
+     "accuracy_live": 0.3333333333333333,
+     "live_sessions": 9,
+     "base_rate": 0.47651006711409394
+    }
+   },
+   "news": {
+    "count_7d": 58,
+    "mood_7d": -0.030606896551724144,
+    "headlines": [
+     {
+      "title": "UnitedHealth's Recovery Has One Weak Spot (Rating Downgrade) - Seeking Alpha",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "Better Dividend Stock for Retirees: CVS vs. UnitedHealth",
+      "published": "2026-10-07"
+     },
+     {
+      "title": "UNH Stock Tracks Hot Monthly Streak: Wall Street Cheers \u2018Impressive\u2019 Q2 And Sees Over 20% More Room To Run - stocktwits.com",
+      "published": "2026-10-05"
+     }
+    ]
+   },
+   "summary": [
+    "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
+    "Neither overbought nor oversold (RSI 45, normal range 30 to 70).",
+    "A typical day moves it about 1.0%. Lately it is calmer than its usual year (19% vs 34% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 11% points.",
+    "It sits 14% below its 1-year high of $433.68.",
+    "News mood over the last week: mixed (58 headlines).",
+    "The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
+   ]
+  }
+ }
+}
