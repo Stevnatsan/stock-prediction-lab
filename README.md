@@ -92,7 +92,7 @@ Every daily run also rewrites [`docs/index.html`](docs/index.html): one page wit
 
 ## Week ahead
 
-A third question, answered every night next to the two daily ones: buy at the next open and hold for 5 trading days; will the stock be higher at the last close, and will it beat SPY? A gradient-boosting model pooled over all stocks answers it from the same historical inputs plus longer momentum (3 and 6 months, distance from the 200-day average). Its track record is walk-forward: each month of history is predicted by a model trained only on weeks that had already ended. Live calls are logged in `state/weekly.csv` and scored when their week ends. See [`stocklab/weekly.py`](stocklab/weekly.py).
+A third question, answered every night next to the two daily ones: buy at the next open and hold for 5 trading days; will the stock be higher at the last close, and will it beat SPY? Two candidates answer it: the **usual odds** (how often the watched stocks rose in the past year's weeks) and a strongly regularised **model** on trend, momentum, volatility and market inputs. Both are tested walk-forward every night, each month of history predicted only from weeks that had already ended, and the one with the better score is shown. When this was added (October 2026) the usual odds won: over a week, nothing tried (gradient boosting, logistic regression, momentum, trend, oversold/overbought rules) beat simply assuming the usual odds. The page also shows each stock's typical weekly range and how it did after setups like today's. Live calls are logged in `state/weekly.csv` and scored when their week ends. See [`stocklab/weekly.py`](stocklab/weekly.py).
 
 ## How it works
 
