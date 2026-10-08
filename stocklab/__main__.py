@@ -3,6 +3,7 @@ python -m stocklab report                         rebuild the report from saved 
 python -m stocklab watchlist --add "KO" --remove TSLA   change which stocks are predicted
 python -m stocklab catalogue                      refresh the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
 python -m stocklab check [TICKER]                 call every data source once and show what came back
+python -m stocklab insight [TICKERS]              plain-language brief (reports/insight.md) and phone page (docs/index.html)
 python -m stocklab orders open|close              send the champion's picks to an Alpaca paper account (needs
                                                   ALPACA_API_KEY and ALPACA_SECRET_KEY)"""
 import argparse
@@ -15,8 +16,8 @@ from .config import ROOT, load_config
 
 def main():
     parser = argparse.ArgumentParser(prog="stocklab", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["daily", "report", "watchlist", "catalogue", "orders", "check"], nargs="?", default="daily")
-    parser.add_argument("step", nargs="?", help="orders: open or close; check: the ticker to try (default AAPL)")
+    parser.add_argument("command", choices=["daily", "report", "watchlist", "catalogue", "orders", "check", "insight"], nargs="?", default="daily")
+    parser.add_argument("step", nargs="?", help="orders: open or close; check: the ticker to try (default AAPL); insight: tickers, comma-separated")
     parser.add_argument("--add", default="", help="symbols to add, e.g. \"KO, PEP\"")
     parser.add_argument("--remove", default="", help="symbols to remove")
     args = parser.parse_args()
@@ -42,6 +43,35 @@ def main():
 
         print("\n".join(run_checks(config, (args.step or "AAPL").upper())))
         return
+    if args.command == "insight":
+        from . import insight, site, weekly
+        from .sources import LiveSources
+        from .state import State
+
+        tickers = [t.strip().upper() for t in (args.step or ",".join(config.tickers)).split(",") if t.strip()]
+        sources, now = LiveSources(config), datetime.now(timezone.utc)
+        state = State.load(ROOT / "state", config)
+        market = sources.prices(config.market, config.history_years)
+        prices = {t: sources.prices(t, config.history_years) for t in tickers}
+        brief = insight.build(prices, market, state, now, tickers)
+        if market is not None:
+            from .features import build_frame
+            from .sources.prices import drop_unfinished_session
+
+            market = drop_unfinished_session(market, now)
+            macro = sources.macro(config.history_years)
+            frames = {t: build_frame(drop_unfinished_session(p, now), market, {"earnings": sources.earnings(t), "analysts": sources.analysts(t),
+                                                                               "filings": sources.filing_dates(t), "macro": macro})
+                      for t, p in prices.items() if p is not None}
+            brief["weekly"] = weekly.run(frames, {t: drop_unfinished_session(p, now) for t, p in prices.items() if p is not None},
+                                         market, ROOT / "state", now, save=False)
+        insight.write(brief, ROOT / "reports")
+        site.write(brief, state, config, now)
+        print(insight.to_markdown(brief))
+        missing = [t for t in tickers if t not in brief["stocks"]]
+        if missing:
+            raise SystemExit(f"No price data for {', '.join(missing)}: {sources.health['prices']['last_error']}")
+        return
     if args.command == "orders":
         from . import alpaca
 
@@ -62,7 +92,7 @@ def main():
         from .sources import LiveSources
 
         sources = LiveSources(config)
-        summary = run_daily(config, sources, ROOT / "state", ROOT / "reports", ROOT / "README.md")
+        summary = run_daily(config, sources, ROOT / "state", ROOT / "reports", ROOT / "README.md", docs_dir=ROOT / "docs")
         print(json.dumps({"sources": sources.health, "stocks": summary}, indent=1, default=str))
     else:
         from .report import build_report

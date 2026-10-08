@@ -86,6 +86,14 @@ When the champion (ensemble) says a stock has a given chance of rising, how ofte
 Full report, with calibration of every model, VADER vs FinBERT, paper trading, real Alpaca fills and source health: [reports/latest.md](reports/latest.md)
 <!-- scoreboard:end -->
 
+## On your phone
+
+Every daily run also rewrites [`docs/index.html`](docs/index.html): one page with two tabs, *Next day* and *Next week*, showing tonight's calls, when to act on them (in your own time zone), and a plain-language brief for each stock, with the stocks under `focus:` in [`config.yaml`](config.yaml) first. To put it online, turn on GitHub Pages once: **Settings → Pages → Build and deployment → Deploy from a branch → `main`, `/docs` → Save**. It then lives at `https://<your-user>.github.io/stock-prediction-lab/` and refreshes itself after every run. On a phone, open it and use *Add to Home Screen*.
+
+## Week ahead
+
+A third question, answered every night next to the two daily ones: buy at the next open and hold for 5 trading days; will the stock be higher at the last close, and will it beat SPY? Two candidates answer it: the **usual odds** (how often the watched stocks rose in the past year's weeks) and a strongly regularised **model** on trend, momentum, volatility and market inputs. Both are tested walk-forward every night, each month of history predicted only from weeks that had already ended, and the one with the better score is shown. When this was added (October 2026) the usual odds won: over a week, nothing tried (gradient boosting, logistic regression, momentum, trend, oversold/overbought rules) beat simply assuming the usual odds. The page also shows each stock's typical weekly range and how it did after setups like today's. Live calls are logged in `state/weekly.csv` and scored when their week ends. See [`stocklab/weekly.py`](stocklab/weekly.py).
+
 ## How it works
 
 Every weekday after the US market closes, GitHub Actions runs `python -m stocklab daily`, which:
@@ -95,7 +103,7 @@ Every weekday after the US market closes, GitHub Actions runs `python -m stockla
 3. **Learns.** The online models are updated with the inputs they used and the real outcome. The update is proportional to the error, so a confident wrong call (say 90% "up" on a day the stock fell) changes the model about 9× more than a confident right one: **wrong predictions are the biggest lessons.** Gradient boosting is retrained on every finished session.
 4. **Predicts the next session** for every stock with every model, and makes the calls with each question's recent **champion**.
 5. **Trades on paper.** Before the next open, the champion's top picks are sent to an Alpaca paper account as market-on-open buys, and sold with market-on-close orders. That evening the real fills are recorded next to the predictions.
-6. **Publishes** the calls, accuracy, calibration and charts to this README and [`reports/latest.md`](reports/latest.md), then commits every prediction, headline and model weight to the repo.
+6. **Publishes** the calls, accuracy, calibration and charts to this README and [`reports/latest.md`](reports/latest.md), plus a plain-language brief for every stock (trend, how it did against the market, how jumpy it is, the news mood, and how much the models' call is worth) in [`reports/insight.md`](reports/insight.md). Then it commits every prediction, headline and model weight to the repo.
 
 The first time it sees a stock, it replays about 4 years of that stock's history through the same predict → score → learn loop, so each model starts with experience rather than from zero. When a model's inputs change (for example a new data source), it is rebuilt from history the same way. Real live predictions are never rewritten.
 
@@ -227,6 +235,7 @@ The tests check this honestly for both kinds of model. On a simulated random mar
 ### See the results (nothing to install)
 
 - **This README:** the scoreboard above updates after every US trading day.
+- **Market insight:** [`reports/insight.md`](reports/insight.md) explains each stock in plain words; [`reports/insight.json`](reports/insight.json) has the same numbers for other tools.
 - **Full report:** [`reports/latest.md`](reports/latest.md) has calibration for every model, VADER vs FinBERT, per-stock accuracy, paper trading, real Alpaca fills and data-source health.
 - **Raw history:**
   - [`state/predictions.csv`](state/predictions.csv): every prediction ever made. For `beat_*` models, `outcome_up` means "beat SPY" and `session_return` is the return above SPY's.
@@ -267,6 +276,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu && pip instal
 python -m stocklab check AAPL        # try every data source once
 python -m stocklab daily             # collect, score, learn, predict, write the report
 python -m stocklab report            # rebuild the report from saved results only
+python -m stocklab insight GOOGL,AAPL,NVDA   # plain-language market brief for these stocks
 python -m stocklab orders open       # send tonight's picks to Alpaca (needs the ALPACA_* variables)
 pytest                               # run the tests
 ```
@@ -288,11 +298,15 @@ stocklab/
   engine.py       the predict → score → learn loop
   pipeline.py     one daily run
   report.py       README scoreboard, reports/latest.md, charts, calibration
+  insight.py      reports/insight.md: plain-language brief per stock
+  site.py         docs/index.html: the phone page
+  weekly.py       the week-ahead calls and their track record
   check.py        try every source once
   catalogue.py    the S&P 500 list (catalogue/sp500.csv, STOCKS.md)
   watchlist.py    add or remove stocks
 state/            predictions, pending calls, live features, orders, headlines, model weights (committed by the bot)
-reports/          latest report and charts
+reports/          latest report, charts, and the plain-language insight
+docs/             the phone page (GitHub Pages), rewritten every run
 tests/            no-lookahead, random-walk, planted-pattern, calibration, Alpaca and end-to-end tests
 ```
 
