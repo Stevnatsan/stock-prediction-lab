@@ -53,16 +53,28 @@ details ul{margin:10px 0 0;padding-left:1.1em;display:flex;flex-direction:column
 .dot.hit{background:var(--up)}.dot.miss{background:var(--down);opacity:.75}
 .honest{display:flex;flex-direction:column;gap:10px}
 footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.tabsel{position:absolute;opacity:0;pointer-events:none}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:var(--track);border-radius:10px}
+.tabs label{text-align:center;padding:9px 0;border-radius:8px;font-weight:600;cursor:pointer;color:var(--muted)}
+#tab-day:checked~.tabs label[for=tab-day],#tab-week:checked~.tabs label[for=tab-week]{background:var(--surface);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#tab-day:focus-visible~.tabs label[for=tab-day],#tab-week:focus-visible~.tabs label[for=tab-week]{outline:2px solid var(--accent)}
+.panel{display:flex;flex-direction:column;gap:24px}
+.panel.week,#tab-week:checked~.panel.day{display:none}
+#tab-week:checked~.panel.week{display:flex}
 </style></head>
 <body><main>
 <header><span class="label">Stock prediction lab</span>
-  <h1>Calls for Thu 08 Oct</h1>
+  <h1>Your stock calls</h1>
   <p class="small">Prices up to 2026-10-08 · models retrained every weekday night</p></header>
+<input class="tabsel" type="radio" name="tab" id="tab-day" checked>
+<input class="tabsel" type="radio" name="tab" id="tab-week">
+<nav class="tabs"><label for="tab-day">Next day</label><label for="tab-week">Next week</label></nav>
+<div class="panel day">
 
 <section class="when">
-  <h2>When to use this</h2>
+  <h2>Next day: Thu 08 Oct</h2>
   <ol>
-    <li>New calls arrive every weekday night after the US market closes. This page was updated <b><time data-utc="2026-10-08T13:56:06.249036+00:00">Thu 08 Oct, 13:56 UTC</time></b>.</li>
+    <li>New calls arrive every weekday night after the US market closes. This page was updated <b><time data-utc="2026-10-08T14:13:10.758151+00:00">Thu 08 Oct, 14:13 UTC</time></b>.</li>
     <li>They are for <b>Thursday 08 Oct</b>: from the open at <b><time data-utc="2026-10-08T09:30:00-04:00" data-short>9:30am New York</time></b> to the close at <b><time data-utc="2026-10-08T16:00:00-04:00" data-short>4:00pm New York</time></b>.</li>
     <li>If you act on a call, act at the open. The call is settled at that day's close.</li>
   </ol>
@@ -70,35 +82,35 @@ footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;ga
   <p class="small">The models are right a bit over half the time. Keep any bet small. Not financial advice.</p>
 </section>
 
-<section class="market"><span class="label">S&amp;P 500 (SPY)</span><span class="num">$774.90</span>
-  <span>This year <b class="num pos">+14.5%</b></span>
-  <span>Past year <b class="num pos">+17.1%</b></span>
+<section class="market"><span class="label">S&amp;P 500 (SPY)</span><span class="num">$776.04</span>
+  <span>This year <b class="num pos">+14.7%</b></span>
+  <span>Past year <b class="num pos">+17.2%</b></span>
   <span class="small">Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one. A typical day moves it about 0.5%. Lately it is calmer than its usual year (10% vs 13% annualised volatility).</span></section>
 <section class="list">
 <article class="card" id="googl">
-  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$352.96</span></div>
+  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$351.78</span></div>
   <div class="call up">
     <span class="chip">Leans up</span>
     <span><b>53%</b> chance it closes above its open · <b>52%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+6.7%</span></div><div><span class="label">This year</span><span class="num pos">+13.0%</span></div><div><span class="label">1 year</span><span class="num pos">+44.0%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+26.9%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+6.4%</span></div><div><span class="label">This year</span><span class="num pos">+12.6%</span></div><div><span class="label">1 year</span><span class="num pos">+43.5%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+26.3%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
     <div class="bar"><i style="left:70%"></i></div>
     <div class="ends"><span>$235.96</span><span>$402.12</span></div></div>
   <details open><summary>What's going on</summary>
-    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 58, normal range 30 to 70).</li><li>A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 27 percentage points.</li><li>It sits 12% below its 1-year high of $402.12.</li><li>News mood over the last week: mixed (195 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 57, normal range 30 to 70).</li><li>A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 26 percentage points.</li><li>It sits 13% below its 1-year high of $402.12.</li><li>News mood over the last week: mixed (193 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Planet Labs Stock Is Down 66% as Google AI Satellite Reaches Orbit - Benzinga</li><li>Planet Labs Stock Is Down 66% as Google AI Satellite Reaches Orbit - TradingView</li><li>GOOG, GOOGL Stock Notice: Alphabet Inc. Stock Plummeted 4% after AI Issues Disclosed - Securities Fraud Class Action Filed - Morningstar</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on GOOGL</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot hit" title="2026-10-02: right"></i><i class="dot miss" title="2026-10-05: wrong"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
     <p class="small">Right 53.3% of the last 120 sessions. It has had a small edge on this stock lately.</p></div>
 </article>
 <article class="card" id="aapl">
-  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$336.99</span></div>
+  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$337.04</span></div>
   <div class="call flat">
     <span class="chip">No clear lean</span>
     <span><b>52%</b> chance it closes above its open · <b>53%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+6.9%</span></div><div><span class="label">This year</span><span class="num pos">+24.3%</span></div><div><span class="label">1 year</span><span class="num pos">+31.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+14.8%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+6.9%</span></div><div><span class="label">This year</span><span class="num pos">+24.3%</span></div><div><span class="label">1 year</span><span class="num pos">+31.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+14.7%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
     <div class="bar"><i style="left:96%"></i></div>
     <div class="ends"><span>$244.37</span><span>$341.07</span></div></div>
@@ -110,17 +122,17 @@ footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;ga
     <p class="small">Right 48.3% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="nvda">
-  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$234.06</span></div>
+  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$235.73</span></div>
   <div class="call down">
     <span class="chip">Leans down</span>
     <span><b>47%</b> chance it closes above its open · <b>43%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+4.8%</span></div><div><span class="label">This year</span><span class="num pos">+25.8%</span></div><div><span class="label">1 year</span><span class="num pos">+26.8%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+9.7%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+5.5%</span></div><div><span class="label">This year</span><span class="num pos">+26.7%</span></div><div><span class="label">1 year</span><span class="num pos">+27.7%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+10.5%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:93%"></i></div>
+    <div class="bar"><i style="left:95%"></i></div>
     <div class="ends"><span>$164.79</span><span>$239.24</span></div></div>
   <details open><summary>What's going on</summary>
-    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 59, normal range 30 to 70).</li><li>A typical day moves it about 1.5%. Lately it is calmer than its usual year (23% vs 38% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 10 percentage points.</li><li>It is close to its 1-year high of $239.24 (-2.2%).</li><li>News mood over the last week: positive (491 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 62, normal range 30 to 70).</li><li>A typical day moves it about 1.5%. Lately it is calmer than its usual year (22% vs 38% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 10 percentage points.</li><li>It is close to its 1-year high of $239.24 (-1.5%).</li><li>News mood over the last week: positive (490 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>SpaceX stock slips on report of its $40 billion in new debt for Nvidia chips - Yahoo Finance</li><li>S&amp;P 500 And Nasdaq 100 Slip From Record Highs Amid Pressure From Soaring Treasury Yields — SPCX, AMD, NVDA, MRVL In Focus - Yahoo Finance</li><li>Nvidia-backed Firmus closes IPO bookbuilding as investor support falter -Bloomberg</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on NVDA</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot miss" title="2026-09-30: wrong"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot hit" title="2026-10-06: right"></i></span>
@@ -128,133 +140,287 @@ footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;ga
 </article></section>
 <details class="more"><summary>Your other 7 stocks</summary><section class="list">
 <article class="card" id="xom">
-  <div class="top"><h3>ExxonMobil <span class="tick">XOM</span></h3><span class="price">$168.64</span></div>
+  <div class="top"><h3>ExxonMobil <span class="tick">XOM</span></h3><span class="price">$167.80</span></div>
   <div class="call up">
     <span class="chip">Leans up</span>
     <span><b>60%</b> chance it closes above its open · <b>64%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+2.7%</span></div><div><span class="label">This year</span><span class="num pos">+42.9%</span></div><div><span class="label">1 year</span><span class="num pos">+51.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+34.8%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+2.2%</span></div><div><span class="label">This year</span><span class="num pos">+42.2%</span></div><div><span class="label">1 year</span><span class="num pos">+51.1%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num pos">+33.9%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:99%"></i></div>
+    <div class="bar"><i style="left:98%"></i></div>
     <div class="ends"><span>$107.52</span><span>$169.32</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 64, normal range 30 to 70).</li><li>A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 35 percentage points.</li><li>It is close to its 1-year high of $169.32 (-0.4%).</li><li>News mood over the last week: positive (82 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 62, normal range 30 to 70).</li><li>A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).</li><li>Over the past year it beat the S&amp;P 500 (SPY) by 34 percentage points.</li><li>It is close to its 1-year high of $169.32 (-0.9%).</li><li>News mood over the last week: positive (82 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>H&amp;P &amp; ExxonMobil Expand Deployment of FlexRobotics® Technology</li><li>Is Helmerich &amp; Payne (HP) Undervalued Following High End Margin Guidance And ExxonMobil Expansion?</li><li>ExxonMobil (XOM) Eyes Trinidad and Tobago to Boost Oil Productio - GuruFocus</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on XOM</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot hit" title="2026-10-02: right"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
     <p class="small">Right 55.0% of the last 120 sessions. It has had a small edge on this stock lately.</p></div>
 </article>
 <article class="card" id="jpm">
-  <div class="top"><h3>JPMorgan Chase <span class="tick">JPM</span></h3><span class="price">$328.04</span></div>
+  <div class="top"><h3>JPMorgan Chase <span class="tick">JPM</span></h3><span class="price">$328.65</span></div>
   <div class="call up">
     <span class="chip">Leans up</span>
     <span><b>54%</b> chance it closes above its open · <b>58%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num neg">-7.1%</span></div><div><span class="label">This year</span><span class="num pos">+3.8%</span></div><div><span class="label">1 year</span><span class="num pos">+8.7%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-8.4%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num neg">-6.9%</span></div><div><span class="label">This year</span><span class="num pos">+4.0%</span></div><div><span class="label">1 year</span><span class="num pos">+8.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-8.4%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:58%"></i></div>
+    <div class="bar"><i style="left:59%"></i></div>
     <div class="ends"><span>$278.75</span><span>$363.37</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</li><li>Neither overbought nor oversold (RSI 32, normal range 30 to 70).</li><li>A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 8 percentage points.</li><li>It is close to its 1-year high of $363.37 (-9.7%).</li><li>News mood over the last week: mixed (131 headlines).</li></ul>
+    <ul><li>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</li><li>Neither overbought nor oversold (RSI 33, normal range 30 to 70).</li><li>A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 8 percentage points.</li><li>It is close to its 1-year high of $363.37 (-9.6%).</li><li>News mood over the last week: mixed (131 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Wells Fargo’s Higher Dividend Yield Masks JPMorgan’s Superior Dividend Safety Record</li><li>JPMorgan Chase: Expect Q3 Earnings To Reinforce Buy Thesis (NYSE:JPM) - Seeking Alpha</li><li>JPMorgan Chase (JPM) Stock Still Looks Cheap Following Its 145% Run - Simply Wall Street</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on JPM</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot miss" title="2026-09-28: wrong"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot miss" title="2026-09-30: wrong"></i><i class="dot miss" title="2026-10-01: wrong"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
     <p class="small">Right 50.0% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="amzn">
-  <div class="top"><h3>Amazon <span class="tick">AMZN</span></h3><span class="price">$258.33</span></div>
+  <div class="top"><h3>Amazon <span class="tick">AMZN</span></h3><span class="price">$259.08</span></div>
   <div class="call flat">
     <span class="chip">No clear lean</span>
     <span><b>51%</b> chance it closes above its open · <b>51%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+2.4%</span></div><div><span class="label">This year</span><span class="num pos">+11.9%</span></div><div><span class="label">1 year</span><span class="num pos">+16.5%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-0.6%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+2.6%</span></div><div><span class="label">This year</span><span class="num pos">+12.2%</span></div><div><span class="label">1 year</span><span class="num pos">+16.8%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-0.4%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:70%"></i></div>
+    <div class="bar"><i style="left:71%"></i></div>
     <div class="ends"><span>$198.79</span><span>$284.02</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</li><li>Neither overbought nor oversold (RSI 56, normal range 30 to 70).</li><li>A typical day moves it about 1.3%. Lately it is calmer than its usual year (22% vs 34% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 1 percentage points.</li><li>It is close to its 1-year high of $284.02 (-9.0%).</li><li>News mood over the last week: positive (268 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 57, normal range 30 to 70).</li><li>A typical day moves it about 1.3%. Lately it is calmer than its usual year (22% vs 34% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 0 percentage points.</li><li>It is close to its 1-year high of $284.02 (-8.8%).</li><li>News mood over the last week: positive (268 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Amazon cuts fewer than 1,000 jobs across teams, Business Insider reports</li><li>Amazon Reportedly Hands Pink Slips To 1,000 Workers As Big Tech Layoffs Continue</li><li>Amazon stock is trading at its lowest trailing PE ratio in years despite AI boom - Yahoo Finance</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on AMZN</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot miss" title="2026-09-28: wrong"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot hit" title="2026-10-02: right"></i><i class="dot miss" title="2026-10-05: wrong"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
     <p class="small">Right 49.2% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="unh">
-  <div class="top"><h3>UnitedHealth Group <span class="tick">UNH</span></h3><span class="price">$375.12</span></div>
+  <div class="top"><h3>UnitedHealth Group <span class="tick">UNH</span></h3><span class="price">$371.67</span></div>
   <div class="call flat">
     <span class="chip">No clear lean</span>
     <span><b>49%</b> chance it closes above its open · <b>36%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num neg">-4.0%</span></div><div><span class="label">This year</span><span class="num pos">+15.9%</span></div><div><span class="label">1 year</span><span class="num pos">+5.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-11.2%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num neg">-4.9%</span></div><div><span class="label">This year</span><span class="num pos">+14.8%</span></div><div><span class="label">1 year</span><span class="num pos">+4.9%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-12.3%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:67%"></i></div>
+    <div class="bar"><i style="left:65%"></i></div>
     <div class="ends"><span>$255.97</span><span>$433.68</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</li><li>Neither overbought nor oversold (RSI 45, normal range 30 to 70).</li><li>A typical day moves it about 1.0%. Lately it is calmer than its usual year (19% vs 34% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 11 percentage points.</li><li>It sits 14% below its 1-year high of $433.68.</li><li>News mood over the last week: mixed (58 headlines).</li></ul>
+    <ul><li>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</li><li>Neither overbought nor oversold (RSI 42, normal range 30 to 70).</li><li>A typical day moves it about 1.0%. Lately it is calmer than its usual year (20% vs 34% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 12 percentage points.</li><li>It sits 14% below its 1-year high of $433.68.</li><li>News mood over the last week: mixed (58 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>UnitedHealth&#x27;s Recovery Has One Weak Spot (Rating Downgrade) - Seeking Alpha</li><li>Better Dividend Stock for Retirees: CVS vs. UnitedHealth</li><li>UNH Stock Tracks Hot Monthly Streak: Wall Street Cheers ‘Impressive’ Q2 And Sees Over 20% More Room To Run - stocktwits.com</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on UNH</span><span class="dots"><i class="dot miss" title="2026-09-24: wrong"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot miss" title="2026-09-30: wrong"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot miss" title="2026-10-06: wrong"></i></span>
     <p class="small">Right 51.7% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="meta">
-  <div class="top"><h3>Meta Platforms <span class="tick">META</span></h3><span class="price">$720.22</span></div>
+  <div class="top"><h3>Meta Platforms <span class="tick">META</span></h3><span class="price">$721.21</span></div>
   <div class="call down">
     <span class="chip">Leans down</span>
     <span><b>46%</b> chance it closes above its open · <b>50%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+10.3%</span></div><div><span class="label">This year</span><span class="num pos">+9.4%</span></div><div><span class="label">1 year</span><span class="num pos">+1.3%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-15.7%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+10.4%</span></div><div><span class="label">This year</span><span class="num pos">+9.5%</span></div><div><span class="label">1 year</span><span class="num pos">+1.5%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-15.7%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:77%"></i></div>
+    <div class="bar"><i style="left:78%"></i></div>
     <div class="ends"><span>$524.82</span><span>$777.59</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 57, normal range 30 to 70).</li><li>A typical day moves it about 1.3%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 16 percentage points.</li><li>It is close to its 1-year high of $777.59 (-7.4%).</li><li>News mood over the last week: mixed (265 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 58, normal range 30 to 70).</li><li>A typical day moves it about 1.3%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 16 percentage points.</li><li>It is close to its 1-year high of $777.59 (-7.3%).</li><li>News mood over the last week: mixed (263 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Meta Platforms (NASDAQ:META) Stock Price Down 2.4% - What&#x27;s Next? - MarketBeat</li><li>Meta Threatened With Major Fines In Europe Over &#x27;Addictive&#x27; Features - Investor&#x27;s Business Daily</li><li>Meta’s Muse, Agentic AI Could Put the Squeeze on These Retail Power Providers</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on META</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot hit" title="2026-09-25: right"></i><i class="dot miss" title="2026-09-28: wrong"></i><i class="dot hit" title="2026-09-29: right"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot hit" title="2026-10-06: right"></i></span>
     <p class="small">Right 51.7% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="msft">
-  <div class="top"><h3>Microsoft <span class="tick">MSFT</span></h3><span class="price">$530.54</span></div>
+  <div class="top"><h3>Microsoft <span class="tick">MSFT</span></h3><span class="price">$531.61</span></div>
   <div class="call down">
     <span class="chip">Leans down</span>
     <span><b>46%</b> chance it closes above its open · <b>52%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+7.9%</span></div><div><span class="label">This year</span><span class="num pos">+10.4%</span></div><div><span class="label">1 year</span><span class="num pos">+2.1%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-15.0%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+8.1%</span></div><div><span class="label">This year</span><span class="num pos">+10.6%</span></div><div><span class="label">1 year</span><span class="num pos">+2.3%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-14.9%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
-    <div class="bar"><i style="left:96%"></i></div>
+    <div class="bar"><i style="left:97%"></i></div>
     <div class="ends"><span>$352.17</span><span>$537.65</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 69, normal range 30 to 70).</li><li>A typical day moves it about 1.1%. Lately it is calmer than its usual year (21% vs 33% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 15 percentage points.</li><li>It is close to its 1-year high of $537.65 (-1.3%).</li><li>News mood over the last week: positive (183 headlines).</li></ul>
+    <ul><li>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</li><li>Neither overbought nor oversold (RSI 69, normal range 30 to 70).</li><li>A typical day moves it about 1.1%. Lately it is calmer than its usual year (21% vs 33% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 15 percentage points.</li><li>It is close to its 1-year high of $537.65 (-1.1%).</li><li>News mood over the last week: positive (183 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Microsoft Stock (NASDAQ:MSFT) Slips on New Canadian Project - TipRanks</li><li>The “Adults in Charge” of AI: Microsoft Stock (NASDAQ:MSFT) Rises Thanks to New Investor Perception - TipRanks</li><li>MSFT Rises 41% in 6 Months on Solid AI Demand: Should You Hold Now? - Yahoo Finance Singapore</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on MSFT</span><span class="dots"><i class="dot miss" title="2026-09-24: wrong"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot miss" title="2026-09-28: wrong"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot hit" title="2026-10-01: right"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot hit" title="2026-10-06: right"></i></span>
     <p class="small">Right 51.7% of the last 120 sessions. It has had no real edge on this stock lately, so treat the call as a coin flip.</p></div>
 </article>
 <article class="card" id="tsla">
-  <div class="top"><h3>Tesla, <span class="tick">TSLA</span></h3><span class="price">$373.18</span></div>
+  <div class="top"><h3>Tesla, <span class="tick">TSLA</span></h3><span class="price">$372.50</span></div>
   <div class="call down">
     <span class="chip">Leans down</span>
     <span><b>42%</b> chance it closes above its open · <b>41%</b> it beats the market</span>
   </div>
-  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+1.5%</span></div><div><span class="label">This year</span><span class="num neg">-17.0%</span></div><div><span class="label">1 year</span><span class="num neg">-13.8%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-30.9%</span></div></div>
+  <div class="stats"><div><span class="label">1 month</span><span class="num pos">+1.3%</span></div><div><span class="label">This year</span><span class="num neg">-17.2%</span></div><div><span class="label">1 year</span><span class="num neg">-14.0%</span></div><div><span class="label">vs S&amp;P, 1 year</span><span class="num neg">-31.2%</span></div></div>
   <div class="range"><span class="label">Where it sits in its 1-year range</span>
     <div class="bar"><i style="left:39%"></i></div>
     <div class="ends"><span>$298.32</span><span>$489.88</span></div></div>
   <details><summary>What's going on</summary>
-    <ul><li>Long-term trend is down (below the 200-day average), with some recent recovery.</li><li>Neither overbought nor oversold (RSI 55, normal range 30 to 70).</li><li>A typical day moves it about 1.6%. Lately it is calmer than its usual year (30% vs 45% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 31 percentage points.</li><li>It sits 24% below its 1-year high of $489.88.</li><li>News mood over the last week: positive (182 headlines).</li></ul>
+    <ul><li>Long-term trend is down (below the 200-day average), with some recent recovery.</li><li>Neither overbought nor oversold (RSI 54, normal range 30 to 70).</li><li>A typical day moves it about 1.6%. Lately it is calmer than its usual year (30% vs 45% annualised volatility).</li><li>Over the past year it lagged the S&amp;P 500 (SPY) by 31 percentage points.</li><li>It sits 24% below its 1-year high of $489.88.</li><li>News mood over the last week: positive (182 headlines).</li></ul>
     <p class="label">Headlines this week</p><ul class="heads"><li>Why Tesla (TSLA) Is Up 6.7% After Unveiling Terafab AI Chip Complex And Major New Credit Lines</li><li>TSLA Stock Recovers To Close Nearly 2% Higher As SpaceX IPO Debuts - Stocktwits</li><li>TSLA Stock Heads For Weekly Win: Dan Ives Sees Over 30% Upside From AI, UBS Calls Setup ‘Tactically Favorable’</li></ul>
   </details>
   <div class="record"><span class="label">Last 9 calls on TSLA</span><span class="dots"><i class="dot hit" title="2026-09-24: right"></i><i class="dot miss" title="2026-09-25: wrong"></i><i class="dot hit" title="2026-09-28: right"></i><i class="dot miss" title="2026-09-29: wrong"></i><i class="dot hit" title="2026-09-30: right"></i><i class="dot miss" title="2026-10-01: wrong"></i><i class="dot miss" title="2026-10-02: wrong"></i><i class="dot hit" title="2026-10-05: right"></i><i class="dot hit" title="2026-10-06: right"></i></span>
     <p class="small">Right 64.2% of the last 120 sessions. It has had a small edge on this stock lately.</p></div>
 </article></section></details>
 <section class="honest">
-  <h2>How good are the calls?</h2>
+  <h2>How good are the daily calls?</h2>
   <p>Over the last 120 sessions the lead model was right <b>52.9%</b> of the time. Simply guessing "up" every day was right 50.8%.
   Since it went live it has been right on 51 of 90 calls. Use the calls as one clue next to the trend and the news, not as a signal on their own.</p>
 </section>
+</div>
+<div class="panel week">
+
+<section class="when">
+  <h2>Week ahead: Thu 08 Oct to Wed 14 Oct</h2>
+  <ol>
+    <li>Each call is for one week of 5 trading days: from the open on <b>Thu 08 Oct</b> to the close on <b>Wed 14 Oct</b>.</li>
+    <li>If you act on one, buy at that first open and hold until that last close. The calls are refreshed every night, so check again before you buy.</li>
+  </ol>
+  <p class="leans"><a class="pill up" href="#w-googl">GOOGL up</a><a class="pill down" href="#w-nvda">NVDA down</a><a class="pill up" href="#w-tsla">TSLA up</a><a class="pill up" href="#w-xom">XOM up</a><a class="pill up" href="#w-jpm">JPM up</a><a class="pill up" href="#w-meta">META up</a><a class="pill down" href="#w-unh">UNH down</a><a class="pill down" href="#w-msft">MSFT down</a></p>
+</section>
+<section class="list">
+<article class="card" id="w-googl">
+  <div class="top"><h3>Alphabet <span class="tick">GOOGL</span></h3><span class="price">$351.78</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>53%</b> chance it is higher after the week · <b>48%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+4.0%</span></div><div><span class="label">1 month</span><span class="num pos">+6.4%</span></div><div><span class="label">3 months</span><span class="num neg">-1.4%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of GOOGL: right 50.6% of the time, no better than always guessing "up" (57.2%). In weeks when it clearly leaned up, GOOGL moved +0.4% on average, against +0.7% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-aapl">
+  <div class="top"><h3>Apple <span class="tick">AAPL</span></h3><span class="price">$337.04</span></div>
+  <div class="call flat">
+    <span class="chip">No clear lean</span>
+    <span><b>51%</b> chance it is higher after the week · <b>43%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+2.0%</span></div><div><span class="label">1 month</span><span class="num pos">+6.9%</span></div><div><span class="label">3 months</span><span class="num pos">+7.0%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of AAPL: right 49.0% of the time, no better than always guessing "up" (56.9%). In weeks when it clearly leaned up, AAPL moved +0.6% on average, against +0.5% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-nvda">
+  <div class="top"><h3>Nvidia <span class="tick">NVDA</span></h3><span class="price">$235.73</span></div>
+  <div class="call down">
+    <span class="chip">Leans down</span>
+    <span><b>47%</b> chance it is higher after the week · <b>44%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+2.1%</span></div><div><span class="label">1 month</span><span class="num pos">+5.5%</span></div><div><span class="label">3 months</span><span class="num pos">+11.9%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of NVDA: right 51.1% of the time, no better than always guessing "up" (59.5%). In weeks when it clearly leaned up, NVDA moved +1.0% on average, against +1.4% for an average week.</p>
+  </div>
+</article></section>
+<details class="more"><summary>Your other 7 stocks</summary><section class="list">
+<article class="card" id="w-tsla">
+  <div class="top"><h3>Tesla, <span class="tick">TSLA</span></h3><span class="price">$372.50</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>61%</b> chance it is higher after the week · <b>60%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+5.2%</span></div><div><span class="label">1 month</span><span class="num pos">+1.3%</span></div><div><span class="label">3 months</span><span class="num neg">-8.6%</span></div></div>
+  <p>Long-term trend is down (below the 200-day average), with some recent recovery.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of TSLA: right 48.0% of the time, no better than always guessing "up" (51.7%). In weeks when it clearly leaned up, TSLA moved +0.0% on average, against +0.6% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-xom">
+  <div class="top"><h3>ExxonMobil <span class="tick">XOM</span></h3><span class="price">$167.80</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>60%</b> chance it is higher after the week · <b>54%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+2.4%</span></div><div><span class="label">1 month</span><span class="num pos">+2.2%</span></div><div><span class="label">3 months</span><span class="num pos">+21.6%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of XOM: right 52.3% of the time, no better than always guessing "up" (54.4%). In weeks when it clearly leaned up, XOM moved +0.6% on average, against +0.3% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-jpm">
+  <div class="top"><h3>JPMorgan Chase <span class="tick">JPM</span></h3><span class="price">$328.65</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>57%</b> chance it is higher after the week · <b>52%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num neg">-0.9%</span></div><div><span class="label">1 month</span><span class="num neg">-6.9%</span></div><div><span class="label">3 months</span><span class="num neg">-1.8%</span></div></div>
+  <p>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of JPM: right 47.6% of the time, no better than always guessing "up" (59.6%). In weeks when it clearly leaned up, JPM moved +0.3% on average, against +0.5% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-meta">
+  <div class="top"><h3>Meta Platforms <span class="tick">META</span></h3><span class="price">$721.21</span></div>
+  <div class="call up">
+    <span class="chip">Leans up</span>
+    <span><b>54%</b> chance it is higher after the week · <b>51%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num neg">-0.7%</span></div><div><span class="label">1 month</span><span class="num pos">+10.4%</span></div><div><span class="label">3 months</span><span class="num pos">+7.9%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of META: right 47.4% of the time, no better than always guessing "up" (58.5%). In weeks when it clearly leaned up, META moved +0.4% on average, against +1.0% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-amzn">
+  <div class="top"><h3>Amazon <span class="tick">AMZN</span></h3><span class="price">$259.08</span></div>
+  <div class="call flat">
+    <span class="chip">No clear lean</span>
+    <span><b>52%</b> chance it is higher after the week · <b>44%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+4.4%</span></div><div><span class="label">1 month</span><span class="num pos">+2.6%</span></div><div><span class="label">3 months</span><span class="num pos">+5.6%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of AMZN: right 50.5% of the time, no better than always guessing "up" (54.8%). In weeks when it clearly leaned up, AMZN moved +0.2% on average, against +0.5% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-unh">
+  <div class="top"><h3>UnitedHealth Group <span class="tick">UNH</span></h3><span class="price">$371.67</span></div>
+  <div class="call down">
+    <span class="chip">Leans down</span>
+    <span><b>48%</b> chance it is higher after the week · <b>43%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+1.8%</span></div><div><span class="label">1 month</span><span class="num neg">-4.9%</span></div><div><span class="label">3 months</span><span class="num neg">-11.9%</span></div></div>
+  <p>Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of UNH: right 46.8% of the time, no better than always guessing "up" (50.2%). In weeks when it clearly leaned up, UNH moved -0.7% on average, against -0.0% for an average week.</p>
+  </div>
+</article>
+<article class="card" id="w-msft">
+  <div class="top"><h3>Microsoft <span class="tick">MSFT</span></h3><span class="price">$531.61</span></div>
+  <div class="call down">
+    <span class="chip">Leans down</span>
+    <span><b>47%</b> chance it is higher after the week · <b>45%</b> it beats the market</span>
+  </div>
+  <div class="stats"><div><span class="label">1 week</span><span class="num pos">+3.7%</span></div><div><span class="label">1 month</span><span class="num pos">+8.1%</span></div><div><span class="label">3 months</span><span class="num pos">+38.3%</span></div></div>
+  <p>Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.</p>
+  <div class="record">
+    
+    <p class="small">Tested on 960 past weeks of MSFT: right 50.1% of the time, no better than always guessing "up" (56.4%). In weeks when it clearly leaned up, MSFT moved -0.0% on average, against +0.4% for an average week.</p>
+  </div>
+</article></section></details>
+<section class="honest">
+  <h2>How good are the weekly calls?</h2>
+  <p>Tested on 9,600 past weeks since 2022-12-01, each predicted only from what was known at the time: right <b>49.3%</b> of the time.
+  Always guessing "up" was right 55.9%, because stocks rise in most weeks. When the model was fairly sure (at least 55% one way), it was right 49.2% of 6,789 calls.
+  Live weekly calls are scored here as each week ends.</p>
+</section>
+</div>
 <footer><a href="https://github.com/Stevnatsan/stock-prediction-lab/blob/main/reports/latest.md">Full report</a> · <a href="https://github.com/Stevnatsan/stock-prediction-lab">Project on GitHub</a>
   <p>Educational project. Not financial advice.</p></footer>
 </main>
 <script>
+const week = document.getElementById('tab-week'), day = document.getElementById('tab-day');
+if (location.hash === '#weekly' || location.hash.startsWith('#w-')) week.checked = true;
+week.addEventListener('change', () => history.replaceState(null, '', '#weekly'));
+day.addEventListener('change', () => history.replaceState(null, '', location.pathname));
 for (const el of document.querySelectorAll('time[data-utc]')) {
   const d = new Date(el.dataset.utc);
   if (isNaN(d)) continue;
