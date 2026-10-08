@@ -67,3 +67,16 @@ def test_walk_forward_never_sees_weeks_that_had_not_ended():
     assert early.any()
     assert before.loc[early, "model"].to_numpy() == pytest.approx(after.loc[early, "model"].to_numpy())
     assert before.loc[early, "usual"].to_numpy() == pytest.approx(after.loc[early, "usual"].to_numpy())
+
+
+def test_a_run_after_the_week_has_opened_logs_no_call(tmp_path):
+    prices, market, frames = _setup()
+    last = prices["AAA"].index[-1]
+    next_day = last + pd.offsets.BDay(1)
+    during = (next_day + pd.Timedelta(hours=16)).tz_localize("UTC").to_pydatetime()  # midday in New York, the session is on
+    out = weekly.run(frames, prices, market, tmp_path, during)
+    assert out["late"] and out["calls"]["AAA"]["p_up"] is not None  # the odds are still shown
+    assert not (tmp_path / "weekly.csv").exists() or pd.read_csv(tmp_path / "weekly.csv").empty
+    before = (next_day + pd.Timedelta(hours=11)).tz_localize("UTC").to_pydatetime()  # early morning in New York, before the open
+    assert not weekly.run(frames, prices, market, tmp_path, before)["late"]
+    assert len(pd.read_csv(tmp_path / "weekly.csv")) == 2

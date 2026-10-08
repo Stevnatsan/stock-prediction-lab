@@ -5,13 +5,13 @@ main, /docs) and it lives at https://<user>.github.io/<repo>/, ready to add to a
 import html
 import json
 import os
-from datetime import datetime, time, timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
 
 import pandas as pd
 
 from .config import ROOT
-from .sources.prices import NEW_YORK
+from .sources.prices import NEW_YORK, SESSION_OPEN
 from .strategy import CHAMPION_WINDOW, champion
 
 LEAN = 0.02  # a call more than 2 points from 50% counts as a lean
@@ -29,8 +29,14 @@ def company_names():
 def next_session(after):
     """The next weekday after `after` (market holidays aside) and its 9:30 and 16:00 New York times."""
     day = pd.Timestamp(after) + pd.offsets.BDay(1)
-    opens = datetime.combine(day.date(), time(9, 30), NEW_YORK)
+    opens = datetime.combine(day.date(), SESSION_OPEN, NEW_YORK)
     return day.date(), opens, opens + timedelta(hours=6, minutes=30)
+
+
+def _too_late(opens, text):
+    """A notice the page shows (in the reader's browser) once `opens` has passed: the calls are for a
+    session that has already started, and acting on them now would not be the call that was tested."""
+    return f'<p class="stale" data-after="{opens.isoformat()}" hidden>{text}</p>'
 
 
 def lean(p):
@@ -162,9 +168,11 @@ def weekly_panel(insight, names, focus, rest):
     lv = live.get("all", {})
     u, m = rec.get("usual", {}), rec.get("model", {})
     folded = "".join(_week_card(t, stocks[t], names.get(t, t), calls[t], live) for t in others)
+    week_opens = datetime.combine(start.date(), SESSION_OPEN, NEW_YORK)
     return f"""
 <section class="when">
   <h2>Week ahead: {_day(start)} to {_day(end)}</h2>
+  {_too_late(week_opens, "<b>This week has already started</b>, so these odds are no longer a call for it. New odds arrive after the US close.")}
   <ol>
     <li>Each call covers 5 trading days: from the open on <b>{_day(start)}</b> to the close on <b>{_day(end)}</b>.</li>
     <li>If you act, buy at that first open and hold until that last close. The odds are refreshed every night.</li>
@@ -326,6 +334,8 @@ def build_page(insight, state, config, now):
     record = overall_record(state) if state is not None else {}
     mk = insight.get("market")
     updated = pd.Timestamp(now).tz_convert("UTC")
+    made = max((p["made_at"] for p in state.pending if p["feature_date"] == as_of and p.get("made_at")), default=None) if as_of else None
+    made = pd.Timestamp(made).tz_convert("UTC") if made else updated
 
     leans = []
     for t in focus + rest:
@@ -346,8 +356,9 @@ def build_page(insight, state, config, now):
         when = f"""
 <section class="when">
   <h2>Next day: {_day(session)}</h2>
+  {_too_late(opens, f"<b>{_day(session, long=True)}'s session has already opened</b>, so it's too late to act on these calls. The next ones arrive after the US close.")}
   <ol>
-    <li>New calls arrive every weekday night after the US market closes. This page was updated <b><time data-utc="{updated.isoformat()}">{updated:%a %d %b, %H:%M} UTC</time></b>.</li>
+    <li>New calls arrive every weekday night after the US market closes. These were made <b><time data-utc="{made.isoformat()}">{made:%a %d %b, %H:%M} UTC</time></b>, before the open.</li>
     <li>They are for <b>{_day(session, long=True)}</b>: from the open at <b><time data-utc="{opens.isoformat()}" data-short>9:30am New York</time></b> to the close at <b><time data-utc="{closes.isoformat()}" data-short>4:00pm New York</time></b>.</li>
     <li>If you act on a call, act at the open. The call is settled at that day's close.</li>
   </ol>
@@ -467,6 +478,8 @@ footer{font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;ga
 .panel.week,.panel.news,#tab-week:checked~.panel.day,#tab-news:checked~.panel.day{display:none}
 #tab-week:checked~.panel.week,#tab-news:checked~.panel.news{display:flex}
 .pill.flat{color:var(--flat)}
+.stale{margin:0;padding:10px 12px;border-left:3px solid var(--down);background:var(--track);border-radius:6px}
+.stale[hidden]{display:none}
 .moodbar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--track)}
 .moodbar i{display:block;height:100%}.moodbar .pos{background:var(--up)}.moodbar .neu{background:var(--flat);opacity:.35}.moodbar .neg{background:var(--down)}
 .spark{display:block;width:100%;height:44px;margin-top:6px}
@@ -492,6 +505,7 @@ if (location.hash === '#news' || location.hash.startsWith('#n-')) news.checked =
 week.addEventListener('change', () => history.replaceState(null, '', '#weekly'));
 news.addEventListener('change', () => history.replaceState(null, '', '#news'));
 day.addEventListener('change', () => history.replaceState(null, '', location.pathname));
+for (const el of document.querySelectorAll('.stale[data-after]')) if (Date.now() >= Date.parse(el.dataset.after)) el.hidden = false;
 for (const el of document.querySelectorAll('time[data-utc]')) {
   const d = new Date(el.dataset.utc);
   if (isNaN(d)) continue;

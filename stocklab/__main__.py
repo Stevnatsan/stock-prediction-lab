@@ -46,26 +46,27 @@ def main():
     if args.command == "insight":
         from . import insight, site, weekly
         from .sources import LiveSources
+        from .sources.prices import drop_unfinished_session
         from .state import State
 
         tickers = [t.strip().upper() for t in (args.step or ",".join(config.tickers)).split(",") if t.strip()]
         sources, now = LiveSources(config), datetime.now(timezone.utc)
         state = State.load(ROOT / "state", config)
-        market = sources.prices(config.market, config.history_years)
-        prices = {t: sources.prices(t, config.history_years) for t in tickers}
+
+        def settled(p):  # during US trading hours today's bar is still moving: describe the last finished day
+            return None if p is None else drop_unfinished_session(p, now)
+
+        market = settled(sources.prices(config.market, config.history_years))
+        prices = {t: settled(sources.prices(t, config.history_years)) for t in tickers}
         events = {t: {"earnings": sources.earnings(t), "analysts": sources.analysts(t)} for t in tickers}
         brief = insight.build(prices, market, state, now, tickers, events)
         if market is not None:
             from .features import build_frame
-            from .sources.prices import drop_unfinished_session
 
-            market = drop_unfinished_session(market, now)
             macro = sources.macro(config.history_years)
-            frames = {t: build_frame(drop_unfinished_session(p, now), market, {**events[t],
-                                                                               "filings": sources.filing_dates(t), "macro": macro})
+            frames = {t: build_frame(p, market, {**events[t], "filings": sources.filing_dates(t), "macro": macro})
                       for t, p in prices.items() if p is not None}
-            brief["weekly"] = weekly.run(frames, {t: drop_unfinished_session(p, now) for t, p in prices.items() if p is not None},
-                                         market, ROOT / "state", now, save=False)
+            brief["weekly"] = weekly.run(frames, {t: p for t, p in prices.items() if p is not None}, market, ROOT / "state", now, save=False)
         insight.write(brief, ROOT / "reports")
         site.write(brief, state, config, now)
         print(insight.to_markdown(brief))

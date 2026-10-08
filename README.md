@@ -146,6 +146,8 @@ Every feature only uses what was public by the evening run:
 - An **earnings report** counts as "coming up" only between the previous close and the reacting session's close. Its surprise is used only after the release time.
 - **Analyst actions** count only if they were published before 17:00 New York time.
 - **FRED values** are used from the *previous* day, because FRED publishes each day's value the next morning.
+- **Today's bar is dropped** until the close has settled, because during trading hours it is still moving.
+- **A run during US trading hours makes no calls** for the session or the week already under way: it would know part of what it claims to predict, so last night's calls stay as they are and nothing new is logged. The page keeps showing them and adds a notice, once the open has passed, that it is too late to act on them.
 
 The tests check each of these rules.
 

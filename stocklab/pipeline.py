@@ -1,21 +1,13 @@
 """One daily run: fetch every source, score yesterday, learn, predict tomorrow, publish."""
-from datetime import datetime, time, timezone
+from datetime import datetime, timezone
 
 from . import boosting, engine, insight, site, weekly
 from .features import BOOSTED, ENSEMBLES, TASKS, VARIANTS, build_frame, live_features, score_headlines, task_of
 from .report import build_report
-from .sources.prices import NEW_YORK, drop_unfinished_session
+from .sources.prices import drop_unfinished_session, next_session_started
 from .state import State
 
 MIN_HISTORY = 80  # trading days needed before the 50-day features exist
-SESSION_OPEN = time(9, 30)
-
-
-def next_session_started(last_date, now):
-    """True once a weekday session after `last_date` has opened (market holidays aside). A prediction
-    made then would already know part of the session it claims to predict, so it isn't made."""
-    now_ny = now.astimezone(NEW_YORK)
-    return now_ny.date() > last_date.date() and now_ny.weekday() < 5 and now_ny.time() >= SESSION_OPEN
 
 
 def run_daily(config, sources, state_dir, reports_dir, readme_path=None, now=None, docs_dir=None):

@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 
 NEW_YORK = ZoneInfo("America/New_York")
+SESSION_OPEN = time(9, 30)
 SESSION_SETTLED = time(16, 15)  # a little after the 16:00 close, so the daily bar is final
 MIN_SESSION_BARS = 70           # a full session has 78 five-minute bars
 RETRY_WAITS = (5, 20, 60)       # seconds between attempts: Yahoo often refuses or rate-limits for a moment
@@ -75,3 +76,10 @@ def drop_unfinished_session(prices, now):
     if len(prices) and prices.index[-1] == today and now_ny.time() < SESSION_SETTLED:
         return prices.iloc[:-1]
     return prices
+
+
+def next_session_started(last_date, now):
+    """True once a weekday session after `last_date` has opened (market holidays aside). A call made
+    then would already know part of the session it claims to predict, so it isn't made or logged."""
+    now_ny = now.astimezone(NEW_YORK)
+    return now_ny.date() > pd.Timestamp(last_date).date() and now_ny.weekday() < 5 and now_ny.time() >= SESSION_OPEN
