@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-10-09 02:09 UTC.
+Generated 2026-10-09 07:23 UTC.
 
 ## Next-session calls
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7680 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 991 |  |
+| finbert | 10 | 0 | 311 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 1004 |  |
-| macro_yahoo | 1 | 0 | 1088 |  |
+| google_news | 10 | 0 | 1002 |  |
+| macro_yahoo | 1 | 0 | 1087 |  |
 | major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
-| prices | 11 | 0 | 11946 |  |
+| prices | 11 | 0 | 11935 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 134 |  |
+| yahoo_rss | 10 | 0 | 139 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-10-08 | 0 | 8 | 36 |
-| MSFT | ok | 2026-10-08 | 0 | 8 | 24 |
-| NVDA | ok | 2026-10-08 | 0 | 8 | 84 |
-| AMZN | ok | 2026-10-08 | 0 | 8 | 45 |
-| GOOGL | ok | 2026-10-08 | 0 | 8 | 32 |
-| META | ok | 2026-10-08 | 0 | 8 | 52 |
-| TSLA | ok | 2026-10-08 | 0 | 8 | 23 |
-| JPM | ok | 2026-10-08 | 0 | 8 | 22 |
-| XOM | ok | 2026-10-08 | 0 | 8 | 21 |
-| UNH | ok | 2026-10-08 | 0 | 8 | 22 |
+| AAPL | ok | 2026-10-08 | 0 | 0 | 0 |
+| MSFT | ok | 2026-10-08 | 0 | 0 | 0 |
+| NVDA | ok | 2026-10-08 | 0 | 0 | 0 |
+| AMZN | ok | 2026-10-08 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-10-08 | 0 | 0 | 0 |
+| META | ok | 2026-10-08 | 0 | 0 | 0 |
+| TSLA | ok | 2026-10-08 | 0 | 0 | 0 |
+| JPM | ok | 2026-10-08 | 0 | 0 | 0 |
+| XOM | ok | 2026-10-08 | 0 | 0 | 0 |
+| UNH | ok | 2026-10-08 | 0 | 0 | 0 |
 
 ---
 
