@@ -1,23 +1,23 @@
 {
- "generated": "2026-10-09T07:23:22+00:00",
+ "generated": "2026-10-10T01:46:19+00:00",
  "market": {
-  "as_of": "2026-10-08",
-  "close": 773.93,
+  "as_of": "2026-10-09",
+  "close": 778.57,
   "returns": {
-   "1 week": 0.013010644862450294,
-   "1 month": 0.017643988818496936,
-   "3 months": 0.027686351832181266,
-   "1 year": 0.16911712774932353
+   "1 week": 0.011602817558622247,
+   "1 month": 0.029918781843103925,
+   "3 months": 0.041824087346640226,
+   "1 year": 0.16915475370385513
   },
-  "ytd": 0.14379241615632266,
+  "ytd": 0.15064990147923663,
   "high_1y": 779.09,
   "low_1y": 628.78,
-  "off_high": -0.006623155221886501,
-  "sma50": 765.5093090820312,
-  "sma200": 719.1625918579101,
-  "rsi_14": 56.73431792361885,
-  "vol_now": 0.10154652716193571,
-  "vol_1y": 0.1301240380775929,
+  "off_high": -0.0006674703992154418,
+  "sma50": 766.2836535644532,
+  "sma200": 719.6578295898438,
+  "rsi_14": 60.48026983440344,
+  "vol_now": 0.09950187069659686,
+  "vol_1y": 0.13012542130512786,
   "typical_day": 0.004524202947012668,
   "up_days_1y": 0.5277777777777778,
   "summary": [
@@ -27,46 +27,41 @@
  },
  "stocks": {
   "AAPL": {
-   "as_of": "2026-10-08",
-   "close": 340.42,
+   "as_of": "2026-10-09",
+   "close": 336.64,
    "returns": {
-    "1 week": 0.030576428552818946,
-    "1 month": 0.07953325737649286,
-    "3 months": 0.08053274164786894,
-    "1 year": 0.3321798799676021
+    "1 week": 0.008840577138804928,
+    "1 month": 0.030835677185202304,
+    "3 months": 0.061833419420841196,
+    "1 year": 0.3093215908056379
    },
-   "ytd": 0.25559711782565886,
+   "ytd": 0.2416550598224294,
    "high_1y": 341.07,
    "low_1y": 244.37,
-   "off_high": -0.0019057492084506578,
-   "sma50": 322.28662658691405,
-   "sma200": 290.07029724121094,
-   "rsi_14": 61.23257139024745,
-   "vol_now": 0.1676451409793872,
-   "vol_1y": 0.246641648402786,
+   "off_high": -0.012988514324480449,
+   "sma50": 322.3565734863281,
+   "sma200": 290.4023234558106,
+   "rsi_14": 56.13815938241815,
+   "vol_now": 0.16362750278635654,
+   "vol_1y": 0.2469012565682476,
    "typical_day": 0.0092604307147659,
-   "up_days_1y": 0.5396825396825397,
+   "up_days_1y": 0.5357142857142857,
    "vs_market": {
-    "3 months": 0.05284638981568768,
-    "1 year": 0.1630627522182786
+    "3 months": 0.02000933207420097,
+    "1 year": 0.1401668371017828
    },
-   "beta": 0.6796108758836306,
+   "beta": 0.6741368760166346,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.50092,
-     "for_session_after": "2026-10-08",
+     "p": 0.48465,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.49166666666666664,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.5456389452332657,
+     "accuracy_live": 0.5454545454545454,
+     "live_sessions": 11,
+     "base_rate": 0.5460992907801419,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.50296,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.54625,
@@ -111,24 +106,24 @@
        "date": "2026-10-07",
        "p": 0.51897,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.50092,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.52314,
-     "for_session_after": "2026-10-08",
-     "accuracy_recent": 0.525,
+     "p": 0.5824,
+     "for_session_after": "2026-10-09",
+     "accuracy_recent": 0.5333333333333333,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.5311004784688995,
+     "accuracy_live": 0.7272727272727273,
+     "live_sessions": 11,
+     "base_rate": 0.5315487571701721,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.56208,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.58693,
@@ -173,59 +168,64 @@
        "date": "2026-10-07",
        "p": 0.53062,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.52314,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 299,
-    "mood_7d": 0.023693645484949833,
+    "count_7d": 342,
+    "mood_7d": -0.016202923976608195,
     "headlines": [
      {
-      "title": "Nvidia, Apple, and Microsoft Spell Trouble for Index Investors",
-      "published": "2026-10-08"
-     },
-     {
-      "title": "Apple cuts iPhone 18 Pro orders due to soft demand, Nikkei Asia reports - Reuters",
+      "title": "Apple Cuts iPhone Orders Up to 20%. Its $2,000 Gamble May Already Be in Trouble.",
       "published": "2026-10-09"
      },
      {
-      "title": "Apple (AAPL) Stock Looks Fully Priced On Its 145% Five Year Run - Simply Wall Street",
-      "published": "2026-10-08"
+      "title": "Apple Shares Dip After Report Says It\u2019s Cutting iPhone 18 Pro Component Orders - Forbes",
+      "published": "2026-10-09"
+     },
+     {
+      "title": "Apple stock falls on report that company is cutting component orders on soft iPhone 18 Pro demand - Yahoo Finance",
+      "published": "2026-10-09"
      }
     ]
    },
    "summary": [
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
-    "Neither overbought nor oversold (RSI 61, normal range 30 to 70).",
-    "A typical day moves it about 0.9%. Lately it is calmer than its usual year (17% vs 25% annualised volatility).",
-    "Over the past year it beat the S&P 500 (SPY) by 16 percentage points.",
-    "It is close to its 1-year high of $341.07 (-0.2%).",
-    "News mood over the last week: mixed (299 headlines).",
-    "The models give 50% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip."
+    "Neither overbought nor oversold (RSI 56, normal range 30 to 70).",
+    "A typical day moves it about 0.9%. Lately it is calmer than its usual year (16% vs 25% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 14 percentage points.",
+    "It is close to its 1-year high of $341.07 (-1.3%).",
+    "News mood over the last week: mixed (342 headlines).",
+    "The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 120,
-     "score": 0.06960666666666666,
-     "positive": 25,
-     "neutral": 80,
-     "negative": 15
+     "count": 138,
+     "score": -0.032702898550724634,
+     "positive": 24,
+     "neutral": 84,
+     "negative": 30
     },
     "previous_week": {
-     "count": 114,
-     "score": -0.10790087719298244,
-     "positive": 23,
-     "neutral": 52,
-     "negative": 39
+     "count": 106,
+     "score": -0.16155377358490566,
+     "positive": 15,
+     "neutral": 54,
+     "negative": 37
     },
     "trend": "improving",
     "major_mood": {
-     "count": 17,
-     "score": 0.02457058823529412,
+     "count": 22,
+     "score": -0.03593181818181818,
      "positive": 2,
-     "neutral": 13,
-     "negative": 2
+     "neutral": 16,
+     "negative": 4
     },
     "daily": [
      {
@@ -295,48 +295,48 @@
      },
      {
       "date": "2026-10-09",
-      "count": 4,
-      "score": -0.362925
+      "count": 35,
+      "score": -0.4261114285714286
      }
     ],
     "read": [
      {
-      "title": "Apple cuts iPhone 18 Pro orders due to soft demand, Nikkei Asia reports",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcWxvbWdzenJKeF9PdGppTmNVeTQySGx4dzNaREdmbktzZzVUc3UtZVdXRUVxT1d6eDA0MGE5UGYxRi1rbXdEYW96ZVRRWXUtS3BialZSa0l0dWVKQzhNVVVfRUlfWk4zM2g1anhLUmpmaUg5VWR3eHcybnJsVE8yVFJWZTl4ZnpQa2xWUm1wN2k4X2llWWVoTHZoRjBnVmkwYjBzdE5ON0VSalY4ZVVrUmVGTkRsUVNHWERuZFV4Z3ZXVlgxekFr?oc=5",
-      "published": "2026-10-09T06:05:00+00:00",
+      "title": "SpaceX, Verizon, T-Mobile, Apple, Delta, Humana, and More Stocks That Explain Today\u2019s Market",
+      "outlet": "Barron's",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1R00wTW03Ml8xUElCVkQ4UUVHVE1Cd0hqWW5tXy1DU0VuRWtwS0xDU2NJTWpVMG15RjBTUldwLWtoU19KSDlYSE9xbkVpdTJKYlMtSlVyd1NtOGdkZXduU2l6YTI?oc=5",
+      "published": "2026-10-09T20:33:00+00:00",
+      "mood": "neutral"
+     },
+     {
+      "title": "Apple Stock Falls After Report of iPhone 18 Pro Production Cuts",
+      "outlet": "Barron's",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQYjFzQ0gzVjFFVnFMMFhkcVBPV2F6N21DTVBDM3lVREdMbExtVHN1QVdEaXYzd0JhS2VucVU2ZElHUjRkbXRMTGFXaTNXNXU4VzNNT3VubGdzVG9qcUdMdGtnVXBYQWRkZW1Cdk1jLVhsajY2M0tuZWczUUU3eHFVM3ZPOTVXU0pvclE?oc=5",
+      "published": "2026-10-09T19:38:00+00:00",
       "mood": "negative"
      },
      {
-      "title": "Apple Set to Debut Touch-Screen MacBook and New iPad Mini in Late October",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObDI2NElweWp0cUlOSVROTjNaZTJBbk55eVFEWUdhcGpIdW9tcXdzRC1sV3dzemdwdlBUSUhPVUVxWThWS3NBZDNEMDhqZjVFcXRvQW9reGs3QjBuVzBTdmpQc2c3MHQ1Ql9WNnh6emJEYWJ2VVFpR1JlUXM1bFlpWTJjaW1oRnN6cGRHeTBWdzM1S0t6SVlrZnhKb1lib2N0QUVsU09lMUVZTVJoWXpVdGVacXpRelFWWFYxd0pJb1Z0QQ?oc=5",
-      "published": "2026-10-08T20:00:08+00:00",
+      "title": "Cramer: Investors selling Apple on latest iPhone 18 report are 'stupid as plywood'",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSFJlTGg5UE16TjZFLWpLTk4wOXoxVDlBajA1RW1ZNHExVjg5Z181ekJFMTVhbVcxbU1uR0VIUXduLVIzM09LMEUtNEUtall3dG9OOHF4WG14R0Jac0FHc3J6eGhONmcyM0Z1ajB4MU9fdkJ2ek94T1oxOGxGdzNwUG5URlhQYWVtcDJUSFRELVpGUDVaMFdGLWo4a1J5bWZZZk0zLUhoRElMd2tRdDh2ZEhjV1BzVUZwaXBQMQ?oc=5",
+      "published": "2026-10-09T16:43:00+00:00",
+      "mood": "negative"
+     },
+     {
+      "title": "Apple's iPhone 18 Pro demand in question: Here's what you need to know",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNLXFIVmNyU0xqZERrYkdLb2JaMHo3SlFOUnFHY2FnZVkySXJLRk13WWpHdGhiNWRadGVyV2VCX1FGSnRnY0g3TjFiN3UxanFhMC1aS0hhUDhxMEhCSTlIalNLcEhEUHZWQjVvRmZhVUU5TTRsNDJvWHFHSnd4S3hGdGQ0SFpxWmpGbzZ2TTFtb0MwQTE0bmQyenhPMWVSR3czNE53c1o4aVpYYmZ1Z1Fj?oc=5",
+      "published": "2026-10-09T16:28:00+00:00",
       "mood": "neutral"
      },
      {
-      "title": "Apple names insider Steve Smith as new M&A chief, memo shows",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcVFMMVdNWVZKM2ExREhPZkJyQnhySHFNTktxYzJFT3dBZjdTTzBEV01LazNJTkdDZExNdFBRS3FtNDRYMXkxWC1EaFotLVI4dkxfXzB4enV0WXNBc3J0bGxtaUF2RUlvLTJzemFWN29ydUtFZWJDR2hGc3pVczhDakMtRTRMWmtKSEVxc0o4ek4tQ3liNUp0RW1EYm0tRGRWZ2FGNmdONGhWeW1jOW16Vg?oc=5",
-      "published": "2026-10-08T19:46:29+00:00",
-      "mood": "neutral"
-     },
-     {
-      "title": "Apple and Amazon Stock Charts Point to More Gains for Big Tech",
-      "outlet": "Barron's",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSGhUenFPdk9zVHFoYXBqb2J4WnBBMTBEN2ZxNUtxMW5nUkNTcmVYWG9xSjFjQjlieXJRamF0YzJLMEpJQVVMVEwzTUc2U3RMa1dwampRdTk0QlpIT1RPTkpYcnVqYXBFXzVVbXZ5S2N5cTE3Z3llSGU0T2ZQdTFXdVdKMl8?oc=5",
-      "published": "2026-10-08T18:03:00+00:00",
-      "mood": "positive"
-     },
-     {
-      "title": "Apple Names New M&A Chief in Latest Shake-Up Under CEO John Ternus",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNV2dHekJsckpPY1oyRk1mME1wTWRpN3NEV3BYdWdLbmJTTjhXWHpjMUloeTBxWHZtaERVbFJhUWI1UDRtU1lOdTVQUURsWXJYbGNOdzZhYXBpTC1rd3ktNWY2aS00emFhVldyNHhCeVB2RDBNOV9JbmRGLThYOHk0OGJGZnNjWGtrMmw0eXZlazRMWkZUWk5DZF9rNEhmWk0wMVBydXhOYlBvM0MwaXlhWm9NWnl0MjZOQ1ZYdG0taE5UcWM?oc=5",
-      "published": "2026-10-08T17:30:32+00:00",
+      "title": "Dow Jones Futures: AI Stocks Rebound From OpenAI Slide; SpaceX, Verizon, Delta, Apple Early Movers",
+      "outlet": "Investor's Business Daily",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPczNHYzZJZHFGenRVQ2RiRmR1a1V2N2MybzBuRnFtcm52UnBPYnd4WTByZHhIeFZ2ZHJ5eG5ac2VyQkd0dTN6Rm54QTVMNWJxM3l1VEFPRndhNV9TUXN0dXAtZ3ZOc3UtZV9kN2JxWGpONGNoem13UEpHR3FJMTFMTkhNQVhKYmpuN0FuYlZ1bDctQno5WDRnUHpxbkNhODBpdDhOcllqSGtlaUU1Sm5ISGFWWnUwamlZYjJDLUdka19kQQ?oc=5",
+      "published": "2026-10-09T12:07:00+00:00",
       "mood": "neutral"
      }
     ],
-    "major_count": 17,
+    "major_count": 22,
     "earnings": {
      "next": "2026-11-02",
      "next_time": null,
@@ -346,7 +346,7 @@
       "surprise": 6.74,
       "move": -0.07353858440208272
      },
-     "typical_move": 0.024588863483735193,
+     "typical_move": 0.024588799514262433,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -363,46 +363,41 @@
    }
   },
   "MSFT": {
-   "as_of": "2026-10-08",
-   "close": 522.61,
+   "as_of": "2026-10-09",
+   "close": 535.07,
    "returns": {
-    "1 week": 0.0191302609050652,
-    "1 month": 0.06297160955847936,
-    "3 months": 0.35963076862492405,
-    "1 year": 0.005591655969643616
+    "1 week": 0.033891710691984045,
+    "1 month": 0.08656893158854384,
+    "3 months": 0.3710767071995553,
+    "1 year": 0.02786022881080097
    },
-   "ytd": 0.08747678022901106,
+   "ytd": 0.11340437806857095,
    "high_1y": 537.65,
    "low_1y": 352.17,
-   "off_high": -0.027967039316828424,
-   "sma50": 498.49214904785157,
-   "sma200": 432.43852798461916,
-   "rsi_14": 61.75513694153657,
-   "vol_now": 0.21500203482147606,
-   "vol_1y": 0.3268227208898737,
+   "off_high": -0.004792026699667051,
+   "sma50": 500.1885009765625,
+   "sma200": 432.7045622253418,
+   "rsi_14": 67.5247039630026,
+   "vol_now": 0.2271504239968359,
+   "vol_1y": 0.32767184919301257,
    "typical_day": 0.011104034239752092,
    "up_days_1y": 0.49603174603174605,
    "vs_market": {
-    "3 months": 0.3319444167927428,
-    "1 year": -0.1635254717796799
+    "3 months": 0.3292526198529151,
+    "1 year": -0.14129452489305416
    },
-   "beta": 0.963886097693326,
+   "beta": 0.9708946223481525,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.47606,
-     "for_session_after": "2026-10-08",
+     "p": 0.49316,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.525,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.5192697768762677,
+     "accuracy_live": 0.45454545454545453,
+     "live_sessions": 11,
+     "base_rate": 0.5197568389057751,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.42794,
-       "right": false
-      },
       {
        "date": "2026-09-25",
        "p": 0.38804,
@@ -447,24 +442,24 @@
        "date": "2026-10-07",
        "p": 0.45976,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.47606,
+       "right": false
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.48464,
-     "for_session_after": "2026-10-08",
-     "accuracy_recent": 0.5333333333333333,
+     "p": 0.54843,
+     "for_session_after": "2026-10-09",
+     "accuracy_recent": 0.525,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.4880382775119617,
+     "accuracy_live": 0.6363636363636364,
+     "live_sessions": 11,
+     "base_rate": 0.48852772466539196,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.56368,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.41657,
@@ -509,13 +504,18 @@
        "date": "2026-10-07",
        "p": 0.52359,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.48464,
+       "right": false
       }
      ]
     }
    },
    "news": {
-    "count_7d": 305,
-    "mood_7d": 0.05475901639344262,
+    "count_7d": 365,
+    "mood_7d": 0.020779452054794527,
     "headlines": [
      {
       "title": "Microsoft Stock (NASDAQ:MSFT) Slips After Its H-1B Access Closed - TipRanks",
@@ -533,35 +533,35 @@
    },
    "summary": [
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
-    "Neither overbought nor oversold (RSI 62, normal range 30 to 70).",
-    "A typical day moves it about 1.1%. Lately it is calmer than its usual year (22% vs 33% annualised volatility).",
-    "Over the past year it lagged the S&P 500 (SPY) by 16 percentage points.",
-    "It is close to its 1-year high of $537.65 (-2.8%).",
-    "News mood over the last week: positive (305 headlines).",
-    "The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip."
+    "Neither overbought nor oversold (RSI 68, normal range 30 to 70).",
+    "A typical day moves it about 1.1%. Lately it is calmer than its usual year (23% vs 33% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 14 percentage points.",
+    "It is close to its 1-year high of $537.65 (-0.5%).",
+    "News mood over the last week: mixed (365 headlines).",
+    "The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 103,
-     "score": 0.11544271844660195,
+     "count": 115,
+     "score": 0.08322521739130435,
      "positive": 37,
-     "neutral": 43,
-     "negative": 23
+     "neutral": 53,
+     "negative": 25
     },
     "previous_week": {
-     "count": 105,
-     "score": 0.14093619047619046,
-     "positive": 36,
-     "neutral": 53,
-     "negative": 16
+     "count": 90,
+     "score": 0.12040333333333333,
+     "positive": 28,
+     "neutral": 48,
+     "negative": 14
     },
     "trend": "steady",
     "major_mood": {
-     "count": 20,
-     "score": -0.08049,
+     "count": 23,
+     "score": -0.1250608695652174,
      "positive": 5,
-     "neutral": 8,
-     "negative": 7
+     "neutral": 9,
+     "negative": 9
     },
     "daily": [
      {
@@ -621,21 +621,28 @@
      },
      {
       "date": "2026-10-07",
-      "count": 22,
-      "score": 0.31048636363636367
+      "count": 23,
+      "score": 0.29680434782608694
      },
      {
       "date": "2026-10-08",
-      "count": 23,
-      "score": -0.34075217391304347
+      "count": 25,
+      "score": -0.37028
      },
      {
       "date": "2026-10-09",
-      "count": 3,
-      "score": -0.12240000000000001
+      "count": 20,
+      "score": 0.046705
      }
     ],
     "read": [
+     {
+      "title": "Use This Unconventional Add-On Entry To Add To Breakouts In Microsoft, Palantir Technologies",
+      "outlet": "Investor's Business Daily",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZndsbjR5a2tVTHhTZGFTMExSS2dyYnpVaFRZN1UtUW1ZYU1xZFF0U3loMWtCanc5eDRkSGZiYng2WEJxeTN4dGsyelR5WlZKeUZRSjBaZ0wyRnBYeGZUb1ZTSVYtM3E2UnlVdjlPYzJ4aVNkNWNTMmowS2RaMnY1RlNQYXlTQUN2QXdYRFIzVmFXMjZVUXFZdVZBYmREWEpZUmJ1c2FjMXR3WWljRFlFQ0wxZzU?oc=5",
+      "published": "2026-10-09T12:02:00+00:00",
+      "mood": "neutral"
+     },
      {
       "title": "Trump Administration Suspends Microsoft From Green Card Program, Alleging Visa Fraud",
       "outlet": "The New York Times",
@@ -663,16 +670,9 @@
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdklaY05JR1RoMVA0UjF2LWY4R0hkbnFFcld0cEtYSWRLR0dlTnozM2w0TmM2N3BGZE56c2kwOVJXTE9XTHVpSk5yX1RBTXhVaXRidVJ1T3kxWnk1eVdzMTJ4Y1VOaENiQTRUNXhST2pGaWVCWkZZWmYyV2I2YWR5WndBMVh6czQ1Y0EzV2M3RnhqQVhjd25EQ3FKTWdmRUNmdWppT1A0TGI5WTdxMW1sSzEyaEZlTHZkYk1iMHNmUzRFU2dZVVE?oc=5",
       "published": "2026-10-08T21:48:29+00:00",
       "mood": "neutral"
-     },
-     {
-      "title": "Microsoft suspended from green card program over H-1B visa abuse",
-      "outlet": "Quartz",
-      "link": "https://qz.com/microsoft-suspended-green-card-program-h1b-visa-100826?.tsrc=rss",
-      "published": "2026-10-08T20:21:28+00:00",
-      "mood": "negative"
      }
     ],
-    "major_count": 20,
+    "major_count": 23,
     "earnings": {
      "next": "2026-10-28",
      "next_time": "after the close",
@@ -682,7 +682,7 @@
       "surprise": 11.81,
       "move": 0.15506739165511707
      },
-     "typical_move": 0.07018972469299391,
+     "typical_move": 0.07018975573855614,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -699,46 +699,41 @@
    }
   },
   "NVDA": {
-   "as_of": "2026-10-08",
-   "close": 230.48,
+   "as_of": "2026-10-09",
+   "close": 229.28,
    "returns": {
-    "1 week": -0.0016460403786183742,
-    "1 month": 0.03159966706854567,
-    "3 months": 0.09375184195941189,
-    "1 year": 0.24855269103953392
+    "1 week": -0.019961522675200016,
+    "1 month": 0.050009150661394663,
+    "3 months": 0.1277775363521345,
+    "1 year": 0.21532070969238482
    },
-   "ytd": 0.23870950546706426,
+   "ytd": 0.2322601491069738,
    "high_1y": 239.24,
    "low_1y": 164.79,
-   "off_high": -0.036615990488577776,
-   "sma50": 221.25115234375,
-   "sma200": 201.59880142211915,
-   "rsi_14": 54.53071535937576,
-   "vol_now": 0.25051203348272966,
-   "vol_1y": 0.37803075984038037,
-   "typical_day": 0.01573673872069281,
-   "up_days_1y": 0.5158730158730159,
+   "off_high": -0.04163186124885698,
+   "sma50": 221.9403125,
+   "sma200": 201.82889556884766,
+   "rsi_14": 53.02739879495085,
+   "vol_now": 0.25192174667293,
+   "vol_1y": 0.37750404971658136,
+   "typical_day": 0.015344920617992364,
+   "up_days_1y": 0.5119047619047619,
    "vs_market": {
-    "3 months": 0.06606549012723062,
-    "1 year": 0.0794355632902104
+    "3 months": 0.08595344900549429,
+    "1 year": 0.04616595598852968
    },
-   "beta": 1.8918049504151524,
+   "beta": 1.8831930632604965,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.48102,
-     "for_session_after": "2026-10-08",
+     "p": 0.51039,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.55,
      "recent_sessions": 120,
-     "accuracy_live": 0.8,
-     "live_sessions": 10,
-     "base_rate": 0.5283975659229209,
+     "accuracy_live": 0.8181818181818182,
+     "live_sessions": 11,
+     "base_rate": 0.5278622087132725,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.47931,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.48876,
@@ -783,24 +778,24 @@
        "date": "2026-10-07",
        "p": 0.46787,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.48102,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.43216,
-     "for_session_after": "2026-10-08",
+     "p": 0.52904,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5833333333333334,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.5215311004784688,
+     "accuracy_live": 0.7272727272727273,
+     "live_sessions": 11,
+     "base_rate": 0.5210325047801148,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.44276,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.46459,
@@ -845,59 +840,64 @@
        "date": "2026-10-07",
        "p": 0.43467,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.43216,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 626,
-    "mood_7d": 0.06790255591054313,
+    "count_7d": 639,
+    "mood_7d": 0.028546009389671355,
     "headlines": [
      {
-      "title": "Micron (MU) and Nvidia (NVDA) Stocks Decline as Apple (AAPL) Con - GuruFocus",
-      "published": "2026-10-08"
+      "title": "Trader Nets 159% Profit on NVDA Weekly Puts as Shares Dip to $23 - GuruFocus",
+      "published": "2026-10-09"
      },
      {
-      "title": "NVIDIA Corp Stock (NVDA) Moved Down by 3.06% on Oct 8: What Signal Does It Send? - TradingKey",
-      "published": "2026-10-08"
+      "title": "NVIDIA's Rally in Trouble? Analyst Warns of Bull Trap - Benzinga",
+      "published": "2026-10-09"
      },
      {
-      "title": "Why Are Nvidia, Broadcom and AI Stocks Falling Today? OpenAI\u2019s US$20 Billion Revenue Gap Sparks Selloff - Stocks Down Under",
-      "published": "2026-10-08"
+      "title": "NVDA Stock Drops 2.94% on Thursday: What to Know - JournalArta",
+      "published": "2026-10-09"
      }
     ]
    },
    "summary": [
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
-    "Neither overbought nor oversold (RSI 55, normal range 30 to 70).",
-    "A typical day moves it about 1.6%. Lately it is calmer than its usual year (25% vs 38% annualised volatility).",
-    "Over the past year it beat the S&P 500 (SPY) by 8 percentage points.",
-    "It is close to its 1-year high of $239.24 (-3.7%).",
-    "News mood over the last week: positive (626 headlines).",
-    "The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
+    "Neither overbought nor oversold (RSI 53, normal range 30 to 70).",
+    "A typical day moves it about 1.5%. Lately it is calmer than its usual year (25% vs 38% annualised volatility).",
+    "Over the past year it beat the S&P 500 (SPY) by 5 percentage points.",
+    "It is close to its 1-year high of $239.24 (-4.2%).",
+    "News mood over the last week: mixed (639 headlines).",
+    "The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 338,
-     "score": 0.06746863905325444,
-     "positive": 97,
-     "neutral": 182,
-     "negative": 59
+     "count": 328,
+     "score": 0.03299603658536585,
+     "positive": 80,
+     "neutral": 190,
+     "negative": 58
     },
     "previous_week": {
-     "count": 274,
-     "score": 0.09939270072992701,
-     "positive": 85,
-     "neutral": 153,
-     "negative": 36
+     "count": 303,
+     "score": 0.11654521452145215,
+     "positive": 104,
+     "neutral": 155,
+     "negative": 44
     },
-    "trend": "steady",
+    "trend": "worsening",
     "major_mood": {
-     "count": 56,
-     "score": 0.007262499999999997,
+     "count": 58,
+     "score": -0.009218965517241383,
      "positive": 17,
-     "neutral": 25,
-     "negative": 14
+     "neutral": 26,
+     "negative": 15
     },
     "daily": [
      {
@@ -962,53 +962,53 @@
      },
      {
       "date": "2026-10-08",
-      "count": 64,
-      "score": -0.25277499999999997
+      "count": 66,
+      "score": -0.27361363636363634
      },
      {
       "date": "2026-10-09",
-      "count": 4,
-      "score": -0.20645
+      "count": 49,
+      "score": -0.0068020408163265295
      }
     ],
     "read": [
      {
-      "title": "Nvidia-backed Aussie AI firm Firmus withdraws historic IPO, citing market volatility",
+      "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOd1RmaEFMYlkxNEZMMFBaYmd6dlMxMkpXSW9rTDA2TVMxeHBDOFlJVjZPOE4zOWhCRUx5ZUVxcTdBQnhHd2c5TzJzQ25SQ2Y4SnhBb1I2M01Ndmh5V2NNMFFHODhlSHZVUHBCeUYzdUxDVFc5dlc1cFhYWkVFVVRjdWlEeExfbmJCZWhZLWJyMmFhM0l1TVJhd3RyamJoU1d5WFA1Z2NQSEw3bWtBc1h5SVhINEVMRmFRenVYRi12QkhaRlhJYWI0RHJGU1M?oc=5",
+      "published": "2026-10-09T23:18:45+00:00",
+      "mood": "negative"
+     },
+     {
+      "title": "Two massive trades just happened in Micron and Nvidia. What they could mean for chips",
       "outlet": "CNBC",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9tMmdLRHRyeDk3OGFjdHA2YkJjREFLZDNxNENsWFdpN3cyOW1xQTRkRUtvY1YybXg4UzVwNUw4R1hUTFFDVVFibTRIX1RVZTc3MGZzWTN6ZmxNWndfcFpyVVZXRFNLV2tuSEHSAW9BVV95cUxORUQtcGkxbXJITWdJV2NCbUtWbEliczgzdHhTbWVXX2Z4blcxdy04TmxseUZYOXh2ZjlCYmY4b0FKZ2sydnZaLVJvcENoVll3MXN5aktLRkdWWkRORU5xbGtHQzFyQzFnLTBCSzBJRVE?oc=5",
-      "published": "2026-10-09T01:02:00+00:00",
-      "mood": "negative"
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOV29sNlQyVUhjWmFVRjNrRmNsWEtOWG1famtzQzVNMlUwRHhvb1AzNWdIckpjSFNCbzY4RzNRalRLTG90MFVYX2dPcGVHWE8wZ1U1RGhsellzR3FUajZVSDJVa01jclhOZmgzWmlQVy1lUzJQdTF2ekkzSnBRR2VSQ1duQmJVQjRHVGZJR0o4MDdIelk0SzdSR25ibGloVllsZG9pTFVKd1hOMl9QMFU5d3NDTEFjVUlVeDYtMUxB0gHDAUFVX3lxTE9jYnNNYXMzWTA4WlVlR20wcjlPRzF2SXh5djlxVTJJbnluQjFrS3UtMC12aEhMeGJSM1BnVnhmUTdURU9YMTI5Y3BiNVAzVDY4dGMwQVU1Q2R0LVdRMl9EbTNXdEQ4WTVwRVdqeENpNmJPcUpoNXdHSXFHMkVDSU5WVGdqSXczMEgzUW82Z0RObi1vQ2owcFdNMW5zbk5hZjFYcmF6VEw5WXhqX1pQV1N5aHh0XzNreGVMTDZxM1NCSEJraw?oc=5",
+      "published": "2026-10-09T18:50:21+00:00",
+      "mood": "neutral"
      },
      {
-      "title": "Nvidia-Backed Firmus IPO Collapses as AI Valuation Concerns Grow",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTTdRWmlock9MZXVkX09SREZqQW43VE9DQ2ltalZmaE5DNzdjaGdhRm1tZHVJaTlQT2F3Q1g5NTMtcENBQWU5dXI3NTk3M0J4UkNEak5FQkdEUmlHSEJQZ09FWXRvblIzWnNRQzNha3BrWklQN3dCTkdnOVBLbkZ3bTdIb1EzZmo0NlVicF9WcTJJekRZNUdtb1kxTFpraXpMVWRpZFFFdXFRZDhhS05zTjJqNks?oc=5",
-      "published": "2026-10-09T00:26:00+00:00",
-      "mood": "negative"
+      "title": "Nvidia Stock Recovers but IPO Fears Feed AI Concerns. OpenAI, Firmus Red Flags.",
+      "outlet": "Barron's",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQakpOR1BJXzh6WGROMTRsVkRsS1ZZODZjMjZxVnNXVVNRV3dfQ1pCcFlBcXZIOGhUZ3pOblprNEVrMzl0OVBLWUtHRm5NS2tmaFpBLUxRdFI1OG1RdlZLRmw5ZFZObzljenRIUnV6a2FCMHBwRHJKQl95T0ZiYjZKVHFTT0hfakdI?oc=5",
+      "published": "2026-10-09T18:25:00+00:00",
+      "mood": "neutral"
      },
      {
-      "title": "Nvidia-Backed Firmus Scraps Australian IPO, Citing Market Conditions",
-      "outlet": "The Wall Street Journal",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbTJwSjBsUTZxRHdGdjFtdzhaaENOcTZlc3doaHVvdl9mWlJWWnNyLUFlQ2tIbk5IN0paQjVUZk9BTHNIclN0SDd4LXN1ZG9hWlREdDZjUXU2aFdBS016NFNtbTNGaDgxRFMxSmZCWXNLTS1DdVI0YjNjQUFVQWdPV0RLNTBpWnZ4UGZxRFZDUV80OGhlMFB1aEZYcXVLeGQ4NS1z?oc=5",
-      "published": "2026-10-08T23:07:06+00:00",
-      "mood": "negative"
+      "title": "Nvidia and Micron stocks bounce on OpenAI $70B revenue target",
+      "outlet": "Quartz",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1OZkZJMktSbEpPT1h5UG5Gb282YlRTaTFIZ04zNmpIQzZhVVF0R1dpWXUyRzRWVHRFYUFwRmlxRGpmMjJBak1OajFyb0xZcnhFNU1wS3BQbXNGOXVpanBKOVJaVngzd3JGRDhGMTBUUnlsNkFvV3UwS0x2T21hUQ?oc=5",
+      "published": "2026-10-09T13:34:34+00:00",
+      "mood": "positive"
      },
      {
-      "title": "Nvidia-backed Firmus scraps $5 billion Australian IPO on poor demand",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY21BNU1iQlJDajVWejFGYjVrM2J0cllKVmc5WEVZX2tMQnROZGFJRkRDekhCaFY0MzRnYXhYOGNaVi11cFlndVo5b1RIYUpaS25JbV92dVkwVEZpXzVaTWdtR3piN0d6SUI2OW9qaEI4eHVCV1VBQkFBWXhyemttZDlhMlFVa3hQdDhpWVZkLW95cmxNaEFzZGxWb2dzU3VPSzNlNTc4OEF5YXV1LVoxOHZuUzFsMTZfaDJuckx4UQ?oc=5",
-      "published": "2026-10-08T22:12:00+00:00",
-      "mood": "negative"
-     },
-     {
-      "title": "Nvidia-backed Firmus scraps $5 billion Australian IPO as investors step up AI scrutiny",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY21BNU1iQlJDajVWejFGYjVrM2J0cllKVmc5WEVZX2tMQnROZGFJRkRDekhCaFY0MzRnYXhYOGNaVi11cFlndVo5b1RIYUpaS25JbV92dVkwVEZpXzVaTWdtR3piN0d6SUI2OW9qaEI4eHVCV1VBQkFBWXhyemttZDlhMlFVa3hQdDhpWVZkLW95cmxNaEFzZGxWb2dzU3VPSzNlNTc4OEF5YXV1LVoxOHZuUzFsMTZfaDJuckx4UQ?oc=5",
-      "published": "2026-10-08T22:12:00+00:00",
-      "mood": "negative"
+      "title": "Here are Friday's biggest analyst calls: Nvidia, SpaceX, Tesla, Boeing, Apple, American Express & more",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVDYzV1h2R2R1TXdkTWFBNDREVDRNY0hvWFdBaDNsSTg1Y2UwZUdacjNYYXNhNjcyUXFFeG53VmlYWThaQkFZa1YxcnhLZnFLc0tDM0NvdlRiLW9kVnZqb0xsSHlORGV6NGJ2TloweDFsQXBuWFJJUmhrY3hUODZMWWg0dEE5Q0VXblM4bA?oc=5",
+      "published": "2026-10-09T12:11:27+00:00",
+      "mood": "neutral"
      }
     ],
-    "major_count": 56,
+    "major_count": 58,
     "earnings": {
      "next": "2026-11-17",
      "next_time": null,
@@ -1018,7 +1018,7 @@
       "surprise": 6.16,
       "move": 0.08737952570943941
      },
-     "typical_move": 0.04020968610653662,
+     "typical_move": 0.04020978370266928,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -1035,46 +1035,41 @@
    }
   },
   "AMZN": {
-   "as_of": "2026-10-08",
-   "close": 254.06,
+   "as_of": "2026-10-09",
+   "close": 262.43,
    "returns": {
-    "1 week": 0.023486290663493392,
-    "1 month": 0.006576876791804409,
-    "3 months": 0.03554251793781571,
-    "1 year": 0.14554963908814944
+    "1 week": 0.04337622542142605,
+    "1 month": 0.04184363536334179,
+    "3 months": 0.06113782405260504,
+    "1 year": 0.16521619418079303
    },
-   "ytd": 0.10068447056988084,
+   "ytd": 0.13694647062012222,
    "high_1y": 284.02,
    "low_1y": 198.79,
-   "off_high": -0.1054855031827916,
-   "sma50": 258.5569998168945,
-   "sma200": 241.98154998779296,
-   "rsi_14": 50.815958617059835,
-   "vol_now": 0.23608882077966237,
-   "vol_1y": 0.3447069500185095,
+   "off_high": -0.0760157635836376,
+   "sma50": 259.09559967041014,
+   "sma200": 242.15154998779298,
+   "rsi_14": 59.047498766151115,
+   "vol_now": 0.25460100903649835,
+   "vol_1y": 0.34589433286339455,
    "typical_day": 0.013202980078435567,
    "up_days_1y": 0.5079365079365079,
    "vs_market": {
-    "3 months": 0.007856166105634443,
-    "1 year": -0.023567488661174085
+    "3 months": 0.019313736705964812,
+    "1 year": -0.003938559523062102
    },
-   "beta": 1.4429827177068528,
+   "beta": 1.4485025482859577,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.56832,
-     "for_session_after": "2026-10-08",
+     "p": 0.54624,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.48333333333333334,
      "recent_sessions": 120,
-     "accuracy_live": 0.4,
-     "live_sessions": 10,
-     "base_rate": 0.5101419878296146,
+     "accuracy_live": 0.45454545454545453,
+     "live_sessions": 11,
+     "base_rate": 0.5106382978723404,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.53589,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.52336,
@@ -1119,24 +1114,24 @@
        "date": "2026-10-07",
        "p": 0.5055,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.56832,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.57844,
-     "for_session_after": "2026-10-08",
+     "p": 0.48493,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5833333333333334,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.48038277511961724,
+     "accuracy_live": 0.5454545454545454,
+     "live_sessions": 11,
+     "base_rate": 0.4808795411089866,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.50169,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.47604,
@@ -1181,57 +1176,62 @@
        "date": "2026-10-07",
        "p": 0.50738,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.57844,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 367,
-    "mood_7d": -0.0073732970027247996,
+    "count_7d": 414,
+    "mood_7d": -0.027683574879227072,
     "headlines": [
      {
-      "title": "Amazon Stock (AMZN) Dips 2% Despite the Launch of New Kids Tablets - TipRanks",
-      "published": "2026-10-08"
+      "title": "VTI is up 0.5% today, on AMZN stock price movement - Quiver Quantitative",
+      "published": "2026-10-09"
      },
      {
-      "title": "Amazon Stocks Fall as Muse Ban Tests Its Shopping Moat - GuruFocus",
-      "published": "2026-10-08"
+      "title": "Capital Analysts LLC Cuts Stock Position in Amazon.com, Inc. $AMZN - MarketBeat",
+      "published": "2026-10-09"
      },
      {
-      "title": "Amazon Stocks Drop as AWS Raises Reserved GPU Prices - TradingView",
-      "published": "2026-10-08"
+      "title": "Amazon's Alexa shopping tool faces its first big October test",
+      "published": "2026-10-09"
      }
     ]
    },
    "summary": [
-    "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
-    "Neither overbought nor oversold (RSI 51, normal range 30 to 70).",
-    "A typical day moves it about 1.3%. Lately it is calmer than its usual year (24% vs 34% annualised volatility).",
-    "Over the past year it lagged the S&P 500 (SPY) by 2 percentage points.",
-    "It sits 11% below its 1-year high of $284.02.",
-    "News mood over the last week: mixed (367 headlines).",
-    "The models give 57% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip."
+    "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
+    "Neither overbought nor oversold (RSI 59, normal range 30 to 70).",
+    "A typical day moves it about 1.3%. Lately it is calmer than its usual year (25% vs 35% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 0 percentage points.",
+    "It is close to its 1-year high of $284.02 (-7.6%).",
+    "News mood over the last week: mixed (414 headlines).",
+    "The models give 55% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 185,
-     "score": 0.02005135135135135,
-     "positive": 35,
-     "neutral": 122,
+     "count": 188,
+     "score": 0.005726595744680852,
+     "positive": 30,
+     "neutral": 130,
      "negative": 28
     },
     "previous_week": {
-     "count": 174,
-     "score": 0.030139080459770116,
-     "positive": 35,
-     "neutral": 113,
-     "negative": 26
+     "count": 165,
+     "score": 0.05508181818181818,
+     "positive": 39,
+     "neutral": 102,
+     "negative": 24
     },
     "trend": "steady",
     "major_mood": {
-     "count": 14,
-     "score": 0.09007857142857142,
-     "positive": 4,
+     "count": 15,
+     "score": 0.11474,
+     "positive": 5,
      "neutral": 8,
      "negative": 2
     },
@@ -1303,11 +1303,18 @@
      },
      {
       "date": "2026-10-09",
-      "count": 8,
-      "score": -0.1343875
+      "count": 32,
+      "score": 0.036971875
      }
     ],
     "read": [
+     {
+      "title": "Brazil\u2019s Bolsonaro Promises a Sharp Pivot on Climate and the Amazon",
+      "outlet": "Bloomberg",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPekx0WXN2ZG01bjQ4eXdxNmlaMjBIeC1SeENVLXBYLUw0YjNrVk9wRm5DUGpnOGRCQVFvTlBFTFd6TVJHbmRyemNPVXlnc0wzWnJjVUdTSXlaa1dIQUdFaG82NV9UZTlIc0NyV3FGVVUxblI0N0I2MXlTQzhFclp5U1Byems1TmEtYnhnTHR6YmpoVGV3ZUFlcUVFRWc3MDEteGFfUEExLTZFNjBMdzJ6YlpLVDdzd2VOSVE?oc=5",
+      "published": "2026-10-09T09:00:04+00:00",
+      "mood": "positive"
+     },
      {
       "title": "Amazon\u2019s delivery box: a symbol of instant gratification and convenience",
       "outlet": "Associated Press",
@@ -1335,16 +1342,9 @@
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUE1oUFB5RzAyOTdPMGZlUEphcVlqMk01cnBHQzBTM0swSmFUMWNHVWhXdjgtczZqVndDVXF1YjZ2anlhRmdCVzBIRzJfQkRQUFBtUFdKOXlUdDJHQ09tT0toWUozR2N4dXNUMDB6R1NRWjZqUWdiZkdwdjd6dEN2REVmelczUjAxTWptM1NMZTUyd3dScVFGa2lnaXhmMnI0S3FIdW5YWTdDTWp2YkhRNlY3eEFjelhGajRSNGg1bXN1UFdkSjI5VUk5dDdvZw?oc=5",
       "published": "2026-10-08T13:03:22+00:00",
       "mood": "positive"
-     },
-     {
-      "title": "Amazon Overhauls Tablet Line By Going After Apple\u2019s High-End iPads",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUjVQelY4eHRDNEdLZjk1MDhzeEpnZ2RPZ0Z0YWR2SnMxVE8tZU0yLVducnlaSGNQMDkycnBQcXkzanY4bWZZd244ZjVLRndHRlJIN043ZHNiZEkyMGtfbXNLclQxaVJGYWM1N1l1ZWY2aXVjRUtBMmt4ak1yV1lMOU9OTEwyaWszMVBRbW1lY1pNdmlIYlZiVk1QSWZYbDF3aE85VDVQVVl2bWNIQUlyZ1F6cmtHbkI4eVpHVw?oc=5",
-      "published": "2026-10-08T13:00:26+00:00",
-      "mood": "negative"
      }
     ],
-    "major_count": 14,
+    "major_count": 15,
     "earnings": {
      "next": "2026-10-29",
      "next_time": "after the close",
@@ -1371,46 +1371,41 @@
    }
   },
   "GOOGL": {
-   "as_of": "2026-10-08",
-   "close": 348.29,
+   "as_of": "2026-10-09",
+   "close": 351.66,
    "returns": {
-    "1 week": 0.029712685077784462,
-    "1 month": 0.05334950846531705,
-    "3 months": -0.024262612003054573,
-    "1 year": 0.42088126814966054
+    "1 week": 0.023755469176446553,
+    "1 month": 0.0573060649694086,
+    "3 months": -0.0017700674346055045,
+    "1 year": 0.4413153308927824
    },
-   "ytd": 0.11491214942022987,
+   "ytd": 0.12569996046489074,
    "high_1y": 402.12,
    "low_1y": 235.96,
-   "off_high": -0.1338680445728967,
-   "sma50": 345.7745422363281,
-   "sma200": 339.4559902954102,
-   "rsi_14": 53.503781254181995,
-   "vol_now": 0.24390728492189692,
-   "vol_1y": 0.3161372149225121,
-   "typical_day": 0.011425687885866898,
-   "up_days_1y": 0.5079365079365079,
+   "off_high": -0.1254874985077835,
+   "sma50": 346.1388287353516,
+   "sma200": 339.66839721679685,
+   "rsi_14": 56.39113741385746,
+   "vol_now": 0.238816725556506,
+   "vol_1y": 0.3161780383941336,
+   "typical_day": 0.011093366559844053,
+   "up_days_1y": 0.5119047619047619,
    "vs_market": {
-    "3 months": -0.05194896383523584,
-    "1 year": 0.251764140400337
+    "3 months": -0.04359415478124573,
+    "1 year": 0.2721605771889273
    },
-   "beta": 1.346578674976136,
+   "beta": 1.3510716780563878,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.53844,
-     "for_session_after": "2026-10-08",
+     "p": 0.56232,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5333333333333333,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.5466531440162272,
+     "accuracy_live": 0.7272727272727273,
+     "live_sessions": 11,
+     "base_rate": 0.547112462006079,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.50819,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.50531,
@@ -1455,24 +1450,24 @@
        "date": "2026-10-07",
        "p": 0.52533,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.53844,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.50097,
-     "for_session_after": "2026-10-08",
-     "accuracy_recent": 0.4583333333333333,
+     "p": 0.51075,
+     "for_session_after": "2026-10-09",
+     "accuracy_recent": 0.45,
      "recent_sessions": 120,
-     "accuracy_live": 0.6,
-     "live_sessions": 10,
-     "base_rate": 0.5358851674641149,
+     "accuracy_live": 0.5454545454545454,
+     "live_sessions": 11,
+     "base_rate": 0.5353728489483748,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.48441,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.45864,
@@ -1517,14 +1512,23 @@
        "date": "2026-10-07",
        "p": 0.51685,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.50097,
+       "right": false
       }
      ]
     }
    },
    "news": {
-    "count_7d": 300,
-    "mood_7d": -0.00014866666666666658,
+    "count_7d": 344,
+    "mood_7d": -0.005579941860465117,
     "headlines": [
+     {
+      "title": "Alphabet (GOOGL) Faces Securities Lawsuit Over Alleged Gemini 3.5 Pro Delay and July Stock Drop - TipRanks",
+      "published": "2026-10-08"
+     },
      {
       "title": "Alphabet Stocks Drop Although TPU Sales Escape Google's Cloud - GuruFocus",
       "published": "2026-10-08"
@@ -1532,43 +1536,39 @@
      {
       "title": "Alphabet Stocks Drop Although TPU Sales Escape Google's Cloud - TradingView",
       "published": "2026-10-08"
-     },
-     {
-      "title": "Alphabet (GOOGL) Stock Looks Reasonable After Its 157% Five Year Run",
-      "published": "2026-10-07"
      }
     ]
    },
    "summary": [
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
-    "Neither overbought nor oversold (RSI 54, normal range 30 to 70).",
+    "Neither overbought nor oversold (RSI 56, normal range 30 to 70).",
     "A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).",
-    "Over the past year it beat the S&P 500 (SPY) by 25 percentage points.",
+    "Over the past year it beat the S&P 500 (SPY) by 27 percentage points.",
     "It sits 13% below its 1-year high of $402.12.",
-    "News mood over the last week: mixed (300 headlines).",
-    "The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge."
+    "News mood over the last week: mixed (344 headlines).",
+    "The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 111,
-     "score": 0.00678918918918919,
-     "positive": 24,
+     "count": 110,
+     "score": 0.02755090909090909,
+     "positive": 25,
      "neutral": 64,
-     "negative": 23
+     "negative": 21
     },
     "previous_week": {
      "count": 105,
-     "score": -0.03458476190476191,
-     "positive": 24,
-     "neutral": 57,
-     "negative": 24
+     "score": -0.06623904761904761,
+     "positive": 21,
+     "neutral": 58,
+     "negative": 26
     },
-    "trend": "steady",
+    "trend": "improving",
     "major_mood": {
      "count": 30,
-     "score": 0.04275,
-     "positive": 3,
-     "neutral": 23,
+     "score": 0.054450000000000005,
+     "positive": 4,
+     "neutral": 22,
      "negative": 4
     },
     "daily": [
@@ -1629,18 +1629,18 @@
      },
      {
       "date": "2026-10-07",
-      "count": 18,
-      "score": -0.021411111111111113
+      "count": 19,
+      "score": 0.006289473684210527
      },
      {
       "date": "2026-10-08",
-      "count": 25,
-      "score": 0.100556
+      "count": 26,
+      "score": 0.05981923076923076
      },
      {
       "date": "2026-10-09",
-      "count": 3,
-      "score": 0.006399999999999985
+      "count": 13,
+      "score": 0.19582307692307693
      }
     ],
     "read": [
@@ -1690,7 +1690,7 @@
       "surprise": 214.23,
       "move": -0.07132620819602653
      },
-     "typical_move": 0.04120037161574773,
+     "typical_move": 0.0412003586633366,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -1707,46 +1707,41 @@
    }
   },
   "META": {
-   "as_of": "2026-10-08",
-   "close": 720.89,
+   "as_of": "2026-10-09",
+   "close": 718.67,
    "returns": {
-    "1 week": -0.006942787979824838,
-    "1 month": 0.10367140050222345,
-    "3 months": 0.0780754951924072,
-    "1 year": 0.014381711783985729
+    "1 week": -0.012924450553250533,
+    "1 month": 0.11616922122129303,
+    "3 months": 0.09517941837972588,
+    "1 year": 0.004552213396243232
    },
-   "ytd": 0.09492011092833175,
+   "ytd": 0.0915482270795469,
    "high_1y": 777.59,
    "low_1y": 524.82,
-   "off_high": -0.07291761757326409,
-   "sma50": 635.7985278320313,
-   "sma200": 628.8865399169922,
-   "rsi_14": 57.55303894683949,
-   "vol_now": 0.5379430129979095,
-   "vol_1y": 0.4182647766373714,
-   "typical_day": 0.012630707441905309,
-   "up_days_1y": 0.5238095238095238,
+   "off_high": -0.07577263327769512,
+   "sma50": 639.3998278808593,
+   "sma200": 629.1808837890625,
+   "rsi_14": 56.84466312883753,
+   "vol_now": 0.5389511435366933,
+   "vol_1y": 0.4182316821741756,
+   "typical_day": 0.01147486809884568,
+   "up_days_1y": 0.5198412698412699,
    "vs_market": {
-    "3 months": 0.05038914336022593,
-    "1 year": -0.1547354159653378
+    "3 months": 0.05335533103308565,
+    "1 year": -0.1646025403076119
    },
-   "beta": 1.4556818704069105,
+   "beta": 1.452574397250431,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.46259,
-     "for_session_after": "2026-10-08",
-     "accuracy_recent": 0.5166666666666667,
+     "p": 0.46578,
+     "for_session_after": "2026-10-09",
+     "accuracy_recent": 0.525,
      "recent_sessions": 120,
-     "accuracy_live": 0.8,
-     "live_sessions": 10,
-     "base_rate": 0.5091277890466531,
+     "accuracy_live": 0.8181818181818182,
+     "live_sessions": 11,
+     "base_rate": 0.5086119554204661,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.42532,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.4208,
@@ -1791,24 +1786,24 @@
        "date": "2026-10-07",
        "p": 0.46452,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.46259,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.48718,
-     "for_session_after": "2026-10-08",
+     "p": 0.46276,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5583333333333333,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.48899521531100476,
+     "accuracy_live": 0.7272727272727273,
+     "live_sessions": 11,
+     "base_rate": 0.48852772466539196,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.40688,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.42271,
@@ -1853,58 +1848,63 @@
        "date": "2026-10-07",
        "p": 0.49991,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.48718,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 396,
-    "mood_7d": -0.0060472222222222255,
+    "count_7d": 427,
+    "mood_7d": -0.015227634660421551,
     "headlines": [
      {
-      "title": "Vista Investment Partners LLC Decreases Position in Meta Platforms, Inc. $META - MarketBeat",
-      "published": "2026-10-08"
+      "title": "Meta Stock Stalls as Safety Concerns Over Its Fastest-Growing AI Product Emerge \u2014 And a $3.9 Billion Tax Strategy Adds to the Scrutiny",
+      "published": "2026-10-09"
      },
      {
-      "title": "Valeo Financial Advisors LLC Reduces Stock Position in Meta Platforms, Inc. $META - MarketBeat",
-      "published": "2026-10-08"
+      "title": "Meta Stock Stalls as Safety Concerns Over Its Fastest-Growing AI Product Emerge \u2014 And a $3.9 Billion Tax Strategy Adds to the Scrutiny - Yahoo Finance",
+      "published": "2026-10-09"
      },
      {
-      "title": "Meta Bans Ads From TikTok on Its Apps in Escalating Feud - Bloomberg.com",
+      "title": "Galvin Gaustad & Stein LLC Decreases Position in Meta Platforms, Inc. $META - MarketBeat",
       "published": "2026-10-09"
      }
     ]
    },
    "summary": [
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
-    "Neither overbought nor oversold (RSI 58, normal range 30 to 70).",
-    "A typical day moves it about 1.3%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).",
-    "Over the past year it lagged the S&P 500 (SPY) by 15 percentage points.",
-    "It is close to its 1-year high of $777.59 (-7.3%).",
-    "News mood over the last week: mixed (396 headlines).",
-    "The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
+    "Neither overbought nor oversold (RSI 57, normal range 30 to 70).",
+    "A typical day moves it about 1.1%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 16 percentage points.",
+    "It is close to its 1-year high of $777.59 (-7.6%).",
+    "News mood over the last week: mixed (427 headlines).",
+    "The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 196,
-     "score": -0.02735612244897959,
-     "positive": 30,
-     "neutral": 130,
-     "negative": 36
+     "count": 202,
+     "score": -0.04904207920792079,
+     "positive": 31,
+     "neutral": 128,
+     "negative": 43
     },
     "previous_week": {
-     "count": 245,
-     "score": -0.05062448979591837,
-     "positive": 57,
-     "neutral": 119,
-     "negative": 69
+     "count": 220,
+     "score": -0.05116409090909091,
+     "positive": 47,
+     "neutral": 115,
+     "negative": 58
     },
     "trend": "steady",
     "major_mood": {
-     "count": 34,
-     "score": 0.016664705882352943,
+     "count": 33,
+     "score": 0.009160606060606062,
      "positive": 6,
-     "neutral": 23,
+     "neutral": 22,
      "negative": 5
     },
     "daily": [
@@ -1970,16 +1970,30 @@
      },
      {
       "date": "2026-10-08",
-      "count": 47,
-      "score": -0.09289787234042553
+      "count": 48,
+      "score": -0.09364166666666666
      },
      {
       "date": "2026-10-09",
-      "count": 7,
-      "score": -0.35728571428571426
+      "count": 34,
+      "score": -0.20142941176470588
      }
     ],
     "read": [
+     {
+      "title": "Inside Mark Zuckerberg\u2019s Decision to Pull the Trigger on Meta\u2019s A.I. Agent",
+      "outlet": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQUtkVjlwSXlOeEVudTI3NWxvd0RVeDBVOGwySmNxOGZ3ZDRmODQ0UTZsZGpLRzNhZXQxWFRISmloVm5xTVdlMFFnNzI4Tm4zdmpiWnlURXYtc2lPeWszZTh2T0RMSnpKbHhjdk5rRmMxUk1sYXFUNkxqbGlSWkNBdkRVTmlJdFIyR005NkE2c1g1aHlkYWFyLTRvbjQwdXFpdzBsUVFkSWI1MkhvaUxoNHQtbzR4RS14M0VCRlNB?oc=5",
+      "published": "2026-10-09T09:03:46+00:00",
+      "mood": "neutral"
+     },
+     {
+      "title": "What to Know About the Facebook Whistle-Blowing Case Depicted in \u2018The Social Reckoning\u2019",
+      "outlet": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOW5uY3BWck9kbFRpd2k0SWpMYXVyVnZqX1VKb1dhZmJKbHdDOGV2am9pRkF1SHdVc3pkdWFvbGVXYW4yWHB4SkN1M01tV0lUMmRPMnlDOExOdGdqNV9tdzBkelVXekVMTmE1WHA5LW12SFU3WkZlWFR2bkRlcjlITDRaeGVRMzlXWDRYdWtBTEdDUmJ3aTZORHgwRzhFT25tSnQw?oc=5",
+      "published": "2026-10-09T09:01:00+00:00",
+      "mood": "neutral"
+     },
      {
       "title": "Meta Bans Ads From TikTok on Its Apps in Escalating Feud",
       "outlet": "Bloomberg",
@@ -2000,23 +2014,9 @@
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcFlfTjhMRWZPWEhDVF9mcGQ1VEY2aWVLMThVLUJaVmNWUzdwV09KTWlDN0E4Rm5IRHFyME1QN01fczZFSGdDbVBsYnh3dDJTdFlfTkczM1NreS11VjJ2QWVFbnV2eU1EMDNWZHl5X2h4WV9SN3FFRUJBaHpzUng2VlhKemtnUnJEblBpajF5U0FCWmdFLWR6azJ0aDB5bEhUdVJHc0g1dVNYY0NZYVdyaU9UOE12SUFDQmpB?oc=5",
       "published": "2026-10-08T23:28:00+00:00",
       "mood": "negative"
-     },
-     {
-      "title": "Meta Bans TikTok From Advertising on Its Apps in Escalating Feud",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPeXFCVEt4TVBVRnF2ejEzTDZINVhULU1CTzVkZXJZNXY4SFpHWWZyMWhsYVVJOS1icVd4NUlPSUFIVnpjdFgyZlJNVl9Qcl9MTm5kNnMzZkNzVElpblpmX1FDVm50NHNZbm1YOVpwWHk1cXlUZVVUV2thNjZsWGVFTFhZU3JSaEg2R09ETENONGdsSnExMnlTVVNiUjQzUDdObFNKbVpsckpRcy00V211RFBodnZFMWltSGRDVlQyYXhkTU04WHZZ?oc=5",
-      "published": "2026-10-08T23:00:00+00:00",
-      "mood": "negative"
-     },
-     {
-      "title": "\u2018The Social Reckoning\u2019 Review: Aaron Sorkin\u2019s Facebook Quip-Fest",
-      "outlet": "The Wall Street Journal",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUnBkZlVId3BWWjBMTlpvbUQwMmN2TndEeWxuZ2VqWnhhaVZlUE9INFdkcUE5S2VqX1VVVWl1Y3BmNVVDYnpoenNmTnljdDNFc1FWbkhoZzdlb2dpOW5rcVUxbTU5dll5WUxpNGEzM0RFWllEV29YbEQ3Z3kwTm50V0Z1RDNXbldnNHJUVzhNVzVVTlNxTjkydWU5ZHBJdjJKNVpVaWVKN1BhbEk?oc=5",
-      "published": "2026-10-08T17:06:00+00:00",
-      "mood": "neutral"
      }
     ],
-    "major_count": 34,
+    "major_count": 33,
     "earnings": {
      "next": "2026-10-28",
      "next_time": "after the close",
@@ -2026,7 +2026,7 @@
       "surprise": -14.42,
       "move": -0.07954089821830823
      },
-     "typical_move": 0.0742129208205048,
+     "typical_move": 0.07421293363031445,
      "reports": 8,
      "beat_count": 7,
      "beat_of": 8
@@ -2043,46 +2043,41 @@
    }
   },
   "TSLA": {
-   "as_of": "2026-10-08",
-   "close": 375.0,
+   "as_of": "2026-10-09",
+   "close": 382.7,
    "returns": {
-    "1 week": 0.05899301209396213,
-    "1 month": 0.019548143033444543,
-    "3 months": -0.08034139930606488,
-    "1 year": -0.13412915751711252
+    "1 week": 0.03267766531425509,
+    "1 month": 0.05264609631688866,
+    "3 months": -0.030550200780859127,
+    "1 year": -0.12762996631511636
    },
-   "ytd": -0.1661478275769055,
+   "ytd": -0.14902603582619256,
    "high_1y": 489.88,
    "low_1y": 298.32,
-   "off_high": -0.23450641736294942,
-   "sma50": 353.26799743652344,
-   "sma200": 391.13469924926756,
-   "rsi_14": 55.793047773223854,
-   "vol_now": 0.2984521410516154,
-   "vol_1y": 0.45286968183309995,
-   "typical_day": 0.015675369881061496,
+   "off_high": -0.21878825754772435,
+   "sma50": 354.74499755859375,
+   "sma200": 390.60454925537107,
+   "rsi_14": 59.732552556393635,
+   "vol_now": 0.30570365753859824,
+   "vol_1y": 0.4531540938703062,
+   "typical_day": 0.016143710725498417,
    "up_days_1y": 0.503968253968254,
    "vs_market": {
-    "3 months": -0.10802775113824614,
-    "1 year": -0.30324628526643604
+    "3 months": -0.07237428812749935,
+    "1 year": -0.2967847200189715
    },
-   "beta": 2.2059035556878763,
+   "beta": 2.208292348387068,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.44501,
-     "for_session_after": "2026-10-08",
+     "p": 0.49099,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.6416666666666667,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.49898580121703856,
+     "accuracy_live": 0.45454545454545453,
+     "live_sessions": 11,
+     "base_rate": 0.49949341438703143,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.43634,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.51669,
@@ -2127,24 +2122,24 @@
        "date": "2026-10-07",
        "p": 0.42246,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.44501,
+       "right": false
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.41938,
-     "for_session_after": "2026-10-08",
+     "p": 0.45054,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.55,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.4880382775119617,
+     "accuracy_live": 0.5454545454545454,
+     "live_sessions": 11,
+     "base_rate": 0.4875717017208413,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.45089,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.53511,
@@ -2189,59 +2184,64 @@
        "date": "2026-10-07",
        "p": 0.41326,
        "right": false
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.41938,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 280,
-    "mood_7d": 0.07620428571428571,
+    "count_7d": 324,
+    "mood_7d": 0.039994444444444444,
     "headlines": [
      {
-      "title": "Why Tesla (TSLA) Is Up 6.7% After Unveiling Terafab AI Chip Complex And Major New Credit Lines",
-      "published": "2026-10-08"
+      "title": "Tesla's China Retail Sales Fall 9% Even as Shanghai Exports Surge 58%",
+      "published": "2026-10-09"
      },
      {
-      "title": "TSLA Stock Hits 1-Month Low Amid SpaceX Merger Jitters \u2014 But Analyst Sees Tesla Holders Getting 66% Of Deal Within A Year - Stocktwits",
-      "published": "2026-10-08"
+      "title": "Why Is Tesla (NASDAQ:TSLA) Stock Up Today? Shanghai Sales Hit a 2026 High, but China Sales Fell 9.4% - Stocks Down Under",
+      "published": "2026-10-09"
      },
      {
-      "title": "TSLA Stock Rises Overnight On Record Cybercab Registrations \u2014 Analyst\u2019s 5 Bullish Bets Signal Nearly 50% Upside",
+      "title": "Tesla (TSLA) Stock Looks Stretched After Its 45% Three Year Run - Yahoo Finance",
       "published": "2026-10-09"
      }
     ]
    },
    "summary": [
     "Long-term trend is down (below the 200-day average), with some recent recovery.",
-    "Neither overbought nor oversold (RSI 56, normal range 30 to 70).",
-    "A typical day moves it about 1.6%. Lately it is calmer than its usual year (30% vs 45% annualised volatility).",
+    "Neither overbought nor oversold (RSI 60, normal range 30 to 70).",
+    "A typical day moves it about 1.6%. Lately it is calmer than its usual year (31% vs 45% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 30 percentage points.",
-    "It sits 23% below its 1-year high of $489.88.",
-    "News mood over the last week: positive (280 headlines).",
-    "The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 64.2% of the time over the last 120 sessions, a meaningful edge, if it lasts."
+    "It sits 22% below its 1-year high of $489.88.",
+    "News mood over the last week: mixed (324 headlines).",
+    "The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 64.2% of the time over the last 120 sessions, a meaningful edge, if it lasts."
    ],
    "press": {
     "week": {
-     "count": 123,
-     "score": 0.1309520325203252,
-     "positive": 38,
-     "neutral": 69,
-     "negative": 16
+     "count": 119,
+     "score": 0.12329327731092438,
+     "positive": 40,
+     "neutral": 62,
+     "negative": 17
     },
     "previous_week": {
-     "count": 107,
-     "score": -0.09233644859813084,
-     "positive": 24,
-     "neutral": 50,
-     "negative": 33
+     "count": 118,
+     "score": -0.018920338983050847,
+     "positive": 31,
+     "neutral": 56,
+     "negative": 31
     },
     "trend": "improving",
     "major_mood": {
-     "count": 6,
-     "score": 0.24004999999999999,
-     "positive": 2,
-     "neutral": 4,
-     "negative": 0
+     "count": 14,
+     "score": 0.06248571428571429,
+     "positive": 4,
+     "neutral": 8,
+     "negative": 2
     },
     "daily": [
      {
@@ -2306,53 +2306,53 @@
      },
      {
       "date": "2026-10-08",
-      "count": 15,
-      "score": 0.11254666666666667
+      "count": 16,
+      "score": 0.11825000000000001
      },
      {
       "date": "2026-10-09",
-      "count": 3,
-      "score": 0.06306666666666667
+      "count": 29,
+      "score": 0.21151379310344826
      }
     ],
     "read": [
      {
-      "title": "They Paid $50,000 and Waited Nine Years. Will Tesla\u2019s Roadster Live Up to the Hype?",
-      "outlet": "The Wall Street Journal",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbFNWYlBmSmtGZVVTR3l6N0o2X0VBeldFU2ZoLVRjckNwOUwyNzVEaENSb0RXWUVJMGFtemNDQXNaLWhNeElacG9NdHZ3dUN2N093cjl6RzZNbU5GQUt2WDNZN2FlZ2dQYnlkYzA3N0pubWdYakoxWXJ6QS1xdlJ1SlhuRFVnT09zRVU2RmNXT0dpc09yTHlBbko1akNmZDFfNkdzT0xvaGpwUmNjUHQ3SjlRUTdReXJVOERDUDFESlU?oc=5",
-      "published": "2026-10-07T13:43:00+00:00",
-      "mood": "neutral"
-     },
-     {
-      "title": "Here are Wednesday's biggest analyst calls: Nvidia, SpaceX, Apple, Tesla, Marvell, Flutter, Micron & more",
+      "title": "Tesla drops 'Full Self-Driving' brand name in Europe after regulator pushback",
       "outlet": "CNBC",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQY1NZYlhoSmJLS190RnM3MS1ETl9ZTlkyLW1TYnJucVZnNlhzMEVvcFNhaGlfTjBvMVhlc2otaGNaMExveUtBWHJUdXRab3pZd3JsNVdBX3NDaHJfSHh2bVd0dkNQZ2ZWeGFrZnFzT3RMZ2ZhTGIyVGFzYVpMb2JXNi1lLXQ1R0M4RDNkWURn?oc=5",
-      "published": "2026-10-07T12:01:22+00:00",
-      "mood": "neutral"
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUXJuOENfRjJXd2VuWVF0Y05YM2xHdGhpM1ZUdkNRSU9mbVNzV0JlVlhNZXVfSHgya19vdGxwOW1JQXB1OHNWSV9oQ2RVUmhFWUs1dVJDWDdPVWhoLWx1eWE5VjNYbS10SFh6V3ZBMUNNdlJ2T2ZURmtBY1JqUjI1UmRoQdIBiAFBVV95cUxNRlBma0lLUGdYbVJ0QXJ6a09wa25uVVVuRWs0c1d4aVB6dE1ZN0l2M2dPUjZwd3BmWmJCakJIakJvcndKYTQ3UTVGMk91VUVtcjJKbHdnMEwwclZjM293TlQzUFN0YUJ3bTN4N2VvbXVRczZYODcyc0JDXzRUdklKSHRlQjFkdTJG?oc=5",
+      "published": "2026-10-09T17:10:13+00:00",
+      "mood": "negative"
      },
      {
-      "title": "Tesla is browbeating the EU to approve its \u2018Full Self-Driving\u2019 tech. The pressure is working.",
+      "title": "Tesla renames 'Full Self-Driving' to 'Assisted Driving' in Europe as it chases clearance for software",
       "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdjBuOTVpakJxeU9NUm55Z2xWcU42ellEeUI4XzhuaGdNWWViVkFqSGJwVGg5Y3NPNmFlTFVBdVBiWGh3TmdCbjF1UnhGM00tQXFPSS1lOHB2YVk1d3ZGbnEwMkRuWGJFREdOcmFaZ3VOYm4tTHkydlZEOEJrTGNqVDZHSk5IZFkxSGFHREhFcm9ZamZNU2YxbmRfVVpmYUJwYm5Wc2Zhdm9yUnlZYW1UM2xjcXVtWGNsQlZsTjh2eXBjQWRaSm9OQg?oc=5",
-      "published": "2026-10-07T06:13:18+00:00",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNV250TWJ1ZlRmak0zTWREOUloN0VqTXBaMUFDM25yRENjSllTdHNMZ0RrSF91WTBOUVhMYkxXVkswQWJGaWhKaV8wLXdOYVJ2bXEyZkliMlpmMDlYU3I1YVFuYWw4V0N6dEpyNnoybTBXOUVFX1ktSEZxQ19IaGxEUk1PT1dQOHVBdWpyOUg2WWM3OUdPNVZMQWdRRktzYWFaR1JSZGREQXJJZGdYQnpfUGM4YkF6RTh0M1dpNkwxUUlIcDctVjhvNzV4dUxjeUdNSkJ4Mm43MDI?oc=5",
+      "published": "2026-10-09T15:09:19+00:00",
       "mood": "positive"
      },
      {
-      "title": "Options Action: SpaceX-Tesla tie-up rumors",
-      "outlet": "CNBC",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZzdabzZwSE90VF9reXpsZ3RQaEZhcHE0RkVqQnBxZk9pUXBOYVhlVXZpbGNGMEpwRkFlN3lvZWxxRU1mVEJfclNNX0FoRFFaNTFMVXYxVmpHU3d5cEdjelF0bVhCVUJsVlNHM3RrQ3VHTGNmLXV2MGNoNGFIZEJsd1pIU3pKNUNDaXgzTQ?oc=5",
-      "published": "2026-10-06T22:06:00+00:00",
+      "title": "Tesla Stock Rises as Elon Musk Asserts Control Over Terafab Chip Project",
+      "outlet": "Barron's",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVTFCSjgtU1laOVpiLW9sY3YxZ3ZHc2VyRDRVMXI0MHUtSFlKbjhFaHpfSjYxTnVSeF9GVUxmRkcwbmtrSmxHSWx6aC1nMXI2cVpLSldFenh3bmFpMW94WWJyTUZaZU5YOFJsQ1hBM0k1MUlEZGhRZVp4aGU0Z1E2ZUREcw?oc=5",
+      "published": "2026-10-09T14:23:00+00:00",
       "mood": "neutral"
      },
      {
-      "title": "Tesla to Showcase Its Cybercab Robotaxi at Paris Auto Show",
+      "title": "Here are Friday's biggest analyst calls: Nvidia, SpaceX, Tesla, Boeing, Apple, American Express & more",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVDYzV1h2R2R1TXdkTWFBNDREVDRNY0hvWFdBaDNsSTg1Y2UwZUdacjNYYXNhNjcyUXFFeG53VmlYWThaQkFZa1YxcnhLZnFLc0tDM0NvdlRiLW9kVnZqb0xsSHlORGV6NGJ2TloweDFsQXBuWFJJUmhrY3hUODZMWWg0dEE5Q0VXblM4bA?oc=5",
+      "published": "2026-10-09T12:11:27+00:00",
+      "mood": "neutral"
+     },
+     {
+      "title": "Tesla Drops \u2018Self-Driving\u2019 Branding to Appease Europe Regulators",
       "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUnhPaEx6NWFzX2EyMzl4SFZKNGthY1RKdjFhQUJVVmxYQjB5QmZZYmhYOTI0WWdRckJPY1JNYkpTcGRIZXJzejdBQlh6aktySzlRemxIS1prZnMzR2hBd0MxYXZPeTZxbXZxOXF4aUN6eUxOTzMwX19zR0pKeF9rUFdIdTYyU0dOZk54elFXX1pQZ3hXSmUya01vS1liZTQ1NGEzQy1yYWpBMzFkS3c?oc=5",
-      "published": "2026-10-06T16:05:13+00:00",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSlJFN0VXNGlFRHFoMWhfV2lOMXlIRUJqb3lUbGRrSGlOMVRvSkVubVRoSkhvc0pieVpSUGQxTnJCbkN1bWVRZmRPdU5WN1paWE1oQVdacWZIdjVIME4tUzIxelhqaDJxeTdhd1NWU3hHckFoYmRhYlB1THpYeE9ub1BUa3hfQjBFYnRIY2FadjZsdldZWUg4OVJITmluck9TMlVadFo1MGhBUXFJeXFudENQQQ?oc=5",
+      "published": "2026-10-09T12:00:35+00:00",
       "mood": "neutral"
      }
     ],
-    "major_count": 6,
+    "major_count": 14,
     "earnings": {
      "next": "2026-10-21",
      "next_time": "after the close",
@@ -2379,46 +2379,41 @@
    }
   },
   "JPM": {
-   "as_of": "2026-10-08",
-   "close": 331.42,
+   "as_of": "2026-10-09",
+   "close": 332.99,
    "returns": {
-    "1 week": -0.00031978805986498937,
-    "1 month": -0.06099786277009134,
-    "3 months": -0.010094691167405023,
-    "1 year": 0.09786823948674628
+    "1 week": 0.006833305635938425,
+    "1 month": -0.053481011615082674,
+    "3 months": 0.00036250412790805875,
+    "1 year": 0.1163480696027892
    },
-   "ytd": 0.04836154939369597,
+   "ytd": 0.05332776522507876,
    "high_1y": 363.37,
    "low_1y": 278.75,
-   "off_high": -0.08791980996430948,
-   "sma50": 348.85996826171873,
-   "sma200": 319.00002883911134,
-   "rsi_14": 37.21770425249195,
-   "vol_now": 0.1796413070117937,
-   "vol_1y": 0.22450126979826424,
-   "typical_day": 0.006372434845320296,
-   "up_days_1y": 0.5396825396825397,
+   "off_high": -0.08359917546386875,
+   "sma50": 348.53760131835935,
+   "sma200": 319.0800555419922,
+   "rsi_14": 40.05264246167288,
+   "vol_now": 0.17773320197121376,
+   "vol_1y": 0.2241973438199303,
+   "typical_day": 0.006346773019293539,
+   "up_days_1y": 0.5436507936507936,
    "vs_market": {
-    "3 months": -0.03778104299958629,
-    "1 year": -0.07124888826257725
+    "3 months": -0.04146158321873217,
+    "1 year": -0.052806684101065926
    },
-   "beta": 0.7884416937293285,
+   "beta": 0.7936704215678718,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.55777,
-     "for_session_after": "2026-10-08",
+     "p": 0.56124,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5083333333333333,
      "recent_sessions": 120,
-     "accuracy_live": 0.3,
-     "live_sessions": 10,
-     "base_rate": 0.5415821501014199,
+     "accuracy_live": 0.36363636363636365,
+     "live_sessions": 11,
+     "base_rate": 0.5420466058763931,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.56825,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.5389,
@@ -2463,24 +2458,24 @@
        "date": "2026-10-07",
        "p": 0.53606,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.55777,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.59709,
-     "for_session_after": "2026-10-08",
-     "accuracy_recent": 0.45,
+     "p": 0.61961,
+     "for_session_after": "2026-10-09",
+     "accuracy_recent": 0.4583333333333333,
      "recent_sessions": 120,
-     "accuracy_live": 0.4,
-     "live_sessions": 10,
-     "base_rate": 0.5330143540669856,
+     "accuracy_live": 0.45454545454545453,
+     "live_sessions": 11,
+     "base_rate": 0.5334608030592735,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.60964,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.58595,
@@ -2525,13 +2520,18 @@
        "date": "2026-10-07",
        "p": 0.58423,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.59709,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 250,
-    "mood_7d": 0.048055999999999995,
+    "count_7d": 288,
+    "mood_7d": 0.050475,
     "headlines": [
      {
       "title": "JPMorgan Stocks Slip as Higher Yields Test Trading Momentum - TradingView",
@@ -2549,27 +2549,27 @@
    },
    "summary": [
     "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
-    "Neither overbought nor oversold (RSI 37, normal range 30 to 70).",
-    "A typical day moves it about 0.6%. Lately it is about as jumpy as its usual year (18% vs 22% annualised volatility).",
-    "Over the past year it lagged the S&P 500 (SPY) by 7 percentage points.",
-    "It is close to its 1-year high of $363.37 (-8.8%).",
-    "News mood over the last week: mixed (250 headlines).",
+    "Neither overbought nor oversold (RSI 40, normal range 30 to 70).",
+    "A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).",
+    "Over the past year it lagged the S&P 500 (SPY) by 5 percentage points.",
+    "It is close to its 1-year high of $363.37 (-8.4%).",
+    "News mood over the last week: positive (288 headlines).",
     "The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 89,
-     "score": 0.08458539325842696,
-     "positive": 25,
-     "neutral": 48,
+     "count": 94,
+     "score": 0.11188085106382979,
+     "positive": 29,
+     "neutral": 49,
      "negative": 16
     },
     "previous_week": {
-     "count": 96,
-     "score": 0.009006249999999999,
-     "positive": 22,
-     "neutral": 54,
-     "negative": 20
+     "count": 93,
+     "score": -0.0017150537634408605,
+     "positive": 20,
+     "neutral": 55,
+     "negative": 18
     },
     "trend": "improving",
     "major_mood": {
@@ -2637,8 +2637,8 @@
      },
      {
       "date": "2026-10-07",
-      "count": 10,
-      "score": 0.31314
+      "count": 12,
+      "score": 0.3329083333333333
      },
      {
       "date": "2026-10-08",
@@ -2647,8 +2647,8 @@
      },
      {
       "date": "2026-10-09",
-      "count": 1,
-      "score": 0.0018
+      "count": 13,
+      "score": 0.1797923076923077
      }
     ],
     "read": [
@@ -2698,7 +2698,7 @@
       "surprise": 5.86,
       "move": 0.024990323138416537
      },
-     "typical_move": 0.025718614281356564,
+     "typical_move": 0.025718634452100694,
      "reports": 8,
      "beat_count": 7,
      "beat_of": 8
@@ -2715,46 +2715,41 @@
    }
   },
   "XOM": {
-   "as_of": "2026-10-08",
-   "close": 168.5,
+   "as_of": "2026-10-09",
+   "close": 168.94,
    "returns": {
-    "1 week": 0.02856789443623331,
-    "1 month": 0.026000148471932993,
-    "3 months": 0.22113371708880325,
-    "1 year": 0.5174477101864308
+    "1 week": 0.030059192120543754,
+    "1 month": 0.022453590811591484,
+    "3 months": 0.17662389722581362,
+    "1 year": 0.5246126932402673
    },
-   "ytd": 0.4282883012340355,
+   "ytd": 0.43201797683982157,
    "high_1y": 169.32,
    "low_1y": 107.52,
-   "off_high": -0.004842944063004784,
-   "sma50": 161.0880325317383,
-   "sma200": 148.67271026611328,
-   "rsi_14": 63.547540191978044,
-   "vol_now": 0.2421668241547917,
-   "vol_1y": 0.25977831995884954,
-   "typical_day": 0.009476913157350164,
-   "up_days_1y": 0.5515873015873016,
+   "off_high": -0.0022442999431535604,
+   "sma50": 161.34762969970703,
+   "sma200": 148.93827812194823,
+   "rsi_14": 64.27556707756081,
+   "vol_now": 0.24188748170354454,
+   "vol_1y": 0.2597502269783732,
+   "typical_day": 0.009035459535678414,
+   "up_days_1y": 0.5555555555555556,
    "vs_market": {
-    "3 months": 0.19344736525662198,
-    "1 year": 0.34833058243710724
+    "3 months": 0.1347998098791734,
+    "1 year": 0.35545793953641214
    },
-   "beta": -0.5678851178669924,
+   "beta": -0.5663879764841246,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.54933,
-     "for_session_after": "2026-10-08",
+     "p": 0.60515,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.55,
      "recent_sessions": 120,
-     "accuracy_live": 0.8,
-     "live_sessions": 10,
-     "base_rate": 0.5197969543147208,
+     "accuracy_live": 0.8181818181818182,
+     "live_sessions": 11,
+     "base_rate": 0.5202839756592292,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.54812,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.58212,
@@ -2799,24 +2794,24 @@
        "date": "2026-10-07",
        "p": 0.59802,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.54933,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.53142,
-     "for_session_after": "2026-10-08",
+     "p": 0.61826,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.48333333333333334,
      "recent_sessions": 120,
-     "accuracy_live": 0.7,
-     "live_sessions": 10,
-     "base_rate": 0.49712643678160917,
+     "accuracy_live": 0.7272727272727273,
+     "live_sessions": 11,
+     "base_rate": 0.49760765550239233,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.60409,
-       "right": false
-      },
       {
        "date": "2026-09-25",
        "p": 0.6666,
@@ -2861,21 +2856,26 @@
        "date": "2026-10-07",
        "p": 0.64351,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.53142,
+       "right": true
       }
      ]
     }
    },
    "news": {
-    "count_7d": 112,
-    "mood_7d": 0.11696785714285715,
+    "count_7d": 125,
+    "mood_7d": 0.0565704,
     "headlines": [
      {
       "title": "ExxonMobil (XOM) Expands Oil Operations in Trinidad to Boost Pro - GuruFocus",
       "published": "2026-10-08"
      },
      {
-      "title": "H&P & ExxonMobil Expand Deployment of FlexRobotics\u00ae Technology",
-      "published": "2026-10-07"
+      "title": "ExxonMobil (XOM) Blocks $5B Environmental Fine Settlement Amid K - GuruFocus",
+      "published": "2026-10-09"
      },
      {
       "title": "Is Helmerich & Payne (HP) Undervalued Following High End Margin Guidance And ExxonMobil Expansion?",
@@ -2887,33 +2887,33 @@
     "Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.",
     "Neither overbought nor oversold (RSI 64, normal range 30 to 70).",
     "A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).",
-    "Over the past year it beat the S&P 500 (SPY) by 35 percentage points.",
-    "It is close to its 1-year high of $169.32 (-0.5%).",
-    "News mood over the last week: positive (112 headlines).",
-    "The models give 55% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
+    "Over the past year it beat the S&P 500 (SPY) by 36 percentage points.",
+    "It is close to its 1-year high of $169.32 (-0.2%).",
+    "News mood over the last week: positive (125 headlines).",
+    "The models give 61% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 44,
-     "score": 0.2182227272727273,
-     "positive": 16,
-     "neutral": 24,
+     "count": 54,
+     "score": 0.19823148148148148,
+     "positive": 18,
+     "neutral": 32,
      "negative": 4
     },
     "previous_week": {
-     "count": 54,
-     "score": 0.15522592592592593,
-     "positive": 17,
-     "neutral": 30,
+     "count": 50,
+     "score": 0.129134,
+     "positive": 15,
+     "neutral": 28,
      "negative": 7
     },
     "trend": "improving",
     "major_mood": {
-     "count": 1,
-     "score": 0.1453,
+     "count": 3,
+     "score": -0.20086666666666664,
      "positive": 0,
-     "neutral": 1,
-     "negative": 0
+     "neutral": 2,
+     "negative": 1
     },
     "daily": [
      {
@@ -2978,16 +2978,30 @@
      },
      {
       "date": "2026-10-08",
-      "count": 14,
-      "score": 0.4135357142857143
+      "count": 16,
+      "score": 0.4101375
      },
      {
       "date": "2026-10-09",
-      "count": 2,
-      "score": 0.0987
+      "count": 13,
+      "score": -0.06841538461538461
      }
     ],
     "read": [
+     {
+      "title": "XOM Stock Price | ExxonMobil Holdings Corp. Stock Quote (U.S.: NYSE)",
+      "outlet": "MarketWatch",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yckVoSEdUYjRYS00wS210R0x5TUVCNzU4ZUROZ2pLRnA5TC15MS1LdlRvTnpTQ08wVFdBTEtNSFJCU2p3LTdtM0hBYWUtODFkdFhxaW5PQlBMR00?oc=5",
+      "published": "2026-10-09T18:27:59+00:00",
+      "mood": "neutral"
+     },
+     {
+      "title": "ExxonMobil blocked $5B Kashagan environmental fine settlement",
+      "outlet": "Quartz",
+      "link": "https://qz.com/exxonmobil-blocked-kashagan-environmental-fine-settlement-100926?.tsrc=rss",
+      "published": "2026-10-09T12:56:32+00:00",
+      "mood": "negative"
+     },
      {
       "title": "ExxonMobil looks to offshore projects in Trinidad and Tobago for next boom",
       "outlet": "Financial Times",
@@ -2996,7 +3010,7 @@
       "mood": "neutral"
      }
     ],
-    "major_count": 1,
+    "major_count": 3,
     "earnings": {
      "next": "2026-10-30",
      "next_time": "before the open",
@@ -3006,7 +3020,7 @@
       "surprise": 13.26,
       "move": -0.009747085511364606
      },
-     "typical_move": 0.011481672544573163,
+     "typical_move": 0.011481680640249722,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -3023,46 +3037,41 @@
    }
   },
   "UNH": {
-   "as_of": "2026-10-08",
-   "close": 370.95,
+   "as_of": "2026-10-09",
+   "close": 379.3,
    "returns": {
-    "1 week": 0.015744796845023945,
-    "1 month": -0.050439705062906626,
-    "3 months": -0.12101603060743682,
-    "1 year": 0.04720746886215155
+    "1 week": 0.01989780591000523,
+    "1 month": -0.01711245305961251,
+    "3 months": -0.11059322661560556,
+    "1 year": 0.0526594746367115
    },
-   "ytd": 0.14593348031351172,
+   "ytd": 0.17172810565075491,
    "high_1y": 433.68,
    "low_1y": 255.97,
-   "off_high": -0.14464499673593623,
-   "sma50": 388.50685302734377,
-   "sma200": 353.58634231567385,
-   "rsi_14": 41.540038716963956,
-   "vol_now": 0.19712261003515802,
-   "vol_1y": 0.34408370758797285,
+   "off_high": -0.125391207385531,
+   "sma50": 387.71503967285156,
+   "sma200": 353.8885621643066,
+   "rsi_14": 49.934301713733795,
+   "vol_now": 0.19764034266977928,
+   "vol_1y": 0.3443837366433078,
    "typical_day": 0.010337065711941984,
    "up_days_1y": 0.47619047619047616,
    "vs_market": {
-    "3 months": -0.14870238243961809,
-    "1 year": -0.12190965888717198
+    "3 months": -0.15241731396224578,
+    "1 year": -0.11649527906714363
    },
-   "beta": 0.4364937542901578,
+   "beta": 0.43819141541811724,
    "models": {
     "up": {
      "model": "ensemble",
-     "p": 0.52543,
-     "for_session_after": "2026-10-08",
+     "p": 0.51064,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5166666666666667,
      "recent_sessions": 120,
-     "accuracy_live": 0.5,
-     "live_sessions": 10,
-     "base_rate": 0.5137055837563452,
+     "accuracy_live": 0.5454545454545454,
+     "live_sessions": 11,
+     "base_rate": 0.5141987829614605,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.48211,
-       "right": false
-      },
       {
        "date": "2026-09-25",
        "p": 0.5129,
@@ -3107,24 +3116,24 @@
        "date": "2026-10-07",
        "p": 0.49414,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.52543,
+       "right": true
       }
      ]
     },
     "beat": {
      "model": "beat_full",
-     "p": 0.35671,
-     "for_session_after": "2026-10-08",
+     "p": 0.35403,
+     "for_session_after": "2026-10-09",
      "accuracy_recent": 0.5666666666666667,
      "recent_sessions": 120,
-     "accuracy_live": 0.4,
-     "live_sessions": 10,
-     "base_rate": 0.4760536398467433,
+     "accuracy_live": 0.36363636363636365,
+     "live_sessions": 11,
+     "base_rate": 0.47655502392344495,
      "last_calls": [
-      {
-       "date": "2026-09-24",
-       "p": 0.41768,
-       "right": true
-      },
       {
        "date": "2026-09-25",
        "p": 0.4473,
@@ -3169,59 +3178,64 @@
        "date": "2026-10-07",
        "p": 0.35729,
        "right": true
+      },
+      {
+       "date": "2026-10-08",
+       "p": 0.35671,
+       "right": false
       }
      ]
     }
    },
    "news": {
-    "count_7d": 81,
-    "mood_7d": -0.00900740740740739,
+    "count_7d": 108,
+    "mood_7d": 0.02742222222222223,
     "headlines": [
      {
-      "title": "UnitedHealth's Recovery Has One Weak Spot (Rating Downgrade) - Seeking Alpha",
-      "published": "2026-10-07"
+      "title": "Unitedhealth Group Inc Stock (UNH) Opened Up by 4.43% on Oct 9: Key Drivers Unveiled - TradingKey",
+      "published": "2026-10-09"
      },
      {
-      "title": "Better Dividend Stock for Retirees: CVS vs. UnitedHealth",
-      "published": "2026-10-07"
+      "title": "Humana Soars 16% on Improved Medicare Advantage Star Ratings; CVS Slides 3%, UnitedHealth Holds Steady",
+      "published": "2026-10-09"
      },
      {
-      "title": "UNH Stock Tracks Hot Monthly Streak: Wall Street Cheers \u2018Impressive\u2019 Q2 And Sees Over 20% More Room To Run - stocktwits.com",
-      "published": "2026-10-05"
+      "title": "Humana Soars 16% on Improved Medicare Advantage Star Ratings; CVS Slides 3%, UnitedHealth Holds Steady - 24/7 Wall St.",
+      "published": "2026-10-09"
      }
     ]
    },
    "summary": [
     "Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).",
-    "Neither overbought nor oversold (RSI 42, normal range 30 to 70).",
+    "Neither overbought nor oversold (RSI 50, normal range 30 to 70).",
     "A typical day moves it about 1.0%. Lately it is calmer than its usual year (20% vs 34% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.",
-    "It sits 14% below its 1-year high of $433.68.",
-    "News mood over the last week: mixed (81 headlines).",
-    "The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
+    "It sits 13% below its 1-year high of $433.68.",
+    "News mood over the last week: mixed (108 headlines).",
+    "The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 42,
-     "score": -0.008323809523809525,
-     "positive": 6,
-     "neutral": 28,
-     "negative": 8
+     "count": 53,
+     "score": 0.04780754716981132,
+     "positive": 8,
+     "neutral": 38,
+     "negative": 7
     },
     "previous_week": {
      "count": 30,
-     "score": 0.10669,
-     "positive": 9,
+     "score": 0.03645333333333334,
+     "positive": 8,
      "neutral": 15,
-     "negative": 6
+     "negative": 7
     },
-    "trend": "worsening",
+    "trend": "steady",
     "major_mood": {
      "count": 2,
-     "score": -0.45070000000000005,
+     "score": -0.0017000000000000001,
      "positive": 0,
-     "neutral": 1,
-     "negative": 1
+     "neutral": 2,
+     "negative": 0
     },
     "daily": [
      {
@@ -3286,29 +3300,29 @@
      },
      {
       "date": "2026-10-08",
-      "count": 11,
-      "score": -0.019954545454545457
+      "count": 13,
+      "score": -0.0057230769230769245
      },
      {
       "date": "2026-10-09",
-      "count": 0,
-      "score": null
+      "count": 13,
+      "score": 0.2014923076923077
      }
     ],
     "read": [
+     {
+      "title": "Final Trades: Hewlett Packard, Wells Fargo, Arista Networks and UnitedHealth",
+      "outlet": "CNBC",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSm1odkc3azhuVFdKR1dFdXhTdlRiWHJLbnBtUkM5bk40OXNKd0Y3d2ZTdmRlM0xZU1k5LWZRMkxldkgzM1hQUHUzLUF6dllWVm9MQ0Ftbm1CR3FJbVp2OGNJeFRVZUF0X2RFWnI0QzVMS0VVa191Ulltc2NkLVRIX2J6bHhQSWR0a2NRemhxVVVuRXpzdEx0Y0lrYU53ZWRYcFR5NktXOGR4d0NscE8xWWZUR0hYYUE?oc=5",
+      "published": "2026-10-09T17:11:00+00:00",
+      "mood": "neutral"
+     },
      {
       "title": "Final Trades: UnitedHealth, Clearway Energy, EQT Corp and the GPIQ",
       "outlet": "CNBC",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRzJQcUpQZ3B1YzAwSkFua1ZuakFQT0hfaEdoWlI5d19seWZfS3o0ampCTG1YMHBEb0tNSHI2blE0d0JGMVhLRTdEdVE3WEdSNmY3LXdvWjE0Rk9vUVRTQThobzAtS0VYYmgxa2FJWVUtRkdjb0JmSV9NRHJGQzFWYnZscFNaam5jREF3dlZUTVdyMWFLNjIyQ2RnbTRBMWpJaF94QjJ1TVhNUQ?oc=5",
       "published": "2026-10-06T19:03:00+00:00",
       "mood": "neutral"
-     },
-     {
-      "title": "UnitedHealth and Humana cutting Medicare Advantage plans in 2027",
-      "outlet": "Quartz",
-      "link": "https://qz.com/unitedhealth-humana-medicare-advantage-plans-dropped-100226?.tsrc=rss",
-      "published": "2026-10-02T17:26:01+00:00",
-      "mood": "negative"
      }
     ],
     "major_count": 2,
@@ -3321,275 +3335,275 @@
       "surprise": 29.8,
       "move": 0.011612431689959957
      },
-     "typical_move": 0.0902925113908016,
+     "typical_move": 0.09029254113989901,
      "reports": 8,
      "beat_count": 6,
      "beat_of": 8
     },
     "analysts": {
      "days": 30,
-     "notes": 0,
+     "notes": 1,
      "upgrades": 0,
      "downgrades": 0,
      "raised": 0,
-     "cut": 0,
-     "target_change": null
+     "cut": 1,
+     "target_change": -0.06511627906976747
     }
    }
   }
  },
  "news_record": {
-  "days": 64,
-  "matched": 0.515625
+  "days": 72,
+  "matched": 0.5416666666666666
  },
  "weekly": {
   "horizon": 5,
   "calls": {
    "AAPL": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.49571408669230854,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.4973219835834325,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4797262503444504,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.4805880117026313,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 61.23257139024745,
-     "state": "stretched",
+     "rsi": 56.13815938241815,
+     "state": "normal",
      "above_200d": true,
-     "range_low": -0.04234056307499869,
-     "median": 0.007952614571491212,
+     "range_low": -0.04234061398176129,
+     "median": 0.00803038190595795,
      "range_high": 0.05108418435381621,
-     "up_share_2y": 0.5756972111553785,
-     "similar_weeks": 341,
-     "similar_up": 0.5747800586510264,
-     "similar_avg": 0.0036596389315681458
+     "up_share_2y": 0.5776892430278885,
+     "similar_weeks": 314,
+     "similar_up": 0.5605095541401274,
+     "similar_avg": 0.00476487435235543
     }
    },
    "MSFT": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.5049671315877323,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5079925832738823,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4895361739732653,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.4894247992544312,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 61.75513694153657,
+     "rsi": 67.5247039630026,
      "state": "stretched",
      "above_200d": true,
-     "range_low": -0.041919346173364735,
-     "median": 0.003068321896344317,
-     "range_high": 0.0401452439179127,
-     "up_share_2y": 0.5557768924302788,
-     "similar_weeks": 258,
-     "similar_up": 0.6356589147286822,
-     "similar_avg": 0.00430612318171145
+     "range_low": -0.041919422425661844,
+     "median": 0.003326232614024094,
+     "range_high": 0.040145326441965515,
+     "up_share_2y": 0.5577689243027888,
+     "similar_weeks": 259,
+     "similar_up": 0.637065637065637,
+     "similar_avg": 0.004389052485855841
     }
    },
    "NVDA": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.49854676344301757,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5025691677603863,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4856447642014182,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.48794127942131826,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 54.53071535937576,
+     "rsi": 53.02739879495085,
      "state": "normal",
      "above_200d": true,
-     "range_low": -0.059799545734257185,
-     "median": 0.008869613866465231,
-     "range_high": 0.07497286404486421,
-     "up_share_2y": 0.5557768924302788,
+     "range_low": -0.05979953525888718,
+     "median": 0.00885972924178835,
+     "range_high": 0.07431497226354611,
+     "up_share_2y": 0.5537848605577689,
      "similar_weeks": 467,
      "similar_up": 0.563169164882227,
-     "similar_avg": 0.005921242631007712
+     "similar_avg": 0.005921243101593739
     }
    },
    "AMZN": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.5036991004536338,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5093632581365628,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4905032044720178,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.49159019883294097,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 50.815958617059835,
+     "rsi": 59.047498766151115,
      "state": "normal",
      "above_200d": true,
      "range_low": -0.046723173033947574,
-     "median": 0.0013521264768130425,
+     "median": 0.001672985086484613,
      "range_high": 0.055047780745554734,
-     "up_share_2y": 0.5258964143426295,
-     "similar_weeks": 411,
-     "similar_up": 0.5450121654501217,
-     "similar_avg": 0.0026197577216300377
+     "up_share_2y": 0.5278884462151394,
+     "similar_weeks": 412,
+     "similar_up": 0.5461165048543689,
+     "similar_avg": 0.002732143695964883
     }
    },
    "GOOGL": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.5025282384448023,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5085152632469909,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4872182856684383,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.4893139047447177,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 53.503781254181995,
+     "rsi": 56.39113741385746,
      "state": "normal",
      "above_200d": true,
-     "range_low": -0.04485462128983449,
-     "median": 0.006189146059344064,
-     "range_high": 0.06033321083549954,
-     "up_share_2y": 0.5597609561752988,
-     "similar_weeks": 402,
-     "similar_up": 0.5845771144278606,
-     "similar_avg": 0.005598560427909317
+     "range_low": -0.044854622601221285,
+     "median": 0.0062308849355553475,
+     "range_high": 0.060332986588726926,
+     "up_share_2y": 0.5617529880478087,
+     "similar_weeks": 403,
+     "similar_up": 0.5856079404466501,
+     "similar_avg": 0.005650366142482832
     }
    },
    "META": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.49867574736828285,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5027615803573708,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4865320890729227,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.48818927913209775,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 57.55303894683949,
+     "rsi": 56.84466312883753,
      "state": "normal",
      "above_200d": true,
-     "range_low": -0.05800597369425799,
-     "median": 0.0018781393597882001,
-     "range_high": 0.0718993764703541,
-     "up_share_2y": 0.5199203187250996,
+     "range_low": -0.05800606764078664,
+     "median": 0.0016570768726114071,
+     "range_high": 0.07189956112954102,
+     "up_share_2y": 0.5179282868525896,
      "similar_weeks": 306,
      "similar_up": 0.5882352941176471,
-     "similar_avg": 0.007352929413362204
+     "similar_avg": 0.0073529245448674015
     }
    },
    "TSLA": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.5104172036675084,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5135447840174611,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.48822302869586703,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.48852117359093983,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 55.793047773223854,
+     "rsi": 59.732552556393635,
      "state": "normal",
      "above_200d": false,
      "range_low": -0.07449548122744722,
-     "median": 0.001883888739288353,
+     "median": 0.0025462672656966223,
      "range_high": 0.097655390872989,
-     "up_share_2y": 0.5139442231075697,
-     "similar_weeks": 298,
-     "similar_up": 0.5536912751677853,
-     "similar_avg": 0.00775576906852178
+     "up_share_2y": 0.5159362549800797,
+     "similar_weeks": 299,
+     "similar_up": 0.5551839464882943,
+     "similar_avg": 0.007854001962456817
     }
    },
    "JPM": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.4981433752677595,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5030377704426423,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.48671648960121683,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.4888948150157858,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 37.21770425249195,
-     "state": "beaten down",
+     "rsi": 40.05264246167288,
+     "state": "normal",
      "above_200d": true,
-     "range_low": -0.029047062553911596,
-     "median": 0.00532622128560567,
-     "range_high": 0.0448792686403453,
+     "range_low": -0.029046890873548867,
+     "median": 0.004837551875601642,
+     "range_high": 0.04487938141748673,
      "up_share_2y": 0.5677290836653387,
-     "similar_weeks": 62,
-     "similar_up": 0.6129032258064516,
-     "similar_avg": 0.01031545043487082
+     "similar_weeks": 403,
+     "similar_up": 0.5508684863523573,
+     "similar_avg": 0.004013184241561478
     }
    },
    "XOM": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.5080394704227094,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.5111599374098508,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.48921538356619687,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.49033587468896045,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 63.547540191978044,
+     "rsi": 64.27556707756081,
      "state": "stretched",
      "above_200d": true,
-     "range_low": -0.03839811594046314,
-     "median": 0.003815416511621539,
-     "range_high": 0.043328233086003566,
+     "range_low": -0.03839804593086605,
+     "median": 0.004057191376527158,
+     "range_high": 0.043328291381469416,
      "up_share_2y": 0.545816733067729,
      "similar_weeks": 214,
      "similar_up": 0.4953271028037383,
-     "similar_avg": -0.0011218416182375399
+     "similar_avg": -0.0011218452842079363
     }
    },
    "UNH": {
-    "feature_date": "2026-10-08",
-    "p_up": 0.5231075697211155,
-    "model_up": 0.49487834521042695,
+    "feature_date": "2026-10-09",
+    "p_up": 0.5239043824701195,
+    "model_up": 0.49841519360556186,
     "source": "usual odds",
     "p_beat": 0.49760956175298804,
-    "model_beat": 0.4829247130835157,
-    "week_from": "2026-10-09",
-    "week_to": "2026-10-15",
+    "model_beat": 0.4830971722913786,
+    "week_from": "2026-10-12",
+    "week_to": "2026-10-16",
     "context": {
-     "rsi": 41.540038716963956,
+     "rsi": 49.934301713733795,
      "state": "normal",
      "above_200d": true,
-     "range_low": -0.0567849903268544,
-     "median": 0.0003670839163825157,
-     "range_high": 0.057485207856836106,
-     "up_share_2y": 0.5059760956175299,
-     "similar_weeks": 184,
-     "similar_up": 0.41847826086956524,
-     "similar_avg": -0.007423856273459703
+     "range_low": -0.056784832202336544,
+     "median": 0.0005100510325276586,
+     "range_high": 0.05748512958502799,
+     "up_share_2y": 0.5079681274900398,
+     "similar_weeks": 185,
+     "similar_up": 0.42162162162162165,
+     "similar_avg": -0.007282528060971902
     }
    }
   },
   "record": {
    "up": {
-    "weeks": 7960,
+    "weeks": 7970,
     "from": "2023-08-01",
     "usual": {
-     "accuracy": 0.5531407035175879,
-     "brier": 0.24762892166376296
+     "accuracy": 0.5533249686323714,
+     "brier": 0.2476328152543168
     },
     "model": {
-     "accuracy": 0.5433417085427136,
-     "brier": 0.248297239674724
+     "accuracy": 0.5432873274780426,
+     "brier": 0.24832135503946173
     },
     "champion": "usual"
    },
    "beat": {
-    "weeks": 7960,
+    "weeks": 7970,
     "from": "2023-08-01",
     "usual": {
-     "accuracy": 0.5081658291457286,
-     "brier": 0.2502279622431971
+     "accuracy": 0.508030112923463,
+     "brier": 0.2502291149235267
     },
     "model": {
-     "accuracy": 0.5012562814070352,
-     "brier": 0.2506694987979782
+     "accuracy": 0.501129234629862,
+     "brier": 0.2506715969449365
     },
     "champion": "usual"
    }
