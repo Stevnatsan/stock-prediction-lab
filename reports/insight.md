@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-10-10 01:46 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-10-10 07:06 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $778.57 on 2026-10-09
 
@@ -28,7 +28,7 @@ Generated 2026-10-10 01:46 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (16% vs 25% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 14 percentage points.
 - It is close to its 1-year high of $341.07 (-1.3%).
-- News mood over the last week: mixed (342 headlines).
+- News mood over the last week: mixed (365 headlines).
 - The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -44,7 +44,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is calmer than its usual year (23% vs 33% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 14 percentage points.
 - It is close to its 1-year high of $537.65 (-0.5%).
-- News mood over the last week: mixed (365 headlines).
+- News mood over the last week: mixed (380 headlines).
 - The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -60,7 +60,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is calmer than its usual year (25% vs 38% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 5 percentage points.
 - It is close to its 1-year high of $239.24 (-4.2%).
-- News mood over the last week: mixed (639 headlines).
+- News mood over the last week: mixed (648 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -76,7 +76,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.3%. Lately it is calmer than its usual year (25% vs 35% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 0 percentage points.
 - It is close to its 1-year high of $284.02 (-7.6%).
-- News mood over the last week: mixed (414 headlines).
+- News mood over the last week: mixed (432 headlines).
 - The models give 55% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -92,7 +92,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is calmer than its usual year (24% vs 32% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 27 percentage points.
 - It sits 13% below its 1-year high of $402.12.
-- News mood over the last week: mixed (344 headlines).
+- News mood over the last week: mixed (378 headlines).
 - The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -108,7 +108,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is choppier than its usual year (54% vs 42% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 16 percentage points.
 - It is close to its 1-year high of $777.59 (-7.6%).
-- News mood over the last week: mixed (427 headlines).
+- News mood over the last week: mixed (434 headlines).
 - The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -124,7 +124,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.6%. Lately it is calmer than its usual year (31% vs 45% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 30 percentage points.
 - It sits 22% below its 1-year high of $489.88.
-- News mood over the last week: mixed (324 headlines).
+- News mood over the last week: mixed (341 headlines).
 - The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 64.2% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
@@ -140,7 +140,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.6%. Lately it is calmer than its usual year (18% vs 22% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 5 percentage points.
 - It is close to its 1-year high of $363.37 (-8.4%).
-- News mood over the last week: positive (288 headlines).
+- News mood over the last week: mixed (290 headlines).
 - The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -156,7 +156,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (24% vs 26% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 36 percentage points.
 - It is close to its 1-year high of $169.32 (-0.2%).
-- News mood over the last week: positive (125 headlines).
+- News mood over the last week: positive (127 headlines).
 - The models give 61% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -172,7 +172,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is calmer than its usual year (20% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 13% below its 1-year high of $433.68.
-- News mood over the last week: mixed (108 headlines).
+- News mood over the last week: mixed (109 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:

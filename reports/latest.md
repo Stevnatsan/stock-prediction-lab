@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-10-10 01:46 UTC.
+Generated 2026-10-10 07:06 UTC.
 
 ## Next-session calls
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7681 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 679 |  |
+| finbert | 10 | 0 | 151 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 999 |  |
+| google_news | 10 | 0 | 1001 |  |
 | macro_yahoo | 1 | 0 | 1088 |  |
 | major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
 | prices | 11 | 0 | 11946 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 157 |  |
+| yahoo_rss | 10 | 0 | 159 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-10-09 | 0 | 8 | 41 |
-| MSFT | ok | 2026-10-09 | 0 | 8 | 35 |
-| NVDA | ok | 2026-10-09 | 0 | 8 | 87 |
-| AMZN | ok | 2026-10-09 | 0 | 8 | 48 |
-| GOOGL | ok | 2026-10-09 | 0 | 8 | 31 |
-| META | ok | 2026-10-09 | 0 | 8 | 49 |
-| TSLA | ok | 2026-10-09 | 0 | 8 | 30 |
-| JPM | ok | 2026-10-09 | 0 | 8 | 29 |
-| XOM | ok | 2026-10-09 | 0 | 8 | 21 |
-| UNH | ok | 2026-10-09 | 0 | 8 | 23 |
+| AAPL | ok | 2026-10-09 | 0 | 0 | 0 |
+| MSFT | ok | 2026-10-09 | 0 | 0 | 0 |
+| NVDA | ok | 2026-10-09 | 0 | 0 | 0 |
+| AMZN | ok | 2026-10-09 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-10-09 | 0 | 0 | 0 |
+| META | ok | 2026-10-09 | 0 | 0 | 0 |
+| TSLA | ok | 2026-10-09 | 0 | 0 | 0 |
+| JPM | ok | 2026-10-09 | 0 | 0 | 0 |
+| XOM | ok | 2026-10-09 | 0 | 0 | 0 |
+| UNH | ok | 2026-10-09 | 0 | 0 | 0 |
 
 ---
 
