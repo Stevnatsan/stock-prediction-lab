@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-10-15 00:32 UTC.
+Generated 2026-10-15 05:55 UTC.
 
 ## Next-session calls
 
@@ -176,35 +176,33 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | Source | Calls ok | Failed | Items | Note |
 |---|---|---|---|---|
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
-| analysts | 10 | 0 | 7779 |  |
+| analysts | 10 | 0 | 7764 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 757 |  |
+| finbert | 10 | 0 | 192 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 997 |  |
-| macro_yahoo | 1 | 0 | 1088 |  |
+| google_news | 10 | 0 | 998 |  |
+| macro_yahoo | 1 | 0 | 1087 |  |
 | major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
-| prices | 11 | 0 | 11946 |  |
+| prices | 11 | 0 | 11935 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 164 |  |
+| yahoo_rss | 10 | 0 | 168 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-10-14 | 0 | 8 | 42 |
-| MSFT | ok | 2026-10-14 | 0 | 8 | 36 |
-| NVDA | ok | 2026-10-14 | 0 | 8 | 77 |
-| AMZN | ok | 2026-10-14 | 0 | 8 | 37 |
-| GOOGL | ok | 2026-10-14 | 0 | 8 | 35 |
-| META | ok | 2026-10-14 | 0 | 8 | 61 |
-| TSLA | ok | 2026-10-14 | 0 | 8 | 31 |
-| JPM | ok | 2026-10-14 | 0 | 8 | 33 |
-| XOM | ok | 2026-10-14 | 0 | 8 | 27 |
-| UNH | ok | 2026-10-14 | 0 | 8 | 34 |
+| AAPL | ok | 2026-10-14 | 0 | 0 | 0 |
+| MSFT | ok | 2026-10-14 | 0 | 0 | 0 |
+| NVDA | ok | 2026-10-14 | 0 | 0 | 0 |
+| AMZN | ok | 2026-10-14 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-10-14 | 0 | 0 | 0 |
+| META | ok | 2026-10-14 | 0 | 0 | 0 |
+| TSLA | ok | 2026-10-14 | 0 | 0 | 0 |
+| JPM | ok | 2026-10-14 | 0 | 0 | 0 |
+| XOM | ok | 2026-10-14 | 0 | 0 | 0 |
+| UNH | ok | 2026-10-14 | 0 | 0 | 0 |
 
 ---
 
