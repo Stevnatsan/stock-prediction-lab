@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-10-16 00:25 UTC.
+Generated 2026-10-16 05:51 UTC.
 
 ## Next-session calls
 
@@ -152,7 +152,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Top 3 by logistic, price only | 1,050 | +40.6% | +8.5% | 0.50 | 51.0% |
 | Top 3 by logistic, all sources (VADER) | 1,050 | +36.7% | +7.8% | 0.49 | 50.3% |
 | Top 3 by logistic, all sources (FinBERT) | 1,050 | +36.7% | +7.8% | 0.49 | 50.3% |
-| Top 3 by gradient boosting | 991 | +71.0% | +14.6% | 0.80 | 36.8% |
+| Top 3 by gradient boosting | 991 | +70.5% | +14.5% | 0.80 | 36.8% |
 | Top 3 by ensemble | 991 | +38.2% | +8.6% | 0.54 | 46.0% |
 | Buy every stock, every session | 1,050 | -1.0% | -0.2% | 0.07 | 51.8% |
 
@@ -161,7 +161,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Strategy | Sessions | Total return | Per year | Sharpe | Winning days |
 |---|---|---|---|---|---|
 | Top 3 by logistic, all sources (VADER) | 1,050 | -22.9% | -6.0% | -0.37 | 47.0% |
-| Top 3 by gradient boosting | 991 | -43.3% | -13.4% | -0.83 | 39.6% |
+| Top 3 by gradient boosting | 991 | -42.9% | -13.3% | -0.81 | 39.6% |
 | Top 3 by ensemble | 991 | -13.6% | -3.6% | -0.16 | 46.4% |
 | Every stock minus SPY | 1,050 | -53.9% | -16.9% | -2.41 | 42.2% |
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7774 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 732 |  |
+| finbert | 10 | 0 | 265 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 992 |  |
-| macro_yahoo | 1 | 0 | 1088 |  |
+| google_news | 10 | 0 | 995 |  |
+| macro_yahoo | 1 | 0 | 1087 |  |
 | major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
-| prices | 11 | 0 | 11946 |  |
+| prices | 11 | 0 | 11935 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 168 |  |
+| yahoo_rss | 10 | 0 | 170 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-10-15 | 0 | 8 | 35 |
-| MSFT | ok | 2026-10-15 | 0 | 8 | 33 |
-| NVDA | ok | 2026-10-15 | 0 | 8 | 81 |
-| AMZN | ok | 2026-10-15 | 0 | 8 | 41 |
-| GOOGL | ok | 2026-10-15 | 0 | 8 | 27 |
-| META | ok | 2026-10-15 | 0 | 8 | 47 |
-| TSLA | ok | 2026-10-15 | 0 | 8 | 33 |
-| JPM | ok | 2026-10-15 | 0 | 8 | 35 |
-| XOM | ok | 2026-10-15 | 0 | 8 | 19 |
-| UNH | ok | 2026-10-15 | 0 | 8 | 19 |
+| AAPL | ok | 2026-10-15 | 0 | 0 | 0 |
+| MSFT | ok | 2026-10-15 | 0 | 0 | 0 |
+| NVDA | ok | 2026-10-15 | 0 | 0 | 0 |
+| AMZN | ok | 2026-10-15 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-10-15 | 0 | 0 | 0 |
+| META | ok | 2026-10-15 | 0 | 0 | 0 |
+| TSLA | ok | 2026-10-15 | 0 | 0 | 0 |
+| JPM | ok | 2026-10-15 | 0 | 0 | 0 |
+| XOM | ok | 2026-10-15 | 0 | 0 | 0 |
+| UNH | ok | 2026-10-15 | 0 | 0 | 0 |
 
 ---
 
