@@ -7,7 +7,7 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-**Updated:** 2026-10-23 00:40 UTC · predictions made after the close of 2026-10-22
+**Updated:** 2026-10-23 06:03 UTC · predictions made after the close of 2026-10-22
 
 ### Next-session calls
 
