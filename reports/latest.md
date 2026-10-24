@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-10-24 00:42 UTC.
+Generated 2026-10-24 05:51 UTC.
 
 ## Next-session calls
 
@@ -152,7 +152,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Top 3 by logistic, price only | 1,056 | +43.1% | +8.9% | 0.52 | 51.0% |
 | Top 3 by logistic, all sources (VADER) | 1,056 | +40.8% | +8.5% | 0.52 | 50.4% |
 | Top 3 by logistic, all sources (FinBERT) | 1,056 | +40.7% | +8.5% | 0.52 | 50.4% |
-| Top 3 by gradient boosting | 997 | +67.8% | +14.0% | 0.77 | 36.7% |
+| Top 3 by gradient boosting | 997 | +65.8% | +13.6% | 0.76 | 36.6% |
 | Top 3 by ensemble | 997 | +38.6% | +8.6% | 0.55 | 46.0% |
 | Buy every stock, every session | 1,056 | -2.9% | -0.7% | 0.05 | 51.9% |
 
@@ -161,7 +161,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Strategy | Sessions | Total return | Per year | Sharpe | Winning days |
 |---|---|---|---|---|---|
 | Top 3 by logistic, all sources (VADER) | 1,056 | -22.3% | -5.9% | -0.35 | 47.0% |
-| Top 3 by gradient boosting | 997 | -42.9% | -13.2% | -0.81 | 39.3% |
+| Top 3 by gradient boosting | 997 | -43.3% | -13.4% | -0.82 | 39.3% |
 | Top 3 by ensemble | 997 | -13.0% | -3.5% | -0.15 | 46.3% |
 | Every stock minus SPY | 1,056 | -54.4% | -17.1% | -2.44 | 42.1% |
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7835 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 543 |  |
+| finbert | 7 | 0 | 34 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 992 |  |
+| google_news | 0 | 10 | 0 | HTTPError: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=UNH+stock&hl=en-US&gl=US&ceid=US:en |
 | macro_yahoo | 1 | 0 | 1089 |  |
-| major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
+| major_news | 0 | 10 | 0 | HTTPError: 503 Server Error: Service Unavailable for url: https://news.google.com/rss/search?q=%28unh+OR+unitedhealth%29+%28site%3Areuters.com+OR+site%3Abloomberg.com+OR+site%3Acnbc.com+OR+site%3Awsj. |
 | prices | 11 | 0 | 11957 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 161 |  |
+| yahoo_rss | 10 | 0 | 165 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-10-23 | 0 | 8 | 36 |
-| MSFT | ok | 2026-10-23 | 0 | 8 | 32 |
-| NVDA | ok | 2026-10-23 | 0 | 8 | 60 |
-| AMZN | ok | 2026-10-23 | 0 | 8 | 32 |
-| GOOGL | ok | 2026-10-23 | 0 | 8 | 27 |
-| META | ok | 2026-10-23 | 0 | 8 | 55 |
-| TSLA | ok | 2026-10-23 | 0 | 8 | 28 |
-| JPM | ok | 2026-10-23 | 0 | 8 | 19 |
-| XOM | ok | 2026-10-23 | 0 | 8 | 21 |
-| UNH | ok | 2026-10-23 | 0 | 8 | 7 |
+| AAPL | ok | 2026-10-23 | 0 | 0 | 0 |
+| MSFT | ok | 2026-10-23 | 0 | 0 | 0 |
+| NVDA | ok | 2026-10-23 | 0 | 0 | 0 |
+| AMZN | ok | 2026-10-23 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-10-23 | 0 | 0 | 0 |
+| META | ok | 2026-10-23 | 0 | 0 | 0 |
+| TSLA | ok | 2026-10-23 | 0 | 0 | 0 |
+| JPM | ok | 2026-10-23 | 0 | 0 | 0 |
+| XOM | ok | 2026-10-23 | 0 | 0 | 0 |
+| UNH | ok | 2026-10-23 | 0 | 0 | 0 |
 
 ---
 
