@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-10-29 01:49 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-10-29 07:03 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $772.31 on 2026-10-28
 
@@ -28,7 +28,7 @@ Generated 2026-10-29 01:49 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (14% vs 24% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 14 percentage points.
 - It is close to its 1-year high of $348.22 (-1.3%).
-- News mood over the last week: mixed (573 headlines).
+- News mood over the last week: mixed (590 headlines).
 - The models give 52% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -44,14 +44,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (20% vs 33% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 13 percentage points.
 - It is close to its 1-year high of $543.45 (-2.3%).
-- News mood over the last week: mixed (620 headlines).
+- News mood over the last week: mixed (654 headlines).
 - The models give 35% odds the next session closes above its open (a slight lean to fall). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-10-28: CoreWeave and other neocloud stocks drop after Microsoft capex comes in below expectations - CNBC
+- 2026-10-29: CRWV, NBIS, IREN, APLD Stocks Drop After Microsoft Capex Falls Short On Delayed Third-Party Capacity
+- 2026-10-29: Bernstein: Crowding in software stocks remains at historic lows; crowded trades are showing reversal signals, making Microsoft (MSFT.US) a "must-own" stock. - Moomoo
 - 2026-10-29: S&P 500, Nasdaq Futures Dip As Weaker-Than-Expected Alphabet Earnings Reignite AI Spending Worries — GOOGL, MSFT, ORCL, NVDA, MRVL In Focus
-- 2026-10-28: Microsoft (NASDAQ:MSFT) Stock Surges 4% After Earnings Beat as Azure Growth Hits 48% - Stocks Down Under
 
 ## NVDA · $215.38 on 2026-10-28
 
@@ -60,7 +60,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (30% vs 38% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 1 percentage points.
 - It is close to its 1-year high of $239.24 (-10.0%).
-- News mood over the last week: mixed (625 headlines).
+- News mood over the last week: mixed (628 headlines).
 - The models give 57% odds the next session closes above its open (a slight lean to rise). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -76,14 +76,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.3%. Lately it is about as jumpy as its usual year (33% vs 35% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 2 percentage points.
 - It sits 10% below its 1-year high of $284.02.
-- News mood over the last week: mixed (523 headlines).
+- News mood over the last week: mixed (528 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to fall). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
+- 2026-10-29: Gene Munster 'More Concerned' About Amazon and Alphabet — Says AI Bots Mean Shopping Edge 'Will Increasingly Be Under Attack'
 - 2026-10-28: Global Product Take-Back Program Market Report 2026 | Capitalize on 10.7% CAGR to $63.73 Billion by 2030 as Apple, Amazon, Samsung, Dell, and Sony Scale Circular Returns
 - 2026-10-28: ASTS Stock Slips Overnight As FCC Clears Amazon’s $11.5B Globalstar Deal — Touts ‘Even More Competition’ - Yahoo Finance
-- 2026-10-28: Amazon.com, Inc. Stock 12‑Month Price Target Raised to $335.38, Implies 33% Upside - TradingView
 
 ## GOOGL · $324.89 on 2026-10-28
 
@@ -92,14 +92,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is calmer than its usual year (22% vs 31% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 7 percentage points.
 - It sits 19% below its 1-year high of $402.12.
-- News mood over the last week: negative (606 headlines).
+- News mood over the last week: negative (663 headlines).
 - The models give 36% odds the next session closes above its open (a slight lean to fall). On this stock they were right 60.0% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
-- 2026-10-28: Alphabet (NASDAQ:GOOGL) Stock Plunges After Q3 Earnings Despite 103% Google Cloud Growth - Stocks Down Under
-- 2026-10-28: GOOGL Stock Slumps 11% After-Hours: Alphabet’s Surge in AI Spending Pressures Third-Quarter Profits And Cash Flows
 - 2026-10-28: Alphabet: GOOGL Crashes 10% on Surging AI Capital Expenditures & Negative Cash Flow - FXLeaders
+- 2026-10-29: GOOGL: Alphabet Stock Drops 10% as Wall Street Searches for Better Earnings - TradingView
+- 2026-10-29: Asia stocks fall as Alphabet, Samsung results disappoint; more tech earnings loom
 
 ## META · $612.49 on 2026-10-28
 
@@ -108,7 +108,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.2%. Lately it is about as jumpy as its usual year (36% vs 43% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 32 percentage points.
 - It sits 21% below its 1-year high of $777.59.
-- News mood over the last week: negative (624 headlines).
+- News mood over the last week: mixed (619 headlines).
 - The models give 52% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -124,14 +124,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is about as jumpy as its usual year (40% vs 45% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 25 percentage points.
 - It sits 17% below its 1-year high of $489.88.
-- News mood over the last week: mixed (453 headlines).
+- News mood over the last week: positive (463 headlines).
 - The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 60.8% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-10-27: Tesla's stock rose 4% after ARK reaffirmed its long-term - KuCoin
 - 2026-10-28: Global Battery Passport Market Report 2026 | Capitalize on 34.2% CAGR to 2030 as Tesla, Siemens, SAP and Circulor Scale EU Compliance, AI and Blockchain
-- 2026-10-27: Tesla Rises 4% as ARK Reiterates $4,400 Long-Term Price Target on Robotaxi Thesis; Rivian Gains 3%, Lucid Holds Steady - 24/7 Wall St.
+- 2026-10-28: Five Seconds of Burn, Six Hours of Recharge; Tesla Stock (NASDAQ:TSLA) Slips on Thruster Stats - TipRanks
 
 ## JPM · $339.30 on 2026-10-28
 
@@ -140,7 +140,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.6%. Lately it is calmer than its usual year (13% vs 22% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 0 percentage points.
 - It is close to its 1-year high of $363.37 (-6.6%).
-- News mood over the last week: mixed (306 headlines).
+- News mood over the last week: mixed (324 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 47.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -156,14 +156,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (21% vs 26% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 48 percentage points.
 - It is close to its 1-year high of $184.54 (-1.4%).
-- News mood over the last week: mixed (195 headlines).
+- News mood over the last week: mixed (208 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
 - 2026-10-27: ExxonMobil (NYSE:XOM) Stock Price Down 2.5% - Should You Sell? - MarketBeat
-- 2026-10-26: ExxonMobil (NYSE:XOM) Hits New 1-Year High - Still a Buy? - MarketBeat
 - 2026-10-28: ExxonMobil (NYSE:XOM) Shares Climb 1.1% - Here's What Happened - MarketBeat
+- 2026-10-28: US-Russia Talks Could Open Door for ExxonMobil (XOM) in Russian Oil Sector Amid Peace Negotiations - GuruFocus
 
 ## UNH · $407.10 on 2026-10-28
 
@@ -172,7 +172,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (29% vs 35% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 0 percentage points.
 - It is close to its 1-year high of $433.68 (-6.1%).
-- News mood over the last week: positive (58 headlines).
+- News mood over the last week: positive (59 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to rise). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
