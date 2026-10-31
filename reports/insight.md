@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-10-31 01:36 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-10-31 07:00 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $755.72 on 2026-10-30
 
@@ -28,7 +28,7 @@ Generated 2026-10-31 01:36 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (15% vs 24% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 17 percentage points.
 - It is close to its 1-year high of $348.91 (-1.2%).
-- News mood over the last week: mixed (589 headlines).
+- News mood over the last week: mixed (601 headlines).
 - The models give 41% odds the next session closes above its open (a slight lean to fall). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -44,7 +44,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is calmer than its usual year (20% vs 33% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 14 percentage points.
 - It is close to its 1-year high of $543.45 (-4.0%).
-- News mood over the last week: mixed (720 headlines).
+- News mood over the last week: mixed (738 headlines).
 - The models give 42% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -60,7 +60,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (32% vs 37% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 14% below its 1-year high of $239.24.
-- News mood over the last week: mixed (652 headlines).
+- News mood over the last week: mixed (673 headlines).
 - The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -76,14 +76,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.3%. Lately it is about as jumpy as its usual year (36% vs 35% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 7 percentage points.
 - It sits 15% below its 1-year high of $284.02.
-- News mood over the last week: negative (648 headlines).
+- News mood over the last week: negative (686 headlines).
 - The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-10-30: Amazon.com (NASDAQ:AMZN) Stock Price Down 1.4% Following Weak Earnings - MarketBeat
-- 2026-10-30: Amazon Stock Falls Despite 40%-Plus AWS Growth Outlook Through 2028 - TradingView
-- 2026-10-30: Nasdaq Down Over 600 Points; Amazon Shares Fall Following Weak Q3 Results - Benzinga
+- 2026-10-30: Stock Market Today, Oct. 30: Amazon Misses Revenue and Earnings Expectations
+- 2026-10-30: Stocks Fall Sharply on Intel and Amazon Sell-offs and Crypto Heist - Barchart.com
 
 ## GOOGL · $279.84 on 2026-10-30
 
@@ -92,14 +92,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is choppier than its usual year (48% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 9 percentage points.
 - It sits 30% below its 1-year high of $402.12.
-- News mood over the last week: negative (723 headlines).
+- News mood over the last week: negative (738 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 60.8% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-10-30: Alphabet loses $475 billion in market value, the biggest drop in its history - Yahoo Finance
-- 2026-10-30: Alphabet (GOOGL) Stock Price Sinks As Q3 Results Deepen AI Cash Flow Doubts
-- 2026-10-30: Alphabet (GOOGL) Stock Price Sinks As Q3 Results Deepen AI Cash Flow Doubts - Yahoo Finance
+- 2026-10-30: Intel stock drops 25% after $500bn wiped off value of Google’s parent company Alphabet - Yahoo Finance UK
+- 2026-10-30: Google Stock Plunges 12% as Earnings Miss Despite 103% Cloud Growth - entARABI
 
 ## META · $614.99 on 2026-10-30
 
@@ -108,7 +108,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (37% vs 43% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 29 percentage points.
 - It sits 21% below its 1-year high of $777.59.
-- News mood over the last week: mixed (563 headlines).
+- News mood over the last week: mixed (587 headlines).
 - The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -124,14 +124,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (37% vs 45% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 24 percentage points.
 - It sits 18% below its 1-year high of $489.88.
-- News mood over the last week: positive (465 headlines).
+- News mood over the last week: positive (484 headlines).
 - The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 60.0% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-10-29: Tesla Stock (TSLA) Falls 0.8% to $404.22 (Oct 28) - Gotrade
+- 2026-10-30: Tesla Stock (TSLA) Falls 0.2% to $403.30 (Oct 29) - Gotrade
 - 2026-10-30: Tesla Stock (TSLA) Falls Flat as China Says Its Flying Cars Can Soar past the Roadster - TipRanks
-- 2026-10-30: Tesla Stock Could Rebound as These 3 Growth Drivers Take Center Stage
 
 ## JPM · $337.04 on 2026-10-30
 
@@ -140,7 +140,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.6%. Lately it is calmer than its usual year (15% vs 22% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 1 percentage points.
 - It is close to its 1-year high of $363.37 (-7.2%).
-- News mood over the last week: mixed (346 headlines).
+- News mood over the last week: mixed (357 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to fall). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -156,14 +156,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (22% vs 26% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 54 percentage points.
 - It is close to its 1-year high of $187.25 (+0.0%).
-- News mood over the last week: mixed (396 headlines).
+- News mood over the last week: mixed (423 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
+- 2026-10-30: ExxonMobil (XOM) Reports Strong Q3 Earnings, Highlights Dividend Sustainability Amid Market Challenges - GuruFocus
 - 2026-10-30: ExxonMobil (NYSE:XOM) reports sales below analyst estimates in Q3 2026 earnings - Yahoo Finance
 - 2026-10-30: ExxonMobil (XOM) Reports Strong Q3 EPS, Highlights Dividend Sust - GuruFocus
-- 2026-10-30: Exxon plans to spend $10B on refining business to boost margins, CEO says (XOM:NYSE) - Seeking Alpha
 
 ## UNH · $406.97 on 2026-10-30
 
@@ -172,7 +172,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (28% vs 35% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 6 percentage points.
 - It is close to its 1-year high of $433.68 (-6.2%).
-- News mood over the last week: positive (67 headlines).
+- News mood over the last week: positive (69 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to fall). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
