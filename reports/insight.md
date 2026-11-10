@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-11-10 04:07 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-11-10 08:25 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $752.69 on 2026-11-09
 
@@ -28,7 +28,7 @@ Generated 2026-11-10 04:07 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (27% vs 25% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 17 percentage points.
 - It is close to its 1-year high of $350.69 (+0.0%).
-- News mood over the last week: negative (541 headlines).
+- News mood over the last week: negative (529 headlines).
 - The models give 61% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -44,14 +44,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (37% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 3 percentage points.
 - It is close to its 1-year high of $555.80 (-1.9%).
-- News mood over the last week: negative (481 headlines).
+- News mood over the last week: negative (484 headlines).
 - The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-06: Oracle Shares Drop Over 4% to Two-Year Low as Microsoft Reportedly Declines to Renew Older-Chip AI Compute Lease - TradingKey
-- 2026-11-06: Microsoft Stock (NASDAQ:MSFT) Slips as Post-Buyout Workforce Looks Unsettled - TipRanks
 - 2026-11-07: Microsoft (MSFT) Is Pulling Back From Key Neocloud Data Center Deals
+- 2026-11-06: Oracle Stock Slides as Microsoft Reportedly Pulls Back From AI Computing Deal - Benzinga
+- 2026-11-06: Microsoft Stocks Move Lower 0.80% as AI Rotation Swings Back to Chipmakers
 
 ## NVDA · $178.67 on 2026-11-09
 
@@ -60,14 +60,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (48% vs 39% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 18 percentage points.
 - It sits 25% below its 1-year high of $239.24.
-- News mood over the last week: negative (752 headlines).
+- News mood over the last week: negative (763 headlines).
 - The models give 42% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
+- 2026-11-09: Stock Market Today, Nov. 9: Nvidia Stock Plunges 4% on Jensen Huang Investigation as Nasdaq Surges Nearly 3% - Yahoo Finance
 - 2026-11-09: Nvidia's shares slide as chip giant probes CEO Jensen Huang over spy claims - CBC
 - 2026-11-10: Nvidia Faces Class Action Suit Over Huang Allegations; Senator Seeks Probe, Analyst Puts CEO Exit Odds At 15%
-- 2026-11-09: Nvidia Stock’s (NVDA) Sell-Off Looks Overdone Ahead of Q3 - Yahoo Finance
 
 ## AMZN · $266.93 on 2026-11-09
 
@@ -76,14 +76,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is choppier than its usual year (42% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 4 percentage points.
 - It is close to its 1-year high of $284.02 (-6.0%).
-- News mood over the last week: negative (575 headlines).
+- News mood over the last week: negative (596 headlines).
 - The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-09: Amazon Is “the Cheapest It’s Been” in Years. Its P/E Fell From 34 to 21
-- 2026-11-08: Amazon (AMZN): AWS Grew 39%, and Management Expects Growth Above 40% in 2027 and 2028 - Yahoo Finance
 - 2026-11-09: Amazon AWS Revenues Up 39% in Q3 as Cloud Rivals Gain Pace: Hold Stock? - The Globe and Mail
+- 2026-11-09: Amazon Stock Fell After a Strong Quarter. Is AWS Growth of 39% Being Ignored? - The Motley Fool
 
 ## GOOGL · $288.15 on 2026-11-09
 
@@ -92,14 +92,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is choppier than its usual year (50% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 28% below its 1-year high of $402.12.
-- News mood over the last week: negative (527 headlines).
+- News mood over the last week: negative (552 headlines).
 - The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 59.2% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-09: Alphabet Plans Up to $3 Billion Asia Bond Sale as AI Funding Pressure Draws Focus, Shares Rise Over 1% Pre-Market - TradingKey
 - 2026-11-09: Nvidia Enters Bear Market As Google Strikes Amid Jensen Huang's China Spy Woes - BeInCrypto
-- 2026-11-09: Alphabet stock gains 0.78%, but remains below all three daily EMAs - The Cryptonomist
+- 2026-11-09: Google stock price prediction after Alphabet escalates AI chip war with Nvidia - Finbold
 
 ## META · $641.37 on 2026-11-09
 
@@ -108,14 +108,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is about as jumpy as its usual year (43% vs 42% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 10 percentage points.
 - It sits 18% below its 1-year high of $777.59.
-- News mood over the last week: negative (625 headlines).
+- News mood over the last week: negative (642 headlines).
 - The models give 51% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-09: Oklo Is Down 86% From Its High. Will Shares Soar When Meta's Reactor Comes Online?
 - 2026-11-09: Oklo Is Down 86% From Its High. Will Shares Soar When Meta's Reactor Comes Online? - The Motley Fool
-- 2026-11-09: Meta Platforms, Inc. $META Stock Position Cut by Aware Super Pty Ltd as trustee of Aware Super - MarketBeat
+- 2026-11-09: Meta Platforms Inc Stock (META) Moved Up by 4.93% on Nov 9: What Signal Does It Send? - TradingKey
 
 ## TSLA · $378.05 on 2026-11-09
 
@@ -124,7 +124,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is choppier than its usual year (60% vs 46% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 29 percentage points.
 - It sits 23% below its 1-year high of $489.88.
-- News mood over the last week: negative (512 headlines).
+- News mood over the last week: negative (507 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to fall). On this stock they were right 60.0% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
@@ -140,14 +140,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.7%. Lately it is about as jumpy as its usual year (28% vs 23% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 2 percentage points.
 - It is close to its 1-year high of $363.37 (-5.9%).
-- News mood over the last week: mixed (325 headlines).
+- News mood over the last week: mixed (324 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-09: DraftKings Faces Three Analyst Downgrades — JPMorgan Says It’s ‘Increasingly Difficult To Recommend’ The Stock
-- 2026-11-06: JPMorgan, Citi say Metlen growth drivers on track after trading update
 - 2026-11-08: JPMorgan Chase & Co. $JPM Stock: Summit Wealth Group LLC Co. Boosts Stake - MarketBeat
+- 2026-11-10: JPMorgan (JPM) Stock May Be 31% Undervalued On Senate Probe News
 
 ## XOM · $164.73 on 2026-11-09
 
@@ -156,7 +156,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (32% vs 27% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 35 percentage points.
 - It sits 12% below its 1-year high of $187.25.
-- News mood over the last week: mixed (186 headlines).
+- News mood over the last week: mixed (192 headlines).
 - The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -172,7 +172,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (31% vs 35% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 13 percentage points.
 - It is close to its 1-year high of $433.68 (-8.3%).
-- News mood over the last week: mixed (102 headlines).
+- News mood over the last week: mixed (104 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
