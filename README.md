@@ -7,7 +7,7 @@
 ## Live scoreboard
 
 <!-- scoreboard:start -->
-**Updated:** 2026-11-07 07:08 UTC · predictions made after the close of 2026-11-06
+**Updated:** 2026-11-10 04:07 UTC · predictions made after the close of 2026-11-09
 
 ### Next-session calls
 
@@ -15,16 +15,16 @@ Two questions for every stock: will it close above its opening price, and will i
 
 | Rank | Stock | P(up) | Call | P(beats SPY) | vs the market | Headlines (24 h) | Mood: VADER | Mood: FinBERT |
 |---|---|---|---|---|---|---|---|---|
-| 1 | AAPL | **64.4%** | **Buy at open** | 63.2% | **Outperform** | 31 | negative (-0.13) | negative (-0.20) |
-| 2 | AMZN | **58.7%** | **Buy at open** | 52.9% | – | 31 | positive (+0.11) | negative (-0.07) |
-| 3 | UNH | **56.3%** | **Buy at open** | 50.7% | – | 14 | positive (+0.21) | positive (+0.09) |
-| 4 | TSLA | **56.2%** | Stay out | 61.9% | **Outperform** | 39 | neutral (-0.01) | neutral (-0.01) |
-| 5 | META | **56.0%** | Stay out | 38.1% | – | 43 | positive (+0.10) | negative (-0.08) |
-| 6 | XOM | **51.2%** | Stay out | 42.6% | – | 15 | positive (+0.25) | positive (+0.19) |
-| 7 | NVDA | **50.3%** | Stay out | 45.0% | – | 84 | neutral (-0.01) | negative (-0.10) |
-| 8 | GOOGL | **49.3%** | Stay out | 68.4% | **Outperform** | 38 | positive (+0.11) | neutral (-0.05) |
-| 9 | JPM | **49.0%** | Stay out | 42.8% | – | 22 | positive (+0.09) | positive (+0.13) |
-| 10 | MSFT | **46.9%** | Stay out | 49.3% | – | 35 | positive (+0.08) | negative (-0.11) |
+| 1 | AAPL | **60.5%** | **Buy at open** | 62.6% | **Outperform** | 31 | positive (+0.07) | positive (+0.13) |
+| 2 | META | **50.9%** | Stay out | 40.5% | – | 49 | positive (+0.10) | neutral (-0.01) |
+| 3 | UNH | **50.4%** | Stay out | 50.1% | – | 12 | positive (+0.16) | neutral (+0.02) |
+| 4 | TSLA | **49.6%** | Stay out | 57.6% | **Outperform** | 37 | positive (+0.06) | positive (+0.10) |
+| 5 | AMZN | **49.5%** | Stay out | 41.1% | – | 52 | positive (+0.21) | positive (+0.08) |
+| 6 | XOM | **47.6%** | Stay out | 43.4% | – | 22 | positive (+0.13) | negative (-0.15) |
+| 7 | MSFT | **47.3%** | Stay out | 43.0% | – | 31 | neutral (+0.03) | neutral (-0.03) |
+| 8 | JPM | **45.9%** | Stay out | 36.5% | – | 29 | positive (+0.17) | neutral (-0.01) |
+| 9 | GOOGL | **44.7%** | Stay out | 56.6% | **Outperform** | 49 | positive (+0.12) | positive (+0.16) |
+| 10 | NVDA | **41.8%** | Stay out | 36.6% | – | 97 | neutral (-0.04) | negative (-0.36) |
 
 ### Which model is winning?
 
@@ -32,21 +32,21 @@ Accuracy over the last 120 sessions.
 
 | Model | Up or down? | Beats the market? |
 |---|---|---|
-| Logistic, all sources (VADER) | 52.7% | **53.9% (champion)** |
-| Logistic, all sources (FinBERT) | 52.8% | – |
-| Logistic, price only | 50.9% | – |
-| Gradient boosting | 50.3% | 51.1% |
-| Ensemble | **53.2% (champion)** | 52.6% |
+| Logistic, all sources (VADER) | 52.5% | **54.1% (champion)** |
+| Logistic, all sources (FinBERT) | 52.6% | – |
+| Logistic, price only | 51.2% | – |
+| Gradient boosting | 50.5% | 50.8% |
+| Ensemble | **53.3% (champion)** | 52.7% |
 
 ### How accurate has it been? Up or down?
 
 | | Predictions | Accuracy | 95% range | Always up | Same as today | Beats baselines? |
 |---|---|---|---|---|---|---|
-| Live, logistic, price only | 310 | **52.9%** | 47.3%–58.5% | 46.8% | 47.4% | no |
-| Live, logistic, all sources (VADER) | 310 | **53.5%** | 48.0%–59.1% | 46.8% | 47.4% | within noise |
-| Live, logistic, all sources (FinBERT) | 310 | **53.9%** | 48.3%–59.4% | 46.8% | 47.4% | within noise |
-| Live, gradient boosting | 310 | **50.3%** | 44.8%–55.9% | 46.8% | 47.4% | no |
-| Live, ensemble | 310 | **53.5%** | 48.0%–59.1% | 46.8% | 47.4% | within noise |
+| Live, logistic, price only | 320 | **52.5%** | 47.0%–58.0% | 47.5% | 48.4% | no |
+| Live, logistic, all sources (VADER) | 320 | **53.1%** | 47.7%–58.6% | 47.5% | 48.4% | within noise |
+| Live, logistic, all sources (FinBERT) | 320 | **53.4%** | 48.0%–58.9% | 47.5% | 48.4% | within noise |
+| Live, gradient boosting | 320 | **50.9%** | 45.5%–56.4% | 47.5% | 48.4% | no |
+| Live, ensemble | 320 | **53.8%** | 48.3%–59.2% | 47.5% | 48.4% | within noise |
 | Historical replay, logistic, price only | 10,348 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no |
 | Historical replay, logistic, all sources (VADER) | 10,348 | **50.4%** | 49.4%–51.4% | 52.2% | 49.8% | no |
 | Historical replay, logistic, all sources (FinBERT) | 10,348 | **50.4%** | 49.4%–51.4% | 52.2% | 49.8% | no |
@@ -57,9 +57,9 @@ Accuracy over the last 120 sessions.
 
 | | Predictions | Accuracy | 95% range | Always beats | Same as today | Beats baselines? |
 |---|---|---|---|---|---|---|
-| Live, logistic, all sources (VADER) | 310 | **54.5%** | 49.0%–60.1% | 47.7% | 46.1% | within noise |
-| Live, gradient boosting | 310 | **53.9%** | 48.3%–59.4% | 47.7% | 46.1% | within noise |
-| Live, ensemble | 310 | **54.5%** | 49.0%–60.1% | 47.7% | 46.1% | within noise |
+| Live, logistic, all sources (VADER) | 320 | **54.4%** | 48.9%–59.8% | 47.5% | 46.2% | within noise |
+| Live, gradient boosting | 320 | **53.4%** | 48.0%–58.9% | 47.5% | 46.2% | within noise |
+| Live, ensemble | 320 | **54.4%** | 48.9%–59.8% | 47.5% | 46.2% | within noise |
 | Historical replay, logistic, all sources (VADER) | 10,348 | **51.4%** | 50.4%–52.3% | 50.4% | 49.8% | within noise |
 | Historical replay, gradient boosting | 9,758 | **50.6%** | 49.6%–51.6% | 50.5% | 49.9% | within noise |
 | Historical replay, ensemble | 9,758 | **51.2%** | 50.2%–52.2% | 50.5% | 49.9% | within noise |
@@ -68,18 +68,18 @@ Any model has to beat simple rules: always say yes (*Always up* / *Always beats*
 
 ### Are the probabilities honest?
 
-When the champion (ensemble) says a stock has a given chance of rising, how often does it? Based on live predictions; on average its probabilities are off by **4.0 percentage points**.
+When the champion (ensemble) says a stock has a given chance of rising, how often does it? Based on live predictions; on average its probabilities are off by **3.7 percentage points**.
 
 | Predicted | Calls | Average prediction | Actually went up | Verdict |
 |---|---|---|---|---|
 | under 40% | 7 | 36.9% | **42.9%** | honest |
 | 40–45% | 53 | 42.9% | **34.0%** | honest |
-| 45–48% | 56 | 46.5% | **48.2%** | honest |
-| 48–50% | 43 | 49.1% | **48.8%** | honest |
-| 50–52% | 43 | 50.9% | **44.2%** | honest |
+| 45–48% | 57 | 46.5% | **49.1%** | honest |
+| 48–50% | 45 | 49.1% | **48.9%** | honest |
+| 50–52% | 45 | 50.9% | **46.7%** | honest |
 | 52–55% | 54 | 53.5% | **51.9%** | honest |
-| 55–60% | 42 | 57.0% | **52.4%** | honest |
-| 60% or more | 12 | 63.3% | **58.3%** | honest |
+| 55–60% | 46 | 57.0% | **52.2%** | honest |
+| 60% or more | 13 | 63.4% | **61.5%** | honest |
 
 ![Rolling accuracy](reports/rolling_accuracy.png)
 
