@@ -1,46 +1,46 @@
 # Stock prediction lab: latest report
 
-Generated 2026-11-11 07:45 UTC.
+Generated 2026-11-12 02:59 UTC.
 
 ## Next-session calls
 
 | Rank | Stock | P(up) | Call | P(beats SPY) | vs the market | Headlines (24 h) | Mood: VADER | Mood: FinBERT |
 |---|---|---|---|---|---|---|---|---|
-| 1 | META | **60.6%** | **Buy at open** | 59.0% | **Outperform** | 48 | positive (+0.13) | neutral (-0.04) |
-| 2 | XOM | **55.3%** | **Buy at open** | 52.3% | – | 27 | positive (+0.12) | neutral (-0.04) |
-| 3 | JPM | **54.8%** | **Buy at open** | 50.5% | – | 28 | positive (+0.06) | neutral (+0.03) |
-| 4 | MSFT | **53.0%** | Stay out | 52.3% | – | 40 | positive (+0.17) | negative (-0.19) |
-| 5 | AAPL | **52.6%** | Stay out | 52.9% | **Outperform** | 33 | positive (+0.18) | positive (+0.14) |
-| 6 | TSLA | **51.4%** | Stay out | 55.2% | **Outperform** | 33 | positive (+0.14) | neutral (+0.02) |
-| 7 | AMZN | **50.0%** | Stay out | 47.7% | – | 58 | positive (+0.29) | positive (+0.10) |
-| 8 | UNH | **48.4%** | Stay out | 38.4% | – | 4 | neutral (+0.04) | negative (-0.43) |
-| 9 | NVDA | **47.6%** | Stay out | 38.4% | – | 115 | neutral (-0.01) | negative (-0.27) |
-| 10 | GOOGL | **45.3%** | Stay out | 50.5% | – | 38 | positive (+0.09) | positive (+0.10) |
+| 1 | META | **60.1%** | **Buy at open** | 57.5% | **Outperform** | 45 | positive (+0.12) | neutral (-0.04) |
+| 2 | XOM | **57.8%** | **Buy at open** | 46.7% | – | 14 | positive (+0.18) | positive (+0.32) |
+| 3 | TSLA | **56.7%** | **Buy at open** | 61.9% | **Outperform** | 39 | positive (+0.11) | neutral (+0.02) |
+| 4 | AAPL | **56.7%** | Stay out | 52.8% | – | 37 | positive (+0.16) | neutral (-0.03) |
+| 5 | NVDA | **55.0%** | Stay out | 57.3% | **Outperform** | 96 | neutral (+0.00) | negative (-0.28) |
+| 6 | JPM | **54.8%** | Stay out | 43.6% | – | 24 | positive (+0.11) | neutral (-0.04) |
+| 7 | AMZN | **52.8%** | Stay out | 46.4% | – | 47 | positive (+0.15) | negative (-0.05) |
+| 8 | UNH | **52.8%** | Stay out | 45.2% | – | 9 | positive (+0.05) | positive (+0.08) |
+| 9 | GOOGL | **51.9%** | Stay out | 54.1% | – | 39 | positive (+0.16) | positive (+0.16) |
+| 10 | MSFT | **50.9%** | Stay out | 52.2% | – | 43 | positive (+0.17) | negative (-0.12) |
 
 Every model's probability:
 
 | Stock | P(up): logistic, price only | P(up): logistic, all sources (VADER) | P(up): logistic, all sources (FinBERT) | P(beats SPY): logistic, all sources (VADER) | P(up): gradient boosting | P(beats SPY): gradient boosting | P(up): ensemble | P(beats SPY): ensemble |
 |---|---|---|---|---|---|---|---|---|
-| AAPL | 52.6% | 51.6% | 51.3% | 52.9% | 53.7% | 48.7% | 52.6% | 50.8% |
-| AMZN | 46.8% | 46.7% | 47.0% | 47.7% | 53.3% | 49.0% | 50.0% | 48.3% |
-| GOOGL | 40.1% | 34.7% | 37.2% | 50.5% | 56.0% | 50.2% | 45.3% | 50.3% |
-| JPM | 54.4% | 54.6% | 53.6% | 50.5% | 55.1% | 50.5% | 54.8% | 50.5% |
-| META | 60.5% | 64.2% | 65.0% | 59.0% | 57.0% | 50.2% | 60.6% | 54.6% |
-| MSFT | 55.2% | 52.2% | 57.8% | 52.3% | 53.7% | 49.8% | 53.0% | 51.1% |
-| NVDA | 40.3% | 35.9% | 35.0% | 38.4% | 59.4% | 50.4% | 47.6% | 44.4% |
-| TSLA | 41.4% | 48.1% | 47.6% | 55.2% | 54.7% | 50.5% | 51.4% | 52.8% |
-| UNH | 46.0% | 42.0% | 43.4% | 38.4% | 54.8% | 49.7% | 48.4% | 44.0% |
-| XOM | 53.4% | 53.4% | 54.4% | 52.3% | 57.2% | 50.5% | 55.3% | 51.4% |
+| AAPL | 56.5% | 54.5% | 57.3% | 52.8% | 58.8% | 50.2% | 56.7% | 51.5% |
+| AMZN | 45.8% | 46.9% | 47.5% | 46.4% | 58.7% | 50.6% | 52.8% | 48.5% |
+| GOOGL | 45.8% | 43.4% | 45.3% | 54.1% | 60.5% | 51.2% | 51.9% | 52.6% |
+| JPM | 52.5% | 50.3% | 49.3% | 43.6% | 59.4% | 50.5% | 54.8% | 47.1% |
+| META | 56.3% | 56.7% | 57.5% | 57.5% | 63.6% | 52.8% | 60.1% | 55.1% |
+| MSFT | 53.1% | 50.3% | 52.5% | 52.2% | 51.4% | 50.1% | 50.9% | 51.1% |
+| NVDA | 52.8% | 56.7% | 55.9% | 57.3% | 53.3% | 50.0% | 55.0% | 53.7% |
+| TSLA | 46.2% | 55.2% | 55.1% | 61.9% | 58.2% | 50.2% | 56.7% | 56.1% |
+| UNH | 51.1% | 46.2% | 47.9% | 45.2% | 59.4% | 50.7% | 52.8% | 47.9% |
+| XOM | 54.2% | 56.4% | 56.5% | 46.7% | 59.1% | 51.0% | 57.8% | 48.8% |
 
 ## Accuracy: up or down?
 
 | | Predictions | Accuracy | 95% range | Always up | Same as today | Beats baselines? | Brier |
 |---|---|---|---|---|---|---|---|
-| Live, logistic, price only | 330 | **52.4%** | 47.0%–57.8% | 47.6% | 48.2% | within noise | 0.2481 |
-| Live, logistic, all sources (VADER) | 330 | **52.7%** | 47.3%–58.1% | 47.6% | 48.2% | within noise | 0.2507 |
-| Live, logistic, all sources (FinBERT) | 330 | **53.0%** | 47.6%–58.4% | 47.6% | 48.2% | within noise | 0.2501 |
-| Live, gradient boosting | 330 | **51.2%** | 45.8%–56.6% | 47.6% | 48.2% | no | 0.2476 |
-| Live, ensemble | 330 | **53.9%** | 48.6%–59.3% | 47.6% | 48.2% | within noise | 0.2469 |
+| Live, logistic, price only | 340 | **52.4%** | 47.0%–57.7% | 47.9% | 47.6% | within noise | 0.2491 |
+| Live, logistic, all sources (VADER) | 340 | **52.6%** | 47.3%–58.0% | 47.9% | 47.6% | within noise | 0.2517 |
+| Live, logistic, all sources (FinBERT) | 340 | **52.9%** | 47.6%–58.2% | 47.9% | 47.6% | within noise | 0.2513 |
+| Live, gradient boosting | 340 | **51.5%** | 46.2%–56.8% | 47.9% | 47.6% | no | 0.2473 |
+| Live, ensemble | 340 | **53.8%** | 48.5%–59.1% | 47.9% | 47.6% | within noise | 0.2472 |
 | Historical replay, logistic, price only | 10,348 | **51.0%** | 50.0%–51.9% | 52.2% | 49.8% | no | 0.2523 |
 | Historical replay, logistic, all sources (VADER) | 10,348 | **50.4%** | 49.4%–51.4% | 52.2% | 49.8% | no | 0.2544 |
 | Historical replay, logistic, all sources (FinBERT) | 10,348 | **50.4%** | 49.4%–51.4% | 52.2% | 49.8% | no | 0.2544 |
@@ -51,9 +51,9 @@ Every model's probability:
 
 | | Predictions | Accuracy | 95% range | Always beats | Same as today | Beats baselines? | Brier |
 |---|---|---|---|---|---|---|---|
-| Live, logistic, all sources (VADER) | 330 | **54.2%** | 48.9%–59.6% | 47.6% | 46.4% | within noise | 0.2536 |
-| Live, gradient boosting | 330 | **53.3%** | 48.0%–58.7% | 47.6% | 46.4% | within noise | 0.2494 |
-| Live, ensemble | 330 | **53.9%** | 48.6%–59.3% | 47.6% | 46.4% | within noise | 0.2496 |
+| Live, logistic, all sources (VADER) | 340 | **54.4%** | 49.1%–59.7% | 47.6% | 46.2% | within noise | 0.2536 |
+| Live, gradient boosting | 340 | **53.8%** | 48.5%–59.1% | 47.6% | 46.2% | within noise | 0.2494 |
+| Live, ensemble | 340 | **54.1%** | 48.8%–59.4% | 47.6% | 46.2% | within noise | 0.2496 |
 | Historical replay, logistic, all sources (VADER) | 10,348 | **51.4%** | 50.4%–52.3% | 50.4% | 49.8% | within noise | 0.2542 |
 | Historical replay, gradient boosting | 9,758 | **50.6%** | 49.6%–51.6% | 50.5% | 49.9% | within noise | 0.2544 |
 | Historical replay, ensemble | 9,758 | **51.2%** | 50.2%–52.2% | 50.5% | 49.9% | within noise | 0.2520 |
@@ -70,29 +70,29 @@ Predictions grouped by confidence. For an honest model, the share that happened 
 
 | Predicted | Logistic, price only | Logistic, all sources (VADER) | Logistic, all sources (FinBERT) | Gradient boosting | Ensemble |
 |---|---|---|---|---|---|
-| under 40% | 50.0% (n=12) | 41.9% (n=43) | 43.2% (n=44) | 42.9% (n=7) | 42.9% (n=7) |
-| 40–45% | 40.9% (n=44) | 44.3% (n=61) | 43.3% (n=60) | 31.0% (n=42) | 32.7% (n=55) |
-| 45–48% | 44.9% (n=49) | 52.8% (n=36) | 50.0% (n=42) | 56.4% (n=55) | 48.3% (n=60) |
-| 48–50% | 46.7% (n=45) | 42.9% (n=35) | 44.1% (n=34) | 48.3% (n=58) | 51.1% (n=47) |
-| 50–52% | 48.8% (n=43) | 51.9% (n=27) | 50.0% (n=26) | 45.2% (n=62) | 48.9% (n=47) |
-| 52–55% | 41.7% (n=72) | 35.7% (n=42) | 40.5% (n=37) | 43.4% (n=53) | 51.9% (n=54) |
-| 55–60% | 63.3% (n=49) | 53.5% (n=43) | 51.2% (n=43) | 53.7% (n=41) | 52.2% (n=46) |
-| 60% or more | 50.0% (n=16) | 60.5% (n=43) | 59.1% (n=44) | 75.0% (n=12) | 57.1% (n=14) |
-| **Average gap** | **5.8 pts** | **5.9 pts** | **5.1 pts** | **6.9 pts** | **3.9 pts** |
+| under 40% | 50.0% (n=12) | 44.4% (n=45) | 45.7% (n=46) | 42.9% (n=7) | 42.9% (n=7) |
+| 40–45% | 44.7% (n=47) | 43.5% (n=62) | 42.6% (n=61) | 31.0% (n=42) | 32.7% (n=55) |
+| 45–48% | 43.1% (n=51) | 51.4% (n=37) | 50.0% (n=44) | 56.4% (n=55) | 50.0% (n=62) |
+| 48–50% | 46.7% (n=45) | 44.4% (n=36) | 44.1% (n=34) | 48.3% (n=58) | 50.0% (n=48) |
+| 50–52% | 48.8% (n=43) | 53.6% (n=28) | 51.9% (n=27) | 45.2% (n=62) | 49.0% (n=49) |
+| 52–55% | 44.0% (n=75) | 37.8% (n=45) | 43.6% (n=39) | 43.1% (n=58) | 52.6% (n=57) |
+| 55–60% | 62.0% (n=50) | 53.5% (n=43) | 50.0% (n=44) | 56.5% (n=46) | 53.2% (n=47) |
+| 60% or more | 47.1% (n=17) | 59.1% (n=44) | 57.8% (n=45) | 75.0% (n=12) | 53.3% (n=15) |
+| **Average gap** | **5.5 pts** | **5.9 pts** | **5.3 pts** | **6.6 pts** | **3.9 pts** |
 
 **Beats the market?**
 
 | Predicted | Logistic, all sources (VADER) | Gradient boosting | Ensemble |
 |---|---|---|---|
-| under 40% | 41.9% (n=43) | – | 66.7% (n=6) |
-| 40–45% | 43.5% (n=69) | – | 40.0% (n=45) |
-| 45–48% | 43.6% (n=39) | 37.1% (n=35) | 40.5% (n=79) |
-| 48–50% | 48.3% (n=29) | 46.7% (n=150) | 50.9% (n=57) |
-| 50–52% | 57.1% (n=28) | 51.8% (n=141) | 54.0% (n=50) |
-| 52–55% | 56.1% (n=41) | 25.0% (n=4) | 48.9% (n=47) |
-| 55–60% | 44.4% (n=36) | – | 53.5% (n=43) |
+| under 40% | 42.2% (n=45) | – | 66.7% (n=6) |
+| 40–45% | 43.5% (n=69) | – | 40.4% (n=47) |
+| 45–48% | 42.5% (n=40) | 37.1% (n=35) | 40.5% (n=79) |
+| 48–50% | 48.3% (n=29) | 46.1% (n=154) | 50.0% (n=58) |
+| 50–52% | 56.7% (n=30) | 52.4% (n=147) | 54.5% (n=55) |
+| 52–55% | 56.8% (n=44) | 25.0% (n=4) | 49.0% (n=49) |
+| 55–60% | 44.7% (n=38) | – | 53.5% (n=43) |
 | 60% or more | 51.1% (n=45) | – | 33.3% (n=3) |
-| **Average gap** | **5.5 pts** | **3.1 pts** | **4.5 pts** |
+| **Average gap** | **5.7 pts** | **3.6 pts** | **4.4 pts** |
 
 ![Calibration](calibration.png)
 
@@ -102,10 +102,10 @@ Every headline is scored by both. Two ways to compare them: the live accuracy of
 
 | Scorer | Stock-days with a clear mood | Mood matched the next session | Next-session return: positive mood | negative mood | Rank correlation with return |
 |---|---|---|---|---|---|
-| VADER | 280 | 48.2% | -0.2% | 0.0% | -0.057 |
-| FinBERT | 222 | 46.8% | -0.2% | 0.1% | -0.094 |
+| VADER | 288 | 48.6% | -0.2% | 0.0% | -0.067 |
+| FinBERT | 228 | 47.4% | -0.2% | 0.0% | -0.079 |
 
-The two scorers agree on the direction of the mood on 66% of 340 stock-days with headlines.
+The two scorers agree on the direction of the mood on 65% of 350 stock-days with headlines.
 
 ## Per stock: up or down?
 
@@ -113,16 +113,16 @@ Based on live predictions.
 
 | Stock | Sessions | Logistic, price only | Logistic, all sources (VADER) | Logistic, all sources (FinBERT) | Gradient boosting | Ensemble | Always up |
 |---|---|---|---|---|---|---|---|
-| AAPL | 33 | 42.4% | 54.5% | 51.5% | 33.3% | 45.5% | 60.6% |
-| AMZN | 33 | 54.5% | 51.5% | 51.5% | 48.5% | 45.5% | 48.5% |
-| GOOGL | 33 | 60.6% | 54.5% | 54.5% | 63.6% | 72.7% | 39.4% |
-| JPM | 33 | 54.5% | 42.4% | 48.5% | 36.4% | 36.4% | 39.4% |
-| META | 33 | 51.5% | 57.6% | 54.5% | 63.6% | 63.6% | 42.4% |
-| MSFT | 33 | 48.5% | 54.5% | 54.5% | 60.6% | 51.5% | 48.5% |
-| NVDA | 33 | 54.5% | 57.6% | 57.6% | 57.6% | 60.6% | 27.3% |
-| TSLA | 33 | 51.5% | 54.5% | 54.5% | 39.4% | 45.5% | 54.5% |
-| UNH | 33 | 45.5% | 42.4% | 42.4% | 60.6% | 54.5% | 51.5% |
-| XOM | 33 | 60.6% | 57.6% | 60.6% | 48.5% | 63.6% | 63.6% |
+| AAPL | 34 | 44.1% | 55.9% | 52.9% | 35.3% | 47.1% | 61.8% |
+| AMZN | 34 | 55.9% | 52.9% | 52.9% | 47.1% | 44.1% | 47.1% |
+| GOOGL | 34 | 58.8% | 52.9% | 52.9% | 64.7% | 70.6% | 41.2% |
+| JPM | 34 | 55.9% | 44.1% | 50.0% | 38.2% | 38.2% | 41.2% |
+| META | 34 | 50.0% | 55.9% | 52.9% | 61.8% | 61.8% | 41.2% |
+| MSFT | 34 | 47.1% | 52.9% | 52.9% | 58.8% | 50.0% | 47.1% |
+| NVDA | 34 | 52.9% | 55.9% | 55.9% | 58.8% | 58.8% | 29.4% |
+| TSLA | 34 | 50.0% | 52.9% | 52.9% | 41.2% | 47.1% | 55.9% |
+| UNH | 34 | 47.1% | 44.1% | 44.1% | 58.8% | 55.9% | 50.0% |
+| XOM | 34 | 61.8% | 58.8% | 61.8% | 50.0% | 64.7% | 64.7% |
 
 ## Per stock: beats the market?
 
@@ -130,16 +130,16 @@ Based on live predictions.
 
 | Stock | Sessions | Logistic, all sources (VADER) | Gradient boosting | Ensemble | Always beats |
 |---|---|---|---|---|---|
-| AAPL | 33 | 57.6% | 45.5% | 63.6% | 63.6% |
-| AMZN | 33 | 42.4% | 57.6% | 42.4% | 51.5% |
-| GOOGL | 33 | 51.5% | 60.6% | 48.5% | 42.4% |
-| JPM | 33 | 51.5% | 60.6% | 51.5% | 42.4% |
-| META | 33 | 57.6% | 39.4% | 51.5% | 39.4% |
-| MSFT | 33 | 60.6% | 54.5% | 60.6% | 51.5% |
-| NVDA | 33 | 54.5% | 48.5% | 54.5% | 30.3% |
-| TSLA | 33 | 54.5% | 57.6% | 54.5% | 51.5% |
-| UNH | 33 | 51.5% | 51.5% | 51.5% | 45.5% |
-| XOM | 33 | 60.6% | 57.6% | 60.6% | 57.6% |
+| AAPL | 34 | 58.8% | 44.1% | 64.7% | 64.7% |
+| AMZN | 34 | 44.1% | 58.8% | 44.1% | 50.0% |
+| GOOGL | 34 | 52.9% | 61.8% | 50.0% | 44.1% |
+| JPM | 34 | 50.0% | 58.8% | 50.0% | 41.2% |
+| META | 34 | 55.9% | 38.2% | 50.0% | 38.2% |
+| MSFT | 34 | 58.8% | 55.9% | 58.8% | 50.0% |
+| NVDA | 34 | 52.9% | 50.0% | 52.9% | 32.4% |
+| TSLA | 34 | 55.9% | 58.8% | 55.9% | 52.9% |
+| UNH | 34 | 52.9% | 52.9% | 52.9% | 44.1% |
+| XOM | 34 | 61.8% | 58.8% | 61.8% | 58.8% |
 
 ## Paper trading (simulated from prices)
 
@@ -149,21 +149,21 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 
 | Strategy | Sessions | Total return | Per year | Sharpe | Winning days |
 |---|---|---|---|---|---|
-| Top 3 by logistic, price only | 1,068 | +39.8% | +8.2% | 0.49 | 50.9% |
-| Top 3 by logistic, all sources (VADER) | 1,068 | +32.8% | +6.9% | 0.45 | 50.4% |
-| Top 3 by logistic, all sources (FinBERT) | 1,068 | +36.5% | +7.6% | 0.48 | 50.4% |
-| Top 3 by gradient boosting | 1,009 | +60.7% | +12.6% | 0.71 | 37.0% |
-| Top 3 by ensemble | 1,009 | +29.9% | +6.8% | 0.45 | 46.0% |
-| Buy every stock, every session | 1,068 | -7.4% | -1.8% | -0.01 | 52.0% |
+| Top 3 by logistic, price only | 1,069 | +37.3% | +7.8% | 0.47 | 50.9% |
+| Top 3 by logistic, all sources (VADER) | 1,069 | +31.9% | +6.8% | 0.44 | 50.3% |
+| Top 3 by logistic, all sources (FinBERT) | 1,069 | +34.5% | +7.2% | 0.46 | 50.3% |
+| Top 3 by gradient boosting | 1,010 | +61.3% | +12.7% | 0.70 | 36.9% |
+| Top 3 by ensemble | 1,010 | +29.1% | +6.6% | 0.44 | 45.9% |
+| Buy every stock, every session | 1,069 | -7.7% | -1.9% | -0.02 | 51.9% |
 
 **Beats the market (market-neutral)**
 
 | Strategy | Sessions | Total return | Per year | Sharpe | Winning days |
 |---|---|---|---|---|---|
-| Top 3 by logistic, all sources (VADER) | 1,068 | -24.4% | -6.4% | -0.39 | 46.8% |
-| Top 3 by gradient boosting | 1,009 | -43.4% | -13.2% | -0.82 | 38.9% |
-| Top 3 by ensemble | 1,009 | -14.5% | -3.8% | -0.17 | 46.2% |
-| Every stock minus SPY | 1,068 | -55.6% | -17.4% | -2.50 | 42.0% |
+| Top 3 by logistic, all sources (VADER) | 1,069 | -24.8% | -6.5% | -0.40 | 46.8% |
+| Top 3 by gradient boosting | 1,010 | -43.4% | -13.2% | -0.82 | 38.8% |
+| Top 3 by ensemble | 1,010 | -15.6% | -4.1% | -0.19 | 46.1% |
+| Every stock minus SPY | 1,069 | -56.0% | -17.6% | -2.52 | 42.0% |
 
 ![Paper trading](paper_trading.png)
 
@@ -176,33 +176,35 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | Source | Calls ok | Failed | Items | Note |
 |---|---|---|---|---|
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
-| analysts | 10 | 0 | 7847 |  |
+| analysts | 10 | 0 | 7850 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 225 |  |
+| finbert | 10 | 0 | 720 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 896 |  |
-| macro_yahoo | 1 | 0 | 1089 |  |
-| major_news | 10 | 0 | 999 |  |
-| prices | 11 | 0 | 11957 |  |
+| google_news | 10 | 0 | 895 |  |
+| macro_yahoo | 1 | 0 | 1090 |  |
+| major_news | 10 | 0 | 1000 |  |
+| options | 10 | 0 | 20 |  |
+| prices | 11 | 0 | 11968 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| yahoo_rss | 10 | 0 | 170 |  |
+| stocktwits | 10 | 0 | 300 |  |
+| yahoo_rss | 10 | 0 | 162 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-11-10 | 0 | 0 | 0 |
-| MSFT | ok | 2026-11-10 | 0 | 0 | 0 |
-| NVDA | ok | 2026-11-10 | 0 | 0 | 0 |
-| AMZN | ok | 2026-11-10 | 0 | 0 | 0 |
-| GOOGL | ok | 2026-11-10 | 0 | 0 | 0 |
-| META | ok | 2026-11-10 | 0 | 0 | 0 |
-| TSLA | ok | 2026-11-10 | 0 | 0 | 0 |
-| JPM | ok | 2026-11-10 | 0 | 0 | 0 |
-| XOM | ok | 2026-11-10 | 0 | 0 | 0 |
-| UNH | ok | 2026-11-10 | 0 | 0 | 0 |
+| AAPL | ok | 2026-11-11 | 0 | 8 | 37 |
+| MSFT | ok | 2026-11-11 | 0 | 8 | 43 |
+| NVDA | ok | 2026-11-11 | 0 | 8 | 96 |
+| AMZN | ok | 2026-11-11 | 0 | 8 | 47 |
+| GOOGL | ok | 2026-11-11 | 0 | 8 | 39 |
+| META | ok | 2026-11-11 | 0 | 8 | 45 |
+| TSLA | ok | 2026-11-11 | 0 | 8 | 39 |
+| JPM | ok | 2026-11-11 | 0 | 8 | 24 |
+| XOM | ok | 2026-11-11 | 0 | 8 | 14 |
+| UNH | ok | 2026-11-11 | 0 | 8 | 9 |
 
 ---
 
