@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-11-13 02:38 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-11-13 07:56 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $757.12 on 2026-11-12
 
@@ -28,13 +28,13 @@ Generated 2026-11-13 02:38 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (28% vs 25% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 17 percentage points.
 - It is close to its 1-year high of $355.36 (-0.1%).
-- News mood over the last week: negative (487 headlines).
+- News mood over the last week: mixed (502 headlines).
 - The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 47.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-12: KeyBanc reiterates Apple stock underweight on weak spending data By Investing.com - Investing.com UK
-- 2026-11-11: Apple’s (AAPL) iPhone Duo Is in Short Supply Heading into the Holidays, Says UBS - TipRanks
+- 2026-11-12: Bernstein SocGen reiterates Apple stock Outperform on AI safety - Investing.com
 - 2026-11-12: Apple Shares Hit Fresh Record High: The AI Safe-Haven Premium Logic Behind 37x P/E - TradingKey
 
 ## MSFT · $523.00 on 2026-11-12
@@ -44,7 +44,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (38% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 8 percentage points.
 - It is close to its 1-year high of $555.80 (-5.9%).
-- News mood over the last week: negative (541 headlines).
+- News mood over the last week: negative (570 headlines).
 - The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -60,14 +60,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is choppier than its usual year (53% vs 39% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 26 percentage points.
 - It sits 31% below its 1-year high of $239.24.
-- News mood over the last week: negative (805 headlines).
+- News mood over the last week: negative (829 headlines).
 - The models give 43% odds the next session closes above its open (a slight lean to fall). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-12: Stock Market Today, Nov. 12: Nvidia Shares Slide on Reports of CEO Jensen Huang's Resignation - Yahoo Finance
 - 2026-11-13: CoreWeave stock sinks nearly 7% after Nvidia CEO Jensen Huang resigns
-- 2026-11-12: A little-known 31-year-old trader shorted Nvidia — it’s down around 27% since. Is his bet paying off? - Yahoo Finance
+- 2026-11-13: China AI stocks tumble as Nvidia fallout fuels fears of tighter U.S. chip curbs
 
 ## AMZN · $267.44 on 2026-11-12
 
@@ -76,14 +76,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is choppier than its usual year (43% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 5 percentage points.
 - It is close to its 1-year high of $284.02 (-5.8%).
-- News mood over the last week: mixed (569 headlines).
+- News mood over the last week: mixed (578 headlines).
 - The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 46.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-12: Amazon Stock (AMZN) Falls 1.7% on Anthropic IPO Filing (Nov 11) - Gotrade
-- 2026-11-11: Amazon Stock (AMZN) Slips on New AWS Chile Data Center Plans - TipRanks
 - 2026-11-11: Amazon Stocks Move Lower 1.64% as Anthropic Filing Details AWS Note Conversion - GuruFocus
+- 2026-11-11: Amazon.com (NASDAQ:AMZN) Stock Falls 1.7% - Here's Why - MarketBeat
 
 ## GOOGL · $298.70 on 2026-11-12
 
@@ -92,7 +92,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.2%. Lately it is choppier than its usual year (52% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 9 percentage points.
 - It sits 26% below its 1-year high of $402.12.
-- News mood over the last week: negative (571 headlines).
+- News mood over the last week: negative (591 headlines).
 - The models give 44% odds the next session closes above its open (a slight lean to fall). On this stock they were right 59.2% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
@@ -108,7 +108,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (41% vs 42% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 20% below its 1-year high of $777.59.
-- News mood over the last week: negative (669 headlines).
+- News mood over the last week: negative (679 headlines).
 - The models give 55% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -130,8 +130,8 @@ Headlines with the strongest tone this week:
 Headlines with the strongest tone this week:
 
 - 2026-11-12: Tesla Stock (TSLA) Dips Despite Being Hailed as Key Builder of Over a Million American Humanoids - TipRanks
-- 2026-11-12: Nasdaq 100 Futures Drop As Reports Relating To Jensen Huang’s Ousting Outweigh CoreWeave’s Strong Outlook — NVDA, TSLA, SNDK, CAPR, CRWV In Focus
 - 2026-11-13: S&P 500, Dow, Nasdaq Futures Recover After Markets End Lower On Jensen Huang’s Exit, Oil Price Pressure — CRWV, CBRS, NVDA, TSLA In Focus
+- 2026-11-13: S&P 500, Dow, Nasdaq Futures Recover After Markets End Lower On Jensen Huang’s Exit, Oil Price Pressure — CRWV, CBRS, NVDA, TSLA In Focus - Stocktwits
 
 ## JPM · $342.82 on 2026-11-12
 
@@ -156,7 +156,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (32% vs 27% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 34 percentage points.
 - It is close to its 1-year high of $187.25 (-9.3%).
-- News mood over the last week: mixed (253 headlines).
+- News mood over the last week: mixed (257 headlines).
 - The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.8% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -172,7 +172,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is calmer than its usual year (25% vs 35% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 15 percentage points.
 - It is close to its 1-year high of $433.68 (-6.6%).
-- News mood over the last week: positive (81 headlines).
+- News mood over the last week: positive (82 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to rise). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
