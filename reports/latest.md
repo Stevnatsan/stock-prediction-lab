@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-11-18 03:43 UTC.
+Generated 2026-11-18 08:32 UTC.
 
 ## Next-session calls
 
@@ -152,7 +152,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Top 3 by logistic, price only | 1,073 | +34.9% | +7.3% | 0.45 | 50.8% |
 | Top 3 by logistic, all sources (VADER) | 1,073 | +34.6% | +7.2% | 0.46 | 50.3% |
 | Top 3 by logistic, all sources (FinBERT) | 1,073 | +32.1% | +6.8% | 0.44 | 50.2% |
-| Top 3 by gradient boosting | 1,014 | +56.7% | +11.8% | 0.67 | 36.8% |
+| Top 3 by gradient boosting | 1,014 | +59.4% | +12.3% | 0.69 | 36.9% |
 | Top 3 by ensemble | 1,014 | +28.0% | +6.3% | 0.43 | 46.0% |
 | Buy every stock, every session | 1,073 | -9.8% | -2.4% | -0.05 | 51.8% |
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7828 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 930 |  |
+| finbert | 10 | 0 | 288 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 882 |  |
+| google_news | 10 | 0 | 869 |  |
 | macro_yahoo | 1 | 0 | 1090 |  |
 | major_news | 10 | 0 | 1000 |  |
-| options | 10 | 0 | 20 |  |
-| prices | 11 | 0 | 11968 |  |
+| prices | 11 | 0 | 11957 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 168 |  |
+| yahoo_rss | 10 | 0 | 166 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-11-17 | 0 | 8 | 32 |
-| MSFT | ok | 2026-11-17 | 0 | 8 | 42 |
-| NVDA | ok | 2026-11-17 | 0 | 8 | 107 |
-| AMZN | ok | 2026-11-17 | 0 | 8 | 69 |
-| GOOGL | ok | 2026-11-17 | 0 | 8 | 41 |
-| META | ok | 2026-11-17 | 0 | 8 | 62 |
-| TSLA | ok | 2026-11-17 | 0 | 8 | 34 |
-| JPM | ok | 2026-11-17 | 0 | 8 | 38 |
-| XOM | ok | 2026-11-17 | 0 | 8 | 24 |
-| UNH | ok | 2026-11-17 | 0 | 8 | 37 |
+| AAPL | ok | 2026-11-17 | 0 | 0 | 0 |
+| MSFT | ok | 2026-11-17 | 0 | 0 | 0 |
+| NVDA | ok | 2026-11-17 | 0 | 0 | 0 |
+| AMZN | ok | 2026-11-17 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-11-17 | 0 | 0 | 0 |
+| META | ok | 2026-11-17 | 0 | 0 | 0 |
+| TSLA | ok | 2026-11-17 | 0 | 0 | 0 |
+| JPM | ok | 2026-11-17 | 0 | 0 | 0 |
+| XOM | ok | 2026-11-17 | 0 | 0 | 0 |
+| UNH | ok | 2026-11-17 | 0 | 0 | 0 |
 
 ---
 
