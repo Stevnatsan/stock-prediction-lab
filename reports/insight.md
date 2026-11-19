@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-11-19 03:26 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-11-19 08:47 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $730.20 on 2026-11-18
 
@@ -28,7 +28,7 @@ Generated 2026-11-19 03:26 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (28% vs 25% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 21 percentage points.
 - It is close to its 1-year high of $356.27 (-1.1%).
-- News mood over the last week: negative (537 headlines).
+- News mood over the last week: negative (532 headlines).
 - The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 47.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -44,14 +44,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (38% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 10 percentage points.
 - It is close to its 1-year high of $555.80 (-8.5%).
-- News mood over the last week: negative (691 headlines).
+- News mood over the last week: negative (721 headlines).
 - The models give 44% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-18: Why Did Software Fears Push Microsoft (NASDAQ:MSFT) Under USD 500 and Leave the Stock Down 2.27%? - Kalkine
 - 2026-11-18: “The New OS For Work”: Microsoft Stock (NASDAQ:MSFT) Slips as Microsoft Pushes Copilot - TipRanks
-- 2026-11-18: Microsoft Stock MSFT Drops Below $500 as New Cybersecurity Concerns Hit Tech - FXLeaders
+- 2026-11-18: What Pushed Microsoft (NASDAQ:MSFT) Below USD 500 Before It Closed Down 2.27% in a Software Rout? - kalkine.ca
 
 ## NVDA · $150.96 on 2026-11-18
 
@@ -60,14 +60,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.6%. Lately it is choppier than its usual year (50% vs 39% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 30 percentage points.
 - It sits 37% below its 1-year high of $239.24.
-- News mood over the last week: negative (759 headlines).
+- News mood over the last week: negative (771 headlines).
 - The models give 39% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.8% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-18: Nvidia (NVDA) Stock Drops Despite Q3 Results Showing Huge AI Earnings - Yahoo Finance
+- 2026-11-19: Anthropic's record IPO lands as Nvidia suffers its worst run since 2008
 - 2026-11-18: Nvidia retreats as strong outlook fails to dispel uncertainty - Reuters
-- 2026-11-18: Nvidia Just Demolished Earnings, but the Stock Is Still Plunging. The Reason Is Obvious. - Yahoo Finance
 
 ## AMZN · $267.74 on 2026-11-18
 
@@ -76,14 +76,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (42% vs 34% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 4 percentage points.
 - It is close to its 1-year high of $284.02 (-5.7%).
-- News mood over the last week: mixed (596 headlines).
+- News mood over the last week: mixed (597 headlines).
 - The models give 44% odds the next session closes above its open (a slight lean to fall). On this stock they were right 46.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-19: Amazon and Google face a 10-year AI supply chain problem
-- 2026-11-18: Amazon Is Up 11% in a Year. UBS Sees Another 32%, Even After Cutting Its AWS Estimates
 - 2026-11-18: AMZN climbs over 2% after unveiling AI collaboration and expanded clean energy strategy - Traders Union
+- 2026-11-19: Anthropic’s Cash Pile Tops Amazon And Nvidia Combined After Record IPO – Meet The New ETF Tracking ANT-Linked Companies
 
 ## GOOGL · $282.44 on 2026-11-18
 
@@ -92,14 +92,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.2%. Lately it is choppier than its usual year (53% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 30% below its 1-year high of $402.12.
-- News mood over the last week: negative (602 headlines).
+- News mood over the last week: negative (643 headlines).
 - The models give 36% odds the next session closes above its open (a slight lean to fall). On this stock they were right 60.0% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-19: Amazon and Google face a 10-year AI supply chain problem
 - 2026-11-18: Alphabet Stock Is Down 25% From Its High. History Suggests a $5,000 Investment Now Will Be Worth This Much by 2028. - The Globe and Mail
-- 2026-11-18: What Does the Record Post-Earnings Drop Mean for the Chart Setup at GOOGL (NASDAQ:GOOGL)? - Kalkine Media
+- 2026-11-18: Ex-Google Engineer May Face New Charges Over Bets on Gemini 3.0 - Bloomberg.com
 
 ## META · $616.38 on 2026-11-18
 
@@ -108,14 +108,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is about as jumpy as its usual year (41% vs 42% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 8 percentage points.
 - It sits 21% below its 1-year high of $777.59.
-- News mood over the last week: negative (671 headlines).
+- News mood over the last week: negative (705 headlines).
 - The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-18: Meta Platforms, Inc. $META Stock: Private Advisory Group LLC Lowers Position - MarketBeat
-- 2026-11-18: Amazon, Google, Meta in spotlight as Needham sees 'fragility' due to Nvidia dependence (NVDA:NASDAQ) - Seeking Alpha
-- 2026-11-19: Some Meta employees reportedly ‘scared’ of the company’s Muse AI Agent that AI head Alexandr Wang ‘champi - The Times of India
+- 2026-11-19: Meta's Q3 revenue jumps 26% as AI boosts ad pri... - Pluang
+- 2026-11-19: Meta Halts Mark Zuckerberg’s New Share Issuance Plan Amid Investor Lawsuit Alleging CEO Pressured Board t - Benzinga
+- 2026-11-19: Meta Platforms Halts Class C Stock Plan Amid Shareholder Lawsuit - GuruFocus
 
 ## TSLA · $383.72 on 2026-11-18
 
@@ -124,14 +124,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is choppier than its usual year (58% vs 45% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 17 percentage points.
 - It sits 22% below its 1-year high of $489.88.
-- News mood over the last week: mixed (464 headlines).
+- News mood over the last week: mixed (486 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 59.2% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-17: Tesla Stocks Decrease 0.51% Even as Texas Robotaxi Authorizations Jump 21% in 18 Days
 - 2026-11-18: Tesla Stock (NASDAQ:TSLA) Notches Up with New Powercore Reveal - TipRanks
-- 2026-11-17: Grandma Wants a Tesla: Tesla Stock (NASDAQ:TSLA) Notches Up During Increase in Elder Popularity - TipRanks
+- 2026-11-18: Tesla (TSLA) Stock Price Prediction: Robotaxi progress keeps Tesla above the key moving-average cluster - Blockchain News
 
 ## JPM · $324.11 on 2026-11-18
 
@@ -140,7 +140,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.7%. Lately it is choppier than its usual year (30% vs 23% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 1 percentage points.
 - It sits 11% below its 1-year high of $363.37.
-- News mood over the last week: negative (423 headlines).
+- News mood over the last week: negative (433 headlines).
 - The models give 46% odds the next session closes above its open (a slight lean to fall). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -156,7 +156,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (34% vs 27% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 29 percentage points.
 - It sits 14% below its 1-year high of $186.08.
-- News mood over the last week: positive (212 headlines).
+- News mood over the last week: positive (207 headlines).
 - The models give 50% odds the next session closes above its open (a slight lean to rise). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -172,11 +172,11 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.0%. Lately it is choppier than its usual year (45% vs 36% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 1 percentage points.
 - It sits 19% below its 1-year high of $433.68.
-- News mood over the last week: negative (175 headlines).
+- News mood over the last week: negative (192 headlines).
 - The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-18: Unitedhealth Group Inc Stock (UNH) Moved Down by 4.61% on Nov 18: Key Drivers Unveiled - TradingKey
 - 2026-11-18: SPY is down 0.3% today, on UNH stock price movement - Quiver Quantitative
-- 2026-11-18: UnitedHealth Group (UNH) Shares Drop Over 8% Amid Regulatory Con - GuruFocus
+- 2026-11-18: Healthcare Stocks: UnitedHealth (UNH), Humana (HUM), Cigna (CI) and Others Fall on Proposed CRUSH Rule - TipRanks
