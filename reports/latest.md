@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-11-24 06:01 UTC.
+Generated 2026-11-24 10:55 UTC.
 
 ## Next-session calls
 
@@ -152,7 +152,7 @@ Hypothetical: each session a strategy buys, at the open, the (up to) 3 stocks it
 | Top 3 by logistic, price only | 1,077 | +26.1% | +5.6% | 0.37 | 50.7% |
 | Top 3 by logistic, all sources (VADER) | 1,077 | +18.8% | +4.1% | 0.30 | 50.2% |
 | Top 3 by logistic, all sources (FinBERT) | 1,077 | +19.3% | +4.2% | 0.31 | 50.1% |
-| Top 3 by gradient boosting | 1,018 | +47.4% | +10.1% | 0.59 | 36.8% |
+| Top 3 by gradient boosting | 1,018 | +49.6% | +10.5% | 0.61 | 36.7% |
 | Top 3 by ensemble | 1,018 | +4.7% | +1.1% | 0.16 | 45.9% |
 | Buy every stock, every session | 1,077 | -18.1% | -4.6% | -0.17 | 51.7% |
 
@@ -178,33 +178,31 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7828 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 10 | 0 | 802 |  |
+| finbert | 10 | 0 | 448 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 9 | 1 | 853 | HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=MSFT+stock&hl=en-US&gl=US&ceid=US:en |
-| macro_yahoo | 1 | 0 | 1089 |  |
-| major_news | 7 | 3 | 700 | HTTPError: 429 Client Error: Too Many Requests for url: https://news.google.com/rss/search?q=%28tesla+OR+tsla%29+%28site%3Areuters.com+OR+site%3Abloomberg.com+OR+site%3Acnbc.com+OR+site%3Awsj.com+OR+s |
-| options | 10 | 0 | 20 |  |
+| google_news | 10 | 0 | 970 |  |
+| macro_yahoo | 1 | 0 | 1090 |  |
+| major_news | 10 | 0 | 1000 |  |
 | prices | 11 | 0 | 11957 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| stocktwits | 10 | 0 | 300 |  |
-| yahoo_rss | 10 | 0 | 175 |  |
+| yahoo_rss | 10 | 0 | 177 |  |
 
 ## This run, per stock
 
 | Stock | Status | Data through | History replayed | Scored today | Headlines (24 h) |
 |---|---|---|---|---|---|
-| AAPL | ok | 2026-11-23 | 0 | 8 | 28 |
-| MSFT | ok | 2026-11-23 | 0 | 8 | 18 |
-| NVDA | ok | 2026-11-23 | 0 | 8 | 97 |
-| AMZN | ok | 2026-11-23 | 0 | 8 | 33 |
-| GOOGL | ok | 2026-11-23 | 0 | 8 | 38 |
-| META | ok | 2026-11-23 | 0 | 8 | 52 |
-| TSLA | ok | 2026-11-23 | 0 | 8 | 41 |
-| JPM | ok | 2026-11-23 | 0 | 8 | 27 |
-| XOM | ok | 2026-11-23 | 0 | 8 | 30 |
-| UNH | ok | 2026-11-23 | 0 | 8 | 14 |
+| AAPL | ok | 2026-11-23 | 0 | 0 | 0 |
+| MSFT | ok | 2026-11-23 | 0 | 0 | 0 |
+| NVDA | ok | 2026-11-23 | 0 | 0 | 0 |
+| AMZN | ok | 2026-11-23 | 0 | 0 | 0 |
+| GOOGL | ok | 2026-11-23 | 0 | 0 | 0 |
+| META | ok | 2026-11-23 | 0 | 0 | 0 |
+| TSLA | ok | 2026-11-23 | 0 | 0 | 0 |
+| JPM | ok | 2026-11-23 | 0 | 0 | 0 |
+| XOM | ok | 2026-11-23 | 0 | 0 | 0 |
+| UNH | ok | 2026-11-23 | 0 | 0 | 0 |
 
 ---
 
