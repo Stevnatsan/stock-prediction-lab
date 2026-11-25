@@ -1,179 +1,179 @@
 # Market insight
 
-Generated 2026-11-24 10:55 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-11-25 04:55 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
-## The market (SPY) · $722.29 on 2026-11-23
+## The market (SPY) · $718.78 on 2026-11-24
 
 - Long-term trend is down (below the 200-day average), with some recent recovery.
 - A typical day moves it about 0.5%. Lately it is choppier than its usual year (32% vs 15% annualised volatility).
-- Last month -5.0%, this year +6.7%, past year +11.9%.
+- Last month -6.1%, this year +6.2%, past year +10.2%.
 
 | Stock | Price | 1 week | 1 month | 3 months | This year | 1 year | vs SPY (1 y) | Off 1-y high | P(up) next session |
 |---|---|---|---|---|---|---|---|---|---|
-| AAPL | $349.08 | -1.0% | +0.5% | +12.7% | +28.9% | +31.6% | +19.7% | -2.0% | 68% |
-| MSFT | $492.50 | -4.7% | -5.9% | +0.4% | +2.7% | +3.8% | -8.1% | -11.2% | 35% |
-| NVDA | $165.05 | +5.7% | -21.8% | -22.4% | -11.3% | -8.4% | -20.3% | -31.0% | 56% |
-| AMZN | $255.39 | -0.9% | +3.0% | -2.2% | +10.6% | +17.6% | +5.7% | -10.1% | 47% |
-| GOOGL | $282.10 | -0.6% | -11.9% | -18.6% | -9.7% | -2.3% | -14.2% | -29.8% | 49% |
-| META | $597.60 | -4.6% | -7.0% | +4.9% | -9.2% | +1.8% | -10.1% | -23.1% | 39% |
-| TSLA | $385.46 | +1.5% | +3.6% | +10.1% | -14.3% | -2.5% | -14.4% | -21.3% | 63% |
-| JPM | $316.66 | -6.4% | -4.5% | -10.8% | +0.2% | +8.2% | -3.7% | -12.9% | 25% |
-| XOM | $156.90 | -6.0% | -13.8% | -1.7% | +33.8% | +37.6% | +25.7% | -15.7% | 62% |
-| UNH | $336.08 | -18.4% | -19.6% | -14.7% | +3.8% | +10.7% | -1.1% | -22.5% | 45% |
+| AAPL | $354.07 | +0.6% | +3.0% | +13.0% | +30.7% | +30.9% | +20.6% | -0.6% | 57% |
+| MSFT | $496.13 | -1.8% | -6.7% | +0.1% | +3.4% | +6.0% | -4.3% | -10.6% | 47% |
+| NVDA | $155.38 | -0.1% | -28.1% | -25.8% | -16.5% | -12.9% | -23.2% | -35.1% | 18% |
+| AMZN | $252.29 | -2.2% | +1.3% | -3.1% | +9.3% | +14.3% | +4.1% | -11.2% | 53% |
+| GOOGL | $279.05 | -0.4% | -11.9% | -18.4% | -10.7% | -6.6% | -16.9% | -30.6% | 26% |
+| META | $589.82 | -4.7% | -6.5% | +2.5% | -10.4% | -0.4% | -10.7% | -24.1% | 53% |
+| TSLA | $384.68 | +1.2% | -1.8% | +11.2% | -14.5% | -1.6% | -11.9% | -21.5% | 58% |
+| JPM | $317.10 | -3.9% | -5.1% | -10.6% | +0.3% | +8.5% | -1.8% | -12.7% | 54% |
+| XOM | $158.23 | -5.4% | -13.7% | +0.7% | +35.0% | +38.7% | +28.5% | -15.0% | 58% |
+| UNH | $341.88 | -12.3% | -16.8% | -14.2% | +5.6% | +9.7% | -0.6% | -21.2% | 58% |
 
-## AAPL · $349.08 on 2026-11-23
+## AAPL · $354.07 on 2026-11-24
 
 - Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
-- Neither overbought nor oversold (RSI 53, normal range 30 to 70).
-- A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (29% vs 25% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 20 percentage points.
-- It is close to its 1-year high of $356.27 (-2.0%).
-- News mood over the last week: negative (498 headlines).
-- The models give 68% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
+- Neither overbought nor oversold (RSI 57, normal range 30 to 70).
+- A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (29% vs 25% annualised volatility).
+- Over the past year it beat the S&P 500 (SPY) by 21 percentage points.
+- It is close to its 1-year high of $356.27 (-0.6%).
+- News mood over the last week: mixed (462 headlines).
+- The models give 57% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-20: Apple (NASDAQ:AAPL) Stock Price Down 1.8% Following Insider Selling - MarketBeat
-- 2026-11-21: Startup sues Apple in India over tap-to-share contacts feature
 - 2026-11-24: Apple Inc. $AAPL Stock: Moss Adams Wealth Advisors LLC Cuts Position - MarketBeat
+- 2026-11-23: Apple Is Up 29% This Year and Already Above Wall Street’s Target. Our Model Sees $400+ - 24/7 Wall St.
+- 2026-11-24: Apple Inc. $AAPL Stock Position Cut by Cidel Asset Management Inc. - MarketBeat
 
-## MSFT · $492.50 on 2026-11-23
+## MSFT · $496.13 on 2026-11-24
 
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
-- Neither overbought nor oversold (RSI 39, normal range 30 to 70).
-- A typical day moves it about 1.2%. Lately it is about as jumpy as its usual year (38% vs 34% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 8 percentage points.
+- Neither overbought nor oversold (RSI 41, normal range 30 to 70).
+- A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (39% vs 34% annualised volatility).
+- Over the past year it lagged the S&P 500 (SPY) by 4 percentage points.
 - It sits 11% below its 1-year high of $554.73.
-- News mood over the last week: negative (579 headlines).
-- The models give 35% odds the next session closes above its open (a slight lean to fall). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge.
+- News mood over the last week: negative (538 headlines).
+- The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-20: Mets Owner Steve Cohen’s Fund Dumped Nearly All of Its AMD and Bet $1 Billion That Microsoft Is the Safer AI Stock. AMD Has Fallen 31% Since
-- 2026-11-20: Microsoft Stock (NASDAQ:MSFT) Slips Despite New Team-Up Effort with Danaher - TipRanks
+- 2026-11-24: Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers "Code Red" - Coinpaper
 - 2026-11-23: Microsoft Corp Stock (MSFT) Opened Up by 3.39% on Nov 23: A Full Analysis - TradingKey
 
-## NVDA · $165.05 on 2026-11-23
+## NVDA · $155.38 on 2026-11-24
 
 - Long-term trend is down (below the 200-day average), with some recent recovery.
-- Neither overbought nor oversold (RSI 43, normal range 30 to 70).
-- A typical day moves it about 1.6%. Lately it is choppier than its usual year (137% vs 52% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 20 percentage points.
-- It sits 31% below its 1-year high of $239.24.
-- News mood over the last week: negative (744 headlines).
-- The models give 56% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.8% of the time over the last 120 sessions, a small but real edge.
+- Neither overbought nor oversold (RSI 39, normal range 30 to 70).
+- A typical day moves it about 1.7%. Lately it is choppier than its usual year (138% vs 52% annualised volatility).
+- Over the past year it lagged the S&P 500 (SPY) by 23 percentage points.
+- It sits 35% below its 1-year high of $239.24.
+- News mood over the last week: negative (699 headlines).
+- The models give 18% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-24: Nvidia Lost $2.75 Trillion in 45 Days -- More Than the Market Cap of 496 S&P 500 Companies -- and Investors Wagering on a Quick Bounce to New Highs May Be Disappointed
-- 2026-11-24: Nvidia shares fall 4% in premarket after Huang comeback rally - CNBC
-- 2026-11-24: Nvidia stock falls after epic rally on Jensen Huang's return as CEO - Yahoo Finance
+- 2026-11-24: Stock Markets Slip as Nvidia and A.I. Stocks Erase Some of Monday’s Rally - The New York Times
+- 2026-11-24: Drops for Nvidia, Anthropic and other AI stocks drag the US market back down - AP News
+- 2026-11-24: A bipartisan backlash is hitting Nvidia in Washington in the wake of Trump’s push for Huang’s return - MarketWatch
 
-## AMZN · $255.39 on 2026-11-23
+## AMZN · $252.29 on 2026-11-24
 
-- Uptrend: the price is above its 50-day and 200-day averages, and the shorter one is above the longer one.
-- Neither overbought nor oversold (RSI 48, normal range 30 to 70).
+- Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
+- Neither overbought nor oversold (RSI 47, normal range 30 to 70).
 - A typical day moves it about 1.4%. Lately it is choppier than its usual year (46% vs 34% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 6 percentage points.
-- It sits 10% below its 1-year high of $284.02.
-- News mood over the last week: mixed (564 headlines).
-- The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 51.7% of the time over the last 120 sessions, which is no better than a coin flip.
+- Over the past year it beat the S&P 500 (SPY) by 4 percentage points.
+- It sits 11% below its 1-year high of $284.02.
+- News mood over the last week: mixed (523 headlines).
+- The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-24: Amazon Plans to Acquire Decart for About $7.5 Billion, Threatening Nvidia Data Center AI Chips - TradingKey
-- 2026-11-23: Amazon.com Inc Stock (AMZN) Moved Up by 3.71% on Nov 23: A Full Analysis - TradingKey
-- 2026-11-23: Amazon Reportedly Agrees $7.5 Billion Decart AI Deal to Strengthen Trainium Chip Technology - Yahoo Finance
+- 2026-11-24: Amazon.com (NASDAQ:AMZN) Stock Price Down 1.2% - What's Next? - MarketBeat
+- 2026-11-24: Is Amazon.com (AMZN) Still Below Fair Value As AI Spending Rises?
+- 2026-11-24: GameStop leads quant ratings among mega-cap consumer discretionary stocks, beating Amazon - Seeking Alpha
 
-## GOOGL · $282.10 on 2026-11-23
+## GOOGL · $279.05 on 2026-11-24
 
 - Downtrend: the price is below its 50-day and 200-day averages, and the shorter one is below the longer one.
-- Neither overbought nor oversold (RSI 41, normal range 30 to 70).
+- Neither overbought nor oversold (RSI 40, normal range 30 to 70).
 - A typical day moves it about 1.2%. Lately it is choppier than its usual year (59% vs 34% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 14 percentage points.
-- It sits 30% below its 1-year high of $402.12.
-- News mood over the last week: negative (639 headlines).
-- The models give 49% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
+- Over the past year it lagged the S&P 500 (SPY) by 17 percentage points.
+- It sits 31% below its 1-year high of $402.12.
+- News mood over the last week: negative (589 headlines).
+- The models give 26% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-23: Google Stock Falls 18% Amid Decline in Search Advertising Revenue - RS Web Solutions
-- 2026-11-22: Billionaire Chase Coleman’s Tiger Global Cut Its Alphabet Stake by 42% - 24/7 Wall St.
-- 2026-11-22: Alphabet's stock falls 34% as it borrows $10.9B for data center expansion amid AI demand uncertainty - Pluang
+- 2026-11-24: Broadcom Stocks Fall 3.98% as Google TPU Order Report Clouds AI Outlook
+- 2026-11-23: Alphabet (GOOGL) Stock Trades Below Fair Value Despite AI Chip Expansion - Simply Wall St
 
-## META · $597.60 on 2026-11-23
+## META · $589.82 on 2026-11-24
 
 - Long-term trend is down (below the 200-day average), with some recent recovery.
-- Neither overbought nor oversold (RSI 42, normal range 30 to 70).
-- A typical day moves it about 1.6%. Lately it is about as jumpy as its usual year (48% vs 43% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 10 percentage points.
-- It sits 23% below its 1-year high of $777.59.
-- News mood over the last week: negative (845 headlines).
-- The models give 39% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
+- Neither overbought nor oversold (RSI 40, normal range 30 to 70).
+- A typical day moves it about 1.6%. Lately it is about as jumpy as its usual year (47% vs 43% annualised volatility).
+- Over the past year it lagged the S&P 500 (SPY) by 11 percentage points.
+- It sits 24% below its 1-year high of $777.59.
+- News mood over the last week: negative (828 headlines).
+- The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-24: AMD Stock Dips Overnight After Nvidia-Triggered Rally: AMD Registers 337M Shares For Resale Tied To OpenAI, Meta Warrants
-- 2026-11-23: Tech surge sends Meta Platforms higher by 7% (META:NASDAQ) - Seeking Alpha
-- 2026-11-24: AMD Stock Dips Overnight After Nvidia-Triggered Rally: AMD Registers 337M Shares For Resale Tied To OpenAI, Meta Warrants - TradingView
+- 2026-11-24: Meta Platforms (NASDAQ:META) Shares Down 1.3% After Analyst Downgrade - MarketBeat
+- 2026-11-25: Meta Stock Forecast: META Falls Below $600 as Class C Pause Delays $60bn Share Sale - FXLeaders
+- 2026-11-24: Meta Stock Dips Premarket As Class C Share Pause Delays $60 Billion AI Funding Plan - TradingView
 
-## TSLA · $385.46 on 2026-11-23
+## TSLA · $384.68 on 2026-11-24
 
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
 - Neither overbought nor oversold (RSI 52, normal range 30 to 70).
-- A typical day moves it about 1.6%. Lately it is choppier than its usual year (74% vs 47% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 14 percentage points.
+- A typical day moves it about 1.5%. Lately it is choppier than its usual year (73% vs 47% annualised volatility).
+- Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 21% below its 1-year high of $489.88.
-- News mood over the last week: mixed (442 headlines).
-- The models give 63% odds the next session closes above its open (a slight lean to rise). On this stock they were right 57.5% of the time over the last 120 sessions, a meaningful edge, if it lasts.
+- News mood over the last week: mixed (470 headlines).
+- The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 57.5% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-24: Tesla stock rises but still down 14% for 2026, trading at high valuations amid stalled growth. - Pluang
-- 2026-11-23: VOO is up 4.7% today, on TSLA stock price movement - Quiver Quantitative
-- 2026-11-23: “An Order of Magnitude a Year”: Tesla Stock (NASDAQ:TSLA) Blasts Up Over 13%, AI to Improve Rapidly - TipRanks
+- 2026-11-25: TSLA Stock Slips Overnight: Dell And HP See No Quick Relief From The AI-Driven Chip Crunch Behind Tesla’s 25% Memory Cut - Yahoo Finance
+- 2026-11-25: TSLA Stock Slips Overnight: Dell And HP See No Quick Relief From The AI-Driven Chip Crunch Behind Tesla’s 25% Memory Cut
 
-## JPM · $316.66 on 2026-11-23
+## JPM · $317.10 on 2026-11-24
 
 - Long-term trend is down (below the 200-day average), with some recent recovery.
 - Neither overbought nor oversold (RSI 37, normal range 30 to 70).
 - A typical day moves it about 0.8%. Lately it is choppier than its usual year (32% vs 23% annualised volatility).
-- Over the past year it lagged the S&P 500 (SPY) by 4 percentage points.
+- Over the past year it lagged the S&P 500 (SPY) by 2 percentage points.
 - It sits 13% below its 1-year high of $363.37.
-- News mood over the last week: negative (370 headlines).
-- The models give 25% odds the next session closes above its open (a slight lean to fall). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
+- News mood over the last week: negative (346 headlines).
+- The models give 54% odds the next session closes above its open (a slight lean to rise). On this stock they were right 47.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-20: JPMorgan Chase & Co (JPM) Shares Fall 3.0% -- What GF Score of 8 - GuruFocus
-- 2026-11-20: JPMorgan Chase & Co (JPM) Shares Fall 3.0% -- What GF Score of 85 Tells Investors - GuruFocus
+- 2026-11-24: META Stock Is Down 24% From Peak: JPMorgan Sees ‘Attractive Buying Opportunity’ — But 2027 Spending, Capex Remain An Overhang
 - 2026-11-23: JPMorgan Chase (JPM) CEO Warns UK Tax Rise Could Threaten £3 Billion HQ
+- 2026-11-22: JPMorgan Chase (JPM) Says Vendor Cyberattack Exposed Customer Data - Simply Wall St
 
-## XOM · $156.90 on 2026-11-23
+## XOM · $158.23 on 2026-11-24
 
 - Long-term uptrend, but the last couple of months have been mixed (the price and its 50-day average disagree).
-- Neither overbought nor oversold (RSI 34, normal range 30 to 70).
-- A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (32% vs 27% annualised volatility).
-- Over the past year it beat the S&P 500 (SPY) by 26 percentage points.
-- It sits 16% below its 1-year high of $186.08.
-- News mood over the last week: mixed (162 headlines).
-- The models give 62% odds the next session closes above its open (a slight lean to rise). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
+- Neither overbought nor oversold (RSI 36, normal range 30 to 70).
+- A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (31% vs 27% annualised volatility).
+- Over the past year it beat the S&P 500 (SPY) by 28 percentage points.
+- It sits 15% below its 1-year high of $186.08.
+- News mood over the last week: mixed (176 headlines).
+- The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
+- 2026-11-23: ExxonMobil Holdings (XOM) Stock: Shares Slide 1.62% as Company Unveils $3B Debt Buyback Results - Blockonomi
 - 2026-11-19: ExxonMobil (NYSE:XOM) Shares Down 1% - Should You Sell? - MarketBeat
 - 2026-11-23: ExxonMobil (NYSE:XOM) Stock Price Down 1.8% - Here's Why - MarketBeat
-- 2026-11-24: ExxonMobil Corporation $XOM Stock Position Increased by Healthcare of Ontario Pension Plan Trust Fund - MarketBeat
 
-## UNH · $336.08 on 2026-11-23
+## UNH · $341.88 on 2026-11-24
 
 - Long-term trend is down (below the 200-day average), with some recent recovery.
-- Beaten down: RSI 29 (below 30 often means it sold off fast and may bounce).
-- A typical day moves it about 1.1%. Lately it is choppier than its usual year (49% vs 37% annualised volatility).
+- Neither overbought nor oversold (RSI 32, normal range 30 to 70).
+- A typical day moves it about 1.1%. Lately it is choppier than its usual year (50% vs 37% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 1 percentage points.
-- It sits 23% below its 1-year high of $433.68.
-- News mood over the last week: negative (313 headlines).
-- The models give 45% odds the next session closes above its open (a slight lean to fall). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip.
+- It sits 21% below its 1-year high of $433.68.
+- News mood over the last week: negative (277 headlines).
+- The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
