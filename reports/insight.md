@@ -1,6 +1,6 @@
 # Market insight
 
-Generated 2026-11-25 04:55 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
+Generated 2026-11-25 09:51 UTC. Plain-language snapshot of each stock. Describes what has happened; it is not a forecast or advice.
 
 ## The market (SPY) · $718.78 on 2026-11-24
 
@@ -28,14 +28,14 @@ Generated 2026-11-25 04:55 UTC. Plain-language snapshot of each stock. Describes
 - A typical day moves it about 1.0%. Lately it is about as jumpy as its usual year (29% vs 25% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 21 percentage points.
 - It is close to its 1-year high of $356.27 (-0.6%).
-- News mood over the last week: mixed (462 headlines).
+- News mood over the last week: mixed (470 headlines).
 - The models give 57% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.0% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
 - 2026-11-24: Apple Inc. $AAPL Stock: Moss Adams Wealth Advisors LLC Cuts Position - MarketBeat
-- 2026-11-23: Apple Is Up 29% This Year and Already Above Wall Street’s Target. Our Model Sees $400+ - 24/7 Wall St.
 - 2026-11-24: Apple Inc. $AAPL Stock Position Cut by Cidel Asset Management Inc. - MarketBeat
+- 2026-11-24: Apple Inc. $AAPL Stock: Ipsen Advisor Group LLC Lowers Position - MarketBeat
 
 ## MSFT · $496.13 on 2026-11-24
 
@@ -44,14 +44,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (39% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 4 percentage points.
 - It sits 11% below its 1-year high of $554.73.
-- News mood over the last week: negative (538 headlines).
+- News mood over the last week: negative (556 headlines).
 - The models give 47% odds the next session closes above its open (a slight lean to fall). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-20: Mets Owner Steve Cohen’s Fund Dumped Nearly All of Its AMD and Bet $1 Billion That Microsoft Is the Safer AI Stock. AMD Has Fallen 31% Since
 - 2026-11-24: Microsoft Stock Falls 7% in a Month as 24-Hour Outage Triggers "Code Red" - Coinpaper
-- 2026-11-23: Microsoft Corp Stock (MSFT) Opened Up by 3.39% on Nov 23: A Full Analysis - TradingKey
+- 2026-11-24: Microsoft beats earnings estimates and lifts dividend: Can MSFT sustain gains? - Traders Union
+- 2026-11-23: Microsoft Stocks Rise 3.9% With a Perfect GF Score as OpenAI Contingency Plans Surface - TradingView
 
 ## NVDA · $155.38 on 2026-11-24
 
@@ -60,14 +60,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.7%. Lately it is choppier than its usual year (138% vs 52% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 23 percentage points.
 - It sits 35% below its 1-year high of $239.24.
-- News mood over the last week: negative (699 headlines).
+- News mood over the last week: negative (704 headlines).
 - The models give 18% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
 
+- 2026-11-25: Nvidia Is Down 31% From Its Peak. History Says This Happens Next - The Motley Fool
+- 2026-11-25: Nvidia stock stumbles again after Jensen Huang's spectacular comeback rally
 - 2026-11-24: Stock Markets Slip as Nvidia and A.I. Stocks Erase Some of Monday’s Rally - The New York Times
-- 2026-11-24: Drops for Nvidia, Anthropic and other AI stocks drag the US market back down - AP News
-- 2026-11-24: A bipartisan backlash is hitting Nvidia in Washington in the wake of Trump’s push for Huang’s return - MarketWatch
 
 ## AMZN · $252.29 on 2026-11-24
 
@@ -76,7 +76,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.4%. Lately it is choppier than its usual year (46% vs 34% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 4 percentage points.
 - It sits 11% below its 1-year high of $284.02.
-- News mood over the last week: mixed (523 headlines).
+- News mood over the last week: mixed (541 headlines).
 - The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip.
 
 Headlines with the strongest tone this week:
@@ -92,7 +92,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.2%. Lately it is choppier than its usual year (59% vs 34% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 17 percentage points.
 - It sits 31% below its 1-year high of $402.12.
-- News mood over the last week: negative (589 headlines).
+- News mood over the last week: negative (614 headlines).
 - The models give 26% odds the next session closes above its open (a slight lean to fall). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -108,7 +108,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.6%. Lately it is about as jumpy as its usual year (47% vs 43% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 11 percentage points.
 - It sits 24% below its 1-year high of $777.59.
-- News mood over the last week: negative (828 headlines).
+- News mood over the last week: negative (857 headlines).
 - The models give 53% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
@@ -124,14 +124,14 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 1.5%. Lately it is choppier than its usual year (73% vs 47% annualised volatility).
 - Over the past year it lagged the S&P 500 (SPY) by 12 percentage points.
 - It sits 21% below its 1-year high of $489.88.
-- News mood over the last week: mixed (470 headlines).
+- News mood over the last week: mixed (498 headlines).
 - The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 57.5% of the time over the last 120 sessions, a meaningful edge, if it lasts.
 
 Headlines with the strongest tone this week:
 
-- 2026-11-24: Tesla stock rises but still down 14% for 2026, trading at high valuations amid stalled growth. - Pluang
 - 2026-11-25: TSLA Stock Slips Overnight: Dell And HP See No Quick Relief From The AI-Driven Chip Crunch Behind Tesla’s 25% Memory Cut - Yahoo Finance
 - 2026-11-25: TSLA Stock Slips Overnight: Dell And HP See No Quick Relief From The AI-Driven Chip Crunch Behind Tesla’s 25% Memory Cut
+- 2026-11-25: Tesla Stock (TSLA) Falls 0.2% to $384.68 (Nov 24) - Gotrade
 
 ## JPM · $317.10 on 2026-11-24
 
@@ -156,7 +156,7 @@ Headlines with the strongest tone this week:
 - A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (31% vs 27% annualised volatility).
 - Over the past year it beat the S&P 500 (SPY) by 28 percentage points.
 - It sits 15% below its 1-year high of $186.08.
-- News mood over the last week: mixed (176 headlines).
+- News mood over the last week: mixed (175 headlines).
 - The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge.
 
 Headlines with the strongest tone this week:
