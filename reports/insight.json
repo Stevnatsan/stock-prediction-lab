@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T04:14:53+00:00",
+ "generated": "2026-11-27T09:40:34+00:00",
  "market": {
   "as_of": "2026-11-25",
   "close": 716.7,
@@ -14,10 +14,10 @@
   "low_1y": 628.78,
   "off_high": -0.08008062290343199,
   "sma50": 757.851015625,
-  "sma200": 730.7721255493165,
-  "rsi_14": 39.85346932908802,
+  "sma200": 730.772123413086,
+  "rsi_14": 39.853469327262566,
   "vol_now": 0.31638170481134753,
-  "vol_1y": 0.14928145870781304,
+  "vol_1y": 0.14928140364190945,
   "typical_day": 0.005041163304869367,
   "up_days_1y": 0.503968253968254,
   "summary": [
@@ -40,17 +40,17 @@
    "low_1y": 245.84,
    "off_high": -0.0019367402887807694,
    "sma50": 342.8381805419922,
-   "sma200": 303.9590926361084,
-   "rsi_14": 58.04306381824135,
+   "sma200": 303.95909240722654,
+   "rsi_14": 58.04306381832266,
    "vol_now": 0.2883719970230473,
-   "vol_1y": 0.24900967573110638,
+   "vol_1y": 0.24900967987589162,
    "typical_day": 0.0093483624404192,
    "up_days_1y": 0.5238095238095238,
    "vs_market": {
     "3 months": 0.19943184793165447,
     "1 year": 0.20990077121746453
    },
-   "beta": 0.5705848873659246,
+   "beta": 0.5705846705732788,
    "models": {
     "up": {
      "model": "finbert",
@@ -178,8 +178,8 @@
     }
    },
    "news": {
-    "count_7d": 467,
-    "mood_7d": -0.04651006423982869,
+    "count_7d": 465,
+    "mood_7d": -0.04390344086021506,
     "headlines": [
      {
       "title": "Apple Removes Talkie From App Store After Reports of Inappropriate AI Messages",
@@ -201,22 +201,22 @@
     "A typical day moves it about 0.9%. Lately it is about as jumpy as its usual year (29% vs 25% annualised volatility).",
     "Over the past year it beat the S&P 500 (SPY) by 21 percentage points.",
     "It is close to its 1-year high of $356.27 (-0.2%).",
-    "News mood over the last week: mixed (467 headlines).",
+    "News mood over the last week: mixed (465 headlines).",
     "The models give 61% odds the next session closes above its open (a slight lean to rise). On this stock they were right 50.8% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 133,
-     "score": 0.033354135338345865,
-     "positive": 34,
-     "neutral": 72,
-     "negative": 27
+     "count": 129,
+     "score": 0.030356589147286818,
+     "positive": 32,
+     "neutral": 71,
+     "negative": 26
     },
     "previous_week": {
-     "count": 146,
-     "score": 0.003902739726027397,
-     "positive": 32,
-     "neutral": 83,
+     "count": 148,
+     "score": 0.005083108108108108,
+     "positive": 33,
+     "neutral": 84,
      "negative": 31
     },
     "trend": "steady",
@@ -228,11 +228,6 @@
      "negative": 2
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 22,
-      "score": 0.02377272727272727
-     },
      {
       "date": "2026-11-14",
       "count": 4,
@@ -296,7 +291,12 @@
      {
       "date": "2026-11-26",
       "count": 27,
-      "score": -0.05362222222222223
+      "score": -0.05398888888888889
+     },
+     {
+      "date": "2026-11-27",
+      "count": 2,
+      "score": 0.0049
      }
     ],
     "read": [
@@ -340,13 +340,13 @@
     "earnings": {
      "next": "2027-01-28",
      "next_time": "after the close",
-     "days_until": 63,
+     "days_until": 62,
      "last": {
       "date": "2026-11-02",
       "surprise": 5.8,
       "move": -0.018976131496446058
      },
-     "typical_move": 0.025300916550023173,
+     "typical_move": 0.025300835798015828,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -371,22 +371,22 @@
     "3 months": -0.028082933317721936,
     "1 year": 0.0421742989873386
    },
-   "ytd": 0.02144373017870138,
+   "ytd": 0.021443795168465396,
    "high_1y": 554.73,
    "low_1y": 351.49,
    "off_high": -0.1168110405592897,
    "sma50": 518.6443994140625,
    "sma200": 443.2291432189941,
-   "rsi_14": 38.99414725433039,
+   "rsi_14": 38.994147254336994,
    "vol_now": 0.388068861260444,
-   "vol_1y": 0.34005891935938243,
+   "vol_1y": 0.3400589387586063,
    "typical_day": 0.0114349791021095,
    "up_days_1y": 0.5,
    "vs_market": {
     "3 months": 0.040157596587356514,
     "1 year": -0.0411213020757335
    },
-   "beta": 0.9372578509327754,
+   "beta": 0.9372588711537384,
    "models": {
     "up": {
      "model": "finbert",
@@ -514,8 +514,8 @@
     }
    },
    "news": {
-    "count_7d": 520,
-    "mood_7d": -0.1086025,
+    "count_7d": 535,
+    "mood_7d": -0.10383588785046728,
     "headlines": [
      {
       "title": "Microsoft Corp Stock (MSFT) Opened Down by 3.53% on Nov 25: Key Drivers Unveiled - TradingKey",
@@ -537,38 +537,33 @@
     "A typical day moves it about 1.1%. Lately it is about as jumpy as its usual year (39% vs 34% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 4 percentage points.",
     "It sits 12% below its 1-year high of $554.73.",
-    "News mood over the last week: negative (520 headlines).",
+    "News mood over the last week: negative (535 headlines).",
     "The models give 62% odds the next session closes above its open (a slight lean to rise). On this stock they were right 52.5% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 88,
-     "score": -0.09546022727272727,
-     "positive": 23,
-     "neutral": 35,
-     "negative": 30
+     "count": 84,
+     "score": -0.095675,
+     "positive": 22,
+     "neutral": 33,
+     "negative": 29
     },
     "previous_week": {
      "count": 173,
-     "score": -0.042957225433526015,
-     "positive": 58,
-     "neutral": 55,
+     "score": -0.04618554913294798,
+     "positive": 57,
+     "neutral": 56,
      "negative": 60
     },
-    "trend": "worsening",
+    "trend": "steady",
     "major_mood": {
-     "count": 5,
-     "score": -0.04542,
-     "positive": 1,
+     "count": 4,
+     "score": -0.13625,
+     "positive": 0,
      "neutral": 3,
      "negative": 1
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 48,
-      "score": -0.22089166666666668
-     },
      {
       "date": "2026-11-14",
       "count": 5,
@@ -631,8 +626,13 @@
      },
      {
       "date": "2026-11-26",
-      "count": 7,
-      "score": -0.15747142857142857
+      "count": 8,
+      "score": -0.13315
+     },
+     {
+      "date": "2026-11-27",
+      "count": 1,
+      "score": 0.7293
      }
     ],
     "read": [
@@ -663,26 +663,19 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWUFvdy1NOXphTWxlN25CWVV2TlppczdLSERycm44cVJmNmF5Q1g5Y184Tmoyak96ekgyZDd4N1h2d3diVUktU1E5aGNtSm1hV2JyNUltOENIU3NLdW1OcEdKVUk0THhOWF94aVlhMUFrNTBULW5hckZ4eWppTG1uMmU1TW1zdmZzSC14QmZySElQbm53dWE1bnhoMVhYNEtCV3ViMGp1bTl3MzB3QnhnVjdGbVJmUQ?oc=5",
       "published": "2026-11-20T17:01:00+00:00",
       "mood": "neutral"
-     },
-     {
-      "title": "Exclusive | Nestle Teams Up With Microsoft, Boston Dynamics on AI in Factories and Products",
-      "outlet": "The Wall Street Journal",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQWUFvdy1NOXphTWxlN25CWVV2TlppczdLSERycm44cVJmNmF5Q1g5Y184Tmoyak96ekgyZDd4N1h2d3diVUktU1E5aGNtSm1hV2JyNUltOENIU3NLdW1OcEdKVUk0THhOWF94aVlhMUFrNTBULW5hckZ4eWppTG1uMmU1TW1zdmZzSC14QmZySElQbm53dWE1bnhoMVhYNEtCV3ViMGp1bTl3MzB3QnhnVjdGbVJmUQ?oc=5",
-      "published": "2026-11-20T07:10:00+00:00",
-      "mood": "positive"
      }
     ],
-    "major_count": 5,
+    "major_count": 4,
     "earnings": {
      "next": "2027-01-27",
      "next_time": "after the close",
-     "days_until": 62,
+     "days_until": 61,
      "last": {
       "date": "2026-10-28",
       "surprise": 3.59,
       "move": -0.0016384335253418758
      },
-     "typical_move": 0.06282856849596727,
+     "typical_move": 0.0628286261935506,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -705,24 +698,24 @@
     "1 week": -0.010996314177805888,
     "1 month": -0.3149490622223081,
     "3 months": -0.34438516189514246,
-    "1 year": -0.180182443188326
+    "1 year": -0.18018251187850465
    },
-   "ytd": -0.19759052249766895,
+   "ytd": -0.1975905883016723,
    "high_1y": 239.24,
    "low_1y": 125.53,
    "off_high": -0.3759404797538184,
    "sma50": 203.65440155029296,
-   "sma200": 202.62062843322755,
-   "rsi_14": 37.452659393717695,
+   "sma200": 202.62062881469726,
+   "rsi_14": 37.45265939389505,
    "vol_now": 1.3804444004263625,
-   "vol_1y": 0.5224442781140747,
+   "vol_1y": 0.5224443421775405,
    "typical_day": 0.01819704229363034,
    "up_days_1y": 0.48412698412698413,
    "vs_market": {
     "3 months": -0.276144631990064,
-    "1 year": -0.2634780442513981
+    "1 year": -0.26347811294157675
    },
-   "beta": 2.4074967122280517,
+   "beta": 2.4074981269489943,
    "models": {
     "up": {
      "model": "finbert",
@@ -850,8 +843,8 @@
     }
    },
    "news": {
-    "count_7d": 669,
-    "mood_7d": -0.1744648729446936,
+    "count_7d": 663,
+    "mood_7d": -0.16734283559577678,
     "headlines": [
      {
       "title": "Nvidia Is Down 35% From Its All-Time High, Tied for Its Biggest Drop Since the AI Boom Began. Is It a Buy? - The Globe and Mail",
@@ -873,38 +866,33 @@
     "A typical day moves it about 1.8%. Lately it is choppier than its usual year (138% vs 52% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 26 percentage points.",
     "It sits 38% below its 1-year high of $239.24.",
-    "News mood over the last week: negative (669 headlines).",
+    "News mood over the last week: negative (663 headlines).",
     "The models give 30% odds the next session closes above its open (a slight lean to fall). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 472,
-     "score": -0.1766029661016949,
-     "positive": 68,
-     "neutral": 234,
-     "negative": 170
+     "count": 469,
+     "score": -0.17612366737739873,
+     "positive": 67,
+     "neutral": 233,
+     "negative": 169
     },
     "previous_week": {
-     "count": 544,
-     "score": -0.1808170955882353,
-     "positive": 65,
-     "neutral": 286,
-     "negative": 193
+     "count": 543,
+     "score": -0.17299281767955801,
+     "positive": 67,
+     "neutral": 288,
+     "negative": 188
     },
     "trend": "steady",
     "major_mood": {
      "count": 215,
-     "score": -0.1671720930232558,
+     "score": -0.17130186046511628,
      "positive": 26,
-     "neutral": 120,
-     "negative": 69
+     "neutral": 119,
+     "negative": 70
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 82,
-      "score": -0.3271231707317073
-     },
      {
       "date": "2026-11-14",
       "count": 7,
@@ -957,18 +945,23 @@
      },
      {
       "date": "2026-11-24",
-      "count": 109,
-      "score": -0.2830724770642202
+      "count": 110,
+      "score": -0.28051363636363635
      },
      {
       "date": "2026-11-25",
-      "count": 71,
-      "score": -0.22926338028169013
+      "count": 73,
+      "score": -0.237027397260274
      },
      {
       "date": "2026-11-26",
-      "count": 39,
-      "score": -0.22069487179487177
+      "count": 42,
+      "score": -0.2251357142857143
+     },
+     {
+      "date": "2026-11-27",
+      "count": 5,
+      "score": -0.07958000000000001
      }
     ],
     "read": [
@@ -1012,13 +1005,13 @@
     "earnings": {
      "next": "2027-02-24",
      "next_time": "after the close",
-     "days_until": 90,
+     "days_until": 89,
      "last": {
       "date": "2026-11-17",
       "surprise": 8.36,
       "move": -0.028946351509443247
      },
-     "typical_move": 0.043159683757552,
+     "typical_move": 0.04315974673208679,
      "reports": 8,
      "beat_count": 8,
      "beat_of": 8
@@ -1058,7 +1051,7 @@
     "3 months": 0.022076412840291493,
     "1 year": -0.0030852687562072934
    },
-   "beta": 1.2429823097291042,
+   "beta": 1.242982819867288,
    "models": {
     "up": {
      "model": "finbert",
@@ -1186,8 +1179,8 @@
     }
    },
    "news": {
-    "count_7d": 533,
-    "mood_7d": -0.06309418386491557,
+    "count_7d": 539,
+    "mood_7d": -0.049510204081632654,
     "headlines": [
      {
       "title": "Amazon Stocks Fall 3.12% as Bernstein Flags a 16% Drop in Cloud Web Traffic",
@@ -1198,8 +1191,8 @@
       "published": "2026-11-26"
      },
      {
-      "title": "Amazon.com (NASDAQ:AMZN) Shares Down 3.1% on Insider Selling - MarketBeat",
-      "published": "2026-11-25"
+      "title": "Amazon.com, Inc. $AMZN Stock: Balentine LLC Cuts Position - MarketBeat",
+      "published": "2026-11-26"
      }
     ]
    },
@@ -1209,38 +1202,33 @@
     "A typical day moves it about 1.4%. Lately it is choppier than its usual year (47% vs 34% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 0 percentage points.",
     "It sits 14% below its 1-year high of $284.02.",
-    "News mood over the last week: negative (533 headlines).",
+    "News mood over the last week: mixed (539 headlines).",
     "The models give 55% odds the next session closes above its open (a slight lean to rise). On this stock they were right 53.3% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 197,
-     "score": -0.053052791878172585,
-     "positive": 45,
-     "neutral": 100,
-     "negative": 52
+     "count": 200,
+     "score": -0.039628000000000003,
+     "positive": 47,
+     "neutral": 102,
+     "negative": 51
     },
     "previous_week": {
-     "count": 214,
-     "score": -0.019923831775700934,
-     "positive": 45,
-     "neutral": 121,
-     "negative": 48
+     "count": 216,
+     "score": -0.03161712962962963,
+     "positive": 44,
+     "neutral": 122,
+     "negative": 50
     },
     "trend": "steady",
     "major_mood": {
-     "count": 18,
-     "score": 0.021433333333333332,
+     "count": 19,
+     "score": 0.02838421052631579,
      "positive": 4,
-     "neutral": 11,
+     "neutral": 12,
      "negative": 3
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 19,
-      "score": 0.12101052631578947
-     },
      {
       "date": "2026-11-14",
       "count": 4,
@@ -1303,11 +1291,23 @@
      },
      {
       "date": "2026-11-26",
-      "count": 25,
-      "score": -0.056312
+      "count": 28,
+      "score": -0.061285714285714284
+     },
+     {
+      "date": "2026-11-27",
+      "count": 4,
+      "score": 0.2344
      }
     ],
     "read": [
+     {
+      "title": "The 80+ Best Amazon Black Friday Deals That Are Actually Worth It",
+      "outlet": "The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1yUWF1VFd2UndQV2M4WVRyaXNYRXRHM1hIa0RFajJOMWNjMzhrTE1LMTk1UzJVZmVDeE0tRG5RY19Jam9SbVVUb1JHdEMzQ2p6LVVEd3RpbU54amJMa0FmZzRFLTFmQ1o0UDQ3dFhJRGExbU5JSllLZU9acFY?oc=5",
+      "published": "2026-11-26T13:11:28+00:00",
+      "mood": "neutral"
+     },
      {
       "title": "K-beauty stocks rally as Korean brands top Amazon bestseller lists globally ahead of Black Friday",
       "outlet": "CNBC",
@@ -1335,20 +1335,13 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOM2pVMDVTbmVZOHkwaGZ0d1dHVEVObExKaTJMaVFIb1dfdGZHQ0N5WWotVzNreXhoMWs4SWphNHlYT29zU3RIbHdnZF91SGswdTdlcUtUN20yRW1OZFk3Z2swZGgxYlF5eEwxVmEwbVVsRHVIV1lHdWt3ZzU5VjlXMkFFNW43MXVPcHRpVnJ1eldNUi00Y2wyZU14STQwQ2JsU0pRYg?oc=5",
       "published": "2026-11-25T07:32:00+00:00",
       "mood": "neutral"
-     },
-     {
-      "title": "Amazon to launch Amazon Autos in UK in early 2027 in first expansion beyond US",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWEtzNzh2NUdSdE41Yi1FYUY2Unk4Q3Z6bGlrb1UxVkxScVV5cmJzRmNZaUp4VFhCSEUwcWNOVHM2aUU3LVByVG81UEhHSFBnWWlmbnFqbC10QzhmVW5JMk84Y0RiVXpvZ3dUWElUNWVnWFBYZEN6Nk8xMVFHWlVPOUxPYi1MdHFSa3NXeVJ0ck9RdHVWYTdXSVJHZzBTZ3lNdFdzUU03MzFjaThMREZxaDUwdm8wQ2JjM25UNlR1ODlOb2c0Vk9DRHRKR3Y?oc=5",
-      "published": "2026-11-25T06:04:00+00:00",
-      "mood": "positive"
      }
     ],
-    "major_count": 18,
+    "major_count": 19,
     "earnings": {
      "next": "2027-02-04",
      "next_time": "after the close",
-     "days_until": 70,
+     "days_until": 69,
      "last": {
       "date": "2026-10-29",
       "surprise": -3.47,
@@ -1384,17 +1377,17 @@
    "low_1y": 265.29,
    "off_high": -0.3208514843655551,
    "sma50": 318.2408001708984,
-   "sma200": 336.06117767333984,
-   "rsi_14": 36.93047255711895,
+   "sma200": 336.0611784362793,
+   "rsi_14": 36.93047255573782,
    "vol_now": 0.5859798685428886,
-   "vol_1y": 0.33596076809936576,
+   "vol_1y": 0.33596076592519664,
    "typical_day": 0.011882746939846367,
    "up_days_1y": 0.48412698412698413,
    "vs_market": {
     "3 months": -0.12954151870719366,
     "1 year": -0.22382459843633318
    },
-   "beta": 1.2605819418881838,
+   "beta": 1.2605816028670813,
    "models": {
     "up": {
      "model": "finbert",
@@ -1522,8 +1515,8 @@
     }
    },
    "news": {
-    "count_7d": 569,
-    "mood_7d": -0.13687820738137083,
+    "count_7d": 590,
+    "mood_7d": -0.13663457627118644,
     "headlines": [
      {
       "title": "Alphabet Inc Class C Stock (GOOG) Opened Down by 5.50% on Nov 25: Key Drivers Unveiled - TradingKey",
@@ -1545,38 +1538,33 @@
     "A typical day moves it about 1.2%. Lately it is choppier than its usual year (59% vs 34% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 22 percentage points.",
     "It sits 32% below its 1-year high of $402.12.",
-    "News mood over the last week: negative (569 headlines).",
+    "News mood over the last week: negative (590 headlines).",
     "The models give 18% odds the next session closes above its open (a slight lean to fall). On this stock they were right 54.2% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 122,
-     "score": -0.20495245901639345,
-     "positive": 24,
-     "neutral": 47,
+     "count": 121,
+     "score": -0.19292644628099173,
+     "positive": 26,
+     "neutral": 44,
      "negative": 51
     },
     "previous_week": {
-     "count": 147,
-     "score": -0.06959659863945579,
+     "count": 152,
+     "score": -0.08407039473684211,
      "positive": 24,
-     "neutral": 86,
-     "negative": 37
+     "neutral": 88,
+     "negative": 40
     },
     "trend": "worsening",
     "major_mood": {
      "count": 15,
-     "score": -0.38074,
+     "score": -0.3659466666666667,
      "positive": 0,
      "neutral": 9,
      "negative": 6
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 19,
-      "score": -0.007831578947368426
-     },
      {
       "date": "2026-11-14",
       "count": 2,
@@ -1639,11 +1627,23 @@
      },
      {
       "date": "2026-11-26",
-      "count": 9,
-      "score": -0.19813333333333336
+      "count": 12,
+      "score": -0.22749166666666668
+     },
+     {
+      "date": "2026-11-27",
+      "count": 2,
+      "score": 0.031899999999999984
      }
     ],
     "read": [
+     {
+      "title": "As Google threatens to cut schools\u2019 search access, Los Angeles blocks AI features",
+      "outlet": "Associated Press",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPX28yVGlpUUl3UEpZMGJaTDRFbXBWR09uX1diWWotVXFuQ2JOTDlZRVVCUXRtN3FyUUNzczI2SG9sTXZXanlELUZfYU1YTHZ3enQ1NUoyUGU4NmwzNzJYV3l5ZjM0cHF0NHlhMDl2R3gwaWROaHREY3Zrd3BBd2hHd202WnFqWTJwSF9pSThfUk5wRV9TQkdBVC1zc09hbHh6M1BVVHJ5MUdmc2JzQmJ2YUJLaEkzSGJXNHc?oc=5",
+      "published": "2026-11-27T05:01:00+00:00",
+      "mood": "negative"
+     },
      {
       "title": "Final Trade: HD, XLI, GOOGL, SLB",
       "outlet": "CNBC",
@@ -1671,26 +1671,19 @@
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTE14N1VWUVJlZHQ1QW1ZcDlhOF8ybW5qTlg3VFUyN2x3NkNrdng0SlZaR2kzLVlMT08wN3ZxdWZhTW1Sako5LUE2ZFhxZzdrNllScjdfazh6eFIzN3NmYU9RTmQxTXlpTUNXblQtTjM3eXhNV2FJcWQ5VFpCUHpvUWdNWEsxaVBhVlZVZHVaMGYxb0pFOWVNZGg1cG16MWE5Z2RjanljM2MyTWw3YVNTMmZFZ3hET2E0UW1XVjh3OTdpUnpK?oc=5",
       "published": "2026-11-25T05:44:00+00:00",
       "mood": "negative"
-     },
-     {
-      "title": "Google Snaps Up London King\u2019s Cross Office as Rents Soar",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXZKdk9fUHNzNTRRVU8xZlBTTV9CeUR3YzFuY0IwbnJlZXNuazlyT0tOb3VXbmpPaUhhejVRalNWVDVqS2w1U2w2TGJhaTNtNnNGWjRfNXk4SWdDck4xZ1hFSGM2VWFma0Y5ZEZQeU9UWUQ3dVhxRnc2VnZBZVcteEJqQlc5TXlvOVdfSVk4bUFXMjQybGxlRzhZcThOa2NCV204OHIzN0Q4eTQ?oc=5",
-      "published": "2026-11-24T13:04:42+00:00",
-      "mood": "neutral"
      }
     ],
     "major_count": 15,
     "earnings": {
      "next": "2027-02-03",
      "next_time": "after the close",
-     "days_until": 69,
+     "days_until": 68,
      "last": {
       "date": "2026-10-28",
       "surprise": -29.54,
       "move": -0.12641203321887406
      },
-     "typical_move": 0.05348052863099596,
+     "typical_move": 0.05348055021100992,
      "reports": 8,
      "beat_count": 7,
      "beat_of": 8
@@ -1720,17 +1713,17 @@
    "low_1y": 524.82,
    "off_high": -0.21566636198409184,
    "sma50": 672.3955395507812,
-   "sma200": 626.8578948974609,
-   "rsi_14": 45.70041703609215,
+   "sma200": 626.8578945922851,
+   "rsi_14": 45.700417035635425,
    "vol_now": 0.48932085793350416,
-   "vol_1y": 0.42707959371836285,
+   "vol_1y": 0.4270795374556289,
    "typical_day": 0.017433843238179647,
    "up_days_1y": 0.49603174603174605,
    "vs_market": {
     "3 months": 0.13700500056310017,
     "1 year": -0.08507547580152786
    },
-   "beta": 1.4000911045195192,
+   "beta": 1.400090982448781,
    "models": {
     "up": {
      "model": "finbert",
@@ -1858,8 +1851,8 @@
     }
    },
    "news": {
-    "count_7d": 781,
-    "mood_7d": -0.12489167733674776,
+    "count_7d": 808,
+    "mood_7d": -0.12141064356435644,
     "headlines": [
      {
       "title": "Meta Faces India Lawsuit Over 5.4 Million Content Restrictions",
@@ -1881,38 +1874,33 @@
     "A typical day moves it about 1.7%. Lately it is about as jumpy as its usual year (49% vs 43% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 9 percentage points.",
     "It sits 22% below its 1-year high of $777.59.",
-    "News mood over the last week: negative (781 headlines).",
+    "News mood over the last week: negative (808 headlines).",
     "The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 55.0% of the time over the last 120 sessions, a small but real edge."
    ],
    "press": {
     "week": {
-     "count": 216,
-     "score": -0.11775138888888889,
-     "positive": 39,
-     "neutral": 102,
+     "count": 219,
+     "score": -0.11162785388127854,
+     "positive": 41,
+     "neutral": 103,
      "negative": 75
     },
     "previous_week": {
-     "count": 200,
-     "score": -0.0988825,
-     "positive": 28,
-     "neutral": 118,
-     "negative": 54
+     "count": 198,
+     "score": -0.1120969696969697,
+     "positive": 26,
+     "neutral": 117,
+     "negative": 55
     },
     "trend": "steady",
     "major_mood": {
-     "count": 14,
-     "score": -0.4095357142857143,
-     "positive": 0,
+     "count": 15,
+     "score": -0.3577,
+     "positive": 1,
      "neutral": 6,
      "negative": 8
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 31,
-      "score": 0.08808064516129033
-     },
      {
       "date": "2026-11-14",
       "count": 4,
@@ -1965,8 +1953,8 @@
      },
      {
       "date": "2026-11-24",
-      "count": 54,
-      "score": -0.10122037037037038
+      "count": 55,
+      "score": -0.10388363636363637
      },
      {
       "date": "2026-11-25",
@@ -1975,23 +1963,28 @@
      },
      {
       "date": "2026-11-26",
-      "count": 30,
-      "score": -0.11590333333333333
+      "count": 32,
+      "score": -0.095159375
+     },
+     {
+      "date": "2026-11-27",
+      "count": 6,
+      "score": -0.04895
      }
     ],
     "read": [
+     {
+      "title": "Japan's JERA enters talks with Anthropic, Meta to build data centres, Nikkei reports",
+      "outlet": "Reuters",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZTV4V1Uwcm12UjRESWc2c1RLT0lrS2p3d29wSW1SRWRDLUJySUV4eG9ZMW4zd3g0OEtCdkw5RkJkVUVVZFdUdDZmcGZXb0hEQVpTSE1XVHpOdzB3UnZVWVVYZUw5dHJuNkZkU2NKYlBtSXUyVnlWTEtxaUxEMmNPN2l3SWVpV1lOaUs5amZLU0VKZ0NOeHV4ajdlYzNRajExcWpyR01ORTFoaVpfWU5ablZnZWVsNVM3SHpKVF84cmdCUXU5a3NoUUFYRHU5dw?oc=5",
+      "published": "2026-11-26T22:13:00+00:00",
+      "mood": "positive"
+     },
      {
       "title": "Dutch groups ask court to halt Meta smart glasses sales over privacy concerns",
       "outlet": "Reuters",
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQTW1YMnQzOGZCbUZNd2loMlNOS203R0ZwcGg3STdSRTlXcnFraDRvNzFwcG5URDlGMDI4Skt3WDRybmVQUi1mUlBMSGwxakl4eEFkU1NtdEdWb3pHc0w5Z2l6cHA0dUloalM1ZkhJYTRTTzlIdVdSUG41ZkpxRElOMG5UUHdobklDckZCZUt3VkxqV1pOYW13b1c5MTBsaXhKcG1sUmhrNnFjdy00VG9OWWhGUDVjRGxINUZaUWdwck9uY2tNeGc?oc=5",
       "published": "2026-11-26T15:20:42+00:00",
-      "mood": "negative"
-     },
-     {
-      "title": "Meta battles political storm in India as Congress party sues, stages protests",
-      "outlet": "Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYlREaWpNT18tWDUtQTBMQW1GZkNzNGZ6d3ZUZFdRUkJXSEpVNXV0VFdoSUtkbXVXOFNzQURjbkNla1prbms0UlJ0VUNmVXJfOUtZWThKUzVwVklycWI0b0c1OHU3NDhETW5maUdxbVBFQTNfNTlqTFRac1NCLWFVNUViNzBWaXhqekhFR2FDTmI0akhwVnpCTGdRMHR4VDZrbmdjLU9xVVdXU0hjaVJiOGJlQ2RGWElLc3htT3haTk4?oc=5",
-      "published": "2026-11-26T09:38:44+00:00",
       "mood": "negative"
      },
      {
@@ -2016,17 +2009,17 @@
       "mood": "neutral"
      }
     ],
-    "major_count": 14,
+    "major_count": 15,
     "earnings": {
      "next": "2027-01-27",
      "next_time": "after the close",
-     "days_until": 62,
+     "days_until": 61,
      "last": {
       "date": "2026-10-21",
       "surprise": -29.33,
       "move": -0.06977583808708443
      },
-     "typical_move": 0.07781913345169326,
+     "typical_move": 0.07781914381614138,
      "reports": 8,
      "beat_count": 6,
      "beat_of": 8
@@ -2066,7 +2059,7 @@
     "3 months": 0.13963090014305546,
     "1 year": -0.17339082879259216
    },
-   "beta": 2.089108915411339,
+   "beta": 2.089109043468459,
    "models": {
     "up": {
      "model": "finbert",
@@ -2194,8 +2187,8 @@
     }
    },
    "news": {
-    "count_7d": 494,
-    "mood_7d": -0.04021012145748988,
+    "count_7d": 501,
+    "mood_7d": -0.03688522954091817,
     "headlines": [
      {
       "title": "Tesla (NASDAQ:TSLA) Shares Down 1.2% - Here's Why - MarketBeat",
@@ -2217,23 +2210,23 @@
     "A typical day moves it about 1.4%. Lately it is choppier than its usual year (73% vs 47% annualised volatility).",
     "Over the past year it lagged the S&P 500 (SPY) by 17 percentage points.",
     "It sits 22% below its 1-year high of $489.88.",
-    "News mood over the last week: mixed (494 headlines).",
+    "News mood over the last week: mixed (501 headlines).",
     "The models give 48% odds the next session closes above its open (a slight lean to fall). On this stock they were right 57.5% of the time over the last 120 sessions, a meaningful edge, if it lasts."
    ],
    "press": {
     "week": {
      "count": 183,
-     "score": -0.020063387978142076,
-     "positive": 44,
+     "score": -0.008287978142076501,
+     "positive": 45,
      "neutral": 97,
-     "negative": 42
+     "negative": 41
     },
     "previous_week": {
      "count": 180,
-     "score": 0.001128888888888889,
-     "positive": 40,
+     "score": -0.019397222222222222,
+     "positive": 38,
      "neutral": 100,
-     "negative": 40
+     "negative": 42
     },
     "trend": "steady",
     "major_mood": {
@@ -2244,11 +2237,6 @@
      "negative": 2
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 36,
-      "score": 0.07503055555555554
-     },
      {
       "date": "2026-11-14",
       "count": 6,
@@ -2302,7 +2290,7 @@
      {
       "date": "2026-11-24",
       "count": 45,
-      "score": -0.0010466666666666623
+      "score": -0.0010644444444444408
      },
      {
       "date": "2026-11-25",
@@ -2313,6 +2301,11 @@
       "date": "2026-11-26",
       "count": 20,
       "score": 0.10644499999999998
+     },
+     {
+      "date": "2026-11-27",
+      "count": 4,
+      "score": 0.09427500000000001
      }
     ],
     "read": [
@@ -2356,7 +2349,7 @@
     "earnings": {
      "next": "2027-01-27",
      "next_time": "after the close",
-     "days_until": 62,
+     "days_until": 61,
      "last": {
       "date": "2026-10-21",
       "surprise": 6.4,
@@ -2387,22 +2380,22 @@
     "3 months": -0.1013488854588106,
     "1 year": 0.0833567754160105
    },
-   "ytd": 0.0019251871296757095,
+   "ytd": 0.0019250904093581767,
    "high_1y": 363.37,
    "low_1y": 278.75,
    "off_high": -0.1283197791920191,
    "sma50": 334.8915081787109,
    "sma200": 322.889765625,
-   "rsi_14": 37.080509654024205,
+   "rsi_14": 37.08050965402271,
    "vol_now": 0.3170888219001643,
-   "vol_1y": 0.23114446247819678,
+   "vol_1y": 0.23114440815632437,
    "typical_day": 0.007592851438021242,
    "up_days_1y": 0.5436507936507936,
    "vs_market": {
     "3 months": -0.03310835555373215,
     "1 year": 6.11743529383979e-05
    },
-   "beta": 0.7694690852080799,
+   "beta": 0.7694695335291418,
    "models": {
     "up": {
      "model": "finbert",
@@ -2530,8 +2523,8 @@
     }
    },
    "news": {
-    "count_7d": 334,
-    "mood_7d": -0.0825065868263473,
+    "count_7d": 333,
+    "mood_7d": -0.08559159159159159,
     "headlines": [
      {
       "title": "META Stock Is Down 24% From Peak: JPMorgan Sees \u2018Attractive Buying Opportunity\u2019 \u2014 But 2027 Spending, Capex Remain An Overhang",
@@ -2553,38 +2546,33 @@
     "A typical day moves it about 0.8%. Lately it is choppier than its usual year (32% vs 23% annualised volatility).",
     "Over the past year it beat the S&P 500 (SPY) by 0 percentage points.",
     "It sits 13% below its 1-year high of $363.37.",
-    "News mood over the last week: negative (334 headlines).",
+    "News mood over the last week: negative (333 headlines).",
     "The models give 58% odds the next session closes above its open (a slight lean to rise). On this stock they were right 48.3% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 83,
-     "score": -0.11470481927710843,
+     "count": 82,
+     "score": -0.10830853658536585,
      "positive": 18,
      "neutral": 36,
-     "negative": 29
+     "negative": 28
     },
     "previous_week": {
-     "count": 107,
-     "score": -0.18763271028037382,
-     "positive": 18,
+     "count": 108,
+     "score": -0.2051787037037037,
+     "positive": 17,
      "neutral": 46,
-     "negative": 43
+     "negative": 45
     },
     "trend": "improving",
     "major_mood": {
-     "count": 10,
-     "score": -0.00835,
+     "count": 11,
+     "score": -0.004463636363636363,
      "positive": 2,
-     "neutral": 6,
+     "neutral": 7,
      "negative": 2
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 16,
-      "score": 0.12391250000000001
-     },
      {
       "date": "2026-11-14",
       "count": 2,
@@ -2647,11 +2635,23 @@
      },
      {
       "date": "2026-11-26",
-      "count": 5,
-      "score": -0.06170000000000001
+      "count": 7,
+      "score": -0.16012857142857143
+     },
+     {
+      "date": "2026-11-27",
+      "count": 0,
+      "score": null
      }
     ],
     "read": [
+     {
+      "title": "JPMorgan, BlackRock Bid for Slice of $543 Billion Singapore Fund",
+      "outlet": "Bloomberg",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPenB3UVNnVVFGc2lIMi1sZmF5NkRBdXMyWmltS3dSSnVQNmtjUUJjLWdvdW5uMXZ3dGJKbzBQTGFUV3BWNFFOQTZqSmpUNzhtUTByNzhDNDdLZEJ0RTlSMEt3ZVpNSmxFWnlJQm1TaWE0VV9JbnFQZkp0SmliSTBVcDVQMDUzckZoNXh5WERRMTh6WE9mREc1UHBjczc4TnRxWFpnRDdYTmlIem51TGhPVVM4MjZlMDg?oc=5",
+      "published": "2026-11-27T02:07:00+00:00",
+      "mood": "neutral"
+     },
      {
       "title": "JPMorgan says the S&P 500 will rise to 8,200 next year because of the AI supercycle",
       "outlet": "CNBC",
@@ -2665,13 +2665,6 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPNU5IQjBNSUJ0bUZYSzE3ZUR2eWxUUjZPTVhoRjQwX0ltNnRlYjVta2F6ZkdBcUZQR3NPV0tNa18wNTJlVVpvS1NDMlR0cWZxdnZyNzRTRkF0dzhoX3hSZFoyaHVPVnlkd0YzdUpZcTN0YWZCVjZKYWpKNkNLa1MwSVE2YVNMdnFDZVEzcW5MNTFtbmRLakVTZGFyOEMxV3lSSEVGSGRoX0lQMG1ZVFZpMXRpcXJ0VFlkeEFZUEpiMA?oc=5",
       "published": "2026-11-25T06:48:00+00:00",
       "mood": "positive"
-     },
-     {
-      "title": "JPMorgan Sets Below Consensus S&P 500 Target of 8,200 for 2027",
-      "outlet": "Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOV3ZoYzZUODBMSTlOZzV1ZFdKaEtPOFpWVDd0Y0hpd0xsLWFmXzNkRWY4d0FybXhvcmtBVVhzNTZmNjY0LU5pdHltWkZMZ25CTkR1djRqeEIzMzRZNldjaEJfa0cxZklzNnN2eVY0OXBLcEZmOWphQVNYdlZOYmtwblRYWkgzZWFSQzdUSzBEUzNDWDNMZTRhVmtkV3lWQWctUU9vREFJaHNqR2ZqZjJrRkQyZw?oc=5",
-      "published": "2026-11-24T20:55:49+00:00",
-      "mood": "neutral"
      },
      {
       "title": "JPMorgan's top books and experiences for the wealthy this holiday season",
@@ -2688,17 +2681,17 @@
       "mood": "neutral"
      }
     ],
-    "major_count": 10,
+    "major_count": 11,
     "earnings": {
      "next": "2027-01-14",
      "next_time": "before the open",
-     "days_until": 49,
+     "days_until": 48,
      "last": {
       "date": "2026-10-13",
       "surprise": -3.24,
       "move": -0.008585088908124261
      },
-     "typical_move": 0.021241817287206102,
+     "typical_move": 0.02124184329921079,
      "reports": 8,
      "beat_count": 6,
      "beat_of": 8
@@ -2728,17 +2721,17 @@
    "low_1y": 111.55,
    "off_high": -0.1504523625289922,
    "sma50": 167.9507440185547,
-   "sma200": 155.04886627197266,
-   "rsi_14": 36.190103532608354,
+   "sma200": 155.0488668823242,
+   "rsi_14": 36.19010353255299,
    "vol_now": 0.3081128223159443,
-   "vol_1y": 0.27405030477020553,
+   "vol_1y": 0.2740502665991342,
    "typical_day": 0.00857677361975795,
    "up_days_1y": 0.5555555555555556,
    "vs_market": {
     "3 months": 0.0851018918114902,
     "1 year": 0.31593693638842635
    },
-   "beta": -0.5228702168046118,
+   "beta": -0.5228705698447902,
    "models": {
     "up": {
      "model": "finbert",
@@ -2867,7 +2860,7 @@
    },
    "news": {
     "count_7d": 145,
-    "mood_7d": 0.03747241379310345,
+    "mood_7d": 0.04129655172413793,
     "headlines": [
      {
       "title": "ExxonMobil Holdings (XOM) Stock: Shares Slide 1.62% as Company Unveils $3B Debt Buyback Results - Blockonomi",
@@ -2894,18 +2887,18 @@
    ],
    "press": {
     "week": {
-     "count": 47,
-     "score": 0.06411063829787234,
-     "positive": 12,
+     "count": 45,
+     "score": 0.06450888888888888,
+     "positive": 11,
      "neutral": 27,
-     "negative": 8
+     "negative": 7
     },
     "previous_week": {
-     "count": 84,
-     "score": 0.14786785714285713,
+     "count": 85,
+     "score": 0.13833176470588235,
      "positive": 32,
      "neutral": 42,
-     "negative": 10
+     "negative": 11
     },
     "trend": "worsening",
     "major_mood": {
@@ -2916,11 +2909,6 @@
      "negative": 1
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 18,
-      "score": 0.28594444444444445
-     },
      {
       "date": "2026-11-14",
       "count": 1,
@@ -2983,6 +2971,11 @@
      },
      {
       "date": "2026-11-26",
+      "count": 1,
+      "score": 0.0228
+     },
+     {
+      "date": "2026-11-27",
       "count": 0,
       "score": null
      }
@@ -3007,13 +3000,13 @@
     "earnings": {
      "next": "2027-01-29",
      "next_time": "before the open",
-     "days_until": 64,
+     "days_until": 63,
      "last": {
       "date": "2026-10-30",
       "surprise": 4.91,
       "move": 0.02160512883365473
      },
-     "typical_move": 0.012223469342014293,
+     "typical_move": 0.012223485993641203,
      "reports": 8,
      "beat_count": 7,
      "beat_of": 8
@@ -3036,24 +3029,24 @@
     "1 week": -0.010631308570118292,
     "1 month": -0.15643658450615205,
     "3 months": -0.11828450922820355,
-    "1 year": 0.11395772894285838
+    "1 year": 0.11395761955404193
    },
    "ytd": 0.06944521173385265,
    "high_1y": 433.68,
    "low_1y": 255.97,
    "off_high": -0.2017378597551034,
    "sma50": 386.48720092773436,
-   "sma200": 366.92089065551755,
-   "rsi_14": 34.73786359376926,
+   "sma200": 366.9208903503418,
+   "rsi_14": 34.73786359376466,
    "vol_now": 0.5038622237267792,
-   "vol_1y": 0.3660844197921123,
+   "vol_1y": 0.36608442186549894,
    "typical_day": 0.011142231707775008,
    "up_days_1y": 0.4880952380952381,
    "vs_market": {
     "3 months": -0.0500439793231251,
-    "1 year": 0.030662127879786283
+    "1 year": 0.030662018490969833
    },
-   "beta": 0.27861149393686546,
+   "beta": 0.2786112029876509,
    "models": {
     "up": {
      "model": "finbert",
@@ -3181,8 +3174,8 @@
     }
    },
    "news": {
-    "count_7d": 159,
-    "mood_7d": -0.1764176100628931,
+    "count_7d": 156,
+    "mood_7d": -0.1656467948717949,
     "headlines": [
      {
       "title": "UnitedHealth, Humana and CVS Shares Fall as Medicare Advantage Rating Changes Threaten $107 Billion in Payments",
@@ -3204,23 +3197,23 @@
     "A typical day moves it about 1.1%. Lately it is choppier than its usual year (50% vs 37% annualised volatility).",
     "Over the past year it beat the S&P 500 (SPY) by 3 percentage points.",
     "It sits 20% below its 1-year high of $433.68.",
-    "News mood over the last week: negative (159 headlines).",
+    "News mood over the last week: negative (156 headlines).",
     "The models give 52% odds the next session closes above its open (a slight lean to rise). On this stock they were right 49.2% of the time over the last 120 sessions, which is no better than a coin flip."
    ],
    "press": {
     "week": {
-     "count": 63,
-     "score": -0.21231904761904763,
+     "count": 59,
+     "score": -0.18737796610169494,
      "positive": 13,
-     "neutral": 25,
-     "negative": 25
+     "neutral": 23,
+     "negative": 23
     },
     "previous_week": {
-     "count": 92,
-     "score": -0.47155108695652176,
-     "positive": 9,
-     "neutral": 25,
-     "negative": 58
+     "count": 97,
+     "score": -0.46281134020618553,
+     "positive": 10,
+     "neutral": 27,
+     "negative": 60
     },
     "trend": "improving",
     "major_mood": {
@@ -3231,11 +3224,6 @@
      "negative": 3
     },
     "daily": [
-     {
-      "date": "2026-11-13",
-      "count": 4,
-      "score": -0.2571
-     },
      {
       "date": "2026-11-14",
       "count": 2,
@@ -3300,6 +3288,11 @@
       "date": "2026-11-26",
       "count": 3,
       "score": -0.3643666666666667
+     },
+     {
+      "date": "2026-11-27",
+      "count": 1,
+      "score": 0.8108
      }
     ],
     "read": [
@@ -3336,13 +3329,13 @@
     "earnings": {
      "next": "2027-01-12",
      "next_time": "before the open",
-     "days_until": 47,
+     "days_until": 46,
      "last": {
       "date": "2026-10-13",
       "surprise": 13.26,
       "move": -0.0020077651646012162
      },
-     "typical_move": 0.08040345214996565,
+     "typical_move": 0.08040347049547682,
      "reports": 8,
      "beat_count": 6,
      "beat_of": 8
@@ -3369,76 +3362,76 @@
    "AAPL": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5383512152004777,
+    "model_up": 0.5392257748867968,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.4990727040597742,
+    "model_beat": 0.499529170636574,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 58.04306381824135,
+     "rsi": 58.04306381832266,
      "state": "normal",
      "above_200d": true,
-     "range_low": -0.04197329186444169,
+     "range_low": -0.0419733062040223,
      "median": 0.00695073301587168,
-     "range_high": 0.0513968571479657,
+     "range_high": 0.051396799665312264,
      "up_share_2y": 0.5737051792828686,
      "similar_weeks": 324,
-     "similar_up": 0.5617283950617284,
-     "similar_avg": 0.0046224013128872525
+     "similar_up": 0.5648148148148148,
+     "similar_avg": 0.004622404032708065
     }
    },
    "MSFT": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5374987765819657,
+    "model_up": 0.5389996624107265,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5042210752819207,
+    "model_beat": 0.5051113873913513,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 38.99414725433039,
+     "rsi": 38.994147254336994,
      "state": "beaten down",
      "above_200d": true,
-     "range_low": -0.04242209278395034,
-     "median": 0.0021634722044359123,
+     "range_low": -0.042422143320331784,
+     "median": 0.00216343979665623,
      "range_high": 0.04089762738302357,
      "up_share_2y": 0.5358565737051793,
      "similar_weeks": 42,
      "similar_up": 0.5476190476190477,
-     "similar_avg": 0.002557058620129795
+     "similar_avg": 0.0025570506721277818
     }
    },
    "NVDA": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5651373683346903,
+    "model_up": 0.5669169045648432,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.54536679960922,
+    "model_beat": 0.5471504062823339,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 37.452659393717695,
+     "rsi": 37.45265939389505,
      "state": "beaten down",
      "above_200d": false,
      "range_low": -0.07056669376616337,
-     "median": 0.004117031458724774,
-     "range_high": 0.0706301629236082,
+     "median": 0.004116954045904397,
+     "range_high": 0.07063027535400938,
      "up_share_2y": 0.5219123505976095,
-     "similar_weeks": 46,
-     "similar_up": 0.5652173913043478,
-     "similar_avg": 0.01337176932482459
+     "similar_weeks": 45,
+     "similar_up": 0.5777777777777777,
+     "similar_avg": 0.015164298717117662
     }
    },
    "AMZN": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5438472392405969,
+    "model_up": 0.5448811734354452,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5122809985343935,
+    "model_beat": 0.5129834302984301,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
@@ -3457,54 +3450,54 @@
    "GOOGL": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5550406698261633,
+    "model_up": 0.5560809991819513,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5223920124967549,
+    "model_beat": 0.5231390690844897,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 36.93047255711895,
+     "rsi": 36.93047255573782,
      "state": "beaten down",
      "above_200d": false,
      "range_low": -0.048996297340879326,
      "median": 0.00517651456327084,
-     "range_high": 0.05691208730460477,
+     "range_high": 0.056912067917194116,
      "up_share_2y": 0.5438247011952191,
-     "similar_weeks": 80,
-     "similar_up": 0.55,
-     "similar_avg": 0.004728356269511289
+     "similar_weeks": 78,
+     "similar_up": 0.5512820512820513,
+     "similar_avg": 0.005119355148382585
     }
    },
    "META": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5556928367539309,
+    "model_up": 0.5574077583390804,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5206231903603005,
+    "model_beat": 0.5220405851064711,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 45.70041703609215,
+     "rsi": 45.700417035635425,
      "state": "normal",
      "above_200d": false,
-     "range_low": -0.06057996764255375,
-     "median": 0.0007447804665969837,
+     "range_low": -0.060579972936104086,
+     "median": 0.0007448231201543365,
      "range_high": 0.07189947777540985,
      "up_share_2y": 0.5079681274900398,
      "similar_weeks": 203,
      "similar_up": 0.5320197044334976,
-     "similar_avg": 0.0070075649452599875
+     "similar_avg": 0.00700756055152238
     }
    },
    "TSLA": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5542735441403174,
+    "model_up": 0.5554454805787444,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5179529812329287,
+    "model_beat": 0.5189713361939405,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
@@ -3523,67 +3516,67 @@
    "JPM": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5409411019050347,
+    "model_up": 0.5421741647310617,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5035874575367243,
+    "model_beat": 0.5042330588334499,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 37.080509654024205,
+     "rsi": 37.08050965402271,
      "state": "beaten down",
      "above_200d": false,
-     "range_low": -0.031575390530577806,
+     "range_low": -0.03157528729812772,
      "median": 0.003923672884150187,
-     "range_high": 0.04219906757216477,
+     "range_high": 0.04219908000649417,
      "up_share_2y": 0.5557768924302788,
      "similar_weeks": 36,
      "similar_up": 0.6944444444444444,
-     "similar_avg": 0.02780510331618544
+     "similar_avg": 0.02780511591074329
     }
    },
    "XOM": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5444527278658183,
+    "model_up": 0.5459898349094944,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5043698511889221,
+    "model_beat": 0.5052259862728204,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 36.190103532608354,
+     "rsi": 36.19010353255299,
      "state": "beaten down",
      "above_200d": true,
-     "range_low": -0.042138593022132804,
-     "median": 0.005288126609736543,
-     "range_high": 0.043847933288186196,
+     "range_low": -0.04213874076320166,
+     "median": 0.005288098853178713,
+     "range_high": 0.04384792721702005,
      "up_share_2y": 0.5557768924302788,
-     "similar_weeks": 40,
-     "similar_up": 0.725,
-     "similar_avg": 0.01624944677550503
+     "similar_weeks": 39,
+     "similar_up": 0.717948717948718,
+     "similar_avg": 0.016582784354510324
     }
    },
    "UNH": {
     "feature_date": "2026-11-25",
     "p_up": 0.5119521912350598,
-    "model_up": 0.5466124009616233,
+    "model_up": 0.5478163276325346,
     "source": "usual odds",
     "p_beat": 0.500398406374502,
-    "model_beat": 0.5125172581700332,
+    "model_beat": 0.5132169439712103,
     "week_from": "2026-11-26",
     "week_to": "2026-12-02",
     "context": {
-     "rsi": 34.73786359376926,
+     "rsi": 34.73786359376466,
      "state": "beaten down",
      "above_200d": false,
-     "range_low": -0.059648650333548804,
-     "median": 0.00030800853137713524,
-     "range_high": 0.057322317417597524,
+     "range_low": -0.059648595606232355,
+     "median": 0.00030806090955781684,
+     "range_high": 0.05732197850587104,
      "up_share_2y": 0.50199203187251,
-     "similar_weeks": 193,
-     "similar_up": 0.6113989637305699,
-     "similar_avg": 0.005826744244090254
+     "similar_weeks": 192,
+     "similar_up": 0.609375,
+     "similar_avg": 0.00577952348317002
     }
    }
   },
@@ -3592,12 +3585,12 @@
     "weeks": 7870,
     "from": "2023-10-02",
     "usual": {
-     "accuracy": 0.5506988564167725,
-     "brier": 0.24747440162813386
+     "accuracy": 0.5508259212198221,
+     "brier": 0.24745082128303372
     },
     "model": {
-     "accuracy": 0.5440914866581957,
-     "brier": 0.24803248624738353
+     "accuracy": 0.5442185514612452,
+     "brier": 0.24804976714192659
     },
     "champion": "usual"
    },
@@ -3606,11 +3599,11 @@
     "from": "2023-10-02",
     "usual": {
      "accuracy": 0.504574332909784,
-     "brier": 0.25035402522968314
+     "brier": 0.2503563957872615
     },
     "model": {
-     "accuracy": 0.5053367217280813,
-     "brier": 0.2507932671802148
+     "accuracy": 0.5064803049555273,
+     "brier": 0.2507999447632606
     },
     "champion": "usual"
    }
@@ -4081,6 +4074,6 @@
     ]
    }
   },
-  "late": true
+  "late": false
  }
 }
