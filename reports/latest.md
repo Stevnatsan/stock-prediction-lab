@@ -1,6 +1,6 @@
 # Stock prediction lab: latest report
 
-Generated 2026-11-26 09:31 UTC.
+Generated 2026-11-27 04:14 UTC.
 
 ## Next-session calls
 
@@ -178,16 +178,16 @@ No paper orders yet. Connect an Alpaca paper account (see the README) and the ch
 | alpaca | 0 | 0 | 0 | skipped: set ALPACA_API_KEY and ALPACA_SECRET_KEY to enable |
 | analysts | 10 | 0 | 7828 |  |
 | earnings | 10 | 0 | 500 |  |
-| finbert | 9 | 0 | 259 |  |
+| finbert | 10 | 0 | 507 |  |
 | finnhub | 0 | 0 | 0 | skipped: set FINNHUB_API_KEY to enable |
 | fred | 0 | 1 | 0 | ReadTimeout: HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20) |
-| google_news | 10 | 0 | 949 |  |
+| google_news | 10 | 0 | 966 |  |
 | macro_yahoo | 1 | 0 | 1090 |  |
-| major_news | 10 | 0 | 1000 |  |
+| major_news | 10 | 0 | 999 |  |
 | prices | 11 | 0 | 11957 |  |
 | reddit | 0 | 0 | 0 | skipped: set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to enable |
 | sec_filings | 0 | 0 | 0 | skipped: set SEC_USER_AGENT to enable |
-| yahoo_rss | 10 | 0 | 179 |  |
+| yahoo_rss | 10 | 0 | 186 |  |
 
 ## This run, per stock
 
